@@ -239,6 +239,19 @@ html,body { margin:0; padding:0; background:#ffffff; }
 .ab-Main .opt2-col-trad .matrix-point { color:#555555; }
 .ab-Main .opt2-col-eq .matrix-point { color:rgba(255,255,255,.9); }
 
+/* FEATURE FIGURE: SQUARE WITH SHADOW */
+.ab-Main .svcfig { display:grid; grid-template-columns:46fr 54fr; gap:64px; align-items:center; }
+.ab-Main .svcfig-media { min-width:0; }
+.ab-Main .svcfig .imgwrap { position:relative; aspect-ratio:1/1; width:100%; max-width:480px; height:auto; margin:0 20px 20px 0; }
+.ab-Main .svcfig .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
+.ab-Main .svcfig .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
+
+/* FEATURE FIGURE: CIRCLE WITH LINES */
+.ab-Main .circfig { display:grid; grid-template-columns:54fr 46fr; gap:64px; align-items:center; }
+.ab-Main .circfig-media { min-width:0; }
+.ab-Main .circfig-media .eqshape { max-width:420px; width:100%; margin:0 auto; }
+.ab-Main .eqshape .eqpic.grain::after { border-radius:50%; }
+
 /* SECTION 6: GENERALIST VS SPECIALIST ARCHITECTURE BOX */
 .ab-Main .archibox { background:#FFFAEB; border:1px solid #F0E6CD; border-radius:8px; padding:44px 48px; margin-top:48px; }
 .ab-Main .archisplit { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
@@ -264,7 +277,10 @@ html,body { margin:0; padding:0; background:#ffffff; }
 
 /* SECTION 9: FINAL CTA */
 .ab-Main .finalcta { background:#003B53; color:#ffffff; }
-.ab-Main .ctasplit { display:grid; grid-template-columns:1.25fr 1fr; gap:64px; align-items:center; }
+.ab-Main .ctasplit { display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:center; }
+.ab-Main .ctaimgwrap { position:relative; min-width:0; }
+.ab-Main .ctaimgwrap .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(18px, 18px); background:rgba(147,188,205,.30); }
+.ab-Main .ctaimgwrap .photo { position:relative; z-index:1; display:block; width:100%; max-width:100%; aspect-ratio:4/3; height:auto; object-fit:cover; border-radius:4px; filter:grayscale(1); }
 
 /* FOOTER & NEWSLETTER */
 .ab-Main .nlband { background:#FFD457; }
@@ -301,13 +317,21 @@ html,body { margin:0; padding:0; background:#ffffff; }
   .ab-Main .sec2split { grid-template-columns:1fr; gap:48px; }
   .ab-Main .sec2side { padding-top:0; }
   .ab-Main .propgrid { grid-template-columns:1fr; }
+  .ab-Main .svcfig { grid-template-columns:1fr; gap:44px; }
+  .ab-Main .svcfig-media { order:2; }
+  .ab-Main .svcfig-content { order:1; }
+  .ab-Main .svcfig .imgwrap { max-width:min(440px, calc(100% - 24px)); margin:0 auto 20px; }
   .ab-Main .tiergrid { grid-template-columns:1fr; }
+  .ab-Main .circfig { grid-template-columns:1fr; gap:44px; }
+  .ab-Main .circfig-media { order:2; }
+  .ab-Main .circfig-media .eqshape { max-width:340px; }
   .ab-Main .opt2-matrix { grid-template-columns:1fr; }
   .ab-Main .opt2-col-trad { border-right:none; border-bottom:1px solid #E2EBF0; padding:36px 28px; }
   .ab-Main .opt2-col-eq { padding:36px 28px; }
   .ab-Main .archisplit { grid-template-columns:1fr; gap:28px; }
   .ab-Main .readygrid { grid-template-columns:1fr; }
   .ab-Main .ctasplit { grid-template-columns:1fr; gap:40px; }
+  .ab-Main .ctaimgwrap { max-width:min(480px, calc(100% - 20px)); margin:0 auto; }
   .ab-Main .nlsplit { grid-template-columns:1fr; gap:28px; }
   .ab-Main .ft3 { grid-template-columns:1fr 1fr; gap:36px; }
 }
@@ -453,7 +477,7 @@ html,body { margin:0; padding:0; background:#ffffff; }
   </div>
 
   <!-- 2. THE FRACTIONAL GENERAL COUNSEL ADVANTAGE & SIDEBAR -->
-  <section class="wrap" style="padding-top:104px; padding-bottom:96px;">
+  <section class="wrap" id="overview" style="padding-top:104px; padding-bottom:96px;">
     <div class="sec2split">
       <div class="sec2main">
         <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">The Embedded Counsel Advantage</span></div>
@@ -494,8 +518,10 @@ html,body { margin:0; padding:0; background:#ffffff; }
           <nav class="sidelist" aria-label="Page navigation">
             <a class="sidelink here" href="#overview"><span>The GC Advantage</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
             <a class="sidelink" href="#whats-included"><span>What's Included</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <a class="sidelink" href="#how-we-work"><span>Working With Us</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
             <a class="sidelink" href="#service-tiers"><span>Service Tiers</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
             <a class="sidelink" href="#contrast-matrix"><span>Traditional vs. Equinox</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
+            <a class="sidelink" href="#coordination"><span>Specialist Coordination</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
             <a class="sidelink" href="#readiness"><span>Readiness Diagnostic</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
             <a class="sidelink" href="#faqs"><span>Frequently Asked Questions</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
           </nav>
@@ -551,6 +577,27 @@ html,body { margin:0; padding:0; background:#ffffff; }
           <p class="propdesc">Regular executive check-ins, annual corporate filings, shareholder agreements, employment compliance, and intellectual property audits to prevent blind spots.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- 4b. WHAT WORKING WITH US LOOKS LIKE (SQUARE WITH SHADOW) -->
+  <section class="wrap" id="how-we-work" style="padding-top:88px; padding-bottom:96px; border-bottom:1px solid #E8EFF2;">
+    <div class="svcfig">
+      <div class="svcfig-media">
+        <div class="imgwrap grain">
+          <div class="imgshadow"></div>
+          <img class="photo" src="img/s8-meeting.jpg" alt="Equinox Strategic Fractional General Counsel in executive consultation meeting" width="1400" height="933">
+        </div>
+      </div>
+      <div class="svcfig-content">
+        <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">What Working With Us Looks Like</span></div>
+        <h2 class="h2">An Embedded Legal Partner <b>Integrated Into Your Daily Rhythm</b></h2>
+        <div style="margin-top:24px;">
+          <p class="body">We don't wait in an ivory tower for you to call. Your dedicated Equinox General Counsel integrates directly into your executive cadence, attending leadership meetings, reviewing operational contracts, and ensuring legal strategy supports your commercial growth.</p>
+          <p class="body" style="margin-top:18px;">When an urgent vendor contract, customer MSA, or executive hire crosses your desk, simply forward it over. Within 24 hours, you receive substantive redlines and plain-English strategic guidance—ready to send directly to the other party.</p>
+          <p class="body" style="margin-top:18px;">Over time, we build custom playbooks and reusable contract templates for your sales, procurement, and HR teams, so routine deals close faster and require less legal intervention over time.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -686,20 +733,22 @@ html,body { margin:0; padding:0; background:#ffffff; }
         </div>
       </div>
 
-      <!-- Generalist vs Specialist Architecture Box -->
-      <div class="archibox">
-        <div class="archisplit">
-          <div>
-            <div class="eyebrowmark" style="margin-bottom:12px;"><span class="ymrule"></span><span class="ytext">Holistic Legal Coordination</span></div>
-            <h3 class="h3" style="font-size:24px; margin-bottom:12px;">How We Handle Highly Specialized Legal Matters</h3>
-            <p class="body" style="font-size:15px; line-height:1.6; color:#4a4a4a;">
-              Just as your primary care physician manages your overall health and coordinates specialists only when necessary, your Equinox General Counsel oversees your complete corporate legal posture.
-            </p>
+      <!-- Holistic Legal Coordination: Circle Image with Lines -->
+      <div class="circfig" id="coordination" style="margin-top:72px; padding-top:64px; border-top:1px solid #E2EBF0;">
+        <div class="circfig-content">
+          <div class="eyebrowmark" style="margin-bottom:14px;"><span class="ymrule"></span><span class="ytext">Holistic Legal Coordination</span></div>
+          <h3 class="h2" style="font-size:30px; line-height:1.24;">Managing 85%+ of Legal Matters <b>and Coordinating Outside Specialists</b></h3>
+          <div style="margin-top:20px;">
+            <p class="body" style="font-size:16.5px; line-height:1.62;">Just as your primary care physician manages your overall health and brings in specialists only when necessary, your Equinox General Counsel oversees your complete corporate legal posture under one predictable monthly investment.</p>
+            <p class="body" style="font-size:16.5px; line-height:1.62; margin-top:14px;">From everyday commercial contracting, real estate, and intellectual property to employee equity and corporate governance, we handle the vast majority of business matters internally.</p>
+            <p class="body" style="font-size:16.5px; line-height:1.62; margin-top:14px;">If your enterprise encounters an ultra-specialized issue—such as international patent litigation or complex maritime regulation—we brief, direct, and oversee that specialist. Because we understand your business and manage the scope, <b>you avoid inflated specialist bills and unnecessary hourly runaway.</b></p>
           </div>
-          <div>
-            <p class="body" style="font-size:15px; line-height:1.6; color:#4a4a4a;">
-              If your enterprise encounters an ultra-specialized issue—such as international patent litigation or maritime regulation—we brief, direct, and oversee that specialist. Because we understand your business and manage the scope, <b>you avoid inflated specialist bills and unnecessary hourly runaway.</b>
-            </p>
+        </div>
+        <div class="circfig-media">
+          <div class="eqshape">
+            <span class="eqring gold"></span>
+            <span class="eqring night"></span>
+            <div class="eqpic grain"><img class="photo" src="img/s4-team.jpg" alt="Equinox business law attorneys collaborating on corporate strategy and specialist oversight" width="1400" height="933"></div>
           </div>
         </div>
       </div>
@@ -826,7 +875,7 @@ html,body { margin:0; padding:0; background:#ffffff; }
     </div>
   </section>
 
-  <!-- 9. FINAL CTA (NIGHT GROUND) -->
+  <!-- 9. FINAL CTA (NIGHT GROUND - SQUARE WITH SHADOW) -->
   <div class="finalcta on-dark" id="consultation">
     <div class="wrap" style="padding-top:104px; padding-bottom:108px;">
       <div class="ctasplit">
@@ -835,14 +884,18 @@ html,body { margin:0; padding:0; background:#ffffff; }
           <h2 class="h2" style="color:#ffffff; font-size:40px; line-height:1.2;">
             Ready to Add an Embedded Legal Partner <b>to Your Executive Team?</b>
           </h2>
-          <p class="body" style="color:rgba(255,255,255,.8); margin-top:20px; font-size:17px; line-height:1.65;">
-            Stop worrying about hourly billing and start leveraging proactive legal counsel designed to accelerate your company’s growth. Schedule a complimentary 30-minute discovery consultation today.
-          </p>
+          <div style="display:flex; flex-direction:column; gap:18px; margin-top:24px; max-width:720px;">
+            <p class="body" style="color:rgba(255,255,255,.85);">Stop worrying about hourly billing and start leveraging proactive legal counsel designed to accelerate your company’s growth.</p>
+            <p class="body" style="color:rgba(255,255,255,.85);">Equinox provides experienced general counsel, practical business protection, and predictable monthly investment without stopwatch anxiety.</p>
+          </div>
+          <div class="btnrow" style="margin-top:36px;">
+            <a class="btn main" href="#consultation"><span>Schedule a Consultation</span></a>
+            <a class="btn secondary" href="index.html#assessment" style="background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.35);"><span>Take Legal Health Check</span></a>
+          </div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:16px; align-items:flex-start;">
-          <a class="btn main" href="#consultation" style="width:100%; max-width:380px;"><span>Schedule a Consultation</span></a>
-          <a class="btn secondary" href="index.html#assessment" style="width:100%; max-width:380px; background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.3);"><span>Take the Legal Health Check</span></a>
-          <span style="font-family:'Montserrat',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,.6); margin-top:8px;">Confidential discovery &bull; Fixed monthly pricing &bull; Cancel anytime</span>
+        <div class="ctaimgwrap grain">
+          <div class="imgshadow"></div>
+          <img class="photo" src="img/cta-47103.jpg" alt="Equinox Strategic Business Team" width="1400" height="933">
         </div>
       </div>
     </div>
