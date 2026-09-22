@@ -1,0 +1,1840 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Industry Depth Image Grid Concepts | Equinox Business Law Group</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+*,*::before,*::after { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:#ffffff; scroll-behavior:smooth; }
+.stage { overflow:visible; }
+.ab-Main { margin:0; background:#ffffff; color:#2c2c2c; }
+.ab-Main a { color:#027CA1; text-decoration:none; }
+.ab-Main a:hover { color:#002B3D; }
+.ab-Main .wrap { max-width:1440px; margin:0 auto; padding:0 64px; }
+.ab-Main .wrapwide { max-width:1440px; margin:0 auto; padding:0 64px; }
+.ab-Main .sans { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; }
+
+/* TYPOGRAPHY TOKENS */
+.ab-Main .eyebrow { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+.ab-Main .h1 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:42px; font-weight:300; line-height:1.15; color:#003B53; margin:0; }
+.ab-Main .h1 b { font-weight:700; }
+.ab-Main .h2 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:34px; font-weight:300; line-height:1.2; letter-spacing:.005em; color:#003B53; margin:0; }
+.ab-Main .h2 b { font-weight:700; }
+.ab-Main .h3 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:20px; font-weight:600; line-height:1.3; color:#003B53; margin:0; }
+.ab-Main .body { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:17.5px; font-weight:400; line-height:1.62; letter-spacing:.005em; color:#2c2c2c; margin:0; }
+.ab-Main .body-sm { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; font-weight:400; line-height:1.6; color:#55727E; margin:0; }
+
+.ab-Main .eyebrowmark { display:flex; align-items:center; gap:14px; margin:0 0 16px; }
+.ab-Main .ymrule { width:40px; height:3px; background:#FFD457; flex:none; }
+.ab-Main .ytext { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+
+/* BUTTONS */
+.ab-Main .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:'Montserrat',Arial,sans-serif; font-size:14.5px; font-weight:600; letter-spacing:.03em; border-radius:3px; padding:14px 28px; cursor:pointer; text-decoration:none; transition:all .16s ease; }
+.ab-Main .btn.main { background:#003B53; color:#ffffff; border:1px solid #003B53; }
+.ab-Main .btn.main:hover { background:#027CA1; border-color:#027CA1; color:#ffffff; }
+.ab-Main .btn.secondary { background:#FFD457; color:#003B53; border:1px solid #FFD457; }
+.ab-Main .btn.secondary:hover { background:#ffe28a; border-color:#ffe28a; color:#003B53; }
+.ab-Main .btn.outline { background:transparent; color:#003B53; border:1.5px solid #003B53; }
+.ab-Main .btn.outline:hover { background:#003B53; color:#ffffff; }
+.ab-Main .btn.sm { padding:9px 18px; font-size:13px; }
+.ab-Main .btn.white-ghost { background:rgba(255,255,255,0.12); color:#ffffff; border:1px solid rgba(255,255,255,0.35); backdrop-filter:blur(8px); }
+.ab-Main .btn.white-ghost:hover { background:#ffffff; color:#003B53; }
+
+/* HEADER & NAVIGATION */
+.ab-Main .hdrrow { display:flex; align-items:center; justify-content:space-between; gap:48px; padding-top:24px; padding-bottom:24px; }
+.ab-Main .wordmark { height:52px; width:auto; display:block; }
+.ab-Main .hdr { position:sticky; top:0; z-index:60; background:#ffffff; border-bottom:1px solid #e4e4e4; }
+.ab-Main .navwrap { display:inline-flex; align-items:center; padding:25px 0 52px; margin:-25px 0 -52px; }
+.ab-Main .navwrap.rel { position:relative; }
+.ab-Main .navitem { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:500; color:#2c2c2c; white-space:nowrap; display:inline-flex; align-items:center; gap:7px; text-decoration:none; cursor:pointer; }
+.ab-Main .navitem .chev { color:#9a9a9a; transition:transform .18s ease, color .18s ease; }
+.ab-Main .navwrap:hover .navitem, .ab-Main .navwrap:focus-within .navitem, .ab-Main .navitem.here { color:#003B53; }
+.ab-Main .navitem.here { font-weight:600; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev, .ab-Main .navitem.here .chev { color:#003B53; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev { transform:rotate(180deg); }
+.ab-Main .megapanel { display:none; position:absolute; left:0; right:0; top:100%; background:#ffffff; border-top:1px solid #e4e4e4; box-shadow:0 30px 52px -20px rgba(0,59,83,.3); z-index:40; }
+.navwrap:hover .megapanel, .navwrap:focus-within .megapanel { display:block; }
+.ab-Main .megahead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#8c8c8c; margin:0; padding-bottom:12px; border-bottom:1px solid #e4e4e4; }
+.ab-Main .megacol { display:flex; flex-direction:column; gap:2px; margin-top:8px; }
+.ab-Main .megalink { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15.5px; font-weight:600; line-height:1.3; color:#003B53; display:block; padding:8px 10px; margin-left:-10px; border-radius:3px; cursor:pointer; transition:background .14s ease; text-decoration:none; }
+.ab-Main .megalink.plain { font-weight:500; color:#2c2c2c; }
+.ab-Main .megalink:hover { background:#eef4f7; }
+.ab-Main .megacount { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:500; color:#9a9a9a; margin-left:8px; }
+.ab-Main .megacta { background:#FFFAEB; border:1px solid #F0E6CD; border-radius:6px; padding:24px 22px; }
+.ab-Main .megacta.on-dark { background:#003B53; border-color:#003B53; color:#ffffff; }
+.ab-Main .ctaeyebrow { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#FFD457; margin:0 0 8px 0; }
+.ab-Main .ctahead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:600; line-height:1.35; color:#ffffff; margin:0 0 16px 0; }
+
+/* BREADCRUMB BAR */
+.ab-Main .crumb-bar {
+  background: #F4F8FA;
+  border-top: 1px solid #E1EBEF;
+  border-bottom: 1px solid #E1EBEF;
+  padding: 14px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.ab-Main .crumb-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.ab-Main .crumb-prefix {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: #8C9DA6;
+  margin-right: 10px;
+  user-select: none;
+}
+.ab-Main .crumb-bar a {
+  color: #93A4AE;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.ab-Main .crumb-bar a:hover {
+  color: #027CA1;
+  text-decoration: underline;
+}
+.ab-Main .crumb-bar .sep {
+  color: #CBD7DC;
+  margin: 0 8px;
+  font-size: 12.5px;
+  line-height: 1;
+  user-select: none;
+}
+.ab-Main .crumb-bar .here {
+  color: #5D707A;
+  font-weight: 400;
+}
+
+/* LAB INTRO BANNER */
+.lab-intro { background:linear-gradient(180deg, #F0F6F8 0%, #FFFFFF 100%); padding:64px 0 48px; border-bottom:1px solid #DCE6EB; }
+.lab-badge { display:inline-flex; align-items:center; gap:8px; background:#003B53; color:#FFD457; padding:5px 12px; border-radius:4px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; margin-bottom:18px; }
+.lab-jumpnav { display:flex; flex-wrap:wrap; gap:10px; margin-top:36px; padding:18px 24px; background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; box-shadow:0 6px 18px rgba(0,59,83,0.04); }
+.lab-jumplink { font-family:'Montserrat',sans-serif; font-size:13.5px; font-weight:600; color:#003B53; text-decoration:none; padding:8px 16px; border-radius:4px; background:#F4F8FA; border:1px solid #E1EBEF; transition:all .15s ease; }
+.lab-jumplink:hover { background:#003B53; color:#ffffff; border-color:#003B53; }
+.lab-jumplink.highlight { background:#FFFAEB; border-color:#F0E6CD; color:#003B53; }
+.lab-jumplink.highlight:hover { background:#003B53; color:#FFD457; border-color:#003B53; }
+
+/* CONCEPT SECTION SHELL */
+.concept-shell { padding:88px 0; border-bottom:1px solid #E1EBEF; position:relative; }
+.concept-shell:nth-child(even) { background:#FAFCFD; }
+.concept-meta { display:grid; grid-template-columns:1fr 340px; gap:48px; align-items:start; margin-bottom:48px; }
+.concept-num { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:#027CA1; margin-bottom:8px; }
+.concept-title { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:700; color:#003B53; margin:0 0 12px 0; line-height:1.25; }
+.concept-desc { font-family:'Montserrat',sans-serif; font-size:16px; line-height:1.6; color:#55727E; margin:0; }
+.kadence-box { background:#ffffff; border:1px solid #DCE6EB; border-left:4px solid #027CA1; border-radius:4px; padding:20px; box-shadow:0 4px 12px rgba(0,59,83,0.03); }
+.kadence-box-title { font-family:'Montserrat',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#003B53; margin:0 0 8px 0; display:flex; align-items:center; gap:8px; }
+.kadence-box-body { font-family:'Montserrat',sans-serif; font-size:13px; line-height:1.55; color:#555555; margin:0; }
+.kadence-pill { display:inline-block; font-size:11px; font-weight:700; background:#EBF4F7; color:#027CA1; padding:2px 8px; border-radius:3px; margin:2px 4px 2px 0; }
+
+/* ==========================================================================
+   CONCEPT 1: ASYMMETRIC BENTO MOSAIC (12-COLUMN GRID)
+   ========================================================================== */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.bento-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px 32px;
+  color: #ffffff;
+  background-color: #002B3D;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+  border: 1px solid rgba(0,59,83,0.15);
+  box-shadow: 0 8px 24px rgba(0,59,83,0.08);
+  text-decoration: none;
+}
+.bento-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,43,61,0.22);
+  border-color: #FFD457;
+}
+.bento-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease, filter .3s ease;
+  filter: brightness(0.85) saturate(1.05);
+}
+.bento-item:hover .bento-bg {
+  transform: scale(1.06);
+  filter: brightness(0.95) saturate(1.15);
+}
+.bento-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,43,61,0.15) 0%, rgba(0,43,61,0.55) 50%, #002B3D 98%);
+  z-index: 1;
+  transition: opacity .25s ease;
+}
+.bento-item:hover .bento-scrim {
+  opacity: 0.92;
+}
+.bento-content {
+  position: relative;
+  z-index: 2;
+}
+.bento-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,212,87,0.18);
+  border: 1px solid #FFD457;
+  color: #FFD457;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+.bento-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+.bento-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 18px 0;
+  max-width: 95%;
+}
+.bento-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.bento-chip {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  padding: 3px 9px;
+  border-radius: 3px;
+}
+.bento-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFD457;
+  transition: gap .15s ease;
+}
+.bento-item:hover .bento-link {
+  gap: 12px;
+}
+/* Layout positions for 5 items */
+.bento-mfg { grid-column: span 7; min-height: 420px; }
+.bento-con { grid-column: span 5; min-height: 420px; }
+.bento-hosp { grid-column: span 4; min-height: 360px; }
+.bento-prof { grid-column: span 4; min-height: 360px; }
+.bento-tech { grid-column: span 4; min-height: 360px; }
+
+/* ==========================================================================
+   CONCEPT 2: HORIZONTAL EXPANDABLE PANELS (FISHEYE STRIPS)
+   ========================================================================== */
+.strips-container {
+  display: flex;
+  height: 520px;
+  gap: 14px;
+  width: 100%;
+}
+.strip-pane {
+  position: relative;
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex .4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow .3s ease, border-color .3s ease;
+  background: #002B3D;
+  border: 1px solid rgba(0,59,83,0.15);
+  box-shadow: 0 8px 24px rgba(0,59,83,0.06);
+}
+.strip-pane:hover, .strip-pane.active {
+  flex: 3.4;
+  box-shadow: 0 16px 36px rgba(0,43,61,0.25);
+  border-color: #FFD457;
+}
+.strip-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease, filter .3s ease;
+  filter: brightness(0.85);
+}
+.strip-pane:hover .strip-bg, .strip-pane.active .strip-bg {
+  transform: scale(1.05);
+  filter: brightness(0.95);
+}
+.strip-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,43,61,0.2) 0%, rgba(0,43,61,0.6) 45%, #002B3D 95%);
+  z-index: 1;
+}
+.strip-collapsed-label {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+.strip-pane:hover .strip-collapsed-label, .strip-pane.active .strip-collapsed-label {
+  opacity: 0;
+}
+.strip-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0,59,83,0.85);
+  border: 1.5px solid #FFD457;
+  color: #FFD457;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.strip-vertical-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.strip-expanded-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease .1s;
+}
+.strip-pane:hover .strip-expanded-content, .strip-pane.active .strip-expanded-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+.strip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFD457;
+  color: #003B53;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.strip-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+.strip-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 20px 0;
+  max-width: 580px;
+}
+.strip-deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 24px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+.strip-deliverable {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.strip-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFD457;
+  flex: none;
+}
+
+/* ==========================================================================
+   CONCEPT 3: 2 + 3 HYBRID CARD GRID
+   ========================================================================== */
+.hybrid-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.hybrid-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.hybrid-card {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 4px 14px rgba(0,59,83,0.03);
+}
+.hybrid-card:hover {
+  transform: translateY(-5px);
+  border-color: #027CA1;
+  box-shadow: 0 16px 32px rgba(0,59,83,0.09);
+}
+.hybrid-imgbox {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #002B3D;
+}
+.hybrid-card.wide .hybrid-imgbox { height: 220px; }
+.hybrid-card.trio .hybrid-imgbox { height: 180px; }
+.hybrid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+  filter: grayscale(0.2) contrast(1.05);
+}
+.hybrid-card:hover .hybrid-img {
+  transform: scale(1.05);
+  filter: grayscale(0) contrast(1.05);
+}
+.hybrid-badge-float {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #003B53;
+  color: #FFD457;
+  border: 1px solid rgba(255,212,87,0.3);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 2;
+}
+.hybrid-body {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.hybrid-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+.hybrid-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+.hybrid-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-top: 14px;
+  border-top: 1px solid #EBF1F4;
+}
+.hybrid-checkitem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+.hybrid-checkitem svg {
+  width: 16px;
+  height: 16px;
+  color: #027CA1;
+  flex: none;
+}
+.hybrid-action {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #003B53;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .15s ease, gap .15s ease;
+}
+.hybrid-card:hover .hybrid-action {
+  color: #027CA1;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   CONCEPT 4: INTERACTIVE SPLIT-SCREEN SHOWCASE (MASTER-DETAIL)
+   ========================================================================== */
+.split-showcase {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+.split-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.split-tab {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-left: 4px solid transparent;
+  border-radius: 6px;
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+}
+.split-tab:hover {
+  background: #FAFCFD;
+  border-color: #CBD7DC;
+}
+.split-tab.active {
+  background: #ffffff;
+  border-color: #DCE6EB;
+  border-left-color: #FFD457;
+  box-shadow: 0 8px 24px rgba(0,59,83,0.08);
+}
+.split-tab-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 0 0 4px 0;
+}
+.split-tab-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12.5px;
+  color: #7A8F99;
+  margin: 0;
+}
+.split-tab-chev {
+  width: 18px;
+  height: 18px;
+  color: #CBD7DC;
+  transition: transform .2s ease, color .2s ease;
+  flex: none;
+}
+.split-tab.active .split-tab-chev {
+  color: #003B53;
+  transform: translateX(4px);
+}
+.split-stage {
+  position: relative;
+  background: #002B3D;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 520px;
+  box-shadow: 0 16px 40px rgba(0,59,83,0.14);
+}
+.split-panel {
+  position: absolute;
+  inset: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.split-panel.active {
+  display: flex;
+  opacity: 1;
+}
+.split-panel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+.split-panel-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,43,61,0.92) 0%, rgba(0,43,61,0.75) 50%, rgba(0,43,61,0.3) 100%);
+  z-index: 1;
+}
+.split-panel-content {
+  position: relative;
+  z-index: 2;
+  padding: 56px 52px;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+.split-panel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFD457;
+  color: #003B53;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.split-panel-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+.split-panel-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 28px 0;
+}
+.split-panel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  margin-bottom: 32px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.split-panel-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  color: #ffffff;
+}
+.split-panel-item svg {
+  width: 16px;
+  height: 16px;
+  color: #FFD457;
+  flex: none;
+}
+
+/* ==========================================================================
+   CONCEPT 5: EQUINOX SIGNATURE GEOMETRIC FRAMES (BRAND CIRCLE & SHADOW OFFSET)
+   ========================================================================== */
+.geo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.geo-grid-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 940px;
+  margin: 32px auto 0;
+}
+.geo-card {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 8px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 4px 12px rgba(0,59,83,0.03);
+}
+.geo-card:hover {
+  transform: translateY(-5px);
+  border-color: #027CA1;
+  box-shadow: 0 16px 36px rgba(0,59,83,0.08);
+}
+.geo-frame-wrap {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.geo-frame-ring-gold {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #FFD457;
+}
+.geo-frame-ring-night {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border-radius: 50%;
+  border: 2px solid rgba(0,59,83,0.4);
+}
+.geo-frame-photo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.geo-frame-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+  filter: grayscale(0.5);
+}
+.geo-card:hover .geo-frame-photo img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+.geo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 0 0 10px 0;
+}
+.geo-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+.geo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.geo-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  background: #F0F6F8;
+  color: #027CA1;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.geo-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #003B53;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .15s ease, gap .15s ease;
+}
+.geo-card:hover .geo-link {
+  color: #027CA1;
+  gap: 12px;
+}
+
+/* COMPARISON TABLE */
+.comp-table-wrap {
+  margin-top: 56px;
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 4px 16px rgba(0,59,83,0.04);
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+.comp-table th {
+  background: #003B53;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.comp-table td {
+  padding: 18px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  border-bottom: 1px solid #EBF1F4;
+  border-right: 1px solid #EBF1F4;
+}
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table tr:hover td { background: #FAFCFD; }
+.star-score { color: #FFD457; font-weight: 700; }
+
+/* FOOTER */
+.ab-Main .ftbody { background:#112337; }
+.ab-Main .ftpad { padding-top:76px; padding-bottom:42px; }
+.ab-Main .ft3 { display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:48px; }
+.ab-Main .ftlogo { height:44px; width:auto; display:block; margin-bottom:20px; }
+.ab-Main .fttag { font-family:'Montserrat',Arial,sans-serif; font-size:13.5px; font-weight:600; color:#FFD457; margin:0 0 10px 0; }
+.ab-Main .ftsub { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.75); margin:0 0 14px 0; line-height:1.5; }
+.ab-Main .ftserve { font-family:'Montserrat',Arial,sans-serif; font-size:12.5px; color:rgba(255,255,255,.5); margin:0; }
+.ab-Main .ftcol { display:flex; flex-direction:column; gap:10px; }
+.ab-Main .fthead { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#ffffff; margin-bottom:8px; }
+.ab-Main .ftlink { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.75); text-decoration:none; transition:color .15s ease; }
+.ab-Main .ftlink:hover { color:#FFD457; }
+.ab-Main .legalbar { margin-top:56px; padding-top:24px; border-top:1px solid rgba(255,255,255,.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+.ab-Main .ftfine { font-family:'Montserrat',Arial,sans-serif; font-size:12.5px; color:rgba(255,255,255,.5); }
+
+/* RESPONSIVE */
+@media (max-width:1150px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 36px; }
+  .bento-mfg { grid-column: span 12; }
+  .bento-con { grid-column: span 12; }
+  .bento-hosp { grid-column: span 6; }
+  .bento-prof { grid-column: span 6; }
+  .bento-tech { grid-column: span 12; }
+  .strips-container { height: 460px; }
+  .split-showcase { grid-template-columns: 1fr; }
+  .split-stage { min-height: 480px; }
+  .geo-grid { grid-template-columns: repeat(2, 1fr); }
+  .geo-grid-sub { grid-template-columns: 1fr; max-width: 100%; }
+}
+
+@media (max-width:850px) {
+  .concept-meta { grid-template-columns: 1fr; gap: 24px; }
+  .strips-container { flex-direction: column; height: auto; }
+  .strip-pane { height: 180px; flex: none; }
+  .strip-pane:hover, .strip-pane.active { height: 380px; flex: none; }
+  .strip-collapsed-label { display: none; }
+  .strip-expanded-content { opacity: 1; pointer-events: auto; padding: 24px; }
+  .hybrid-row-2 { grid-template-columns: 1fr; }
+  .hybrid-row-3 { grid-template-columns: 1fr; }
+  .geo-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width:600px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 20px; }
+  .bento-hosp, .bento-prof, .bento-tech { grid-column: span 12; }
+  .strip-deliverables { grid-template-columns: 1fr; }
+  .split-panel-content { padding: 32px 24px; }
+  .split-panel-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="stage"><div class="ab-Main">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="wrapwide hdrrow">
+      <a href="index.html" aria-label="Equinox Business Law Group Home"><img class="wordmark" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group — Strategic Legal Counsel for All"></a>
+
+      <div style="display:flex; align-items:center; gap:32px;">
+        <div class="navwrap"><a class="navitem" href="general-counsel.html">General Counsel</a></div>
+
+        <div class="navwrap">
+          <a class="navitem here" href="services.html" tabindex="0">Services<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1.05fr 0.8fr 300px; gap:44px; padding-top:38px; padding-bottom:34px;">
+              <div>
+                <p class="megahead">Practice Areas</p>
+                <div class="megacol">
+                  <a class="megalink" href="services.html"><b>All Services &amp; Practice Areas</b></a>
+                  <span class="megalink">Starting a Business</span>
+                  <a class="megalink" href="service-contract-negotiation.html">Contract Negotiation &amp; Maintenance</a>
+                  <span class="megalink">Buying &amp; Selling a Business / M&amp;A</span>
+                  <span class="megalink">Intellectual Property</span>
+                  <span class="megalink">Real Estate</span>
+                  <span class="megalink">Succession &amp; Transition Planning</span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">By business function</p>
+                <div class="megacol">
+                  <span class="megalink">Corporate Strategy</span>
+                  <span class="megalink">Human Resources</span>
+                  <span class="megalink">Sales &amp; Revenue</span>
+                  <span class="megalink">Property &amp; Facilities</span>
+                  <span class="megalink">Purchasing &amp; Supply Chain</span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">Industries we serve</p>
+                <div class="megacol">
+                  <a class="megalink" href="industries-concept.html" style="color:#027CA1; font-weight:700;">Explore Industry Concepts &rarr;</a>
+                  <span class="megalink plain">Manufacturing</span>
+                  <span class="megalink plain">Construction</span>
+                  <span class="megalink plain">Hospitality / Retail</span>
+                  <span class="megalink plain">Professional Services</span>
+                  <span class="megalink plain">Software &amp; Tech</span>
+                </div>
+              </div>
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Design Exploration</p>
+                <p class="ctahead">Transforming icon boxes into high-impact image blocks.</p>
+                <a class="btn secondary sm" href="services.html"><span>Return to Services</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap"><a class="navitem" href="our-approach.html">Our Approach</a></div>
+        <div class="navwrap"><a class="navitem" href="about.html">About Us</a></div>
+        <div class="navwrap"><a class="navitem" href="careers.html">Careers</a></div>
+      </div>
+
+      <a class="btn secondary sm" href="general-counsel.html"><span>Book a Consultation</span></a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB BAR -->
+  <div class="crumb-bar">
+    <div class="wrapwide crumb-inner">
+      <span class="crumb-prefix">YOU ARE HERE:</span>
+      <a href="index.html">Home</a>
+      <span class="sep">&gt;&gt;</span>
+      <a href="services.html">Services</a>
+      <span class="sep">&gt;&gt;</span>
+      <span class="here">Industry Depth Image Concepts</span>
+    </div>
+  </div>
+
+  <!-- LAB INTRO -->
+  <section class="lab-intro">
+    <div class="wrap">
+      <div class="lab-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Equinox UI Design Lab
+      </div>
+      <h1 class="h1">5 Photographic UI Concepts for <b>5 Industry Sectors</b></h1>
+      <p class="body" style="margin-top:16px; max-width:920px;">
+        The current Industry Depth section in <a href="services.html#prax-grid" style="color:#027CA1; font-weight:600;">services.html</a> relies on 5 plain icon boxes. This page demonstrates 5 distinct, production-ready artistic ways to present Equinox&rsquo;s 5 industry areas using <b>rich image blocks, overlay gradients, and interactive mosaic structures</b> that can be directly assembled in WordPress with <b>Kadence Blocks</b>.
+      </p>
+
+      <div class="lab-jumpnav">
+        <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#8C9DA6; letter-spacing:.12em; text-transform:uppercase; align-self:center; margin-right:6px;">Jump To Concept:</span>
+        <a class="lab-jumplink" href="#concept-1">1. Bento Mosaic</a>
+        <a class="lab-jumplink" href="#concept-2">2. Expandable Strips</a>
+        <a class="lab-jumplink" href="#concept-3">3. 2+3 Hybrid Grid</a>
+        <a class="lab-jumplink" href="#concept-4">4. Split-Screen Showcase</a>
+        <a class="lab-jumplink" href="#concept-5">5. Geometric Frames</a>
+        <a class="lab-jumplink highlight" href="#comparison-matrix">&star; Compare All 5</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONCEPT 1: ASYMMETRIC BENTO MOSAIC
+       ===================================================================== -->
+  <section class="concept-shell" id="concept-1">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div>
+          <div class="concept-num">Concept 01 &bull; Editorial &amp; High Impact</div>
+          <h2 class="concept-title">The Asymmetric Bento Mosaic</h2>
+          <p class="concept-desc">
+            Solves the awkward 5-item grid imbalance using an editorial 12-column masonry grid. <b>Manufacturing</b> (7 cols) and <b>Construction</b> (5 cols) anchor the top with expansive cinematic scale. <b>Hospitality</b>, <b>Professional Services</b>, and <b>Software &amp; Tech</b> form a clean 3-part foundation below (4 cols each).
+          </p>
+        </div>
+        <div class="kadence-box">
+          <div class="kadence-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#027CA1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            Kadence Block Recipe
+          </div>
+          <p class="kadence-box-body">
+            Use <span class="kadence-pill">Kadence Row Layout</span> (12-col grid) or <span class="kadence-pill">Kadence Advanced Gallery</span> set to Masonry/Custom. Inside each cell, place a <span class="kadence-pill">Kadence Info Box</span> with background image overlay and inner content.
+          </p>
+        </div>
+      </div>
+
+      <!-- LIVE PREVIEW 1 -->
+      <div class="bento-grid">
+
+        <!-- 1. Manufacturing (Wide 7 cols) -->
+        <a href="#concept-1" class="bento-item bento-mfg">
+          <img class="bento-bg" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/building-corporate-steel.jpg';" alt="Manufacturing Plant Equipment">
+          <div class="bento-scrim"></div>
+          <div class="bento-content">
+            <span class="bento-tag">Heavy Industry &amp; Production</span>
+            <h3 class="bento-title">Manufacturing</h3>
+            <p class="bento-desc">Supply chain agreements, capital equipment leases, production safety regulations, and distributor indemnities that protect high-throughput production lines.</p>
+            <div class="bento-chips">
+              <span class="bento-chip">OEM &amp; Tier-1 Supply</span>
+              <span class="bento-chip">Equipment Financing</span>
+              <span class="bento-chip">Safety &amp; OSHA Compliance</span>
+            </div>
+            <span class="bento-link">Explore Manufacturing Counsel &rarr;</span>
+          </div>
+        </a>
+
+        <!-- 2. Construction (5 cols) -->
+        <a href="#concept-1" class="bento-item bento-con">
+          <img class="bento-bg" src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='assets/img/cta-bricks.jpg';" alt="Commercial Construction Site">
+          <div class="bento-scrim"></div>
+          <div class="bento-content">
+            <span class="bento-tag">Commercial &amp; Infrastructure</span>
+            <h3 class="bento-title">Construction</h3>
+            <p class="bento-desc">Subcontractor agreements, prevailing wage guidance, mechanic&rsquo;s liens, job-site risk, and multi-tier dispute defense.</p>
+            <div class="bento-chips">
+              <span class="bento-chip">AIA / AGC Contracts</span>
+              <span class="bento-chip">Lien Foreclosures</span>
+            </div>
+            <span class="bento-link">Explore Construction Counsel &rarr;</span>
+          </div>
+        </a>
+
+        <!-- 3. Hospitality & Retail (4 cols) -->
+        <a href="#concept-1" class="bento-item bento-hosp">
+          <img class="bento-bg" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='assets/img/building-glass-atrium.jpg';" alt="Restaurant and Retail Interior">
+          <div class="bento-scrim"></div>
+          <div class="bento-content">
+            <span class="bento-tag">Consumer &amp; Dining</span>
+            <h3 class="bento-title">Hospitality / Retail</h3>
+            <p class="bento-desc">High-traffic retail leases, wage &amp; hour labor compliance, multi-unit franchise structures, and supplier contracts.</p>
+            <span class="bento-link">Explore Hospitality &rarr;</span>
+          </div>
+        </a>
+
+        <!-- 4. Professional Services (4 cols) -->
+        <a href="#concept-1" class="bento-item bento-prof">
+          <img class="bento-bg" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='assets/img/s8-meeting.jpg';" alt="Executive Boardroom Meeting">
+          <div class="bento-scrim"></div>
+          <div class="bento-content">
+            <span class="bento-tag">Consulting &amp; Practice Firms</span>
+            <h3 class="bento-title">Professional Services</h3>
+            <p class="bento-desc">Client engagement letters, partner buy-in/buy-out structures, IP assignment, and restrictive covenants for advisory teams.</p>
+            <span class="bento-link">Explore Advisory &rarr;</span>
+          </div>
+        </a>
+
+        <!-- 5. Software & Tech (4 cols) -->
+        <a href="#concept-1" class="bento-item bento-tech">
+          <img class="bento-bg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='assets/img/building-ny-glass.jpg';" alt="Modern Tech Workplace">
+          <div class="bento-scrim"></div>
+          <div class="bento-content">
+            <span class="bento-tag">SaaS &amp; Intellectual Property</span>
+            <h3 class="bento-title">Software &amp; Tech</h3>
+            <p class="bento-desc">SaaS subscription agreements, software licensing, developer contractor NDAs, and data privacy frameworks.</p>
+            <span class="bento-link">Explore Tech Counsel &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONCEPT 2: HORIZONTAL EXPANDABLE STRIPS
+       ===================================================================== -->
+  <section class="concept-shell" id="concept-2">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div>
+          <div class="concept-num">Concept 02 &bull; Interactive &amp; Modern</div>
+          <h2 class="concept-title">The Panoramic Expandable Strips</h2>
+          <p class="concept-desc">
+            An ultra-sleek, space-saving showcase. 5 vertical photographic panels stand side-by-side. Moving your mouse over any strip smoothly expands it to 3.5&times; width while gently compressing the others, revealing rich descriptions, key contract deliverables, and a call-to-action without any vertical scrolling.
+          </p>
+        </div>
+        <div class="kadence-box">
+          <div class="kadence-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#027CA1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            Kadence Block Recipe
+          </div>
+          <p class="kadence-box-body">
+            Built using a single <span class="kadence-pill">Kadence Row Layout</span> with 5 sections set to CSS flex (`flex: 1` normal, `flex: 3.5` on hover) or a custom Kadence HTML block with lightweight responsive fallback.
+          </p>
+        </div>
+      </div>
+
+      <!-- LIVE PREVIEW 2 -->
+      <div class="strips-container">
+
+        <!-- Strip 1: Manufacturing (Default Active) -->
+        <div class="strip-pane active">
+          <img class="strip-bg" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null;this.src='assets/img/building-corporate-steel.jpg';" alt="Manufacturing">
+          <div class="strip-scrim"></div>
+          <div class="strip-collapsed-label">
+            <div class="strip-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <span class="strip-vertical-title">Manufacturing</span>
+          </div>
+          <div class="strip-expanded-content">
+            <span class="strip-badge">Industrial Sector</span>
+            <h3 class="strip-title">Manufacturing &amp; Heavy Fabrication</h3>
+            <p class="strip-desc">Supply chain agreements, capital equipment leases, production safety regulations, and distributor indemnities that protect high-volume production operations.</p>
+            <div class="strip-deliverables">
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Supply Chain &amp; Logistics SLAs</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Machinery &amp; Capital Leases</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Distributor Agreements</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Product Liability Shields</span></div>
+            </div>
+            <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Explore Manufacturing Counsel</span></a>
+          </div>
+        </div>
+
+        <!-- Strip 2: Construction -->
+        <div class="strip-pane">
+          <img class="strip-bg" src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null;this.src='assets/img/cta-bricks.jpg';" alt="Construction">
+          <div class="strip-scrim"></div>
+          <div class="strip-collapsed-label">
+            <div class="strip-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <span class="strip-vertical-title">Construction</span>
+          </div>
+          <div class="strip-expanded-content">
+            <span class="strip-badge">Building &amp; Trades</span>
+            <h3 class="strip-title">Construction &amp; Development</h3>
+            <p class="strip-desc">Subcontractor agreements, prevailing wage guidance, mechanic&rsquo;s liens, job-site risk, and multi-tier dispute defense across the Pacific Northwest.</p>
+            <div class="strip-deliverables">
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Subcontractor Master MSAs</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Mechanic&rsquo;s Lien Enforcement</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Prevailing Wage Defense</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Job-site Indemnification</span></div>
+            </div>
+            <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Explore Construction Counsel</span></a>
+          </div>
+        </div>
+
+        <!-- Strip 3: Hospitality / Retail -->
+        <div class="strip-pane">
+          <img class="strip-bg" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null;this.src='assets/img/building-glass-atrium.jpg';" alt="Hospitality">
+          <div class="strip-scrim"></div>
+          <div class="strip-collapsed-label">
+            <div class="strip-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            </div>
+            <span class="strip-vertical-title">Hospitality / Retail</span>
+          </div>
+          <div class="strip-expanded-content">
+            <span class="strip-badge">Retail &amp; Dining</span>
+            <h3 class="strip-title">Hospitality, Dining &amp; Retail</h3>
+            <p class="strip-desc">High-traffic commercial leases, tip-pooling and wage compliance, multi-unit franchise agreements, and food/beverage distribution contracts.</p>
+            <div class="strip-deliverables">
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Commercial Space Leases</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Wage &amp; Hour Compliance</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Liquor Licensing Support</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Franchise Disclosures</span></div>
+            </div>
+            <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Explore Hospitality Counsel</span></a>
+          </div>
+        </div>
+
+        <!-- Strip 4: Professional Services -->
+        <div class="strip-pane">
+          <img class="strip-bg" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null;this.src='assets/img/s8-meeting.jpg';" alt="Professional Services">
+          <div class="strip-scrim"></div>
+          <div class="strip-collapsed-label">
+            <div class="strip-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <span class="strip-vertical-title">Professional Services</span>
+          </div>
+          <div class="strip-expanded-content">
+            <span class="strip-badge">Firms &amp; Consultancies</span>
+            <h3 class="strip-title">Professional Services &amp; Advisory</h3>
+            <p class="strip-desc">Client engagement letters, equity buy-in/buy-out agreements, proprietary methodology protection, and executive restrictive covenants.</p>
+            <div class="strip-deliverables">
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Client Engagement Agreements</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Partner Buy-In Structuring</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Work Product IP Assignment</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Non-Solicitation Protections</span></div>
+            </div>
+            <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Explore Advisory Counsel</span></a>
+          </div>
+        </div>
+
+        <!-- Strip 5: Software & Tech -->
+        <div class="strip-pane">
+          <img class="strip-bg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" onerror="this.onerror=null;this.src='assets/img/building-ny-glass.jpg';" alt="Technology">
+          <div class="strip-scrim"></div>
+          <div class="strip-collapsed-label">
+            <div class="strip-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="strip-vertical-title">Software &amp; Tech</span>
+          </div>
+          <div class="strip-expanded-content">
+            <span class="strip-badge">SaaS &amp; Platforms</span>
+            <h3 class="strip-title">Software, SaaS &amp; Tech Ventures</h3>
+            <p class="strip-desc">SaaS customer subscription agreements, API licensing, developer IP assignments, and consumer privacy frameworks (CCPA/GDPR).</p>
+            <div class="strip-deliverables">
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>SaaS Master Subscriptions</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Developer IP Assignments</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Privacy Policy &amp; Terms</span></div>
+              <div class="strip-deliverable"><span class="strip-bullet"></span><span>Data Breach Response Prep</span></div>
+            </div>
+            <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Explore Tech Counsel</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONCEPT 3: 2 + 3 HYBRID CARD GRID
+       ===================================================================== -->
+  <section class="concept-shell" id="concept-3">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div>
+          <div class="concept-num">Concept 03 &bull; Clean, Familiar &amp; Highly Readable</div>
+          <h2 class="concept-title">The 2 + 3 Split-Level Card Grid</h2>
+          <p class="concept-desc">
+            A balanced approach using photographic card headers and structured content bodies. The top row highlights 2 major industrial categories (Manufacturing and Construction) with wider aspect ratios and expanded legal scopes. The second row cleanly accommodates the 3 service and digital categories.
+          </p>
+        </div>
+        <div class="kadence-box">
+          <div class="kadence-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#027CA1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
+            Kadence Block Recipe
+          </div>
+          <p class="kadence-box-body">
+            100% native Kadence blocks! Row 1 is a <span class="kadence-pill">Kadence Row Layout</span> (2 cols), Row 2 is a <span class="kadence-pill">Kadence Row Layout</span> (3 cols). Each card is built using a <span class="kadence-pill">Kadence Info Box</span> with an image header and text block.
+          </p>
+        </div>
+      </div>
+
+      <!-- LIVE PREVIEW 3 -->
+      <div class="hybrid-row-2">
+
+        <!-- Card 1: Manufacturing -->
+        <article class="hybrid-card wide">
+          <div class="hybrid-imgbox">
+            <img class="hybrid-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='assets/img/building-corporate-steel.jpg';" alt="Manufacturing Plant">
+            <span class="hybrid-badge-float">Industrial &bull; Tier-1</span>
+          </div>
+          <div class="hybrid-body">
+            <div>
+              <h3 class="hybrid-title">Manufacturing &amp; Distribution</h3>
+              <p class="hybrid-desc">We structure long-term raw material supply master contracts, equipment leasing instruments, product recall protocols, and independent distributor agreements across domestic and international channels.</p>
+              <div class="hybrid-checklist">
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Supply chain liability allocation &amp; indemnities</span></div>
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Capital equipment financing &amp; vendor warranties</span></div>
+              </div>
+            </div>
+            <a class="hybrid-action" href="services.html"><span>Explore Manufacturing Legal Practice</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 2: Construction -->
+        <article class="hybrid-card wide">
+          <div class="hybrid-imgbox">
+            <img class="hybrid-img" src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" onerror="this.onerror=null;this.src='assets/img/cta-bricks.jpg';" alt="Construction Trades">
+            <span class="hybrid-badge-float">Commercial Building</span>
+          </div>
+          <div class="hybrid-body">
+            <div>
+              <h3 class="hybrid-title">Construction &amp; Real Estate Development</h3>
+              <p class="hybrid-desc">Protecting general contractors, specialty trades, and developers from payment disputes, mechanic&rsquo;s liens, subcontractor defaults, and multi-tier public works prevailing wage audits.</p>
+              <div class="hybrid-checklist">
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Custom subcontract agreements with pay-if-paid terms</span></div>
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Lien notices, bond claims, and dispute mitigation</span></div>
+              </div>
+            </div>
+            <a class="hybrid-action" href="services.html"><span>Explore Construction Legal Practice</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="hybrid-row-3">
+
+        <!-- Card 3: Hospitality -->
+        <article class="hybrid-card trio">
+          <div class="hybrid-imgbox">
+            <img class="hybrid-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null;this.src='assets/img/building-glass-atrium.jpg';" alt="Hospitality">
+            <span class="hybrid-badge-float">Hospitality</span>
+          </div>
+          <div class="hybrid-body">
+            <div>
+              <h3 class="hybrid-title">Hospitality / Retail</h3>
+              <p class="hybrid-desc">High-traffic retail leases, wage &amp; hour labor compliance, multi-unit franchise structures, and supplier contracts.</p>
+              <div class="hybrid-checklist">
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Commercial retail leases</span></div>
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Tip pools &amp; labor defense</span></div>
+              </div>
+            </div>
+            <a class="hybrid-action" href="services.html"><span>Learn More</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 4: Professional Services -->
+        <article class="hybrid-card trio">
+          <div class="hybrid-imgbox">
+            <img class="hybrid-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null;this.src='assets/img/s8-meeting.jpg';" alt="Professional Advisory">
+            <span class="hybrid-badge-float">Firms &amp; Advisory</span>
+          </div>
+          <div class="hybrid-body">
+            <div>
+              <h3 class="hybrid-title">Professional Services</h3>
+              <p class="hybrid-desc">Client engagement letters, partner buy-in/buy-out structures, IP assignment, and restrictive covenants.</p>
+              <div class="hybrid-checklist">
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Engagement terms &amp; fee models</span></div>
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Partner equity transitions</span></div>
+              </div>
+            </div>
+            <a class="hybrid-action" href="services.html"><span>Learn More</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 5: Software & Tech -->
+        <article class="hybrid-card trio">
+          <div class="hybrid-imgbox">
+            <img class="hybrid-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" onerror="this.onerror=null;this.src='assets/img/building-ny-glass.jpg';" alt="Software & Tech">
+            <span class="hybrid-badge-float">Software &amp; SaaS</span>
+          </div>
+          <div class="hybrid-body">
+            <div>
+              <h3 class="hybrid-title">Software &amp; Tech</h3>
+              <p class="hybrid-desc">SaaS subscription agreements, software licensing, developer contractor NDAs, and data privacy frameworks.</p>
+              <div class="hybrid-checklist">
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Customer SaaS agreements &amp; SLAs</span></div>
+                <div class="hybrid-checkitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Contractor IP ownership cleanups</span></div>
+              </div>
+            </div>
+            <a class="hybrid-action" href="services.html"><span>Learn More</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONCEPT 4: INTERACTIVE SPLIT-SCREEN SHOWCASE
+       ===================================================================== -->
+  <section class="concept-shell" id="concept-4">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div>
+          <div class="concept-num">Concept 04 &bull; Focused Storytelling &amp; Deep Dive</div>
+          <h2 class="concept-title">The Interactive Split-Screen Spotlight</h2>
+          <p class="concept-desc">
+            Rather than crowding all 5 industries into one dense view, this master-detail design pairs an interactive vertical selector menu with a cinematic photo spotlight. Clicking any industry immediately updates the background photography, core risk analysis, and contract deliverables.
+          </p>
+        </div>
+        <div class="kadence-box">
+          <div class="kadence-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#027CA1" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="8" y1="8" x2="8" y2="21"/></svg>
+            Kadence Block Recipe
+          </div>
+          <p class="kadence-box-body">
+            Directly maps to the <span class="kadence-pill">Kadence Tabs Block</span> with <b>Vertical Layout</b> orientation. Each tab panel contains an image overlay container with text, pills, and button blocks.
+          </p>
+        </div>
+      </div>
+
+      <!-- LIVE PREVIEW 4 -->
+      <div class="split-showcase">
+
+        <!-- Selector List (Left) -->
+        <div class="split-nav" role="tablist">
+          <button class="split-tab active" type="button" onclick="selectShowcase(0)" id="tab-0">
+            <div>
+              <div class="split-tab-title">1. Manufacturing</div>
+              <p class="split-tab-sub">Supply chain, equipment leasing, &amp; distributor networks</p>
+            </div>
+            <svg class="split-tab-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="split-tab" type="button" onclick="selectShowcase(1)" id="tab-1">
+            <div>
+              <div class="split-tab-title">2. Construction</div>
+              <p class="split-tab-sub">Subcontracts, mechanic&rsquo;s liens, &amp; prevailing wage</p>
+            </div>
+            <svg class="split-tab-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="split-tab" type="button" onclick="selectShowcase(2)" id="tab-2">
+            <div>
+              <div class="split-tab-title">3. Hospitality / Retail</div>
+              <p class="split-tab-sub">High-traffic retail leases, wage &amp; hour, &amp; licensing</p>
+            </div>
+            <svg class="split-tab-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="split-tab" type="button" onclick="selectShowcase(3)" id="tab-3">
+            <div>
+              <div class="split-tab-title">4. Professional Services</div>
+              <p class="split-tab-sub">Client master agreements, partner buy-in, &amp; IP</p>
+            </div>
+            <svg class="split-tab-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <button class="split-tab" type="button" onclick="selectShowcase(4)" id="tab-4">
+            <div>
+              <div class="split-tab-title">5. Software &amp; Tech</div>
+              <p class="split-tab-sub">SaaS terms, developer contractor NDAs, &amp; privacy</p>
+            </div>
+            <svg class="split-tab-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <!-- Spotlight Stage (Right) -->
+        <div class="split-stage">
+
+          <!-- Panel 0: Manufacturing -->
+          <div class="split-panel active" id="panel-0">
+            <img class="split-panel-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/building-corporate-steel.jpg';" alt="Manufacturing Stage">
+            <div class="split-panel-scrim"></div>
+            <div class="split-panel-content">
+              <span class="split-panel-badge">Core Sector Spotlight</span>
+              <h3 class="split-panel-title">Manufacturing &amp; Industrial Logistics</h3>
+              <p class="split-panel-desc">We shield production lines, mitigate raw material cost volatility, and protect proprietary tooling rights through rock-solid vendor and OEM contracts.</p>
+              <div class="split-panel-grid">
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Master Supply Agreements</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Equipment Capital Leases</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Distributor Territory Rights</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>OSHA Workplace Regulations</span></div>
+              </div>
+              <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Consult Manufacturing Practice</span></a>
+            </div>
+          </div>
+
+          <!-- Panel 1: Construction -->
+          <div class="split-panel" id="panel-1">
+            <img class="split-panel-img" src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/cta-bricks.jpg';" alt="Construction Stage">
+            <div class="split-panel-scrim"></div>
+            <div class="split-panel-content">
+              <span class="split-panel-badge">Core Sector Spotlight</span>
+              <h3 class="split-panel-title">Construction &amp; Commercial Development</h3>
+              <p class="split-panel-desc">From framing and civil engineering to multi-tier general contracting, we secure prompt payment and deflect liability across job sites.</p>
+              <div class="split-panel-grid">
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Subcontract Risk Allocation</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Mechanic&rsquo;s Lien Enforcement</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Public Works Prevailing Wage</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Bond Claim Filings</span></div>
+              </div>
+              <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Consult Construction Practice</span></a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Hospitality / Retail -->
+          <div class="split-panel" id="panel-2">
+            <img class="split-panel-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/building-glass-atrium.jpg';" alt="Hospitality Stage">
+            <div class="split-panel-scrim"></div>
+            <div class="split-panel-content">
+              <span class="split-panel-badge">Core Sector Spotlight</span>
+              <h3 class="split-panel-title">Hospitality, Restaurants &amp; Retail</h3>
+              <p class="split-panel-desc">Navigating the high-stakes world of landlord covenants, foot-traffic lease clauses, and aggressive service-worker labor audits.</p>
+              <div class="split-panel-grid">
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Commercial Lease Negotiation</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Tip-Pooling &amp; Wage Defense</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Franchise System Structuring</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Liquor &amp; Health Licensing</span></div>
+              </div>
+              <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Consult Hospitality Practice</span></a>
+            </div>
+          </div>
+
+          <!-- Panel 3: Professional Services -->
+          <div class="split-panel" id="panel-3">
+            <img class="split-panel-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/s8-meeting.jpg';" alt="Professional Services Stage">
+            <div class="split-panel-scrim"></div>
+            <div class="split-panel-content">
+              <span class="split-panel-badge">Core Sector Spotlight</span>
+              <h3 class="split-panel-title">Professional Services &amp; Advisory</h3>
+              <p class="split-panel-desc">Protecting firm profitability, establishing clean partner succession equity paths, and shielding confidential client frameworks.</p>
+              <div class="split-panel-grid">
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Client Engagement Letters</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Partner Buy-In / Buy-Outs</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Proprietary Methodology IP</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Executive Restrictive Covenants</span></div>
+              </div>
+              <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Consult Professional Services</span></a>
+            </div>
+          </div>
+
+          <!-- Panel 4: Software & Tech -->
+          <div class="split-panel" id="panel-4">
+            <img class="split-panel-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" onerror="this.onerror=null;this.src='assets/img/building-ny-glass.jpg';" alt="Software & Tech Stage">
+            <div class="split-panel-scrim"></div>
+            <div class="split-panel-content">
+              <span class="split-panel-badge">Core Sector Spotlight</span>
+              <h3 class="split-panel-title">Software, SaaS &amp; High-Growth Tech</h3>
+              <p class="split-panel-desc">Crafting scalable enterprise subscription agreements, securing developer IP assignments, and ensuring full data privacy compliance.</p>
+              <div class="split-panel-grid">
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Enterprise SaaS Agreements</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Software Licensing &amp; APIs</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>Developer Contractor NDAs</span></div>
+                <div class="split-panel-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg><span>CCPA &amp; GDPR Compliance</span></div>
+              </div>
+              <a href="services.html" class="btn secondary sm" style="width:fit-content;"><span>Consult Tech Practice</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONCEPT 5: EQUINOX SIGNATURE GEOMETRIC FRAMES
+       ===================================================================== -->
+  <section class="concept-shell" id="concept-5">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div>
+          <div class="concept-num">Concept 05 &bull; Signature Brand Identity</div>
+          <h2 class="concept-title">The Equinox Geometric Ring Frames</h2>
+          <p class="concept-desc">
+            Rather than generic rectangular photos, this concept embeds Equinox&rsquo;s iconic concentric brand geometry (the double concentric gold and night circles from the homepage hero). Each industry card features a circular image cutout framed in precision gold and night accents, creating an unmistakably bespoke legal look.
+          </p>
+        </div>
+        <div class="kadence-box">
+          <div class="kadence-box-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#027CA1" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg>
+            Kadence Block Recipe
+          </div>
+          <p class="kadence-box-body">
+            Use <span class="kadence-pill">Kadence Info Box Block</span> with <b>Image</b> media type set to <b>Circle</b> border-radius and gold border styling. Layout uses a 3-column + 2-column centered <span class="kadence-pill">Kadence Row Layout</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- LIVE PREVIEW 5 (3 + 2 Formation) -->
+      <div class="geo-grid">
+
+        <!-- Card 1: Manufacturing -->
+        <div class="geo-card">
+          <div class="geo-frame-wrap">
+            <div class="geo-frame-ring-gold"></div>
+            <div class="geo-frame-ring-night"></div>
+            <div class="geo-frame-photo">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=300&q=80" onerror="this.onerror=null;this.src='assets/img/building-corporate-steel.jpg';" alt="Manufacturing Frame">
+            </div>
+          </div>
+          <h3 class="geo-title">Manufacturing</h3>
+          <p class="geo-desc">Supply chain agreements, capital equipment leases, production safety regulations, and distributor indemnities.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">Supply Chain</span>
+            <span class="geo-tag">Equipment Leases</span>
+            <span class="geo-tag">OSHA</span>
+          </div>
+          <a class="geo-link" href="services.html"><span>Explore Practice</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Card 2: Construction -->
+        <div class="geo-card">
+          <div class="geo-frame-wrap">
+            <div class="geo-frame-ring-gold"></div>
+            <div class="geo-frame-ring-night"></div>
+            <div class="geo-frame-photo">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=300&q=80" onerror="this.onerror=null;this.src='assets/img/cta-bricks.jpg';" alt="Construction Frame">
+            </div>
+          </div>
+          <h3 class="geo-title">Construction</h3>
+          <p class="geo-desc">Subcontractor agreements, prevailing wage guidance, mechanic&rsquo;s liens, job-site risk, and multi-tier dispute defense.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">Subcontracts</span>
+            <span class="geo-tag">Mechanic Liens</span>
+            <span class="geo-tag">Public Works</span>
+          </div>
+          <a class="geo-link" href="services.html"><span>Explore Practice</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Card 3: Hospitality / Retail -->
+        <div class="geo-card">
+          <div class="geo-frame-wrap">
+            <div class="geo-frame-ring-gold"></div>
+            <div class="geo-frame-ring-night"></div>
+            <div class="geo-frame-photo">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" onerror="this.onerror=null;this.src='assets/img/building-glass-atrium.jpg';" alt="Hospitality Frame">
+            </div>
+          </div>
+          <h3 class="geo-title">Hospitality / Retail</h3>
+          <p class="geo-desc">High-traffic retail leases, wage &amp; hour labor compliance, multi-unit franchise structures, and supplier contracts.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">Commercial Leases</span>
+            <span class="geo-tag">Labor Defense</span>
+            <span class="geo-tag">Franchising</span>
+          </div>
+          <a class="geo-link" href="services.html"><span>Explore Practice</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+      </div>
+
+      <div class="geo-grid-sub">
+
+        <!-- Card 4: Professional Services -->
+        <div class="geo-card">
+          <div class="geo-frame-wrap">
+            <div class="geo-frame-ring-gold"></div>
+            <div class="geo-frame-ring-night"></div>
+            <div class="geo-frame-photo">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=80" onerror="this.onerror=null;this.src='assets/img/s8-meeting.jpg';" alt="Professional Services Frame">
+            </div>
+          </div>
+          <h3 class="geo-title">Professional Services</h3>
+          <p class="geo-desc">Client engagement letters, partner buy-in/buy-out structures, IP assignment, and restrictive covenants for advisory teams.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">Engagement MSAs</span>
+            <span class="geo-tag">Partner Transitions</span>
+            <span class="geo-tag">IP Protection</span>
+          </div>
+          <a class="geo-link" href="services.html"><span>Explore Practice</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+        <!-- Card 5: Software & Tech -->
+        <div class="geo-card">
+          <div class="geo-frame-wrap">
+            <div class="geo-frame-ring-gold"></div>
+            <div class="geo-frame-ring-night"></div>
+            <div class="geo-frame-photo">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=300&q=80" onerror="this.onerror=null;this.src='assets/img/building-ny-glass.jpg';" alt="Software Frame">
+            </div>
+          </div>
+          <h3 class="geo-title">Software &amp; Tech</h3>
+          <p class="geo-desc">SaaS subscription agreements, software licensing, developer contractor NDAs, and data privacy frameworks.</p>
+          <div class="geo-tags">
+            <span class="geo-tag">SaaS Contracts</span>
+            <span class="geo-tag">Developer IP</span>
+            <span class="geo-tag">Privacy (CCPA)</span>
+          </div>
+          <a class="geo-link" href="services.html"><span>Explore Practice</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       COMPARISON & RECOMMENDATION MATRIX
+       ===================================================================== -->
+  <section class="concept-shell" id="comparison-matrix" style="background:#ffffff;">
+    <div class="wrap">
+      <div style="max-width:820px;">
+        <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Design Evaluation</span></div>
+        <h2 class="h2">Comparing the <b>5 UI Approaches</b></h2>
+        <p class="body" style="margin-top:16px;">
+          Each concept brings unique strengths depending on your priorities for visual drama, ease of WordPress maintenance, and mobile performance.
+        </p>
+      </div>
+
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>Visual Impact</th>
+              <th>Kadence WP Ease</th>
+              <th>Mobile Behavior</th>
+              <th>Best Suited For</th>
+              <th>Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>1. Bento Mosaic</b></td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;&starf;</span> Exceptional</td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;</span> Moderate</td>
+              <td>Stacks into 2-col then 1-col cards</td>
+              <td>Bold, editorial, modern corporate presence</td>
+              <td><span class="kadence-pill" style="background:#E8F5E9; color:#2E7D32;">Top Choice for Wow Factor</span></td>
+            </tr>
+            <tr>
+              <td><b>2. Expandable Strips</b></td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;&starf;</span> Ultra Interactive</td>
+              <td><span class="star-score">&starf;&starf;&starf;</span> Custom CSS</td>
+              <td>Converts to clean vertical cards</td>
+              <td>Zero-scroll compactness, high engagement</td>
+              <td><span class="kadence-pill" style="background:#FFF8E1; color:#F57F17;">Great for Desktop Interaction</span></td>
+            </tr>
+            <tr>
+              <td><b>3. 2+3 Hybrid Grid</b></td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;</span> High</td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;&starf;</span> Easiest</td>
+              <td>Flawless automatic grid collapse</td>
+              <td>Bulletproof readability &amp; Kadence parity</td>
+              <td><span class="kadence-pill" style="background:#E1F5FE; color:#0277BD;">Top Choice for WordPress Simplicity</span></td>
+            </tr>
+            <tr>
+              <td><b>4. Split Showcase</b></td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;</span> High</td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;</span> Built-in Tabs</td>
+              <td>Tabs wrap above the showcase image</td>
+              <td>Deep storytelling, comprehensive bullet lists</td>
+              <td><span class="kadence-pill" style="background:#EDE7F6; color:#512DA8;">Best for Detailed Legal Deliverables</span></td>
+            </tr>
+            <tr>
+              <td><b>5. Geometric Frames</b></td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;</span> Distinctive</td>
+              <td><span class="star-score">&starf;&starf;&starf;&starf;&starf;</span> Very Easy</td>
+              <td>Centered 1-col card flow</td>
+              <td>Direct cohesion with Equinox circle logo/hero</td>
+              <td><span class="kadence-pill" style="background:#FBE9E7; color:#D84315;">Best for Brand Consistency</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:40px; display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <span style="font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600; color:#003B53;">Ready to implement one of these in services.html?</span>
+        <a class="btn main sm" href="services.html"><span>Return to Services Page</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ftbody">
+    <div class="wrapwide ftpad">
+      <div class="ft3">
+        <div>
+          <img class="ftlogo" src="./assets/equinox-logo-tag-reverse.png" alt="Equinox Business Law Group">
+          <p class="fttag">Strategic Legal Counsel for Growing Enterprises</p>
+          <p class="ftsub">Equinox provides proactive, fixed-fee Fractional General Counsel and business law solutions for mid-market companies throughout the Pacific Northwest.</p>
+          <p class="ftserve">Serving Washington, Oregon, and multi-state enterprises.</p>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Practices &amp; Industries</span>
+          <a class="ftlink" href="services.html">All Services</a>
+          <a class="ftlink" href="service-contract-negotiation.html">Contracts &amp; Negotiations</a>
+          <a class="ftlink" href="services.html#prax-formation">Business Formation</a>
+          <a class="ftlink" href="services.html#prax-ma">M&amp;A &amp; Transactions</a>
+          <a class="ftlink" href="industries-concept.html">Industry Concepts (Active)</a>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Explore Equinox</span>
+          <a class="ftlink" href="index.html">Home</a>
+          <a class="ftlink" href="about.html">About Us</a>
+          <a class="ftlink" href="team.html">Our Team</a>
+          <a class="ftlink" href="our-approach.html">Our Approach</a>
+          <a class="ftlink" href="general-counsel.html">General Counsel</a>
+          <a class="ftlink" href="careers.html">Careers</a>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Contact</span>
+          <span class="ftlink">425-250-0205</span>
+          <span class="ftlink">contact@equinoxbusinesslaw.com</span>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12.5px; color:rgba(255,255,255,0.45); margin-top:16px;">
+            11100 NE 8th St, Suite 450<br>Bellevue, WA 98004
+          </p>
+        </div>
+      </div>
+      <div class="legalbar">
+        <span class="ftfine">&copy; 2026 Equinox Business Law Group PLLC</span>
+        <span class="ftfine">Confidential Internal Concept Showcase &bull; Blocked from Web Crawlers</span>
+      </div>
+    </div>
+  </footer>
+
+</div></div>
+
+<!-- JAVASCRIPT FOR INTERACTIVE DEMOS -->
+<script>
+// Concept 2: Strips Click/Hover handler
+document.querySelectorAll('.strip-pane').forEach(function(pane) {
+  pane.addEventListener('mouseenter', function() {
+    document.querySelectorAll('.strip-pane').forEach(function(p) { p.classList.remove('active'); });
+    pane.classList.add('active');
+  });
+});
+
+// Concept 4: Split Showcase Tab Switcher
+function selectShowcase(idx) {
+  // Update tabs
+  document.querySelectorAll('.split-tab').forEach(function(t, i) {
+    if (i === idx) {
+      t.classList.add('active');
+    } else {
+      t.classList.remove('active');
+    }
+  });
+
+  // Update panels
+  document.querySelectorAll('.split-panel').forEach(function(p, i) {
+    if (i === idx) {
+      p.classList.add('active');
+    } else {
+      p.classList.remove('active');
+    }
+  });
+}
+</script>
+</body>
+</html>
