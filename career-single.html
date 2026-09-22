@@ -333,10 +333,127 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 @media (max-width:1150px) {
   .ab-Main .ctasplit { grid-template-columns:1fr; gap:48px; }
 }
+
+/* ==================================================================
+   RESPONSIVE HEADER, BURGER DRAWER & MOBILE ADJUSTMENTS
+   ================================================================== */
+.ab-Main .desktop-nav { display:flex; align-items:center; gap:32px; }
+
+/* BURGER MENU & MOBILE DRAWER */
+.ab-Main .hdr-actions-mobile { display:none; align-items:center; gap:12px; }
+.ab-Main .hdr-mob-cta { padding:7px 14px; font-size:13px; font-weight:600; border-radius:3px; }
+.ab-Main .burger-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid #DCE6EB;
+  border-radius: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 10px 8px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .2s ease;
+  color: #003B53;
+  box-sizing: border-box;
+}
+.ab-Main .burger-btn:hover { background:#F4F8FA; border-color:#003B53; }
+.ab-Main .burger-btn:focus-visible { outline:2px solid #027CA1; outline-offset:2px; }
+.ab-Main .burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #003B53;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.ab-Main .burger-btn.open .burger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.ab-Main .burger-btn.open .burger-line:nth-child(2) { opacity: 0; }
+.ab-Main .burger-btn.open .burger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.ab-Main .mobile-drawer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 3px solid #003B53;
+  box-shadow: 0 20px 40px rgba(0,59,83,0.18);
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 55;
+  padding: 16px 24px 32px;
+}
+.ab-Main .mobile-drawer.open {
+  display: block;
+  animation: mobDrawerSlide .24s ease-out;
+}
+@keyframes mobDrawerSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ab-Main .mob-nav-list { display:flex; flex-direction:column; gap:0; margin:0; padding:0; list-style:none; }
+.ab-Main .mob-nav-item { border-bottom:1px solid #EBF1F4; }
+.ab-Main .mob-nav-link { display:flex; align-items:center; justify-content:space-between; font-family:'Montserrat',Arial,sans-serif; font-size:16px; font-weight:600; color:#003B53; padding:13px 4px; text-decoration:none; transition:color .15s ease; }
+.ab-Main .mob-nav-link:hover, .ab-Main .mob-nav-link.here { color:#027CA1; }
+.ab-Main .mob-acc { border-bottom:1px solid #EBF1F4; }
+.ab-Main .mob-acc-summary { display:flex; align-items:center; justify-content:space-between; font-family:'Montserrat',Arial,sans-serif; font-size:16px; font-weight:600; color:#003B53; padding:13px 4px; cursor:pointer; list-style:none; user-select:none; }
+.ab-Main .mob-acc-summary::-webkit-details-marker { display:none; }
+.ab-Main .mob-acc-chev { width:18px; height:18px; color:#7A8F99; transition:transform .2s ease; flex:none; }
+.ab-Main .mob-acc[open] .mob-acc-chev { transform:rotate(180deg); color:#027CA1; }
+.ab-Main .mob-acc-body { padding:8px 12px 14px 16px; background:#FAFCFD; border-left:3px solid #FFD457; border-radius:0 4px 4px 0; margin:0 0 10px 0; display:flex; flex-direction:column; gap:6px; }
+.ab-Main .mob-sublink { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:500; color:#2c2c2c; text-decoration:none; padding:5px 0; display:block; transition:color .15s ease; }
+.ab-Main .mob-sublink:hover, .ab-Main .mob-sublink.here { color:#027CA1; font-weight:700; }
+.ab-Main .mob-drawer-footer { margin-top:20px; padding-top:20px; border-top:1px solid #E1EBEF; display:flex; flex-direction:column; gap:12px; }
+.ab-Main .mob-contact-row { display:flex; align-items:center; gap:10px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:#55727E; text-decoration:none; }
+.ab-Main .mob-contact-row:hover { color:#003B53; }
+.ab-Main .mob-contact-row svg { width:16px; height:16px; color:#027CA1; flex:none; }
+
+/* RESPONSIVE MEDIA QUERIES FOR HEADER & NEWSLETTER */
+@media (max-width:1024px) {
+  .ab-Main .desktop-nav { display: none !important; }
+  .ab-Main .desktop-cta { display: none !important; }
+  .ab-Main .hdr-actions-mobile { display: flex; }
+  .ab-Main .burger-btn { display: flex; }
+  .ab-Main .hdrrow { padding-top: 16px; padding-bottom: 16px; gap: 16px; }
+  .ab-Main .wordmark { height: 40px; max-width: 200px; }
+  @supports (animation-timeline: scroll()) {
+    .ab-Main .hdrrow { animation-name: none; }
+    .ab-Main .wordmark { animation-name: none; }
+  }
+}
+
+@media (max-width:850px) {
+  .ab-Main .nlsplit { grid-template-columns: 1fr; gap: 24px; }
+  .ab-Main .nlpad { padding-top: 42px; padding-bottom: 46px; }
+  .ab-Main .nlform { width: 100%; }
+}
+
+@media (max-width:600px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 20px; }
+  .ab-Main .hdrrow { padding-top: 13px; padding-bottom: 13px; }
+  .ab-Main .wordmark { height: 34px; max-width: 165px; }
+  .ab-Main .hdr-mob-cta { display: none; }
+  .ab-Main .mobile-drawer { padding: 14px 18px 28px; }
+  .ab-Main .nlpad { padding-top: 36px; padding-bottom: 40px; }
+  .ab-Main .nlsplit { gap: 18px; }
+  .ab-Main .nlhead { font-size: 19px; line-height: 1.3; }
+  .ab-Main .nlsub { font-size: 14px; margin-top: 6px; }
+  .ab-Main .nlform { flex-direction: column; width: 100%; gap: 10px; }
+  .ab-Main .nlin { width: 100%; }
+  .ab-Main .nlform .btn { width: 100%; padding: 14px; justify-content: center; }
+  .ab-Main .btnrow { flex-direction:column; align-items:stretch; }
+  .ab-Main .btnrow .btn { width:100%; }
+}
+
 </style>
 </head>
 <body>
-<div class="stage"><div class="ab-Main" style="width:100%; margin:0 auto"><div style="width:100%; min-width:1180px; background:#ffffff;">
+<div class="stage"><div class="ab-Main" style="width:100%; margin:0 auto"><div style="width:100%; min-width:0; background:#ffffff;">
 
     <!-- HEADER -->
   <div class="hdr">
@@ -344,7 +461,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
       <a href="index.html" aria-label="Equinox Business Law Group Home"><img class="wordmark" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group — Strategic Legal Counsel for All"></a>
 
-      <div style="display:flex; align-items:center; gap:32px;">
+      <div class="desktop-nav">
 
         <div class="navwrap"><a class="navitem" href="general-counsel.html">General Counsel</a></div>
 
@@ -468,8 +585,78 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
         <div class="navwrap"><a class="navitem" href="blog.html">Blog</a></div>
       </div>
 
-      <a class="btn main sm" href="#"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><span>Contact Us</span></a>
+      <a class="btn main sm desktop-cta" href="general-counsel.html"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><span>Contact Us</span></a>
+
+      <div class="hdr-actions-mobile">
+        <a class="btn main sm hdr-mob-cta" href="general-counsel.html"><span>Consult</span></a>
+        <button class="burger-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer" onclick="toggleMobileNav()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
     </div>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+      <ul class="mob-nav-list">
+        <li class="mob-nav-item">
+          <a class="mob-nav-link" href="general-counsel.html">General Counsel</a>
+        </li>
+        <li class="mob-nav-item">
+          <details class="mob-acc">
+            <summary class="mob-acc-summary">
+              <span>Services &amp; Practice Areas</span>
+              <svg class="mob-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="mob-acc-body">
+              <a class="mob-sublink" href="services.html">All Services &amp; Overview</a>
+              <a class="mob-sublink" href="service-contract-negotiation.html">Contract Negotiation &amp; Maintenance</a>
+              <a class="mob-sublink" href="services.html#business-formation">Business Formation &amp; Structuring</a>
+              <a class="mob-sublink" href="services.html#employment">Employment &amp; HR Advisory</a>
+              <a class="mob-sublink" href="services.html#mergers-acquisitions">Mergers &amp; Acquisitions (M&amp;A)</a>
+              <a class="mob-sublink" href="services.html#intellectual-property">Intellectual Property &amp; Trademarks</a>
+              <a class="mob-sublink" href="services.html#commercial-real-estate">Commercial Real Estate</a>
+              <a class="mob-sublink" href="services.html#dispute-resolution">Business Disputes &amp; Litigation</a>
+            </div>
+          </details>
+        </li>
+        <li class="mob-nav-item">
+          <details class="mob-acc" open>
+            <summary class="mob-acc-summary">
+              <span>Our Approach</span>
+              <svg class="mob-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="mob-acc-body">
+              <a class="mob-sublink" href="our-approach.html">The Equinox Difference</a>
+              <a class="mob-sublink" href="about.html">About Equinox</a>
+              <a class="mob-sublink" href="team.html">Our Team</a>
+              <a class="mob-sublink here" href="careers.html">Careers</a>
+              <a class="mob-sublink" href="events.html">Events &amp; Workshops</a>
+              <a class="mob-sublink" href="our-approach.html#pricing">Predictable Pricing Model</a>
+            </div>
+          </details>
+        </li>
+        <li class="mob-nav-item">
+          <a class="mob-nav-link" href="blog.html">Blog &amp; Insights</a>
+        </li>
+      </ul>
+
+      <div class="mob-drawer-footer">
+        <a class="btn main" style="width:100%; justify-content:center;" href="general-counsel.html">
+          <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+          <span>Book a Consultation</span>
+        </a>
+        <a class="mob-contact-row" href="tel:425-250-0205">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.2 3.5h3l1.5 4-2 1.3a12.5 12.5 0 0 0 6.5 6.5l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2C10.6 19.2 4.8 13.4 4.2 5.7a2 2 0 0 1 2-2.2z"/></svg>
+          <span>425-250-0205</span>
+        </a>
+        <a class="mob-contact-row" href="mailto:contact@equinoxbusinesslaw.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg>
+          <span>contact@equinoxbusinesslaw.com</span>
+        </a>
+      </div>
+    </nav>
   </div>
 
   <!-- 1. HERO GRADIENT BAND -->
@@ -920,5 +1107,56 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   }
 })();
 </script>
+
+<!-- SCRIPT FOR MOBILE NAV -->
+<script>
+function toggleMobileNav() {
+  var drawer = document.getElementById('mobile-drawer');
+  var burger = document.querySelector('.burger-btn');
+  if (!drawer || !burger) return;
+  var isOpen = drawer.classList.contains('open');
+  if (isOpen) {
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  } else {
+    drawer.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+}
+
+// Close mobile navigation when clicking outside or pressing Escape
+document.addEventListener('click', function(e) {
+  var drawer = document.getElementById('mobile-drawer');
+  var burger = document.querySelector('.burger-btn');
+  if (!drawer || !burger || !drawer.classList.contains('open')) return;
+  if (!drawer.contains(e.target) && !burger.contains(e.target)) {
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var drawer = document.getElementById('mobile-drawer');
+    var burger = document.querySelector('.burger-btn');
+    if (drawer && drawer.classList.contains('open')) {
+      drawer.classList.remove('open');
+      if (burger) {
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
+      }
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+  }
+});
+</script>
+
 </body>
 </html>
