@@ -264,21 +264,36 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .praxlink { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',Arial,sans-serif; font-size:14.5px; font-weight:700; color:#003B53; text-decoration:none; transition:color .15s ease, gap .15s ease; }
 .ab-Main .praxlink:hover { color:#027CA1; gap:12px; }
 
-/* SECTION 4: 5 BUSINESS FUNCTIONS ACCORDION / TABS */
+/* SECTION 4: 5 BUSINESS FUNCTIONS ACCORDION */
 .ab-Main .funcband { background:#FAFCFD; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; padding:96px 0; }
-.ab-Main .functabs { display:flex; align-items:center; gap:12px; overflow-x:auto; padding-bottom:8px; margin-top:36px; border-bottom:2px solid #E2EBF0; scrollbar-width:none; }
-.ab-Main .functabs::-webkit-scrollbar { display:none; }
-.ab-Main .functab { font-family:'Montserrat',Arial,sans-serif; font-size:14.5px; font-weight:600; color:#5f7683; background:transparent; border:none; padding:12px 20px; border-radius:4px 4px 0 0; cursor:pointer; display:inline-flex; align-items:center; gap:8px; white-space:nowrap; position:relative; bottom:-2px; border-bottom:3px solid transparent; transition:all .18s ease; }
-.ab-Main .functab:hover { color:#003B53; background:rgba(0,59,83,0.03); }
-.ab-Main .functab.active { color:#003B53; font-weight:700; border-bottom-color:#003B53; background:#ffffff; box-shadow:0 -3px 10px rgba(0,59,83,0.04); }
-.ab-Main .funcpill { font-size:11px; font-weight:700; background:#EBF4F7; color:#027CA1; padding:2px 8px; border-radius:10px; }
-.ab-Main .functab.active .funcpill { background:#003B53; color:#FFD457; }
-.ab-Main .funcpanel { display:none; background:#ffffff; border:1px solid #DCE6EB; border-radius:0 0 6px 6px; padding:44px 48px; box-shadow:0 6px 20px rgba(0,59,83,0.04); margin-top:-1px; }
-.ab-Main .funcpanel.active { display:block; animation:fadeIn .25s ease; }
-@keyframes fadeIn { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
-.ab-Main .funclist { display:grid; grid-template-columns:repeat(3, 1fr); gap:18px 36px; margin-top:28px; }
-.ab-Main .funcitem { display:flex; align-items:flex-start; gap:12px; font-family:'Montserrat',Arial,sans-serif; font-size:15px; color:#2c2c2c; line-height:1.45; }
-.ab-Main .funcbullet { width:7px; height:7px; border-radius:50%; background:#FFD457; margin-top:7px; flex:none; box-shadow:0 0 0 2px rgba(0,59,83,0.1); }
+.ab-Main .func-acc-wrap { max-width:1120px; margin-top:40px; }
+.ab-Main .func-acc-toolbar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:20px; }
+.ab-Main .func-acc-badge { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#027CA1; display:inline-flex; align-items:center; gap:8px; }
+.ab-Main .func-acc-btns { display:inline-flex; gap:10px; }
+.ab-Main .func-ctrl-btn { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:600; color:#55727E; background:#ffffff; border:1px solid #DCE6EB; padding:6px 14px; border-radius:3px; cursor:pointer; transition:all .15s ease; }
+.ab-Main .func-ctrl-btn:hover { background:#003B53; color:#ffffff; border-color:#003B53; }
+
+.ab-Main .func-accordion { display:flex; flex-direction:column; gap:14px; }
+.ab-Main .func-acc-item { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; overflow:hidden; transition:border-color .18s ease, box-shadow .18s ease; }
+.ab-Main .func-acc-item:hover { border-color:#CBD7DC; box-shadow:0 6px 18px rgba(0,59,83,0.04); }
+.ab-Main .func-acc-item[open] { border-color:#003B53; border-top:3px solid #003B53; box-shadow:0 8px 26px rgba(0,59,83,0.06); }
+.ab-Main .func-acc-summary { padding:24px 28px; cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:24px; user-select:none; }
+.ab-Main .func-acc-summary::-webkit-details-marker { display:none; }
+.ab-Main .func-acc-summary:focus-visible { outline:2px solid #027CA1; outline-offset:-2px; }
+.ab-Main .func-acc-head { flex:1 1 auto; min-width:0; }
+.ab-Main .func-acc-title-row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.ab-Main .func-acc-title { font-family:'Montserrat',Arial,sans-serif; font-size:19px; font-weight:700; color:#003B53; margin:0; line-height:1.3; }
+.ab-Main .funcpill { font-family:'Montserrat',Arial,sans-serif; font-size:11.5px; font-weight:700; background:#EBF4F7; color:#027CA1; padding:3px 10px; border-radius:10px; letter-spacing:.02em; }
+.ab-Main .func-acc-item[open] .funcpill { background:#003B53; color:#FFD457; }
+.ab-Main .func-acc-desc { font-family:'Montserrat',Arial,sans-serif; font-size:14px; line-height:1.55; color:#55727E; margin:6px 0 0 0; }
+.ab-Main .func-acc-toggle { width:34px; height:34px; border-radius:50%; background:#F4F8FA; display:flex; align-items:center; justify-content:center; flex:none; transition:background .18s ease, transform .2s ease; }
+.ab-Main .func-acc-chev { width:16px; height:16px; color:#027CA1; transition:transform .2s ease; }
+.ab-Main .func-acc-item[open] .func-acc-toggle { background:#003B53; }
+.ab-Main .func-acc-item[open] .func-acc-chev { color:#FFD457; transform:rotate(180deg); }
+.ab-Main .func-acc-body { padding:24px 28px 28px; border-top:1px solid #EBF1F4; background:#FAFCFD; }
+.ab-Main .funclist { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px 28px; margin:0; }
+.ab-Main .funcitem { display:flex; align-items:flex-start; gap:10px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:#2c2c2c; line-height:1.45; }
+.ab-Main .funcbullet { width:6px; height:6px; border-radius:50%; background:#FFD457; margin-top:6px; flex:none; box-shadow:0 0 0 2px rgba(0,59,83,0.1); }
 
 /* SECTION 5: INDUSTRIES WE SERVE */
 .ab-Main .indgrid { display:grid; grid-template-columns:repeat(5, 1fr); gap:20px; margin-top:40px; }
@@ -381,13 +396,19 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   .ab-Main .indgrid { grid-template-columns:repeat(2, 1fr); }
   .ab-Main .models-split { grid-template-columns:1fr; }
   .ab-Main .assess-banner { flex-direction:column; align-items:flex-start; }
-  .ab-Main .funclist { grid-template-columns:1fr; }
-  .ab-Main .funcpanel { padding:32px 24px; }
+  .ab-Main .funclist { grid-template-columns:repeat(2, 1fr); gap:12px 20px; }
+  .ab-Main .func-acc-summary { padding:20px 22px; }
+  .ab-Main .func-acc-body { padding:20px 22px 24px; }
   .ab-Main .ft3 { grid-template-columns:1fr; }
 }
 
 @media (max-width:600px) {
   .ab-Main .wrap, .ab-Main .wrapwide { padding:0 20px; }
+  .ab-Main .funclist { grid-template-columns:1fr; gap:10px; }
+  .ab-Main .func-acc-summary { padding:18px 18px; gap:14px; }
+  .ab-Main .func-acc-title { font-size:16.5px; }
+  .ab-Main .func-acc-body { padding:16px 18px 20px; }
+  .ab-Main .func-acc-toolbar { flex-direction:column; align-items:flex-start; }
   .ab-Main .indgrid { grid-template-columns:1fr; }
   .ab-Main .btnrow { flex-direction:column; align-items:stretch; }
   .ab-Main .btnrow .btn { width:100%; }
@@ -734,109 +755,167 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
         <p class="body" style="margin-top:20px;">Legal issues don&rsquo;t live in a silo; they intersect with everyday business functions. Explore our capabilities across leadership, sales, talent, property, and procurement.</p>
       </div>
 
-      <!-- Tabs -->
-      <div class="functabs" role="tablist" aria-label="Business functions">
-        <button class="functab active" role="tab" aria-selected="true" aria-controls="panel-corp" id="tab-corp" onclick="showTab('corp')">
-          <span>Corporate Strategy</span><span class="funcpill">21 services</span>
-        </button>
-        <button class="functab" role="tab" aria-selected="false" aria-controls="panel-hr" id="tab-hr" onclick="showTab('hr')">
-          <span>Human Resources</span><span class="funcpill">11 services</span>
-        </button>
-        <button class="functab" role="tab" aria-selected="false" aria-controls="panel-sales" id="tab-sales" onclick="showTab('sales')">
-          <span>Sales &amp; Commercial</span><span class="funcpill">7 services</span>
-        </button>
-        <button class="functab" role="tab" aria-selected="false" aria-controls="panel-property" id="tab-property" onclick="showTab('property')">
-          <span>Property &amp; Facilities</span><span class="funcpill">4 services</span>
-        </button>
-        <button class="functab" role="tab" aria-selected="false" aria-controls="panel-vendor" id="tab-vendor" onclick="showTab('vendor')">
-          <span>Purchasing &amp; Vendors</span><span class="funcpill">4 services</span>
-        </button>
-      </div>
-
-      <!-- Panel 1: Corporate Strategy -->
-      <div class="funcpanel active" role="tabpanel" id="panel-corp" aria-labelledby="tab-corp">
-        <h3 class="h3">Corporate Strategy &amp; Executive Counsel</h3>
-        <p class="body-sm" style="margin-top:10px; max-width:840px;">Proactive governance, financing structures, shareholder alignment, and M&amp;A advisory that help CEOs and boards build enterprise value safely.</p>
-        <div class="funclist">
-          <div class="funcitem"><span class="funcbullet"></span><span>Corporate Strategy &amp; Structuring</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Investor Documents &amp; Term Sheets</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Financing Transactions &amp; Debt</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Stock Options &amp; Equity Grants</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Company Formation &amp; Structuring</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Annual Shareholder &amp; Board Meetings</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Business Licensing &amp; Compliance</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Owner &amp; Operating Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Owner Dispute Resolution</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Distribution Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Licensing &amp; IP Strategy</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Confidentiality &amp; NDAs</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Trademark Registration &amp; Defense</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Purchase &amp; Sales Transactions</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Contracts Lifecycle Management</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Copyright Registration &amp; Audits</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Mergers &amp; Acquisitions</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Succession &amp; Transition Planning</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Stock Issuance &amp; Transfers</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Insurance Policy Review</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Corporate Records Maintenance</span></div>
+      <div class="func-acc-wrap">
+        <div class="func-acc-toolbar">
+          <span class="func-acc-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            5 Operational Departments &bull; 47 Specialized Services
+          </span>
+          <div class="func-acc-btns">
+            <button class="func-ctrl-btn" type="button" onclick="toggleAllFunc(true)">Expand All</button>
+            <button class="func-ctrl-btn" type="button" onclick="toggleAllFunc(false)">Collapse All</button>
+          </div>
         </div>
-      </div>
 
-      <!-- Panel 2: Human Resources -->
-      <div class="funcpanel" role="tabpanel" id="panel-hr" aria-labelledby="tab-hr">
-        <h3 class="h3">Human Resources &amp; Employment Advisory</h3>
-        <p class="body-sm" style="margin-top:10px; max-width:840px;">Employment law compliance, executive agreements, handbooks, and workplace dispute solutions that protect company culture and minimize liability.</p>
-        <div class="funclist">
-          <div class="funcitem"><span class="funcbullet"></span><span>New Hire Onboarding Protocols</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Executive Employment Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Employee Manuals &amp; Handbooks</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Workplace Dispute Guidance</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Workplace Policy Drafting</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Internal Communications Review</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Multi-State Employment Compliance</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Wage &amp; Hour Audit Assistance</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Non-Compete &amp; Non-Solicitation</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Confidentiality &amp; Trade Secret Protections</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Separation &amp; Severance Agreements</span></div>
-        </div>
-      </div>
+        <div class="func-accordion">
 
-      <!-- Panel 3: Sales -->
-      <div class="funcpanel" role="tabpanel" id="panel-sales" aria-labelledby="tab-sales">
-        <h3 class="h3">Sales &amp; Commercial Revenue Growth</h3>
-        <p class="body-sm" style="margin-top:10px; max-width:840px;">Accelerating contract turnaround, closing deals faster, protecting margins, and setting clear terms for customer relationships.</p>
-        <div class="funclist">
-          <div class="funcitem"><span class="funcbullet"></span><span>Master Services Agreements (MSAs)</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Independent Contractor Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Sales Representative Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Commission &amp; Incentive Planning</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Online Terms of Use &amp; Privacy Policies</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Commercial Dispute Resolution</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Data Privacy &amp; Consumer Compliance</span></div>
-        </div>
-      </div>
+          <!-- 1. Corporate Strategy & Executive Counsel -->
+          <details class="func-acc-item" open>
+            <summary class="func-acc-summary">
+              <div class="func-acc-head">
+                <div class="func-acc-title-row">
+                  <h3 class="func-acc-title">Corporate Strategy &amp; Executive Counsel</h3>
+                  <span class="funcpill">21 services</span>
+                </div>
+                <p class="func-acc-desc">Proactive governance, financing structures, shareholder alignment, and M&amp;A advisory that help CEOs and boards build enterprise value safely.</p>
+              </div>
+              <span class="func-acc-toggle" aria-hidden="true">
+                <svg class="func-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </summary>
+            <div class="func-acc-body">
+              <div class="funclist">
+                <div class="funcitem"><span class="funcbullet"></span><span>Corporate Strategy &amp; Structuring</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Investor Documents &amp; Term Sheets</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Financing Transactions &amp; Debt</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Stock Options &amp; Equity Grants</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Company Formation &amp; Structuring</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Annual Shareholder &amp; Board Meetings</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Business Licensing &amp; Compliance</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Owner &amp; Operating Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Owner Dispute Resolution</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Distribution Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Licensing &amp; IP Strategy</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Confidentiality &amp; NDAs</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Trademark Registration &amp; Defense</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Purchase &amp; Sales Transactions</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Contracts Lifecycle Management</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Copyright Registration &amp; Audits</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Mergers &amp; Acquisitions</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Succession &amp; Transition Planning</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Stock Issuance &amp; Transfers</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Insurance Policy Review</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Corporate Records Maintenance</span></div>
+              </div>
+            </div>
+          </details>
 
-      <!-- Panel 4: Property -->
-      <div class="funcpanel" role="tabpanel" id="panel-property" aria-labelledby="tab-property">
-        <h3 class="h3">Property, Real Estate &amp; Facilities</h3>
-        <p class="body-sm" style="margin-top:10px; max-width:840px;">Securing business facilities, managing landlord-tenant relationships, and structuring asset ownership to prevent operational disruption.</p>
-        <div class="funclist">
-          <div class="funcitem"><span class="funcbullet"></span><span>Commercial Lease Negotiation &amp; Renewals</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Property Regulatory &amp; Zoning Compliance</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Heavy Equipment Purchasing &amp; Leasing</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Commercial Real Estate Purchases &amp; Sales</span></div>
-        </div>
-      </div>
+          <!-- 2. Human Resources & Employment Advisory -->
+          <details class="func-acc-item">
+            <summary class="func-acc-summary">
+              <div class="func-acc-head">
+                <div class="func-acc-title-row">
+                  <h3 class="func-acc-title">Human Resources &amp; Employment Advisory</h3>
+                  <span class="funcpill">11 services</span>
+                </div>
+                <p class="func-acc-desc">Employment law compliance, executive agreements, handbooks, and workplace dispute solutions that protect company culture and minimize liability.</p>
+              </div>
+              <span class="func-acc-toggle" aria-hidden="true">
+                <svg class="func-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </summary>
+            <div class="func-acc-body">
+              <div class="funclist">
+                <div class="funcitem"><span class="funcbullet"></span><span>New Hire Onboarding Protocols</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Executive Employment Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Employee Manuals &amp; Handbooks</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Workplace Dispute Guidance</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Workplace Policy Drafting</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Internal Communications Review</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Multi-State Employment Compliance</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Wage &amp; Hour Audit Assistance</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Non-Compete &amp; Non-Solicitation</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Confidentiality &amp; Trade Secret Protections</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Separation &amp; Severance Agreements</span></div>
+              </div>
+            </div>
+          </details>
 
-      <!-- Panel 5: Purchasing & Vendors -->
-      <div class="funcpanel" role="tabpanel" id="panel-vendor" aria-labelledby="tab-vendor">
-        <h3 class="h3">Purchasing, Supply Chain &amp; Vendor Management</h3>
-        <p class="body-sm" style="margin-top:10px; max-width:840px;">Safeguarding procurement relationships, allocating vendor liability fairly, and building repeatable procurement terms.</p>
-        <div class="funclist">
-          <div class="funcitem"><span class="funcbullet"></span><span>Master Vendor Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Purchase Orders: Terms &amp; Conditions</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Subcontractor Master Agreements</span></div>
-          <div class="funcitem"><span class="funcbullet"></span><span>Warehousing, Logistics &amp; Distribution</span></div>
+          <!-- 3. Sales & Commercial Revenue Growth -->
+          <details class="func-acc-item">
+            <summary class="func-acc-summary">
+              <div class="func-acc-head">
+                <div class="func-acc-title-row">
+                  <h3 class="func-acc-title">Sales &amp; Commercial Revenue Growth</h3>
+                  <span class="funcpill">7 services</span>
+                </div>
+                <p class="func-acc-desc">Accelerating contract turnaround, closing deals faster, protecting margins, and setting clear terms for customer relationships.</p>
+              </div>
+              <span class="func-acc-toggle" aria-hidden="true">
+                <svg class="func-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </summary>
+            <div class="func-acc-body">
+              <div class="funclist">
+                <div class="funcitem"><span class="funcbullet"></span><span>Master Services Agreements (MSAs)</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Independent Contractor Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Sales Representative Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Commission &amp; Incentive Planning</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Online Terms of Use &amp; Privacy Policies</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Commercial Dispute Resolution</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Data Privacy &amp; Consumer Compliance</span></div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 4. Property, Real Estate & Facilities -->
+          <details class="func-acc-item">
+            <summary class="func-acc-summary">
+              <div class="func-acc-head">
+                <div class="func-acc-title-row">
+                  <h3 class="func-acc-title">Property, Real Estate &amp; Facilities</h3>
+                  <span class="funcpill">4 services</span>
+                </div>
+                <p class="func-acc-desc">Securing business facilities, managing landlord-tenant relationships, and structuring asset ownership to prevent operational disruption.</p>
+              </div>
+              <span class="func-acc-toggle" aria-hidden="true">
+                <svg class="func-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </summary>
+            <div class="func-acc-body">
+              <div class="funclist">
+                <div class="funcitem"><span class="funcbullet"></span><span>Commercial Lease Negotiation &amp; Renewals</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Property Regulatory &amp; Zoning Compliance</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Heavy Equipment Purchasing &amp; Leasing</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Commercial Real Estate Purchases &amp; Sales</span></div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 5. Purchasing, Supply Chain & Vendor Management -->
+          <details class="func-acc-item">
+            <summary class="func-acc-summary">
+              <div class="func-acc-head">
+                <div class="func-acc-title-row">
+                  <h3 class="func-acc-title">Purchasing, Supply Chain &amp; Vendor Management</h3>
+                  <span class="funcpill">4 services</span>
+                </div>
+                <p class="func-acc-desc">Safeguarding procurement relationships, allocating vendor liability fairly, and building repeatable procurement terms.</p>
+              </div>
+              <span class="func-acc-toggle" aria-hidden="true">
+                <svg class="func-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </summary>
+            <div class="func-acc-body">
+              <div class="funclist">
+                <div class="funcitem"><span class="funcbullet"></span><span>Master Vendor Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Purchase Orders: Terms &amp; Conditions</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Subcontractor Master Agreements</span></div>
+                <div class="funcitem"><span class="funcbullet"></span><span>Warehousing, Logistics &amp; Distribution</span></div>
+              </div>
+            </div>
+          </details>
+
         </div>
       </div>
     </div>
@@ -1091,23 +1170,16 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
 </div></div>
 
-<!-- SCRIPT FOR FUNCTION TABS -->
+<!-- SCRIPT FOR FUNCTION ACCORDION -->
 <script>
-function showTab(tabId) {
-  document.querySelectorAll('.functab').forEach(function(b) {
-    b.classList.remove('active');
-    b.setAttribute('aria-selected', 'false');
+function toggleAllFunc(expand) {
+  document.querySelectorAll('.func-acc-item').forEach(function(item) {
+    if (expand) {
+      item.setAttribute('open', '');
+    } else {
+      item.removeAttribute('open');
+    }
   });
-  document.querySelectorAll('.funcpanel').forEach(function(p) {
-    p.classList.remove('active');
-  });
-  var activeBtn = document.getElementById('tab-' + tabId);
-  var activePnl = document.getElementById('panel-' + tabId);
-  if (activeBtn && activePnl) {
-    activeBtn.classList.add('active');
-    activeBtn.setAttribute('aria-selected', 'true');
-    activePnl.classList.add('active');
-  }
 }
 </script>
 </body>
