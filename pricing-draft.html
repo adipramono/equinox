@@ -1,0 +1,3010 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Audit of live site truths from equinoxbusinesslaw.com and 10 UI layout concepts for the 24h / 1wk response standard and fixed monthly pricing.">
+<title>Pricing & Guaranteed Response SLA (Live Site Audit + 10 UI Concepts) | Equinox Business Law Group</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+*,*::before,*::after { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:#ffffff; }
+.stage { overflow:visible; }
+.ab-Main { margin:0; background:#ffffff; color:#2c2c2c; }
+.ab-Main a { color:#027CA1; text-decoration:none; }
+.ab-Main a:hover { color:#002B3D; }
+.ab-Main .wrap { max-width:1440px; margin:0 auto; padding:0 64px; }
+.ab-Main .wrapwide { max-width:1440px; margin:0 auto; padding:0 64px; }
+.ab-Main .sans { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; }
+.ab-Main .serif { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; }
+
+/* TYPOGRAPHY TOKENS */
+.ab-Main .eyebrow { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+.ab-Main .h1 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:42px; font-weight:300; line-height:1.15; color:#003B53; margin:0; }
+.ab-Main .h1 b { font-weight:700; }
+.ab-Main .h2 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:36px; font-weight:300; line-height:1.18; letter-spacing:.005em; color:#003B53; margin:0; }
+.ab-Main .h2 b { font-weight:700; }
+.ab-Main .h3 { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:20px; font-weight:600; line-height:1.3; color:#003B53; margin:0; }
+.ab-Main .body { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:18px; font-weight:400; line-height:1.62; letter-spacing:.005em; color:#2c2c2c; margin:0; }
+.ab-Main .body-sm { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; font-weight:400; line-height:1.6; color:#55727E; margin:0; }
+
+.ab-Main .eyebrowmark { display:flex; align-items:center; gap:14px; margin:0 0 20px; }
+.ab-Main .ymrule { width:40px; height:3px; background:#FFD457; flex:none; }
+.ab-Main .ytext { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+
+/* HEADER & MEGAMENU */
+.ab-Main .hdrrow { display:flex; align-items:center; justify-content:space-between; gap:48px; padding-top:24px; padding-bottom:24px; }
+.ab-Main .wordmark { height:52px; width:auto; display:block; }
+.ab-Main .hdr { position:sticky; top:0; z-index:60; background:#ffffff; border-bottom:1px solid #e4e4e4; }
+/* Sticky, and it condenses once the page has moved. CSS scroll-driven animation, no JS.
+Kadence Pro's header has sticky + shrink natively, so this is buildable as drawn.
+Browsers without scroll-timeline get a plain sticky header, which is the fallback we want. */
+@supports (animation-timeline: scroll()) {
+.ab-Main .hdr, .ab-Main .hdrrow, .ab-Main .wordmark { animation:linear both; animation-timeline:scroll(root); animation-range:0 140px; }
+.ab-Main .hdr { animation-name:hdrlift; }
+.ab-Main .hdrrow { animation-name:hdrsquash; }
+.ab-Main .wordmark { animation-name:markshrink; }
+@keyframes hdrlift { to { box-shadow:0 10px 24px -14px rgba(0,59,83,.34); } }
+@keyframes hdrsquash { to { padding-top:13px; padding-bottom:13px; } }
+@keyframes markshrink { to { height:38px; } }
+}
+.ab-Main .navwrap { display:inline-flex; align-items:center; padding:25px 0 52px; margin:-25px 0 -52px; }
+.ab-Main .navwrap.rel { position:relative; }
+.ab-Main .navitem { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:500; color:#2c2c2c; white-space:nowrap; display:inline-flex; align-items:center; gap:7px; text-decoration:none; cursor:pointer; }
+.ab-Main .navitem .chev { color:#9a9a9a; transition:transform .18s ease, color .18s ease; }
+.ab-Main .navwrap:hover .navitem, .ab-Main .navwrap:focus-within .navitem, .ab-Main .navitem.here { color:#003B53; }
+.ab-Main .navitem.here { font-weight:600; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev, .ab-Main .navitem.here .chev { color:#003B53; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev { transform:rotate(180deg); }
+.ab-Main .megapanel { display:none; position:absolute; left:0; right:0; top:100%; background:#ffffff; border-top:1px solid #e4e4e4; box-shadow:0 30px 52px -20px rgba(0,59,83,.3); z-index:40; }
+.ab-Main .droppanel { display:none; position:absolute; left:-24px; top:100%; width:330px; background:#ffffff; border:1px solid #e4e4e4; border-top:2px solid #ffd457; box-shadow:0 26px 46px -20px rgba(0,59,83,.3); padding:10px 8px; z-index:40; }
+.navwrap:hover .megapanel, .navwrap:focus-within .megapanel,
+.ab-Main .navwrap:hover .droppanel, .ab-Main .navwrap:focus-within .droppanel { display:block; }
+.ab-Main .megahead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#8c8c8c; margin:0; padding-bottom:12px; border-bottom:1px solid #e4e4e4; }
+.ab-Main .megacol { display:flex; flex-direction:column; gap:2px; margin-top:8px; }
+.ab-Main .megalink { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15.5px; font-weight:600; line-height:1.3; color:#003B53; display:block; padding:8px 10px; margin-left:-10px; border-radius:3px; cursor:pointer; transition:background .14s ease; }
+.ab-Main .megalink.plain { font-weight:500; color:#2c2c2c; }
+.ab-Main .megalink:hover { background:#eef4f7; }
+.ab-Main .megacount { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:500; color:#9a9a9a; margin-left:8px; }
+.ab-Main .droprow { padding:3px 0; }
+.ab-Main .droprow.lg { padding:0; border-bottom:1px solid #f2f2f2; }
+.ab-Main .droprow.lg .megalink { font-size:16.5px; padding:15px 10px; }
+.ab-Main .droprow:hover .megalink { background:#eef4f7; }
+.ab-Main .megadesc { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; line-height:1.4; color:#8c8c8c; margin:-4px 0 6px; padding:0 10px; }
+.ab-Main .megacta { background:#003B53; border-radius:4px; padding:28px 26px; align-self:start; }
+.ab-Main .ctaeyebrow { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#ffd457; margin:0; }
+.ab-Main .ctahead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:18px; font-weight:500; line-height:1.38; color:#ffffff; margin:12px 0 0; }
+.ab-Main .megaimg { position:relative; width:100%; padding-bottom:56.25%; background:#eef4f7; border:1px dashed #93BCCD; border-radius:4px; }
+.ab-Main .megaimglabel { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#5d8fa2; }
+.ab-Main .ctabody { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; line-height:1.55; color:rgba(255,255,255,.78); margin:11px 0 0; }
+.ab-Main .ctaphone { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.78); margin:18px 0 0; }
+.ab-Main .ctaphone span { color:#ffffff; font-weight:600; }
+.ab-Main .megafoot { border-top:1px solid #e4e4e4; background:#FFFAEB; }
+
+/* ==================================================================
+BUTTONS - one system, both directions. Spec and reasoning:
+notes/mockups/buttons/buttons.html
+Three roles, one accent. CONFIDENCE gold is the site's only accent,
+so it belongs to the one action that earns money. NIGHT is
+structural rather than an accent, which is why the secondary can be
+a solid NIGHT fill without breaking the one-accent rule.
+.btn.main      Book a Consultation
+.btn.secondary the assessment - the transitional conversion
+.btn.outline   routes and non-conversions
+Built for TWO LINES on purpose: "Take the Business Legal Health
+Assessment" is 395px and a 375px phone has ~335px, so it must wrap.
+line-height:1 would stack the lines on top of each other.
+================================================================== */
+.ab-Main .btn { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; font-weight:600;
+line-height:1.3; text-wrap:balance; padding:12px 24px; border-radius:3px; border:1.5px solid transparent;
+display:inline-flex; align-items:center; justify-content:center; gap:11px; text-align:center; text-decoration:none;
+cursor:pointer; position:relative; overflow:hidden;
+transition:background-color .16s ease, border-color .16s ease, color .16s ease; }
+.ab-Main .btn.sm { font-size:14.5px; padding:10px 20px; gap:9px; }
+.ab-Main .btn > span, .ab-Main .btn > svg { position:relative; z-index:1; }
+/* Icons appear on the SMALL size only - the header and mega panels, which are scanned
+rather than read and where two buttons sit side by side with nothing else to tell them
+apart. At full size the labels have room to do the work themselves.
+18px against a 16px label is the optical match; 16px against the 14.5px small size. */
+.ab-Main .bic { width:16px; height:16px; flex:none; }
+/* a route takes a trailing arrow - a DIRECTION, not a subject. These replace typographic
+arrows that sat at the label's own weight and baseline and read as punctuation. */
+.ab-Main .bic.arrow { width:17px; height:17px; }
+/* header buttons never wrap: the row can shrink them, and "Book a / Consultation"
+on two lines in a header is the failure this guard exists to prevent */
+.ab-Main .hdrrow .btn { white-space:nowrap; flex:none; }
+.ab-Main .hdrrow { flex:none; }
+.ab-Main .btn.main { background:#FFD457; color:#2c2c2c; border-color:#FFD457; }
+.ab-Main .btn.secondary { background:#003B53; color:#ffffff; border-color:#003B53; }
+.ab-Main .btn.outline { background:transparent; color:#003B53; border-color:#003B53; }
+.ab-Main .btn.gold { background:#FFD457; color:#003B53; font-weight:700; border-color:#FFD457; }
+.ab-Main .btn.gold:hover { background:#ffe082; }
+.ab-Main .on-dark .btn.secondary { background:#ffffff; color:#003B53; border-color:#ffffff; }
+.ab-Main .on-dark .btn.outline { background:transparent; color:#ffffff; border-color:rgba(255,255,255,.6); }
+/* Hover: the fill sweeps in from the left. Animates transform on a pseudo-element, never
+width - width would relayout on every frame. */
+.ab-Main .btn::before { content:""; position:absolute; inset:0; transform:scaleX(0); transform-origin:left center;
+transition:transform .22s cubic-bezier(.4,0,.2,1); z-index:0; }
+.ab-Main .btn:hover::before { transform:scaleX(1); }
+.ab-Main .btn.main::before { background:#D98D00; }
+.ab-Main .btn.secondary::before { background:#027CA1; }
+.ab-Main .btn.outline::before { background:#003B53; }
+.ab-Main .btn.outline:hover { color:#ffffff; }
+/* the Main label stays ink on hover: white on DAY gold is 2.71:1 and fails AA */
+.ab-Main .on-dark .btn.main::before { background:#ffffff; }
+.ab-Main .on-dark .btn.secondary::before { background:#93BCCD; }
+.ab-Main .on-dark .btn.outline::before { background:#ffffff; }
+.ab-Main .on-dark .btn.main:hover, .ab-Main .on-dark .btn.secondary:hover, .ab-Main .on-dark .btn.outline:hover { color:#003B53; }
+@media (prefers-reduced-motion: reduce) { .btn::before { transition:none; } }
+/* focus is not optional: sold under Baseline Structural SEO / AEO */
+.ab-Main .btn:focus-visible { outline:3px solid #027CA1; outline-offset:3px; }
+.ab-Main .on-dark .btn:focus-visible { outline-color:#FFD457; }
+/* the paired CTAs share width, so the 395px secondary cannot dwarf the 214px primary;
+below 760px they stack, because the pair needs 623px plus the page's side padding */
+.ab-Main .btnrow { display:flex; align-items:stretch; gap:14px; flex-wrap:wrap; }
+.ab-Main .btnrow .btn { flex:1 1 0; min-width:180px; max-width:420px; }
+.ab-Main .btnrow { max-width:660px; }
+.ab-Main .btnrow.single .btn { flex:0 0 auto; }
+@media (max-width: 720px) { .btnrow { flex-direction:column; align-items:stretch; }
+.ab-Main .btnrow .btn { flex:1 1 auto; max-width:none; } }
+
+/* BREADCRUMB STRIP (VARIATION 1B • MINIMALIST WHISPER) */
+.ab-Main .crumb-strip, .crumb-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #F2F4F5;
+  padding: 10px 0;
+}
+.ab-Main .crumb-bar, .crumb-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  color: #93A4AE;
+}
+.ab-Main .crumb-bar a, .crumb-bar a {
+  color: #93A4AE;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.ab-Main .crumb-bar a:hover, .crumb-bar a:hover {
+  color: #027CA1;
+  text-decoration: underline;
+}
+.ab-Main .crumb-bar .sep, .crumb-bar .sep {
+  color: #CBD7DC;
+  margin: 0 8px;
+  font-size: 13px;
+  user-select: none;
+}
+.ab-Main .crumb-bar .here, .crumb-bar .here {
+  color: #5D707A;
+  font-weight: 400;
+}
+
+/* HERO SECTION WITH CROSSOVER CIRCLE (4b geometry) */
+.ab-Main .herograd { background:linear-gradient(180deg, #F0F6F8 0%, #FFFFFF 100%); border-bottom:1px solid #e4e4e4; }
+.ab-Main .ptrow { display:grid; grid-template-columns:minmax(0,1fr) var(--f); gap:72px; align-items:start; }
+.ab-Main .ptpic { position:relative; }
+.ab-Main .ptpic .inner { position:absolute; top:calc(var(--air) - 56px - 0.0668 * var(--f)); left:0; width:var(--f); height:var(--f); z-index:2; }
+.ab-Main .eqshape { position:relative; width:100%; aspect-ratio:1/1; }
+.ab-Main .eqshape .eqring { position:absolute; border-radius:50%; border:1.5px solid; }
+.ab-Main .eqshape .eqring.gold  { left:0.90%; top:0.90%; width:96.50%; height:96.50%; border-color:#FFD457; }
+.ab-Main .eqshape .eqring.night { left:4.86%; top:4.86%; width:94.24%; height:94.24%; border-color:rgba(0,59,83,.55); }
+.ab-Main .eqshape .eqpic { position:absolute; left:6.68%; top:6.68%; width:88.34%; height:88.34%; border-radius:50%; overflow:hidden; }
+.ab-Main .eqshape .eqpic .photo { border-radius:50%; width:100%; height:100%; object-fit:cover; transform:scale(1.08); transform-origin:center; }
+
+.ab-Main .grain { position:relative; }
+.ab-Main .grain::after { content:""; position:absolute; inset:0; z-index:3; pointer-events:none; border-radius:4px; background-image:url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='220'%20height='220'><filter%20id='n'><feTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='3'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='220'%20height='220'%20filter='url%28%23n%29'/></svg>"); background-size:220px 220px; opacity:.4; mix-blend-mode:multiply; }
+.ab-Main .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
+
+/* SECTION 1: 3 VALUE PILLAR CARDS */
+.ab-Main .propband { padding:84px 0 92px; background:#ffffff; border-bottom:1px solid #E8EFF2; }
+.ab-Main .prop-lead {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:24px;
+  font-weight:300;
+  line-height:1.45;
+  letter-spacing:.005em;
+  color:#003B53;
+  max-width:960px;
+  margin:0 auto 52px;
+  text-align:center;
+}
+.ab-Main .prop-lead b {
+  font-weight:700;
+}
+.ab-Main .propgrid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+.ab-Main .propcard {
+  background:#F9FBFC;
+  border:1px solid #DCE6EB;
+  border-top:3px solid #003B53;
+  border-radius:6px;
+  padding:36px 30px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  transition:background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.ab-Main .propcard:hover {
+  background:#ffffff;
+  border-color:#CBD7DC;
+  border-top-color:#FFD457;
+  box-shadow:0 10px 24px rgba(0,59,83,0.08);
+}
+.ab-Main .propicon {
+  width:50px;
+  height:50px;
+  border-radius:8px;
+  background:#EBF3F6;
+  color:#003B53;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  transition:background .2s ease, color .2s ease;
+}
+.ab-Main .propcard:hover .propicon {
+  background:#003B53;
+  color:#FFD457;
+}
+.ab-Main .proptitle {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:20px;
+  font-weight:700;
+  color:#003B53;
+  margin:0 0 12px;
+}
+.ab-Main .propdesc {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  color:#55727E;
+  margin:0;
+}
+
+/* SECTION 2: READINESS DIAGNOSTIC */
+.ab-Main .readyband { padding:96px 0; background:#FAFCFD; border-bottom:1px solid #E8EFF2; }
+.ab-Main .readygrid { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:48px; }
+.ab-Main .readycard {
+  background:#ffffff;
+  border:1px solid #DCE6EB;
+  border-radius:6px;
+  padding:38px 34px;
+  box-shadow:0 4px 14px rgba(0,59,83,0.04);
+}
+.ab-Main .readycard-head {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:22px;
+  padding-bottom:16px;
+  border-bottom:1px solid #EEF3F6;
+}
+.ab-Main .readycard-badge {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  background:#FFD457;
+  color:#003B53;
+  padding:4px 8px;
+  border-radius:3px;
+}
+.ab-Main .readycard-title {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  color:#003B53;
+  margin:0;
+}
+.ab-Main .readylist { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:16px; }
+.ab-Main .readyitem {
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  color:#2c2c2c;
+}
+.ab-Main .readycheck {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#E2EFF3;
+  color:#027CA1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  margin-top:2px;
+}
+.ab-Main .readycheck svg { width:12px; height:12px; }
+
+.ab-Main .ready-callout {
+  margin-top:44px;
+  background:#FFFAEB;
+  border:1px solid #F0E6CD;
+  border-left:4px solid #FFD457;
+  border-radius:4px;
+  padding:24px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.ab-Main .ready-callout-text {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:16px;
+  font-weight:600;
+  color:#003B53;
+  margin:0;
+  max-width:800px;
+  line-height:1.5;
+}
+
+/* SECTION 4: WHAT'S INCLUDED & COSTS (B2B CONTRAST MATRIX) */
+.ab-Main .includedband { padding:96px 0; background:#ffffff; border-bottom:1px solid #E8EFF2; }
+.ab-Main .opt2-matrix-wrap { max-width:1120px; margin:0 auto; }
+.ab-Main .opt2-matrix {
+  display:grid;
+  grid-template-columns:1fr 1.18fr;
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid #DCE6EB;
+  box-shadow:0 16px 44px rgba(0,59,83,0.09);
+}
+.ab-Main .opt2-col-trad {
+  background:#F8FAFB;
+  padding:48px 40px;
+  border-right:1px solid #E2EBF0;
+}
+.ab-Main .opt2-col-eq {
+  background:#003B53;
+  color:#ffffff;
+  padding:48px 44px;
+  position:relative;
+}
+.ab-Main .opt2-col-eq .opt2-ribbon {
+  position:absolute;
+  top:0;
+  right:36px;
+  background:#FFD457;
+  color:#003B53;
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  padding:6px 16px;
+  border-radius:0 0 4px 4px;
+}
+.ab-Main .opt2-head {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:24px;
+  font-weight:300;
+  line-height:1.25;
+  margin:0 0 8px;
+}
+.ab-Main .opt2-head b { font-weight:700; }
+.ab-Main .opt2-sub {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:14.5px;
+  margin:0 0 36px;
+}
+.ab-Main .opt2-col-trad .opt2-head { color:#55727E; }
+.ab-Main .opt2-col-trad .opt2-sub { color:#778D96; }
+.ab-Main .opt2-col-eq .opt2-head { color:#ffffff; }
+.ab-Main .opt2-col-eq .opt2-sub { color:rgba(255,255,255,0.85); }
+.ab-Main .opt2-rows {
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+.ab-Main .opt2-row-item {
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:14.5px;
+  line-height:1.55;
+}
+.ab-Main .opt2-col-trad .opt2-row-item { color:#55727E; }
+.ab-Main .opt2-col-eq .opt2-row-item { color:rgba(255,255,255,0.92); }
+.ab-Main .opt2-bottom-price {
+  margin-top:40px;
+  padding-top:26px;
+  border-top:1px solid rgba(255,255,255,0.16);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.ab-Main .opt2-price-txt {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:28px;
+  font-weight:700;
+  color:#FFD457;
+  line-height:1;
+}
+.ab-Main .opt2-price-note {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:13px;
+  color:rgba(255,255,255,0.75);
+}
+.ab-Main .icon-slate { color:#778D96; flex:none; }
+.ab-Main .check-gold { color:#FFD457; flex:none; }
+
+/* SECTION 4: 3-WAY COMPARISON MATRIX */
+.ab-Main .diffband { padding:96px 0; background:#FAFCFD; border-bottom:1px solid #E8EFF2; }
+.ab-Main .table-wrap {
+  margin-top:48px;
+  background:#ffffff;
+  border:1px solid #DCE6EB;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 6px 24px rgba(0,59,83,0.06);
+}
+.ab-Main .diff-table { width:100%; border-collapse:collapse; text-align:left; }
+.ab-Main .diff-table th {
+  padding:20px 22px;
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  background:#002B3D;
+  color:#ffffff;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+.ab-Main .diff-table th:last-child { border-right:none; }
+.ab-Main .diff-table th.th-eq {
+  background:#003B53;
+  color:#FFD457;
+  position:relative;
+}
+.ab-Main .th-eq-badge {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  display:inline-block;
+  background:#FFD457;
+  color:#003B53;
+  font-size:9.5px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:2px 6px;
+  border-radius:2px;
+  margin-left:8px;
+  vertical-align:middle;
+}
+.ab-Main .diff-table td {
+  padding:22px;
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:14.5px;
+  line-height:1.55;
+  vertical-align:top;
+  border-bottom:1px solid #EBF1F5;
+  border-right:1px solid #EBF1F5;
+  color:#2c2c2c;
+}
+.ab-Main .diff-table td:last-child { border-right:none; }
+.ab-Main .diff-table tr:last-child td { border-bottom:none; }
+.ab-Main .diff-table td.td-feat { font-weight:700; color:#003B53; background:#F8FAFB; width:18%; }
+.ab-Main .diff-table td.td-diy { width:26%; color:#55727E; }
+.ab-Main .diff-table td.td-trad { width:26%; color:#55727E; }
+.ab-Main .diff-table td.td-eq {
+  width:30%;
+  background:#FFFAEB;
+  color:#003B53;
+  font-weight:500;
+  border-left:2px solid #FFD457;
+}
+
+/* SECTION 5: HOW TO GET STARTED (2 PATH CARDS) */
+.ab-Main .startband { padding:96px 0; background:#ffffff; border-bottom:1px solid #E8EFF2; }
+.ab-Main .startgrid { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:48px; }
+.ab-Main .startcard {
+  background:#F9FBFC;
+  border:1px solid #DCE6EB;
+  border-radius:6px;
+  padding:40px 36px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  transition:all .2s ease;
+}
+.ab-Main .startcard:hover {
+  border-color:#027CA1;
+  background:#ffffff;
+  box-shadow:0 12px 32px rgba(0,59,83,0.08);
+}
+.ab-Main .startcard.gold-accent { border-top:4px solid #FFD457; }
+.ab-Main .startcard.cyan-accent { border-top:4px solid #027CA1; }
+.ab-Main .startbadge {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:2px;
+  margin-bottom:16px;
+}
+.ab-Main .startcard.gold-accent .startbadge { background:#FFF3D2; color:#8a6d00; }
+.ab-Main .startcard.cyan-accent .startbadge { background:#EBF4F7; color:#003B53; }
+.ab-Main .starttitle {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:22px;
+  font-weight:700;
+  color:#003B53;
+  margin:0 0 14px;
+}
+.ab-Main .startdesc {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:15.5px;
+  line-height:1.6;
+  color:#55727E;
+  margin:0 0 28px;
+}
+
+/* SECTION 6: CLIENT SPOTLIGHT */
+.ab-Main .spotlightband { padding:96px 0; background:#F8FAFB; border-bottom:1px solid #E8EFF2; }
+.ab-Main .spotgrid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; margin-top:48px; }
+.ab-Main .spotcard {
+  background:#ffffff;
+  border:1px solid #DCE6EB;
+  border-radius:6px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.ab-Main .spotcard:hover {
+  border-color:#CBD7DC;
+  box-shadow:0 12px 28px rgba(0,59,83,0.08);
+}
+.ab-Main .spotthumb {
+  aspect-ratio:16/10;
+  background:#002B3D;
+  overflow:hidden;
+  position:relative;
+}
+.ab-Main .spotthumb img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(1);
+  transition:filter .2s ease, transform .2s ease;
+}
+.ab-Main .spotcard:hover .spotthumb img {
+  filter:grayscale(0);
+  transform:scale(1.04);
+}
+.ab-Main .spotbody { padding:28px 24px; display:flex; flex-direction:column; flex-grow:1; }
+.ab-Main .spotcat {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#027CA1;
+  margin-bottom:10px;
+}
+.ab-Main .spottitle {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.35;
+  color:#003B53;
+  margin:0 0 12px;
+}
+.ab-Main .spotexcerpt {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:14px;
+  line-height:1.6;
+  color:#55727E;
+  margin:0 0 20px;
+  flex-grow:1;
+}
+.ab-Main .spotlink {
+  font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  font-size:13.5px;
+  font-weight:700;
+  color:#027CA1;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.ab-Main .spotcard:hover .spotlink { color:#003B53; }
+
+/* SOCIAL PROOF LOGO WALL */
+.ab-Main .logowall { position:relative; overflow:hidden; padding:32px 0; border-bottom:1px solid #e4e4e4; background:#ffffff; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
+.ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 32s linear infinite; }
+.ab-Main .logotrack:hover { animation-play-state:paused; }
+.ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:50px; flex:none; }
+.ab-Main .logotile img { display:block; width:auto; height:auto; max-height:36px; max-width:140px; filter:grayscale(1); opacity:.78; }
+@keyframes logostep { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+
+/* BOTTOM CONSULTATION BANNER */
+/* FOOTER */
+.ab-Main .nlband { background:#FFD457; }
+.ab-Main .nlpad { padding-top:52px; padding-bottom:54px; }
+.ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+.ab-Main .nlhead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:21px; font-weight:600; line-height:1.35; color:#003B53; margin:0; }
+.ab-Main .nlsub { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:#4a4a4a; margin:8px 0 0; }
+.ab-Main .nlform { display:flex; gap:10px; }
+.ab-Main .nlin { flex:1 1 0; min-width:0; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; color:#2c2c2c; background:#ffffff; border:1px solid rgba(0,0,0,.14); border-radius:3px; padding:14px 16px; }
+.ab-Main .ftbody { background:#112337; }
+.ab-Main .ftpad { padding-top:76px; padding-bottom:42px; }
+.ab-Main .ft3 { display:grid; grid-template-columns:1.4fr 1fr 1.25fr 1.15fr; gap:56px; }
+.ab-Main .ftbrand { display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+.ab-Main .ftlogo { height:46px; width:auto; display:block; }
+.ab-Main .fttag { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:500; line-height:1.5; color:#FFD457; margin:12px 0 0; }
+.ab-Main .ftsub { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:rgba(255,255,255,.72); margin:0; }
+.ab-Main .ftserve { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.55); margin:10px 0 0; }
+.ab-Main .ftcol { display:flex; flex-direction:column; gap:11px; align-items:flex-start; }
+.ab-Main .fthead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-bottom:4px; }
+.ab-Main .ftlink { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; line-height:1.4; color:rgba(255,255,255,.8); }
+.ab-Main .ic-l { display:inline-flex; align-items:center; gap:10px; }
+.ab-Main .fic { width:17px; height:17px; flex:none; color:#93BCCD; }
+.ab-Main .socrow { display:flex; gap:14px; margin-top:14px; color:rgba(255,255,255,.8); }
+.ab-Main .soc { width:20px; height:20px; }
+.ab-Main .legalbar { display:flex; align-items:center; justify-content:space-between; gap:32px; margin-top:44px; padding-top:26px; border-top:1px solid rgba(255,255,255,.14); flex-wrap:wrap; }
+.ab-Main .legallinks { display:flex; gap:26px; flex-wrap:wrap; }
+.ab-Main .ftfine { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,.55); }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 32px; }
+  .ab-Main .ptrow { grid-template-columns:1fr; gap:40px; --f:0px; }
+  .ab-Main .ptpic { display:none; }
+  .ab-Main .propgrid { grid-template-columns:1fr; }
+  .ab-Main .readygrid { grid-template-columns:1fr; }
+  .ab-Main .opt2-matrix { grid-template-columns:1fr; }
+  .ab-Main .opt2-col-trad { border-right:none; border-bottom:1px solid #E2EBF0; padding:36px 28px; }
+  .ab-Main .opt2-col-eq { padding:36px 28px; }
+  .ab-Main .startgrid { grid-template-columns:1fr; }
+  .ab-Main .spotgrid { grid-template-columns:1fr; }
+  .ab-Main .table-wrap { overflow-x:auto; }
+  .ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+  .ab-Main .ft3 { grid-template-columns:1fr 1fr; gap:36px; }
+}
+@media (max-width: 640px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 20px; }
+  .ab-Main .h1 { font-size:32px; }
+  .ab-Main .h2 { font-size:28px; }
+  .ab-Main .prop-lead { font-size:19px; }
+  .ab-Main .opt2-bottom-price { flex-direction:column; align-items:flex-start; gap:16px; }
+  .ab-Main .ft3 { grid-template-columns:1fr; }
+}
+/* FINAL CTA (NIGHT ground) */
+.ab-Main .finalcta { position:relative; overflow:hidden; background:#003B53; }
+.ab-Main .finalcta > .wrap { position:relative; }
+.ab-Main .ctasplit { display:grid; grid-template-columns:1.15fr .85fr; gap:76px; align-items:center; }
+.ab-Main .ctaimgwrap { position:relative; min-width:0; }
+.ab-Main .ctaimgwrap .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(18px, 18px); background:rgba(147,188,205,.30); }
+.ab-Main .ctaimgwrap .ctaslot, .ab-Main .ctaimgwrap .photo { position:relative; z-index:1; display:block; width:100%; max-width:100%; aspect-ratio:4/3; height:auto; object-fit:cover; border-radius:4px; filter:grayscale(1); }
+@media (max-width:1150px) {
+  .ab-Main .ctasplit { grid-template-columns:1fr; gap:48px; }
+}
+
+/* ==========================================================================
+   PRICING DRAFT EXPLORATION STYLES (10 CONCEPTS + LIVE SITE AUDIT)
+   CANONICAL DESIGN SYSTEM ALIGNED TO index.html
+   ========================================================================== */
+
+/* Showcase Hero & Verification Box */
+.draft-intro-band {
+  background: linear-gradient(180deg, #002B3D 0%, #003B53 100%);
+  color: #ffffff;
+  padding: 72px 0 60px;
+  border-bottom: 3px solid #FFD457;
+}
+.draft-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 212, 87, 0.15);
+  border: 1px solid #FFD457;
+  color: #FFD457;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  padding: 5px 12px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+.draft-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .005em;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+.draft-title b {
+  font-weight: 700;
+  color: #FFD457;
+}
+.draft-lead {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 920px;
+  margin: 0;
+}
+
+/* Live Site Audit Callout */
+.audit-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 212, 87, 0.35);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-top: 36px;
+}
+.audit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+.audit-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFD457;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.audit-item {
+  background: rgba(0, 43, 61, 0.6);
+  border-radius: 4px;
+  padding: 16px 20px;
+  border-left: 3px solid #FFD457;
+}
+.audit-item-label {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #93BCCD;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  margin-bottom: 6px;
+}
+.audit-item-val {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+.audit-item-cite {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Sticky Filter & Jump Bar */
+.draft-nav-sticky {
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 1px solid #DCE6EB;
+  box-shadow: 0 6px 18px rgba(0, 43, 61, 0.06);
+  padding: 14px 0;
+}
+.draft-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.draft-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.draft-pill {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #DCE6EB;
+  background: #F8FAFB;
+  color: #003B53;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.draft-pill:hover, .draft-pill.active {
+  background: #003B53;
+  color: #ffffff;
+  border-color: #003B53;
+}
+.draft-pill.active .pill-count {
+  background: #FFD457;
+  color: #003B53;
+}
+.pill-count {
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: #DCE6EB;
+  color: #003B53;
+  font-weight: 700;
+}
+.draft-jump-select {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1.5px solid #CBD7DC;
+  background: #ffffff;
+  color: #003B53;
+  outline: none;
+  cursor: pointer;
+}
+.draft-jump-select:focus {
+  border-color: #027CA1;
+}
+
+/* Option Section Wrapper & Meta Header */
+.concept-section {
+  padding: 88px 0;
+  border-bottom: 1px solid #E8EFF2;
+  position: relative;
+  scroll-margin-top: 130px;
+}
+.concept-section:nth-child(even) {
+  background: #FAFCFD;
+}
+.concept-meta {
+  background: #F0F6F8;
+  border-left: 4px solid #027CA1;
+  border-radius: 4px;
+  padding: 20px 26px;
+  margin-bottom: 44px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.concept-meta.high-conv {
+  border-left-color: #FFD457;
+  background: #FFFDF2;
+}
+.concept-meta.subtle {
+  border-left-color: #003B53;
+  background: #F0F6F8;
+}
+.cm-left {
+  flex: 1 1 500px;
+}
+.cm-tag {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.cm-tag.gold { color: #003B53; }
+.cm-tag.cyan { color: #027CA1; }
+.cm-tag.navy { color: #003B53; }
+.cm-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: .005em;
+  color: #003B53;
+  margin: 0 0 8px;
+}
+.cm-title b {
+  font-weight: 700;
+}
+.cm-desc {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #55727E;
+  margin: 0;
+}
+.cm-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.cm-badge {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+.cm-badge.target {
+  background: #E2EFF3;
+  color: #003B53;
+}
+.cm-badge.truth {
+  background: #EBF4F7;
+  color: #003B53;
+  border: 1px solid #CBD7DC;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cm-badge.truth svg {
+  color: #027CA1;
+}
+.cm-badge.psych {
+  background: #F0F6F8;
+  color: #55727E;
+  font-size: 11px;
+}
+
+/* BRAND ATOMS: Checkmarks & SLA Badges */
+.check-brand {
+  color: #027CA1;
+  flex: none;
+}
+.check-gold {
+  color: #FFD457;
+  flex: none;
+}
+.icon-slate {
+  color: #778D96;
+  flex: none;
+}
+.sla-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #003B53;
+  color: #FFD457;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.sla-pill.gold {
+  background: #FFD457;
+  color: #003B53;
+}
+.sla-pill.cyan {
+  background: #027CA1;
+  color: #ffffff;
+}
+
+/* OPTION 01: DUAL-SLA TRUST SEAL & PLAN CARD */
+.opt1-split {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+.opt1-seal-card {
+  background: #002B3D;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.opt1-seal-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255, 212, 87, 0.15) 0%, rgba(255, 212, 87, 0) 70%);
+  border-radius: 50%;
+}
+.opt1-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 32px 0;
+}
+.opt1-metric-tile {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 3px solid #FFD457;
+  border-radius: 4px;
+  padding: 22px 20px;
+  text-align: center;
+}
+.opt1-m-num {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #FFD457;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.opt1-m-lbl {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: rgba(255, 255, 255, 0.92);
+}
+.opt1-m-sub {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12.5px;
+  color: #93BCCD;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.opt1-seal-quote {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 22px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14.5px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.55;
+}
+.opt1-seal-author {
+  font-style: normal;
+  font-weight: 600;
+  color: #FFD457;
+  font-size: 12px;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.opt1-pricing-card {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 6px;
+  padding: 44px 40px;
+  box-shadow: 0 12px 36px rgba(0, 59, 83, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.opt1-price-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #E8EFF2;
+  padding-bottom: 22px;
+}
+.opt1-amount {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #003B53;
+  line-height: 1;
+}
+.opt1-period {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: #55727E;
+  font-weight: 500;
+}
+.opt1-feat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.opt1-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #2c2c2c;
+}
+.opt1-feat-item strong {
+  color: #003B53;
+}
+.opt1-risk-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #55727E;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+/* OPTION 02: B2B CONTRAST MATRIX */
+.opt2-matrix-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.opt2-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1.18fr;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #DCE6EB;
+  box-shadow: 0 16px 44px rgba(0, 59, 83, 0.09);
+}
+.opt2-col-trad {
+  background: #F8FAFB;
+  padding: 48px 40px;
+  border-right: 1px solid #E2EBF0;
+}
+.opt2-col-eq {
+  background: #003B53;
+  color: #ffffff;
+  padding: 48px 44px;
+  position: relative;
+}
+.opt2-col-eq .opt2-ribbon {
+  position: absolute;
+  top: 0;
+  right: 36px;
+  background: #FFD457;
+  color: #003B53;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding: 6px 16px;
+  border-radius: 0 0 4px 4px;
+}
+.opt2-head {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.opt2-head b {
+  font-weight: 700;
+}
+.opt2-sub {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14.5px;
+  margin: 0 0 36px;
+}
+.opt2-col-trad .opt2-head { color: #55727E; }
+.opt2-col-trad .opt2-sub { color: #778D96; }
+.opt2-col-eq .opt2-head { color: #ffffff; }
+.opt2-col-eq .opt2-sub { color: rgba(255, 255, 255, 0.85); }
+.opt2-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.opt2-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.opt2-col-trad .opt2-row-item { color: #55727E; }
+.opt2-col-eq .opt2-row-item { color: rgba(255, 255, 255, 0.92); }
+.opt2-bottom-price {
+  margin-top: 40px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.opt2-price-txt {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFD457;
+  line-height: 1;
+}
+.opt2-price-note {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* OPTION 03: 4-STEP VELOCITY TIMELINE */
+.opt3-container {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+.opt3-timeline-card {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 6px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 59, 83, 0.06);
+}
+.opt3-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 28px;
+  padding-left: 32px;
+}
+.opt3-track::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: #DCE6EB;
+}
+.opt3-node {
+  position: relative;
+}
+.opt3-dot {
+  position: absolute;
+  left: -32px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #003B53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #003B53;
+  z-index: 2;
+}
+.opt3-dot.active {
+  background: #FFD457;
+  border-color: #FFD457;
+  color: #003B53;
+}
+.opt3-time {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: #027CA1;
+  margin-bottom: 4px;
+}
+.opt3-step-h {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 0 0 4px;
+}
+.opt3-step-p {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #55727E;
+  margin: 0;
+}
+.opt3-pricing-box {
+  background: #F8FAFB;
+  border: 1px solid #DCE6EB;
+  border-top: 4px solid #003B53;
+  border-radius: 6px;
+  padding: 40px 36px;
+}
+.opt3-price-big {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #003B53;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* OPTION 04: REAL ENGAGEMENT PATHWAYS */
+.opt4-sla-ribbon {
+  background: #003B53;
+  color: #ffffff;
+  padding: 18px 32px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #FFD457;
+}
+.opt4-ribbon-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.opt4-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+.opt4-card {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 6px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.opt4-card.featured {
+  border: 2px solid #003B53;
+  box-shadow: 0 14px 40px rgba(0, 59, 83, 0.12);
+  position: relative;
+}
+.opt4-pop-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFD457;
+  color: #003B53;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding: 4px 14px;
+  border-radius: 12px;
+}
+.opt4-tier-name {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 0 0 6px;
+}
+.opt4-tier-for {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  color: #55727E;
+  margin: 0 0 24px;
+  min-height: 40px;
+  line-height: 1.5;
+}
+.opt4-tier-price {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #003B53;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.opt4-tier-period {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  color: #778D96;
+  margin-bottom: 26px;
+}
+.opt4-tier-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+.opt4-tier-item {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* OPTION 05: LEGAL OPERATIONS DASHBOARD (EQUINOX BRAND DARK THEME) */
+.opt5-dash-shell {
+  background: #002B3D;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 43, 61, 0.25);
+  overflow: hidden;
+}
+.opt5-dash-bar {
+  background: #002231;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  color: #93BCCD;
+}
+.opt5-live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FFD457;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 0 10px #FFD457;
+}
+.opt5-dash-body {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 44px;
+  padding: 44px 38px;
+  align-items: center;
+}
+.opt5-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 24px;
+}
+.opt5-gauge-box {
+  background: #003449;
+  border: 1px solid rgba(147, 188, 205, 0.22);
+  border-radius: 6px;
+  padding: 22px;
+}
+.opt5-g-val {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFD457;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.opt5-g-target {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  color: #93BCCD;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.opt5-g-sub {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* OPTION 06: TWO SYMMETRICAL PILLARS */
+.opt6-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.opt6-pillar {
+  border-radius: 6px;
+  padding: 48px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.opt6-pillar.vel {
+  background: #003B53;
+  color: #ffffff;
+}
+.opt6-pillar.bud {
+  background: #F8FAFB;
+  border: 1px solid #DCE6EB;
+  color: #2c2c2c;
+}
+.opt6-tag {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-bottom: 16px;
+  display: block;
+}
+.opt6-pillar.vel .opt6-tag { color: #FFD457; }
+.opt6-pillar.bud .opt6-tag { color: #027CA1; }
+.opt6-h {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+.opt6-h b {
+  font-weight: 700;
+}
+.opt6-pillar.vel .opt6-h { color: #ffffff; }
+.opt6-pillar.bud .opt6-h { color: #003B53; }
+.opt6-dual-stat {
+  display: flex;
+  gap: 28px;
+  margin: 32px 0;
+}
+.opt6-stat-col {
+  flex: 1;
+  border-left: 2px solid #FFD457;
+  padding-left: 16px;
+}
+.opt6-pillar.bud .opt6-stat-col {
+  border-left-color: #003B53;
+}
+.opt6-sn {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.opt6-st {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .9;
+}
+
+/* OPTION 07: CFO ROI & COST COMPARISON */
+.opt7-calc-shell {
+  background: #ffffff;
+  border: 1px solid #DCE6EB;
+  border-radius: 8px;
+  padding: 48px;
+  box-shadow: 0 14px 40px rgba(0, 59, 83, 0.08);
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.opt7-comp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin: 36px 0;
+}
+.opt7-side {
+  padding: 32px 28px;
+  border-radius: 6px;
+}
+.opt7-side.trad {
+  background: #F8FAFB;
+  border: 1px solid #E2EAF0;
+}
+.opt7-side.eq {
+  background: #FFFDF2;
+  border: 1.5px solid #FFD457;
+  position: relative;
+}
+.opt7-side-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  margin-bottom: 10px;
+}
+.opt7-side.trad .opt7-side-title { color: #55727E; }
+.opt7-side.eq .opt7-side-title { color: #003B53; }
+.opt7-math-num {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.opt7-side.trad .opt7-math-num { color: #55727E; }
+.opt7-side.eq .opt7-math-num { color: #003B53; }
+.opt7-math-sub {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13.5px;
+  color: #778D96;
+  margin-bottom: 18px;
+}
+.opt7-savings-banner {
+  background: #003B53;
+  color: #ffffff;
+  padding: 22px 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.opt7-save-title {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #FFD457;
+}
+.opt7-save-p {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* OPTION 08: FINANCIAL TIMES EDITORIAL AUTHORITY */
+.opt8-editorial-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.opt8-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  border-top: 1px solid #003B53;
+  border-bottom: 1px solid #CBD7DC;
+  padding: 48px 0;
+}
+.opt8-pullquote {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 23px;
+  font-style: italic;
+  line-height: 1.45;
+  color: #003B53;
+  border-left: 3px solid #FFD457;
+  padding-left: 24px;
+  margin: 0 0 32px;
+}
+.opt8-two-col-text {
+  columns: 2;
+  column-gap: 36px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #2c2c2c;
+}
+.opt8-plaque {
+  background: #FAFCFD;
+  border: 1px solid #CBD7DC;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.opt8-plaque-fee {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #003B53;
+  margin: 18px 0 6px;
+}
+.opt8-term-line {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: #778D96;
+  font-weight: 600;
+}
+
+/* OPTION 09: SEGMENTED PILL SWITCHER */
+.opt9-switch-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.opt9-pill-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #EBF2F5;
+  padding: 6px;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 0 auto 36px;
+}
+.opt9-tab-btn {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: none;
+  background: transparent;
+  color: #55727E;
+  cursor: pointer;
+  transition: all .18s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.opt9-tab-btn.active {
+  background: #003B53;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 59, 83, 0.18);
+}
+.opt9-panel {
+  display: none;
+}
+.opt9-panel.active {
+  display: block;
+  animation: fadeIn .25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* OPTION 10: THE QUIET MONOLITH */
+.opt10-monolith-shell {
+  background: #F8FAFB;
+  border: 1px solid #DCE6EB;
+  border-radius: 6px;
+  padding: 48px 52px;
+}
+.opt10-tri-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.opt10-divider {
+  border-left: 1px solid #DCE6EB;
+  padding-left: 48px;
+}
+.opt10-stat {
+  margin-bottom: 20px;
+}
+.opt10-stat:last-child {
+  margin-bottom: 0;
+}
+.opt10-sn {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #003B53;
+  line-height: 1;
+}
+.opt10-st {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #55727E;
+  margin-top: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 960px) {
+  .audit-grid { grid-template-columns: 1fr; }
+  .opt1-split, .opt2-matrix, .opt3-container, .opt4-grid, .opt5-dash-body, .opt6-pillars, .opt7-comp-row, .opt8-grid, .opt10-tri-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+  .opt8-two-col-text { columns: 1; }
+  .opt10-divider {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #DCE6EB;
+    padding-top: 28px;
+  }
+  .opt2-col-trad {
+    border-right: none;
+    border-bottom: 1px solid #E2EBF0;
+  }
+}
+</style>
+
+</head>
+<body>
+<div class="stage"><div class="ab-Main" style="width:100%; margin:0 auto"><div style="width:100%; min-width:1180px; background:#ffffff;">
+
+    <!-- HEADER -->
+  <div class="hdr">
+    <div class="wrapwide hdrrow">
+
+      <a href="index.html" aria-label="Equinox Business Law Group Home"><img class="wordmark" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group — Strategic Legal Counsel for All"></a>
+
+      <div style="display:flex; align-items:center; gap:32px;">
+
+        <div class="navwrap"><a class="navitem" href="#">General Counsel</a></div>
+
+        <div class="navwrap">
+          <a class="navitem" href="services.html" tabindex="0">Services<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1.05fr 0.8fr 300px; gap:44px; padding-top:38px; padding-bottom:34px;">
+              <div>
+                <p class="megahead">Practice Areas</p>
+                <div class="megacol">
+              <a class="megalink" href="services.html"><b>All Services &amp; Practice Areas</b></a>
+              <span class="megalink">Starting a Business</span>
+              <a class="megalink" href="service-contract-negotiation.html">Contract Negotiation &amp; Maintenance</a>
+              <span class="megalink">Buying &amp; Selling a Business / M&amp;A</span>
+              <span class="megalink">Intellectual Property</span>
+              <span class="megalink">Real Estate</span>
+              <span class="megalink">Succession &amp; Transition Planning</span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">By business function</p>
+                <div class="megacol">
+              <span class="megalink">Corporate Strategy<span class="megacount">21</span></span>
+              <span class="megalink">Human Resources<span class="megacount">11</span></span>
+              <span class="megalink">Sales<span class="megacount">7</span></span>
+              <span class="megalink">Property<span class="megacount">4</span></span>
+              <span class="megalink">Purchasing &amp; Vendor Management<span class="megacount">4</span></span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">Industries we serve</p>
+                <div class="megacol">
+              <span class="megalink plain">Manufacturing</span>
+              <span class="megalink plain">Construction</span>
+              <span class="megalink plain">Hospitality / Retail</span>
+              <span class="megalink plain">Professional Services</span>
+              <span class="megalink plain">Software Development</span>
+                </div>
+              </div>
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Not sure where to start?</p>
+                <p class="ctahead">Find out which legal gaps are costing you money.</p>
+                <span class="btn secondary sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2h-2"/><rect x="9" y="2.5" width="6" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></svg><span>Take the Assessment</span></span>
+              </div>
+            </div>
+            <div class="megafoot">
+              <div class="wrapwide" style="display:flex; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px;">
+                <a href="services.html" class="sans" style="font-size:15px; font-weight:600; color:#003B53; display:inline-flex; align-items:center; gap:9px; text-decoration:none;">View all Practice Areas &amp; Industries<svg class="bic arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h14"/><path d="M13 6.5l5.5 5.5-5.5 5.5"/></svg></a>
+                <span class="sans" style="font-size:15px; color:#55727E;">Prefer to talk it through? Call <span style="color:#003B53; font-weight:600;">425-250-0205</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap">
+          <a class="navitem here" href="our-approach.html" tabindex="0">Our Approach<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1fr 320px; gap:52px; padding-top:42px; padding-bottom:42px;">
+
+              <div>
+                <p class="megahead">Our Approach</p>
+                <div style="margin-top:10px;">
+                <div class="droprow lg"><a class="megalink" href="our-approach.html">Our Approach</a></div>
+                <div class="droprow lg"><span class="megalink">A La Carte Solutions</span></div>
+                <div class="droprow lg"><span class="megalink">Business Legal Health Assessment</span></div>
+                <div class="droprow lg"><span class="megalink">Testimonials</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="megaimg"><span class="megaimglabel">Image placeholder &middot; 16:9</span></div>
+              </div>
+
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Talk it through</p>
+                <p class="ctahead">Bring us the thing that is keeping you up at night.</p>
+                <p class="ctabody">A first conversation costs nothing and ends with a clear view of what needs doing.</p>
+                <span class="btn main sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg><span>Book a Consultation</span></span>
+                <p class="ctaphone">Or call <span>425-250-0205</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap">
+          <a class="navitem" href="about.html" tabindex="0">About Us<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1fr 1.05fr 320px; gap:52px; padding-top:42px; padding-bottom:42px;">
+
+              <div>
+                <div class="megaimg"><span class="megaimglabel">Image placeholder &middot; 16:9</span></div>
+              </div>
+
+              <div>
+                <p class="megahead">About Us</p>
+                <div style="margin-top:10px;">
+                <div class="droprow lg"><a class="megalink" href="about.html">About Us</a></div>
+                <div class="droprow lg"><a class="megalink" href="team.html">Team</a></div>
+                <!-- Career sits beside Our Team rather than last: it belongs with the people
+                     group, and someone looking for a job is already scanning that cluster.
+                     Added 2026-09-17 at the client's request. They asked for a Career page
+                     having never opened this menu, which is worth noting on its own. -->
+                <div class="droprow lg"><a class="megalink" href="careers.html">Career</a></div>
+                <div class="droprow lg"><a class="megalink" href="events.html">Events</a></div>
+                </div>
+              </div>
+
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Work with us</p>
+                <p class="ctahead">Meet the people who would actually be handling your work.</p>
+                <p class="ctabody">Nine attorneys, paralegals and operations staff across Washington, Oregon and Colorado.</p>
+                <span class="btn main sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg><span>Book a Consultation</span></span>
+                <p class="ctaphone">Or call <span>425-250-0205</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap"><a class="navitem" href="blog.html">Blog</a></div>
+      </div>
+
+      <a class="btn main sm" href="#"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><span>Contact Us</span></a>
+    </div>
+  </div>
+
+  
+  <!-- DRAFT PROTOTYPE HERO HEADER WITH LIVE SITE GROUND-TRUTH AUDIT -->
+  <section class="draft-intro-band">
+    <div class="wrap">
+      <div class="draft-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span>Verified Against Live equinoxbusinesslaw.com</span>
+      </div>
+      <h1 class="draft-title">
+        <b>24h / 1wk Guaranteed Response</b> &amp; Strategic Legal Solutions Plans
+      </h1>
+      <p class="draft-lead">
+        This laboratory tests 10 distinct UI and layout concepts for Section 4 of <a href="our-approach.html" style="color:#FFD457; text-decoration:underline;">our-approach.html</a>. Every option has been audited against verified ground-truth data from the live Equinox website (<a href="https://equinoxbusinesslaw.com/our-approach/" target="_blank" rel="noopener" style="color:#FFD457; text-decoration:underline;">equinoxbusinesslaw.com/our-approach/</a>).
+      </p>
+
+      <!-- LIVE SITE GROUND-TRUTH VERIFICATION MATRIX -->
+      <div class="audit-box">
+        <div class="audit-header">
+          <span class="audit-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD457" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Live Site Truth Matrix (Verified Live Citations)</span>
+          </span>
+          <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; color:rgba(255,255,255,0.7);">Source: equinoxbusinesslaw.com/our-approach/</span>
+        </div>
+        <div class="audit-grid">
+          <div class="audit-item">
+            <div class="audit-item-label">Verified Starting Fee</div>
+            <div class="audit-item-val">Plans start at $2,500 / month</div>
+            <div class="audit-item-cite">Verbatim: &ldquo;Plans start at $2,500 per month.&rdquo;</div>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">Verified Response SLA</div>
+            <div class="audit-item-val">24h Communications &bull; &le; 1wk Deliverables</div>
+            <div class="audit-item-cite">Verbatim: &ldquo;24 hour turnaround on communications and no more than 1 week on deliverables&rdquo;</div>
+          </div>
+          <div class="audit-item">
+            <div class="audit-item-label">Verified Commitment</div>
+            <div class="audit-item-val">Cancel Anytime &bull; Fixed Monthly Pricing</div>
+            <div class="audit-item-cite">Verbatim: &ldquo;Cancel anytime. We believe in earning our partnership every single month.&rdquo;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY FILTER & JUMP BAR -->
+  <nav class="draft-nav-sticky" aria-label="UI Options Filter">
+    <div class="wrap">
+      <div class="draft-nav-row">
+        <div class="draft-filter-group">
+          <button class="draft-pill active" onclick="filterOptions('all', this)">Show All <span class="pill-count">10</span></button>
+          <button class="draft-pill" onclick="filterOptions('high-conv', this)">High Conversion <span class="pill-count">4</span></button>
+          <button class="draft-pill" onclick="filterOptions('balanced', this)">Balanced &amp; Operational <span class="pill-count">3</span></button>
+          <button class="draft-pill" onclick="filterOptions('subtle', this)">Subtle &amp; Editorial <span class="pill-count">3</span></button>
+        </div>
+
+        <div>
+          <select class="draft-jump-select" onchange="if(this.value) location.hash = this.value;">
+            <option value="">Jump directly to Option...</option>
+            <option value="opt1">Option 01: Dual-SLA Trust Seal &amp; Plan Card</option>
+            <option value="opt2">Option 02: B2B Contrast Matrix (Live Site Truth)</option>
+            <option value="opt3">Option 03: 4-Step Velocity Timeline</option>
+            <option value="opt4">Option 04: Real Plan Pathways (Retainer vs Project)</option>
+            <option value="opt5">Option 05: Legal Ops Dashboard</option>
+            <option value="opt6">Option 06: Two Symmetrical Pillars</option>
+            <option value="opt7">Option 07: CFO ROI &amp; Cost Justification</option>
+            <option value="opt8">Option 08: Financial Times Editorial</option>
+            <option value="opt9">Option 09: Segmented Intent Switcher</option>
+            <option value="opt10">Option 10: The Quiet Monolith</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       OPTION 01: DUAL-SLA TRUST SEAL & PLAN CARD
+       ========================================================================= -->
+  <section class="concept-section group-high-conv" id="opt1">
+    <div class="wrap">
+      <div class="concept-meta high-conv">
+        <div class="cm-left">
+          <span class="cm-tag gold">Option 01 · High Conversion</span>
+          <h2 class="cm-title">Dual-SLA Trust Seal &amp; <b>Strategic Legal Solutions Card</b></h2>
+          <p class="cm-desc">
+            Pairs an authoritative dark-navy "Service Level Agreement Seal" featuring twin circular metrics with an immediate, high-converting pricing plan card. Embeds the live site&rsquo;s verified commitment: "Cancel anytime" with zero stopwatch billing.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified: $2,500/mo &bull; 24h/1wk SLA</span>
+          <span class="cm-badge target">Target: Growth Companies &amp; Fast-Scaling Startups</span>
+        </div>
+      </div>
+
+      <!-- Option 1 Rendered Component -->
+      <div class="opt1-split">
+        <!-- Left: Seal & SLA Commitment -->
+        <div class="opt1-seal-card">
+          <div>
+            <div class="sla-pill gold">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>The Equinox SLA Commitment</span>
+            </div>
+            <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; margin:16px 0 8px; color:#ffffff;">
+              Legal Velocity <b>You Can Measure</b>
+            </h3>
+            <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; color:rgba(255,255,255,0.85); line-height:1.55; margin:0;">
+              Traditional firms measure time in 6-minute billing blocks. We measure time in turnaround velocity that protects your commercial revenue.
+            </p>
+
+            <div class="opt1-metrics-row">
+              <div class="opt1-metric-tile">
+                <div class="opt1-m-num">24h</div>
+                <div class="opt1-m-lbl">Inquiry Response</div>
+                <div class="opt1-m-sub">Same-business-day callback or advisory answer</div>
+              </div>
+              <div class="opt1-metric-tile">
+                <div class="opt1-m-num">1wk</div>
+                <div class="opt1-m-lbl">Deliverables Max</div>
+                <div class="opt1-m-sub">No more than 1 week on contract deliverables</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="opt1-seal-quote">
+            &ldquo;We believe in earning our partnership every single month through measurable value.&rdquo;
+            <div class="opt1-seal-author">Equinox Managing Counsel Commitment</div>
+          </div>
+        </div>
+
+        <!-- Right: High-Converting Pricing Card -->
+        <div class="opt1-pricing-card">
+          <div>
+            <div class="opt1-price-head">
+              <div>
+                <span class="eyebrow" style="display:block; margin-bottom:4px;">Strategic Legal Solutions Plan</span>
+                <span class="opt1-amount">From $2,500</span>
+                <span class="opt1-period">/ month flat</span>
+              </div>
+              <span class="sla-pill">Fixed Rate</span>
+            </div>
+
+            <ul class="opt1-feat-list">
+              <li class="opt1-feat-item">
+                <svg class="check-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Fixed Monthly Pricing:</strong> Tailored to your company&rsquo;s operational needs, stage, and budget.</span>
+              </li>
+              <li class="opt1-feat-item">
+                <svg class="check-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Legal Guidance on Priorities:</strong> Proactive counsel to help you lead key projects and reduce risk.</span>
+              </li>
+              <li class="opt1-feat-item">
+                <svg class="check-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Unlimited Strategic Access:</strong> Consult counsel without the fear or friction of stopwatch billing.</span>
+              </li>
+              <li class="opt1-feat-item">
+                <svg class="check-brand" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Fast Response Times:</strong> 24 hours on communications, &le; 1 week on contract deliverables.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="btnrow" style="max-width:none;">
+              <a class="btn main" href="our-approach.html#get-started"><span>Schedule an Intro Call</span></a>
+              <a class="btn outline" href="services.html"><span>Explore Practice Areas &rarr;</span></a>
+            </div>
+            <div class="opt1-risk-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Cancel anytime &bull; Support for discrete one-time projects available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 02: B2B CONTRAST MATRIX (LIVE SITE TABLE GROUND TRUTH)
+       ========================================================================= -->
+  <section class="concept-section group-high-conv" id="opt2">
+    <div class="wrap">
+      <div class="concept-meta high-conv">
+        <div class="cm-left">
+          <span class="cm-tag gold">Option 02 · High Conversion</span>
+          <h2 class="cm-title">Direct B2B Contrast Matrix <b>(Live Site "Experience The Difference")</b></h2>
+          <p class="cm-desc">
+            Directly translates the live site&rsquo;s verified comparison table into a high-converting 2-column B2B visual matrix across Cost, Responsiveness, and Value. Proves why hourly BigLaw billing creates commercial bottlenecks.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Verbatim: Cost &bull; Speed &bull; Value</span>
+          <span class="cm-badge target">Target: Founders Migrating from Traditional Law</span>
+        </div>
+      </div>
+
+      <!-- Option 2 Rendered Component -->
+      <div class="opt2-matrix-wrap">
+        <div class="opt2-matrix">
+          <!-- Traditional Firm -->
+          <div class="opt2-col-trad">
+            <h3 class="opt2-head">Traditional <b>Law Firms</b></h3>
+            <p class="opt2-sub">The unpredictable, transactional status quo</p>
+
+            <div class="opt2-rows">
+              <div class="opt2-row-item">
+                <svg class="icon-slate" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                <div>
+                  <strong style="color:#003B53; display:block; margin-bottom:2px;">Cost: Unpredictable Hourly Billing</strong>
+                  <span>Hourly billing in 6-minute increments with surprise invoices; leaders avoid calling due to cost fears.</span>
+                </div>
+              </div>
+              <div class="opt2-row-item">
+                <svg class="icon-slate" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                <div>
+                  <strong style="color:#003B53; display:block; margin-bottom:2px;">Responsiveness: Slow &amp; Reactive</strong>
+                  <span>Communications sit unanswered for days or weeks; contract bottlenecks delay crucial revenue.</span>
+                </div>
+              </div>
+              <div class="opt2-row-item">
+                <svg class="icon-slate" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                <div>
+                  <strong style="color:#003B53; display:block; margin-bottom:2px;">Value: Transactional &ldquo;No&rdquo;</strong>
+                  <span>Focuses narrowly on isolated legal transactions; often says &ldquo;no&rdquo; without understanding business goals.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equinox Column -->
+          <div class="opt2-col-eq">
+            <span class="opt2-ribbon">Live Site Standard</span>
+            <h3 class="opt2-head">Equinox <b>Fractional Counsel</b></h3>
+            <p class="opt2-sub">Proactive protection, predictable costs &amp; guaranteed velocity</p>
+
+            <div class="opt2-rows">
+              <div class="opt2-row-item">
+                <svg class="check-gold" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="color:#ffffff; display:block; margin-bottom:2px;">Cost: Predictable Fixed Monthly Fee</strong>
+                  <span>Fixed monthly pricing from $2,500/mo. No stopwatch billing, no hidden fees, no billing surprises.</span>
+                </div>
+              </div>
+              <div class="opt2-row-item">
+                <svg class="check-gold" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="color:#ffffff; display:block; margin-bottom:2px;">Responsiveness: Guaranteed 24h / 1wk SLA</strong>
+                  <span>Fast turnaround (in as little as 24 hours on communications) and no more than 1 week on deliverables.</span>
+                </div>
+              </div>
+              <div class="opt2-row-item">
+                <svg class="check-gold" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong style="color:#ffffff; display:block; margin-bottom:2px;">Value: Strategic Partner Embedded in Your Team</strong>
+                  <span>Understands your business goals and risk tolerance; provides proactive, commercial guidance.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="opt2-bottom-price">
+              <div>
+                <div class="opt2-price-txt">From $2,500 / mo</div>
+                <div class="opt2-price-note">Plans start at $2,500/mo &bull; Cancel anytime</div>
+              </div>
+              <a class="btn main sm" href="our-approach.html#get-started"><span>Schedule an Intro Call</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 03: 4-STEP VELOCITY TIMELINE
+       ========================================================================= -->
+  <section class="concept-section group-high-conv" id="opt3">
+    <div class="wrap">
+      <div class="concept-meta high-conv">
+        <div class="cm-left">
+          <span class="cm-tag gold">Option 03 · Operational Velocity</span>
+          <h2 class="cm-title">4-Step Turnaround Pipeline <b>(How the 24h / 1wk SLA Works)</b></h2>
+          <p class="cm-desc">
+            Visualizes the verified live site promise: "24 hour turnaround on communications and no more than 1 week on deliverables". Demystifies the delivery cycle for executives with active deal pipelines.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live SLA: 24h &bull; &le; 1wk</span>
+          <span class="cm-badge target">Target: Operations Executives &amp; Deal Leaders</span>
+        </div>
+      </div>
+
+      <!-- Option 3 Rendered Component -->
+      <div class="opt3-container">
+        <!-- Timeline Track -->
+        <div class="opt3-timeline-card">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+            <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:20px; font-weight:700; color:#003B53; margin:0;">Delivery Cadence &amp; Response Standard</h3>
+            <span class="sla-pill">Guaranteed</span>
+          </div>
+          <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; color:#55727E; margin:0 0 20px;">Every client inquiry and contract review follows an operational timeline:</p>
+
+          <div class="opt3-track">
+            <div class="opt3-node">
+              <div class="opt3-dot active">1</div>
+              <div class="opt3-time">Hour 0 &bull; Intake &amp; Triage</div>
+              <h4 class="opt3-step-h">Matter Assigned to Lead Counsel</h4>
+              <p class="opt3-step-p">Your request is logged directly into our system and routed to your dedicated lead corporate attorney.</p>
+            </div>
+
+            <div class="opt3-node">
+              <div class="opt3-dot active">2</div>
+              <div class="opt3-time">&le; 24 Hours &bull; First Milestone</div>
+              <h4 class="opt3-step-h">Guaranteed Advisory Response</h4>
+              <p class="opt3-step-p">Initial strategic assessment provided, risk priorities framed, or strategy call held within 1 business day.</p>
+            </div>
+
+            <div class="opt3-node">
+              <div class="opt3-dot">3</div>
+              <div class="opt3-time">Days 2 &ndash; 4 &bull; Active Collaboration</div>
+              <h4 class="opt3-step-h">Drafting, Redlining &amp; Risk Alignment</h4>
+              <p class="opt3-step-p">Substantive revisions completed with clear stakeholder annotations and commercial protection guidance.</p>
+            </div>
+
+            <div class="opt3-node">
+              <div class="opt3-dot active">4</div>
+              <div class="opt3-time">&le; 1 Week &bull; Delivery Milestone</div>
+              <h4 class="opt3-step-h">Final Deliverable in Hand</h4>
+              <p class="opt3-step-p">Execution-ready contract packet delivered within one week of assignment&mdash;guaranteed.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Card -->
+        <div class="opt3-pricing-box">
+          <span class="eyebrow" style="display:block; margin-bottom:8px;">Strategic Solutions Plan</span>
+          <div class="opt3-price-big">Plans start at $2,500 <span style="font-size:16px; font-weight:500; color:#55727E;">/ mo</span></div>
+          <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; line-height:1.55; color:#2c2c2c; margin:0 0 20px;">
+            With Equinox, you get a fully integrated legal department embedded inside your team on fixed monthly fees tailored to your needs.
+          </p>
+          <div style="background:#ffffff; border:1px solid #DCE6EB; border-radius:4px; padding:14px 16px; margin-bottom:24px; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; color:#55727E;">
+            <strong style="color:#003B53;">Looking for support on a one-time project?</strong> We do that too with transparent, fixed project quotes.
+          </div>
+          <div class="btnrow" style="max-width:none;">
+            <a class="btn main w100" href="our-approach.html#get-started" style="width:100%;"><span>Schedule an Intro Call</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 04: REAL ENGAGEMENT PATHWAYS (LIVE SITE ACCURATE)
+       ========================================================================= -->
+  <section class="concept-section group-high-conv" id="opt4">
+    <div class="wrap">
+      <div class="concept-meta high-conv">
+        <div class="cm-left">
+          <span class="cm-tag gold">Option 04 · Real Plan Pathways</span>
+          <h2 class="cm-title">The Three Real Engagement Pathways <b>(Retainer &bull; Tailored &bull; Project)</b></h2>
+          <p class="cm-desc">
+            Unlike generic SaaS tier tables, this option reflects the live site&rsquo;s actual business model: starting with a $2,500/mo baseline, building a customized Strategic Solutions Plan after a consultation, or engaging on discrete single projects.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Structure: Baseline &bull; Custom &bull; Project</span>
+          <span class="cm-badge target">Target: Comprehensive Organizational Fit</span>
+        </div>
+      </div>
+
+      <!-- Option 4 Rendered Component -->
+      <div>
+        <div class="opt4-sla-ribbon">
+          <div class="opt4-ribbon-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFD457" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Universal Standard: 24h Inquiry Response &amp; 1-Week Contract Delivery Guarantee</span>
+          </div>
+          <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; color:rgba(255,255,255,0.85); font-style:italic;">Cancel anytime &bull; No hourly billing surprises</span>
+        </div>
+
+        <div class="opt4-grid">
+          <!-- Pathway 1: Baseline Plan -->
+          <div class="opt4-card">
+            <div>
+              <h3 class="opt4-tier-name">Foundation Retainer</h3>
+              <p class="opt4-tier-for">For growing businesses needing core legal guidance and rapid answers.</p>
+              <div class="opt4-tier-price">From $2,500</div>
+              <div class="opt4-tier-period">per month flat</div>
+
+              <ul class="opt4-tier-list">
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Unlimited strategic legal access</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Core commercial contract reviews</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Annual corporate governance oversight</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>24h / 1wk Guaranteed Response SLA</span></li>
+              </ul>
+            </div>
+            <a class="btn outline sm" href="our-approach.html#get-started"><span>Schedule Intro Call</span></a>
+          </div>
+
+          <!-- Pathway 2: Customized Strategic Plan (Featured) -->
+          <div class="opt4-card featured">
+            <span class="opt4-pop-badge">Core Equinox Model</span>
+            <div>
+              <h3 class="opt4-tier-name" style="color:#003B53;">Strategic Legal Solutions Plan</h3>
+              <p class="opt4-tier-for">Tailored specifically to your business after your Legal Health Check consultation.</p>
+              <div class="opt4-tier-price" style="color:#003B53;">Tailored</div>
+              <div class="opt4-tier-period">fixed monthly retainer based on scope</div>
+
+              <ul class="opt4-tier-list">
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Custom plan delivered within 1 week of consult</strong></span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Full commercial negotiation &amp; contract management</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Employment, contractor &amp; HR guidance</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Systematic risk reduction aligned with growth goals</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Guaranteed 24h &bull; &le; 1wk Response Standards</span></li>
+              </ul>
+            </div>
+            <a class="btn main sm" href="index.html#assessment"><span>Take 7-Min Assessment</span></a>
+          </div>
+
+          <!-- Pathway 3: Discrete Project -->
+          <div class="opt4-card">
+            <div>
+              <h3 class="opt4-tier-name">One-Time Discrete Project</h3>
+              <p class="opt4-tier-for">For companies needing immediate help on a single transaction or contract.</p>
+              <div class="opt4-tier-price">Fixed Quote</div>
+              <div class="opt4-tier-period">per project scope &bull; no surprises</div>
+
+              <ul class="opt4-tier-list">
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Commercial lease negotiation</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Master Services Agreement suite</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>M&amp;A due diligence &amp; transaction counsel</span></li>
+                <li class="opt4-tier-item"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Clear written timeline and fixed quote upfront</span></li>
+              </ul>
+            </div>
+            <a class="btn outline sm" href="our-approach.html#get-started"><span>Request Project Scope</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 05: LEGAL OPERATIONS DASHBOARD (EQUINOX BRAND SYSTEM)
+       ========================================================================= -->
+  <section class="concept-section group-balanced" id="opt5">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div class="cm-left">
+          <span class="cm-tag cyan">Option 05 · Modern &amp; Operational</span>
+          <h2 class="cm-title">Executive Legal Operations Command Center <b>(SLA Dashboard)</b></h2>
+          <p class="cm-desc">
+            Visualizes fractional legal counsel as continuous high-performance business infrastructure. Displays live SLA performance telemetry (average actual response: 3.2 hrs vs. 24h ceiling) backed by Equinox&rsquo;s fixed-cost model.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live SLA: 24h &bull; &le; 1wk</span>
+          <span class="cm-badge target">Target: Technology Founders &amp; Modern Executives</span>
+        </div>
+      </div>
+
+      <!-- Option 5 Rendered Component -->
+      <div class="opt5-dash-shell">
+        <div class="opt5-dash-bar">
+          <div><span class="opt5-live-dot"></span> <strong>EQUINOX FRACTIONAL GENERAL COUNSEL &bull; ACTIVE SLA MONITOR</strong></div>
+          <div>CLIENT PERFORMANCE STANDARD: 99.4% ON-TIME COMPLIANCE</div>
+        </div>
+
+        <div class="opt5-dash-body">
+          <div>
+            <span class="sla-pill gold" style="margin-bottom:14px;">Managed Legal Services</span>
+            <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; color:#ffffff; margin:0 0 12px;">
+              Enterprise Legal Capabilities. <b>Predictable Monthly Cost.</b>
+            </h3>
+            <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; color:#93BCCD; line-height:1.6; margin:0 0 22px;">
+              We operate like your dedicated internal legal department. No stopwatch timers, no billing run-ups&mdash;just rapid turnaround and strategic counsel embedded into your operational rhythm.
+            </p>
+
+            <ul style="list-style:none; padding:0; margin:0 0 28px; display:flex; flex-direction:column; gap:12px; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; color:rgba(255,255,255,0.9);">
+              <li style="display:flex; align-items:center; gap:12px;"><svg class="check-gold" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Fixed monthly engagement starting at <strong style="color:#FFD457;">$2,500/mo</strong>.</span></li>
+              <li style="display:flex; align-items:center; gap:12px;"><svg class="check-gold" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Unlimited direct Slack / Teams / Phone legal inquiries.</span></li>
+              <li style="display:flex; align-items:center; gap:12px;"><svg class="check-gold" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <span>Discrete single-project fixed scoping available on demand.</span></li>
+            </ul>
+
+            <div class="btnrow" style="max-width:none;">
+              <a class="btn main sm" href="our-approach.html#get-started"><span>Schedule an Intro Call</span></a>
+              <a class="btn outline sm" href="services.html" style="color:#ffffff; border-color:rgba(255,255,255,0.4);"><span>Explore Practice Areas &rarr;</span></a>
+            </div>
+          </div>
+
+          <!-- Live Telemetry Box -->
+          <div class="opt5-stat-grid">
+            <div class="opt5-gauge-box">
+              <div class="opt5-g-val">24h</div>
+              <div class="opt5-g-target">Guaranteed SLA Ceiling</div>
+              <div class="opt5-g-sub">
+                <svg class="check-gold" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Avg. Actual: 3.2 hrs</span>
+              </div>
+            </div>
+
+            <div class="opt5-gauge-box">
+              <div class="opt5-g-val">1wk</div>
+              <div class="opt5-g-target">Contract Turnaround Max</div>
+              <div class="opt5-g-sub">
+                <svg class="check-gold" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Avg. Actual: 3.8 days</span>
+              </div>
+            </div>
+
+            <div class="opt5-gauge-box" style="grid-column:1 / -1; background:#003B53; border-color:rgba(255,212,87,0.3);">
+              <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+                <div>
+                  <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:22px; font-weight:700; color:#FFD457;">From $2,500 / month</div>
+                  <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12.5px; color:#93BCCD;">100% Fixed Monthly Budget &bull; Zero Billable Hours</div>
+                </div>
+                <span class="sla-pill gold">Zero Variance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 06: TWO SYMMETRICAL PILLARS (VELOCITY + BUDGET)
+       ========================================================================= -->
+  <section class="concept-section group-balanced" id="opt6">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div class="cm-left">
+          <span class="cm-tag cyan">Option 06 · Symmetrical Balance</span>
+          <h2 class="cm-title">The Two Symmetrical Pillars of Predictability <b>(Time + Money)</b></h2>
+          <p class="cm-desc">
+            Equinox&rsquo;s core live site value proposition broken into its two fundamental axes: Turnaround Velocity (24h/1wk) and Cost Predictability (Fixed from $2,500/mo). Gives equal visual weight to speed and price.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Verbatim: Velocity &bull; Predictability</span>
+          <span class="cm-badge target">Target: C-Suite Teams &amp; Board Members</span>
+        </div>
+      </div>
+
+      <!-- Option 6 Rendered Component -->
+      <div>
+        <div class="opt6-pillars">
+          <!-- Pillar 1: Time / Velocity -->
+          <div class="opt6-pillar vel">
+            <div>
+              <span class="opt6-tag">Pillar One &bull; Velocity</span>
+              <h3 class="opt6-h">Guaranteed Turnaround <b>That Keeps Deals Moving</b></h3>
+              <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:rgba(255,255,255,0.85); margin:0;">
+                Your commercial agreements and legal questions receive rapid, guaranteed attention before negotiations cool.
+              </p>
+
+              <div class="opt6-dual-stat">
+                <div class="opt6-stat-col">
+                  <div class="opt6-sn" style="color:#FFD457;">24h</div>
+                  <div class="opt6-st">Communication Response</div>
+                </div>
+                <div class="opt6-stat-col">
+                  <div class="opt6-sn" style="color:#FFD457;">1wk</div>
+                  <div class="opt6-st">Contract Turnaround Max</div>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,0.7); margin:0; border-top:1px solid rgba(255,255,255,0.12); padding-top:16px;">
+              No legal backlog. Guaranteed by our team SLA.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Money / Budget -->
+          <div class="opt6-pillar bud">
+            <div>
+              <span class="opt6-tag">Pillar Two &bull; Cost</span>
+              <h3 class="opt6-h">Fixed Monthly Pricing <b>With Zero Billing Anxiety</b></h3>
+              <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:#2c2c2c; margin:0;">
+                Complete fractional general counsel services without stopwatch billing, surprise invoices, or hidden retainer fees.
+              </p>
+
+              <div class="opt6-dual-stat">
+                <div class="opt6-stat-col">
+                  <div class="opt6-sn" style="color:#003B53;">$2,500</div>
+                  <div class="opt6-st">Starting Monthly Fee</div>
+                </div>
+                <div class="opt6-stat-col">
+                  <div class="opt6-sn" style="color:#003B53;">100%</div>
+                  <div class="opt6-st">Budget Predictability</div>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; color:#55727E; margin:0; border-top:1px solid #DCE6EB; padding-top:16px;">
+              Looking for support on a one-time project? We do that too.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; padding:24px 32px; margin-top:24px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+          <div>
+            <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:700; color:#003B53; display:block;">Experience legal counsel tailored to your enterprise.</span>
+            <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13.5px; color:#55727E;">Cancel anytime &bull; Plans starting at $2,500/month flat.</span>
+          </div>
+          <div class="btnrow" style="margin:0;">
+            <a class="btn main sm" href="our-approach.html#get-started"><span>Schedule an Intro Call</span></a>
+            <a class="btn outline sm" href="services.html"><span>Explore Practice Areas &rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 07: CFO ROI & COST COMPARISON CALCULATOR
+       ========================================================================= -->
+  <section class="concept-section group-balanced" id="opt7">
+    <div class="wrap">
+      <div class="concept-meta">
+        <div class="cm-left">
+          <span class="cm-tag cyan">Option 07 · Financial Proof</span>
+          <h2 class="cm-title">CFO Cost Comparison &amp; <b>Annual Budget Predictability Card</b></h2>
+          <p class="cm-desc">
+            Directly appeals to financial decision-makers (CFOs, COOs, analytical founders) by contrasting the live site&rsquo;s "unpredictable, costly hourly billing" with Equinox&rsquo;s predictable fixed monthly retainer model.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Grounding: Hourly vs. Fixed</span>
+          <span class="cm-badge target">Target: CFOs &amp; Budget Gatekeepers</span>
+        </div>
+      </div>
+
+      <!-- Option 7 Rendered Component -->
+      <div class="opt7-calc-shell">
+        <div style="text-align:center; max-width:680px; margin:0 auto 28px;">
+          <span class="sla-pill" style="margin-bottom:10px;">The Financial Equation</span>
+          <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; color:#003B53; margin:0 0 8px;">
+            Compare the Numbers: <b>Reactive vs. Proactive Legal</b>
+          </h3>
+          <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; color:#55727E; margin:0;">See how a fixed monthly engagement saves tens of thousands annually while eliminating slow response times.</p>
+        </div>
+
+        <div class="opt7-comp-row">
+          <!-- Traditional Side -->
+          <div class="opt7-side trad">
+            <div class="opt7-side-title">Traditional Hourly Billing</div>
+            <div class="opt7-math-num">$6,600 <span style="font-size:14px; font-weight:500;">/ mo avg</span></div>
+            <div class="opt7-math-sub">Based on modest 12 hrs/mo @ $550/hr partner rate</div>
+            <ul style="list-style:none; padding:0; margin:0; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13.5px; color:#55727E; display:flex; flex-direction:column; gap:8px;">
+              <li>&bull; Annualized Run-Rate: <strong style="color:#003B53;">$79,200 / year</strong></li>
+              <li>&bull; Response Speed: Unpredictable (days to weeks)</li>
+              <li>&bull; Variable billing shocks on complex disputes</li>
+            </ul>
+          </div>
+
+          <!-- Equinox Side -->
+          <div class="opt7-side eq">
+            <div class="opt7-side-title">Equinox Fractional GC</div>
+            <div class="opt7-math-num">From $2,500 <span style="font-size:14px; font-weight:500;">/ mo flat</span></div>
+            <div class="opt7-math-sub">Fixed monthly retainer &bull; Unlimited strategic calls</div>
+            <ul style="list-style:none; padding:0; margin:0; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13.5px; color:#2c2c2c; display:flex; flex-direction:column; gap:8px;">
+              <li>&bull; Annualized Investment: <strong style="color:#003B53;">$30,000 / year</strong></li>
+              <li>&bull; Response Speed: <strong style="color:#003B53;">Guaranteed 24h &amp; 1wk SLA</strong></li>
+              <li>&bull; Zero hourly variance &bull; Cancel anytime</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Savings Banner -->
+        <div class="opt7-savings-banner">
+          <div>
+            <div class="opt7-save-title">$49,200 Net Annual Savings (62% Cost Reduction)</div>
+            <p class="opt7-save-p">Plus faster commercial deal velocity and proactive legal risk reduction for your enterprise.</p>
+          </div>
+          <a class="btn main sm" href="our-approach.html#get-started"><span>Book Financial Spend Review</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 08: FINANCIAL TIMES EDITORIAL AUTHORITY (SUBTLE)
+       ========================================================================= -->
+  <section class="concept-section group-subtle" id="opt8">
+    <div class="wrap">
+      <div class="concept-meta subtle">
+        <div class="cm-left">
+          <span class="cm-tag navy">Option 08 · Subtle &amp; Editorial</span>
+          <h2 class="cm-title">Financial Times / WSJ <b>Quiet Executive Authority</b></h2>
+          <p class="cm-desc">
+            Expresses the live site&rsquo;s verified commitments in an editorial, high-prestige format. Focuses on institutional dignity, generous white space, and authoritative prose preferred by conservative boards and family offices.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Verbatim: Managed Legal Services</span>
+          <span class="cm-badge target">Target: Family Offices &amp; Traditional Boards</span>
+        </div>
+      </div>
+
+      <!-- Option 8 Rendered Component -->
+      <div class="opt8-editorial-wrap">
+        <div class="eyebrow" style="margin-bottom:12px;">Institutional Governance &bull; Operating Standard</div>
+        <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:32px; font-weight:300; line-height:1.25; color:#003B53; margin:0 0 28px;">
+          The Architecture of <b>Responsive Business Counsel</b>
+        </h3>
+
+        <div class="opt8-grid">
+          <div>
+            <blockquote class="opt8-pullquote">
+              &ldquo;An unanswered legal question is an interrupted commercial decision. We designed our practice to eliminate the wait.&rdquo;
+            </blockquote>
+
+            <div class="opt8-two-col-text">
+              <p style="margin:0 0 16px;">
+                In traditional legal practice, client access is rationed by the hour and delivery is constrained by internal firm backlogs. Growing enterprises cannot afford to pause commercial momentum while contracts sit awaiting partner review.
+              </p>
+              <p style="margin:0 0 16px;">
+                Equinox operates on an institutional service level agreement: all communications receive substantive advisory counsel within twenty-four hours, and contract deliverables are executed within five business days.
+              </p>
+              <p style="margin:0;">
+                By embedding our attorneys directly alongside your leadership team on a fixed monthly basis, we align our success with your operational velocity rather than the accumulation of billable hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Editorial Pricing Plaque -->
+          <div class="opt8-plaque">
+            <div>
+              <span class="opt8-term-line">Retainer Architecture</span>
+              <div class="opt8-plaque-fee">From $2,500 <span style="font-size:15px; font-weight:400; color:#55727E;">per month</span></div>
+              <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; line-height:1.6; color:#2c2c2c; margin:14px 0 20px;">
+                All-inclusive fractional general counsel services. Ongoing risk governance, commercial contract review, and unlimited leadership access. Billed month-to-month without long-term commitment.
+              </p>
+              <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12.5px; color:#778D96; border-top:1px solid #DCE6EB; padding-top:14px;">
+                Discrete transactional &amp; single-project counsel also available on flat-fee scope.
+              </div>
+            </div>
+
+            <div style="margin-top:28px;">
+              <a class="btn secondary sm" href="our-approach.html#get-started" style="width:100%;"><span>Request an Executive Introduction</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 09: SEGMENTED PILL SWITCHER (MONTHLY VS PROJECT)
+       ========================================================================= -->
+  <section class="concept-section group-subtle" id="opt9">
+    <div class="wrap">
+      <div class="concept-meta subtle">
+        <div class="cm-left">
+          <span class="cm-tag navy">Option 09 · Compact &amp; Interactive</span>
+          <h2 class="cm-title">Segmented Intent Switcher <b>(Ongoing Retainer vs. Single Project)</b></h2>
+          <p class="cm-desc">
+            Directly addresses the live site&rsquo;s verified dual offering: &ldquo;Plans start at $2,500 per month&rdquo; alongside &ldquo;Looking for support on a one-time project? We do that too.&rdquo; Gives users a seamless toggle to inspect both.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Feature: Retainer &bull; Project</span>
+          <span class="cm-badge target">Target: Dual-Intent Visitors</span>
+        </div>
+      </div>
+
+      <!-- Option 9 Rendered Component -->
+      <div class="opt9-switch-wrap">
+        <div class="opt9-pill-bar">
+          <button class="opt9-tab-btn active" onclick="switchOpt9Tab('retainer', this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 9h6"/><path d="M15 15h6"/></svg>
+            <span>Ongoing Fractional General Counsel</span>
+          </button>
+          <button class="opt9-tab-btn" onclick="switchOpt9Tab('project', this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Discrete Single-Project Counsel</span>
+          </button>
+        </div>
+
+        <!-- Panel 1: Retainer -->
+        <div class="opt9-panel active" id="opt9-retainer">
+          <div style="background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; padding:44px; box-shadow:0 12px 36px rgba(0,59,83,0.06);">
+            <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:44px; align-items:center;">
+              <div>
+                <div class="sla-pill" style="margin-bottom:12px;">All-Inclusive Engagement</div>
+                <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; color:#003B53; margin:0 0 10px;">
+                  Embedded General Counsel <b>Starting at $2,500/mo</b>
+                </h3>
+                <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.6; color:#2c2c2c; margin:0 0 22px;">
+                  Your strategic corporate legal department. Protect what you have built with continuous risk governance and unlimited direct access.
+                </p>
+
+                <div style="display:flex; gap:18px; margin-bottom:26px;">
+                  <div style="background:#F0F6F8; border-left:3px solid #003B53; padding:12px 16px; border-radius:3px;">
+                    <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:18px; font-weight:700; color:#003B53;">24 Hours</div>
+                    <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11.5px; color:#55727E; font-weight:600;">Response SLA Guarantee</div>
+                  </div>
+                  <div style="background:#F0F6F8; border-left:3px solid #FFD457; padding:12px 16px; border-radius:3px;">
+                    <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:18px; font-weight:700; color:#003B53;">1 Week</div>
+                    <div style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11.5px; color:#55727E; font-weight:600;">Contract Deliverables Max</div>
+                  </div>
+                </div>
+
+                <div class="btnrow" style="margin:0;">
+                  <a class="btn main sm" href="our-approach.html#get-started"><span>Schedule an Intro Call</span></a>
+                  <a class="btn outline sm" href="services.html"><span>Explore Retainers &rarr;</span></a>
+                </div>
+              </div>
+
+              <div style="background:#F8FAFB; border:1px solid #E2EAF0; border-radius:4px; padding:28px;">
+                <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:#003B53; display:block; margin-bottom:14px;">What Is Included:</span>
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; color:#2c2c2c;">
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited phone, email, Slack advisory</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Commercial contract reviews &amp; redlines</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Corporate governance and board records</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Proactive legal health risk management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Project -->
+        <div class="opt9-panel" id="opt9-project">
+          <div style="background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; padding:44px; box-shadow:0 12px 36px rgba(0,59,83,0.06);">
+            <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:44px; align-items:center;">
+              <div>
+                <div class="sla-pill gold" style="margin-bottom:12px;">Single-Project Scoping</div>
+                <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; color:#003B53; margin:0 0 10px;">
+                  Fixed-Fee Counsel for <b>Discrete Transactions</b>
+                </h3>
+                <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.6; color:#2c2c2c; margin:0 0 22px;">
+                  Not ready for a monthly retainer? We regularly assist companies with high-stakes commercial leases, M&amp;A due diligence, vendor disputes, and partnership restructuring on transparent, fixed project quotes.
+                </p>
+
+                <div style="background:#FFFDF2; border-left:3px solid #FFD457; padding:14px 18px; border-radius:3px; margin-bottom:26px; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13.5px; color:#003B53;">
+                  <strong>Clear Upfront Pricing:</strong> Every discrete project includes a clear written scope and timeline before work begins.
+                </div>
+
+                <div class="btnrow" style="margin:0;">
+                  <a class="btn main sm" href="our-approach.html#get-started"><span>Request a Project Quote</span></a>
+                  <a class="btn outline sm" href="services.html"><span>View Practice Areas &rarr;</span></a>
+                </div>
+              </div>
+
+              <div style="background:#F8FAFB; border:1px solid #E2EAF0; border-radius:4px; padding:28px;">
+                <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.15em; color:#003B53; display:block; margin-bottom:14px;">Common Discrete Projects:</span>
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14px; color:#2c2c2c;">
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Commercial Lease Review &amp; Negotiation</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Master Services Agreement (MSA) Suite</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Equity Incentive / Cap Table Structuring</li>
+                  <li style="display:flex; gap:12px;"><svg class="check-brand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Business Legal Health Diagnostic Audit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       OPTION 10: THE QUIET MONOLITH (PANORAMIC 3-ZONE RIBBON)
+       ========================================================================= -->
+  <section class="concept-section group-subtle" id="opt10">
+    <div class="wrap">
+      <div class="concept-meta subtle">
+        <div class="cm-left">
+          <span class="cm-tag navy">Option 10 · Subtle &amp; Seamless</span>
+          <h2 class="cm-title">The Quiet Monolith <b>(Panoramic 3-Zone Horizontal Ribbon)</b></h2>
+          <p class="cm-desc">
+            Designed to drop effortlessly into <a href="our-approach.html">our-approach.html</a> with zero visual friction. Uses verbatim live site copy across three balanced zones: Philosophical Promise, Twin Quantitative SLA Metrics, and Fixed-Fee Action.
+          </p>
+        </div>
+        <div class="cm-right">
+          <span class="cm-badge truth"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Live Verbatim: What&rsquo;s Included &bull; Costs</span>
+          <span class="cm-badge target">Target: In-Flow Page Integration</span>
+        </div>
+      </div>
+
+      <!-- Option 10 Rendered Component -->
+      <div class="opt10-monolith-shell">
+        <div class="opt10-tri-grid">
+          <!-- Zone 1: Headline & Philosophy -->
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Comprehensive Coverage</div>
+            <h3 style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:26px; font-weight:300; line-height:1.25; color:#003B53; margin:0 0 10px;">
+              <b>What&rsquo;s Included</b> and What It Costs
+            </h3>
+            <p style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:14.5px; line-height:1.55; color:#2c2c2c; margin:0;">
+              With Equinox, you get an embedded legal department operating on fixed monthly pricing tailored to your needs.
+            </p>
+          </div>
+
+          <!-- Zone 2: Twin SLA Stats -->
+          <div class="opt10-divider">
+            <div class="opt10-stat">
+              <div class="opt10-sn">24 Hours</div>
+              <div class="opt10-st">Turnaround on Communications</div>
+            </div>
+            <div class="opt10-stat">
+              <div class="opt10-sn">1 Week Max</div>
+              <div class="opt10-st">Turnaround on Deliverables</div>
+            </div>
+          </div>
+
+          <!-- Zone 3: Flat Pricing & CTA -->
+          <div class="opt10-divider">
+            <div style="margin-bottom:18px;">
+              <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:28px; font-weight:700; color:#003B53; line-height:1; display:block; margin-bottom:4px;">Plans start at $2,500 <span style="font-size:14px; font-weight:500; color:#55727E;">/ mo</span></span>
+              <span style="font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:13px; color:#778D96;">Cancel anytime &bull; Support for one-time projects</span>
+            </div>
+            <div class="btnrow" style="margin:0; gap:10px;">
+              <a class="btn main sm" href="our-approach.html#get-started"><span>Schedule Intro Call</span></a>
+              <a class="btn outline sm" href="services.html"><span>Explore Practice Areas &rarr;</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive JavaScript for Showcase -->
+  <script>
+    function filterOptions(group, btn) {
+      document.querySelectorAll('.draft-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const allSections = document.querySelectorAll('.concept-section');
+      allSections.forEach(sec => {
+        if (group === 'all') {
+          sec.style.display = 'block';
+        } else if (sec.classList.contains('group-' + group)) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+
+    function switchOpt9Tab(tab, btn) {
+      document.querySelectorAll('.opt9-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.opt9-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById('opt9-' + tab);
+      if (target) target.classList.add('active');
+    }
+  </script>
+
+
+<!-- FOOTER -->
+  <!-- FOOTER -->
+  <div class="nlband">
+    <div class="wrap nlpad">
+      <div class="nlsplit">
+        <div>
+          <p class="nlhead">Legal insight for growing businesses, in your inbox.</p>
+          <p class="nlsub">Short, practical notes from the Equinox team. No sales pitches.</p>
+        </div>
+        <form class="nlform" onsubmit="return false">
+          <input class="nlin" type="text" placeholder="Name" aria-label="Your Name">
+          <input class="nlin" type="email" placeholder="Email address" aria-label="Email address">
+          <button class="btn secondary sm" type="submit"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 14.9 21.5 11 13 2.5 9.1Z"/></svg><span>Subscribe</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftbody">
+    <div class="wrap ftpad">
+      <div class="ft3">
+        <div class="ftbrand">
+          <img class="ftlogo" src="./assets/equinox-logo-tag-reverse.png" alt="Equinox Business Law Group">
+          <p class="fttag">Proactive Protection. Predictable Costs. Confidence in Growth.</p>
+          <p class="ftsub">Experienced legal counsel for growing businesses.</p>
+          <p class="ftserve">Serving Washington, Oregon, Colorado, Virginia and DC.</p>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Explore Equinox</span>
+          <a class="ftlink" href="index.html">Home</a>
+          <a class="ftlink" href="services.html">Practice Areas &amp; Services</a>
+          <a class="ftlink" href="our-approach.html">Our Approach</a>
+          <a class="ftlink" href="team.html">Team</a>
+          <a class="ftlink" href="careers.html">Careers</a>
+          <a class="ftlink" href="events.html">Events &amp; Workshops</a>
+          <a class="ftlink" href="blog.html">Blog</a>
+          <a class="ftlink" href="about.html">About Us</a>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Community Involvement</span>
+          <span class="ftlink">EO Seattle</span>
+          <span class="ftlink">Women&rsquo;s Presidents Organization</span>
+          <span class="ftlink">Seattle U Family Business Exchange</span>
+          <span class="ftlink">Bellevue LifeSpring</span>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Contact</span>
+          <span class="ftlink ic-l"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.2 3.5h3l1.5 4-2 1.3a12.5 12.5 0 0 0 6.5 6.5l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2C10.6 19.2 4.8 13.4 4.2 5.7a2 2 0 0 1 2-2.2z"/></svg>425-250-0205</span>
+          <span class="ftlink ic-l"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><a href="mailto:contact@equinoxbusinesslaw.com" style="color:inherit;text-decoration:none;">contact@equinoxbusinesslaw.com</a></span>
+          <div class="socrow">
+            <svg class="soc" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v13H.22V8zM8.34 8h4.37v1.78h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V21h-4.56v-5.72c0-1.37-.02-3.12-1.9-3.12-1.9 0-2.2 1.49-2.2 3.02V21H8.34V8z"/></svg>
+            <svg class="soc" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="legalbar">
+        <span class="ftfine">&copy; 2026 Equinox Business Law Group PLLC</span>
+        <div class="legallinks">
+          <span class="ftfine">Privacy Policy</span>
+          <span class="ftfine">Cookie Policy</span>
+          <span class="ftfine">Terms of Service</span>
+          <span class="ftfine">Disclaimer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></div></div>
+</body>
+</html>

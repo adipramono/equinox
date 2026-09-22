@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Opportunity &mdash; Equinox Business Law Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* DIRECTION A DESIGN SYSTEM & RESET */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:#FAFAFA; color:#222222; -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; height:auto; display:block; }
+
+.ab-Main {
+  --navy: #003B53;
+  --midnight: #002B3D;
+  --deepnight: #001E2B;
+  --gold: #FFD457;
+  --sky: #93BCCD;
+  --ocean: #027CA1;
+  --mist: #E8F0F4;
+  --air: 105px;
+  --f: 430px;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  color: #333333;
+}
+
+.ab-Main .wrap { max-width:1180px; margin:0 auto; padding:0 32px; }
+.ab-Main .wrapwide { max-width:1240px; margin:0 auto; padding:0 32px; }
+
+/* TYPOGRAPHY */
+.ab-Main .eyebrowmark { display:inline-flex; align-items:center; gap:8px; margin-bottom:14px; }
+.ab-Main .ymrule { width:24px; height:2px; background:#FFD457; display:inline-block; }
+.ab-Main .ytext { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#027CA1; }
+.ab-Main .h1 { font-family:'Montserrat',Arial,sans-serif; font-size:42px; font-weight:400; line-height:1.2; color:#003B53; margin:0; }
+.ab-Main .h1 b { font-weight:700; }
+.ab-Main .h2 { font-family:'Montserrat',Arial,sans-serif; font-size:32px; font-weight:400; line-height:1.25; color:#003B53; margin:0; }
+.ab-Main .h2 b { font-weight:700; }
+.ab-Main .h3 { font-family:'Montserrat',Arial,sans-serif; font-size:22px; font-weight:700; color:#003B53; margin:0; }
+.ab-Main .body { font-family:'Montserrat',Arial,sans-serif; font-size:16px; line-height:1.65; color:#555555; }
+.ab-Main .body-sm { font-family:'Montserrat',Arial,sans-serif; font-size:14px; line-height:1.6; color:#666666; }
+
+/* BUTTONS */
+.ab-Main .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 26px; border-radius:4px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:700; cursor:pointer; text-decoration:none; transition:all .2s ease; }
+.ab-Main .btn.main { background:#003B53; color:#ffffff; border:1px solid #003B53; }
+.ab-Main .btn.main:hover { background:#027CA1; border-color:#027CA1; }
+.ab-Main .btn.gold { background:#FFD457; color:#003B53; border:1px solid #FFD457; }
+.ab-Main .btn.gold:hover { background:#ffe182; border-color:#ffe182; }
+.ab-Main .btn.secondary { background:#ffffff; color:#003B53; border:1px solid #DCE6EB; }
+.ab-Main .btn.secondary:hover { border-color:#027CA1; color:#027CA1; }
+.ab-Main .btn.sm { padding:8px 18px; font-size:13px; }
+.ab-Main .btn.w100 { width:100%; }
+.ab-Main .btn svg { width:14px; height:14px; flex:none; }
+
+/* HEADER */
+.ab-Main .hdr { background:#ffffff; border-bottom:1px solid #e7ecf0; position:relative; z-index:40; }
+.ab-Main .hdrrow { display:flex; align-items:center; justify-content:space-between; height:78px; }
+.ab-Main .wordmark { height:40px; width:auto; display:block; }
+.ab-Main .navitem { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:600; color:#003B53; display:inline-flex; align-items:center; gap:5px; padding:8px 0; text-decoration:none; transition:color .18s ease; }
+.ab-Main .navitem:hover { color:#027CA1; }
+.ab-Main .navitem .chev { transition:transform .2s ease; }
+.ab-Main .navwrap { position:relative; }
+.ab-Main .megapanel { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:100vw; background:#ffffff; border-bottom:2px solid #003B53; box-shadow:0 16px 36px rgba(0,59,83,0.12); opacity:0; pointer-events:none; transition:all .22s ease; z-index:60; }
+.ab-Main .navwrap:hover .megapanel, .ab-Main .navwrap:focus-within .megapanel { opacity:1; pointer-events:auto; }
+.ab-Main .mphead { font-family:'Montserrat',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#003B53; margin:0 0 14px; border-bottom:1px solid #E8F0F4; padding-bottom:6px; }
+.ab-Main .mplink { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:#444444; text-decoration:none; display:block; padding:5px 0; transition:color .16s ease; }
+.ab-Main .mplink:hover { color:#027CA1; font-weight:600; }
+.ab-Main .mpcallout { background:#F4F8FA; border-left:3px solid #027CA1; padding:18px 20px; border-radius:0 4px 4px 0; }
+
+/* INNER-PAGE HEAD & HERO GRADIENT BAND */
+.ab-Main .herograd { background:radial-gradient(ellipse at 50% 38%, #FFFFFF 0%, #E8F0F4 46%, #93BCCD 100%); }
+/* BREADCRUMB STRIP (VARIATION 1B • MINIMALIST WHISPER) */
+.ab-Main .crumb-strip, .crumb-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #F2F4F5;
+  padding: 10px 0;
+}
+.ab-Main .crumb-bar, .crumb-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  color: #93A4AE;
+}
+.ab-Main .crumb-bar a, .crumb-bar a {
+  color: #93A4AE;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.ab-Main .crumb-bar a:hover, .crumb-bar a:hover {
+  color: #027CA1;
+  text-decoration: underline;
+}
+.ab-Main .crumb-bar .sep, .crumb-bar .sep {
+  color: #CBD7DC;
+  margin: 0 8px;
+  font-size: 13px;
+  user-select: none;
+}
+.ab-Main .crumb-bar .here, .crumb-bar .here {
+  color: #5D707A;
+  font-weight: 400;
+}
+.ab-Main .svclead { margin-top:20px; max-width:720px; }
+
+/* PAGE HEAD PICTURE: the circle at drop 105 with 4b geometry */
+.ab-Main .ptrow { display:grid; grid-template-columns:minmax(0,1fr) var(--f); gap:72px; align-items:start; }
+.ab-Main .ptpic { position:relative; }
+.ab-Main .ptpic .inner { position:absolute; top:calc(var(--air) - 56px - 0.0668 * var(--f)); left:0; width:var(--f); height:var(--f); z-index:2; }
+.ab-Main .eqshape { position:relative; width:100%; aspect-ratio:1/1; }
+.ab-Main .eqshape .eqring { position:absolute; border-radius:50%; border:1.5px solid; }
+.ab-Main .eqshape .eqring.gold  { left:0.90%; top:0.90%; width:96.50%; height:96.50%; border-color:#FFD457; }
+.ab-Main .eqshape .eqring.night { left:4.86%; top:4.86%; width:94.24%; height:94.24%; border-color:rgba(0,59,83,.55); }
+.ab-Main .eqshape .eqpic { position:absolute; left:6.68%; top:6.68%; width:88.34%; height:88.34%; border-radius:50%; overflow:hidden; }
+.ab-Main .eqshape .eqpic .photo { border-radius:50%; object-fit:cover; object-position:center; width:100%; height:100%; }
+.ab-Main .eqshape .eqpic.grain::after { border-radius:50%; }
+
+/* SECTION 2 SPLIT & SIDEBAR */
+.ab-Main .sec2split { display:grid; grid-template-columns:1fr 340px; gap:72px; align-items:start; }
+.ab-Main .sec2main { min-width:0; }
+.ab-Main .sec2side { padding-top:280px; display:flex; flex-direction:column; gap:32px; }
+
+.ab-Main .backlink { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:700; color:#027CA1; text-decoration:none; margin-bottom:28px; transition:color .18s ease; }
+.ab-Main .backlink:hover { color:#003B53; }
+.ab-Main .backlink svg { width:16px; height:16px; }
+
+/* JOB CONTENT SECTION */
+.ab-Main .job-body-block { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; padding:44px 48px; box-shadow:0 4px 16px rgba(0,59,83,0.03); }
+.ab-Main .job-prose-sec { margin-bottom:40px; }
+.ab-Main .job-prose-sec:last-child { margin-bottom:0; }
+.ab-Main .job-prose-head { font-family:'Montserrat',Arial,sans-serif; font-size:22px; font-weight:700; color:#003B53; margin:0 0 16px; position:relative; padding-bottom:10px; border-bottom:1px solid #EBF1F5; }
+.ab-Main .job-bullet-list { margin:16px 0 0; padding-left:22px; font-family:'Montserrat',Arial,sans-serif; font-size:15.5px; line-height:1.75; color:#444444; }
+.ab-Main .job-bullet-list li { margin-bottom:10px; }
+.ab-Main .job-bullet-list li:last-child { margin-bottom:0; }
+
+/* APPLY CALLOUT IN CONTENT */
+.ab-Main .job-apply-banner { background:#F4F9FB; border:1.5px solid #93BCCD; border-radius:6px; padding:36px; margin-top:44px; display:flex; flex-direction:column; gap:16px; }
+.ab-Main .job-apply-title { font-family:'Montserrat',Arial,sans-serif; font-size:22px; font-weight:700; color:#003B53; margin:0; }
+.ab-Main .job-apply-desc { font-family:'Montserrat',Arial,sans-serif; font-size:15px; line-height:1.65; color:#555555; margin:0; }
+
+/* SIDEBAR FACTS BOX */
+.ab-Main .factsbox { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; padding:30px 26px; box-shadow:0 4px 16px rgba(0,59,83,0.04); }
+.ab-Main .facthead { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#003B53; margin:0 0 20px; padding-bottom:12px; border-bottom:1px solid #EBF1F5; }
+.ab-Main .factrow { margin-bottom:16px; }
+.ab-Main .factrow:last-of-type { margin-bottom:24px; }
+.ab-Main .factlabel { font-family:'Montserrat',Arial,sans-serif; font-size:11.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#7E98A6; display:block; margin-bottom:3px; }
+.ab-Main .factval { font-family:'Montserrat',Arial,sans-serif; font-size:14.5px; font-weight:600; color:#003B53; }
+
+/* SIDEBAR NAVIGATION BOX */
+.ab-Main .sidebox { background:#F7FAFC; border:1px solid #DCE6EB; border-radius:6px; padding:28px 24px; }
+.ab-Main .sidehead { font-family:'Montserrat',Arial,sans-serif; font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#7E98A6; margin:0 0 16px; }
+.ab-Main .sidelist { display:flex; flex-direction:column; gap:4px; }
+.ab-Main .sidelink { display:flex; align-items:center; justify-content:space-between; padding:10px 14px; border-radius:4px; font-family:'Montserrat',Arial,sans-serif; font-size:14.5px; font-weight:600; color:#003B53; text-decoration:none; transition:all .18s ease; }
+.ab-Main .sidelink:hover { background:#EBF4F7; color:#027CA1; }
+.ab-Main .sidelink.here { background:#003B53; color:#ffffff; }
+.ab-Main .sidechev { width:14px; height:14px; }
+
+/* WHAT NEXT SECTION - CONCEPT 12 (HORIZON BASE-SHELF DOCK) */
+.ab-Main .whatnextwrap { padding-top:88px; padding-bottom:104px; border-top:1px solid #e4e4e4; }
+.ab-Main .whatnexthead { margin-bottom:34px; }
+.ab-Main .shelfgrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; }
+.ab-Main .shelfcard { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column; box-shadow:0 4px 14px rgba(0,59,83,0.04); transition:border-color .22s ease, box-shadow .22s ease; transform:none; }
+.ab-Main .shelfcard:hover { border-color:#027CA1; box-shadow:0 10px 26px rgba(0,59,83,0.1); }
+.ab-Main .shelfmedia { position:relative; width:100%; aspect-ratio:2.2 / 1; overflow:hidden; }
+.ab-Main .shelfmedia .photo { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1); }
+.ab-Main .shelfcard:hover .shelfmedia .photo { transform:scale(1.06); }
+.ab-Main .shelfdock { background:#002B3D; padding:15px 20px; display:flex; align-items:center; justify-content:space-between; color:#ffffff; transition:background-color .2s ease; }
+.ab-Main .shelfcard:hover .shelfdock { background:#003B53; }
+.ab-Main .shelfname { font-family:'Montserrat',Arial,sans-serif; font-size:15px; font-weight:700; color:#ffffff; letter-spacing:-0.01em; line-height:1.3; }
+.ab-Main .shelfarrow { width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; color:#93BCCD; flex:none; transition:background-color .2s ease, color .2s ease; }
+.ab-Main .shelfarrow svg { width:13px; height:13px; }
+.ab-Main .shelfcard:hover .shelfarrow { background:#FFD457; color:#003B53; }
+
+/* FOOTER */
+.ab-Main .nlband { background:#002B3D; padding:52px 0; color:#ffffff; }
+.ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.ab-Main .nlhead { font-family:'Montserrat',Arial,sans-serif; font-size:24px; font-weight:600; line-height:1.3; color:#ffffff; margin:0 0 6px; }
+.ab-Main .nlsub { font-family:'Montserrat',Arial,sans-serif; font-size:15px; color:rgba(255,255,255,.75); margin:0; }
+.ab-Main .nlform { display:flex; gap:12px; }
+.ab-Main .nlin { flex:1; height:46px; border-radius:4px; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); padding:0 16px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:#ffffff; outline:none; }
+.ab-Main .nlin::placeholder { color:rgba(255,255,255,.5); }
+.ab-Main .ftbody { background:#001E2B; color:#ffffff; padding:64px 0 28px; }
+.ab-Main .ft3 { display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr; gap:48px; }
+.ab-Main .ftlogo { height:36px; width:auto; margin-bottom:18px; }
+.ab-Main .fttag { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:600; color:#FFD457; margin:0 0 8px; }
+.ab-Main .ftsub { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.7); margin:0 0 12px; }
+.ab-Main .ftserve { font-family:'Montserrat',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,.55); margin:0; }
+.ab-Main .fthead { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#FFD457; margin:0 0 16px; display:block; }
+.ab-Main .ftcol { display:flex; flex-direction:column; gap:8px; }
+.ab-Main .ftlink { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.8); text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+.ab-Main .ftlink:hover { color:#FFD457; }
+.ab-Main .fic { width:16px; height:16px; flex:none; }
+.ab-Main .socrow { display:flex; gap:12px; margin-top:14px; }
+.ab-Main .soc { width:22px; height:22px; color:rgba(255,255,255,.7); cursor:pointer; }
+.ab-Main .soc:hover { color:#FFD457; }
+.ab-Main .legalbar { border-top:1px solid rgba(255,255,255,.1); margin-top:52px; padding-top:24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.ab-Main .ftfine { font-family:'Montserrat',Arial,sans-serif; font-size:13px; color:rgba(255,255,255,.5); }
+.ab-Main .legallinks { display:flex; gap:20px; }
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width:1150px) {
+  .ab-Main .ptrow { grid-template-columns:minmax(0,1fr); gap:40px; }
+  .ab-Main .ptpic .inner { position:static; width:min(var(--f), 88vw); height:auto; }
+  .ab-Main .sec2split { grid-template-columns:1fr; gap:48px; }
+  .ab-Main .sec2side { padding-top:0; }
+  .ab-Main .ft3 { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:768px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding:0 24px; }
+  .ab-Main .job-body-block { padding:28px 20px; }
+  .ab-Main .shelfgrid { grid-template-columns:1fr; }
+  .ab-Main .nlsplit { grid-template-columns:1fr; }
+  .ab-Main .nlform { flex-direction:column; }
+  .ab-Main .ft3 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<div class="stage"><div class="ab-Main" style="width:100%; margin:0 auto"><div style="width:100%; min-width:1180px; background:#ffffff;">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="wrapwide hdrrow">
+      <a href="index.html"><img class="wordmark" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group — Strategic Legal Counsel for All"></a>
+
+      <div style="display:flex; align-items:center; gap:32px;">
+        <div class="navwrap"><a class="navitem" href="#">General Counsel</a></div>
+
+        <div class="navwrap">
+          <a class="navitem" href="services-index-A-v1.html" tabindex="0">Services<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1.05fr 0.8fr 300px; gap:44px; padding-top:38px; padding-bottom:34px;">
+              <div>
+                <p class="mphead">Primary Counsel Models</p>
+                <a class="mplink" href="#">General Counsel Services</a>
+                <a class="mplink" href="#">Fractional General Counsel</a>
+                <a class="mplink" href="#">Enterprise Legal Pods</a>
+                <a class="mplink" href="#">Special Project Counsel</a>
+              </div>
+              <div>
+                <p class="mphead">Practice Areas</p>
+                <a class="mplink" href="#">Corporate Governance &amp; Formation</a>
+                <a class="mplink" href="#">Commercial Contracts &amp; Leases</a>
+                <a class="mplink" href="#">Mergers &amp; Acquisitions (M&amp;A)</a>
+                <a class="mplink" href="#">Employment Law &amp; HR Strategy</a>
+                <a class="mplink" href="#">Intellectual Property &amp; Trademarks</a>
+              </div>
+              <div>
+                <p class="mphead">Evaluations &amp; Tools</p>
+                <a class="mplink" href="#">Business Legal Health Assessment</a>
+                <a class="mplink" href="#">Compliance Audit Readiness</a>
+                <a class="mplink" href="#">Contract Portfolio Review</a>
+              </div>
+              <div class="mpcallout">
+                <p style="font-family:'Montserrat',Arial,sans-serif; font-size:15px; font-weight:700; color:#003B53; margin:0 0 8px;">A Smarter Legal Model</p>
+                <p class="body-sm" style="margin:0 0 16px;">Fixed monthly subscriptions, zero billable hours, and an integrated team invested in your growth.</p>
+                <a class="btn main sm" href="about-A-v1.html">Learn About Our Model</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap">
+          <a class="navitem" href="about-A-v1.html" tabindex="0">About Us<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1fr 1fr 1fr 300px; gap:44px; padding-top:38px; padding-bottom:34px;">
+              <div>
+                <p class="mphead">Our Firm</p>
+                <a class="mplink" href="about-A-v1.html">About Equinox</a>
+                <a class="mplink" href="about-A-v1.html#model">The Equinox Model</a>
+                <a class="mplink" href="about-A-v1.html#values">Core Values</a>
+                <a class="mplink" href="about-career-A-v1.html">Careers &amp; Culture</a>
+              </div>
+              <div>
+                <p class="mphead">People</p>
+                <a class="mplink" href="about-team-A-v1.html">Our Entire Legal Team</a>
+                <a class="mplink" href="about-team-A-v1.html#attorneys">Attorneys &amp; Counsel</a>
+                <a class="mplink" href="about-team-A-v1.html#support">Operations &amp; Support</a>
+              </div>
+              <div>
+                <p class="mphead">Offices &amp; Presence</p>
+                <a class="mplink" href="#">Bellevue, Washington (HQ)</a>
+                <a class="mplink" href="#">Denver, Colorado</a>
+                <a class="mplink" href="#">Pacific Northwest Region</a>
+              </div>
+              <div class="mpcallout">
+                <p style="font-family:'Montserrat',Arial,sans-serif; font-size:15px; font-weight:700; color:#003B53; margin:0 0 8px;">Join Our Team</p>
+                <p class="body-sm" style="margin:0 0 16px;">We practice law with purpose and collaboration. Explore active opportunities across legal and operations.</p>
+                <a class="btn main sm" href="about-career-A-v1.html">View Open Positions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap"><a class="navitem" href="#">Resources</a></div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a class="btn gold" href="mailto:contact@equinoxbusinesslaw.com"><span>Let&rsquo;s Connect</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. HERO GRADIENT BAND -->
+  <div class="herograd">
+    <div class="wrap" style="padding-top:40px; padding-bottom:56px;">
+      <div class="ptrow" style="margin-top:0;">
+        <div class="ptcopy">
+          <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext" id="heroBadge">Sample Opportunity &middot; Lorem Ipsum Placeholder</span></div>
+          <h1 class="h1" id="heroTitle">Corporate Counsel &mdash; <b>Lorem Ipsum Dolor Sit Amet</b></h1>
+          <p class="svclead body" id="heroLead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <em>(Sample placeholder job posting &mdash; active positions posted when available.)</em></p>
+        </div>
+
+        <!-- Brand circle frame at drop 105 (Direction A 4b geometry) -->
+        <div class="ptpic" aria-hidden="true">
+          <div class="inner">
+            <div class="eqshape">
+              <span class="eqring gold"></span>
+              <span class="eqring night"></span>
+              <div class="eqpic grain"><img class="photo" src="img/hero-5785.jpg" alt="Equinox business team members in collaboration"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB: VARIATION 1B (MINIMALIST WHISPER) -->
+  <div class="crumb-strip" role="region" aria-label="Breadcrumb navigation">
+    <div class="wrap">
+      <nav class="crumb-bar" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">&bull;</span>
+        <a href="about-A-v1.html">About Us</a>
+        <span class="sep">&bull;</span>
+        <a href="about-career-A-v1.html">Careers</a>
+        <span class="sep">&bull;</span>
+        <span class="here" id="crumbJob" aria-current="page">Corporate Counsel (Lorem Ipsum Entry)</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. SECTION 2 SPLIT: JOB DETAILS & SIDEBAR -->
+  <div class="wrap" style="padding-top:40px; padding-bottom:96px;">
+    <div class="sec2split">
+
+      <!-- MAIN CONTENT COLUMN -->
+      <main class="sec2main">
+        <a class="backlink" href="about-career-A-v1.html#openings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to all career opportunities
+        </a>
+
+        <div class="job-body-block">
+
+          <!-- Section: About Role -->
+          <section class="job-prose-sec">
+            <h2 class="job-prose-head">About the Opportunity (Lorem Ipsum)</h2>
+            <div id="jobOverviewContent">
+              <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="body" style="margin-top:14px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </section>
+
+          <!-- Section: The Equinox Pod Model -->
+          <section class="job-prose-sec">
+            <h2 class="job-prose-head">The Pod Model: How You Work (Sample)</h2>
+            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          </section>
+
+          <!-- Section: Responsibilities -->
+          <section class="job-prose-sec">
+            <h2 class="job-prose-head">What You&rsquo;ll Do (Lorem Ipsum)</h2>
+            <ul class="job-bullet-list" id="jobDutiesList">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</li>
+              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+              <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</li>
+              <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</li>
+              <li>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio nullam varius.</li>
+            </ul>
+          </section>
+
+          <!-- Section: Qualifications -->
+          <section class="job-prose-sec">
+            <h2 class="job-prose-head">What You&rsquo;ll Bring (Lorem Ipsum)</h2>
+            <ul class="job-bullet-list" id="jobReqsList">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</li>
+              <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</li>
+              <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.</li>
+              <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</li>
+            </ul>
+          </section>
+
+          <!-- Section: Total Rewards & Benefits -->
+          <section class="job-prose-sec">
+            <h2 class="job-prose-head">Total Rewards &amp; Culture (Sample)</h2>
+            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:</p>
+            <ul class="job-bullet-list">
+              <li><strong>Lorem Ipsum:</strong> Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.</li>
+              <li><strong>Dolor Sit Amet:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</li>
+              <li><strong>Adipiscing Elit:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</li>
+              <li><strong>Excepteur Sint:</strong> Occaecat cupidatat non proident sunt in culpa qui officia deserunt.</li>
+              <li><strong>Tempor Incididunt:</strong> Ut labore et dolore magna aliqua ut enim ad minim veniam.</li>
+            </ul>
+          </section>
+
+          <!-- Apply Banner Box -->
+          <div class="job-apply-banner" id="applyBanner">
+            <h3 class="job-apply-title">Lorem ipsum dolor sit amet consectetur?</h3>
+            <p class="job-apply-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Please note: This is a placeholder sample entry for template design demonstration. Active job postings will appear here when available.</p>
+            <div style="margin-top:8px;">
+              <a class="btn main" id="bannerApplyBtn" href="mailto:careers@equinoxbusinesslaw.com?subject=Sample%20Placeholder%20Inquiry%3A%20Corporate%20Counsel">
+                <span>Sample Application (Placeholder)</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sec2side">
+
+        <!-- Quick Job Facts Box -->
+        <div class="factsbox">
+          <p class="facthead">Opportunity Overview (Sample)</p>
+          <div class="factrow">
+            <span class="factlabel">Department</span>
+            <span class="factval" id="factDept">Legal Counsel (Lorem Ipsum)</span>
+          </div>
+          <div class="factrow">
+            <span class="factlabel">Location / Model</span>
+            <span class="factval" id="factLocation">Bellevue, WA / Hybrid (Placeholder)</span>
+          </div>
+          <div class="factrow">
+            <span class="factlabel">Employment Type</span>
+            <span class="factval" id="factType">Full-Time (Placeholder)</span>
+          </div>
+          <div class="factrow">
+            <span class="factlabel">Experience Level</span>
+            <span class="factval" id="factExp">Lorem Ipsum Practice</span>
+          </div>
+          <div class="factrow">
+            <span class="factlabel">Bar Licensure</span>
+            <span class="factval" id="factLicensure">Lorem Ipsum Bar</span>
+          </div>
+          <a class="btn main w100" id="sideApplyBtn" href="mailto:careers@equinoxbusinesslaw.com?subject=Sample%20Placeholder%20Inquiry%3A%20Corporate%20Counsel">
+            <span>Sample Application (Placeholder)</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <div class="sidebox">
+          <p class="sidehead">About Us</p>
+          <nav class="sidelist" aria-label="About Us navigation">
+            <a class="sidelink" href="about-A-v1.html"><span>About Us</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+            <a class="sidelink" href="about-team-A-v1.html"><span>Team</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+            <a class="sidelink here" href="about-career-A-v1.html"><span>Careers</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+            <a class="sidelink" href="#"><span>Strategic Outside General Counsel</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+            <a class="sidelink" href="#"><span>Contact</span><svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+          </nav>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 3. WHAT NEXT SECTION - CONCEPT 12 (HORIZON BASE-SHELF DOCK) -->
+  <div class="whatnextwrap">
+    <div class="wrap">
+      <div class="whatnexthead">
+        <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Continue Exploring Equinox</span></div>
+        <h2 class="h2">Where would you like to <b>go next?</b></h2>
+      </div>
+
+      <div class="shelfgrid">
+        <!-- Shelf Card 1: Team -->
+        <a class="shelfcard" href="about-team-A-v1.html">
+          <div class="shelfmedia">
+            <img class="photo" src="img/s8-team.jpg" alt="Equinox legal team members">
+          </div>
+          <div class="shelfdock">
+            <span class="shelfname">Meet our legal team</span>
+            <span class="shelfarrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- Shelf Card 2: Careers -->
+        <a class="shelfcard" href="about-career-A-v1.html">
+          <div class="shelfmedia">
+            <img class="photo" src="img/hero-5785.jpg" alt="Equinox career culture">
+          </div>
+          <div class="shelfdock">
+            <span class="shelfname">All career openings</span>
+            <span class="shelfarrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- Shelf Card 3: Model -->
+        <a class="shelfcard" href="about-A-v1.html">
+          <div class="shelfmedia">
+            <img class="photo" src="img/s8-meeting.jpg" alt="Equinox strategic approach">
+          </div>
+          <div class="shelfdock">
+            <span class="shelfname">Our approach &amp; model</span>
+            <span class="shelfarrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. FOOTER -->
+  <div class="nlband">
+    <div class="wrap nlsplit">
+      <div>
+        <p class="nlhead">Subscribe to Strategic Legal Insights</p>
+        <p class="nlsub">Quarterly business law briefings, compliance updates, and leadership perspectives.</p>
+      </div>
+      <form class="nlform" action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you for subscribing.');">
+        <input class="nlin" type="email" placeholder="Enter your business email" required>
+        <button class="btn gold" type="submit"><span>Subscribe</span></button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="ftbody">
+    <div class="wrap">
+      <div class="ft3">
+        <div>
+          <img class="ftlogo" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group">
+          <p class="fttag">Strategic Legal Counsel for Business Growth</p>
+          <p class="ftsub">Reinventing corporate legal counsel with predictable monthly subscription models and proactive advisory partnerships.</p>
+          <p class="ftserve">Serving Washington, Oregon, Colorado, and enterprises nationwide.</p>
+        </div>
+        <div>
+          <span class="fthead">About &amp; Team</span>
+          <div class="ftcol">
+            <a class="ftlink" href="about-A-v1.html">About Equinox</a>
+            <a class="ftlink" href="about-team-A-v1.html">Our Legal Team</a>
+            <a class="ftlink" href="about-career-A-v1.html">Careers</a>
+            <a class="ftlink" href="about-A-v1.html#model">The Equinox Model</a>
+            <a class="ftlink" href="about-A-v1.html#values">Core Values</a>
+          </div>
+        </div>
+        <div>
+          <span class="fthead">Counsel Solutions</span>
+          <div class="ftcol">
+            <a class="ftlink" href="#">General Counsel Services</a>
+            <a class="ftlink" href="#">Corporate Governance</a>
+            <a class="ftlink" href="#">Business Transactions</a>
+            <a class="ftlink" href="#">Employment Strategy</a>
+            <a class="ftlink" href="#">Intellectual Property</a>
+          </div>
+        </div>
+        <div>
+          <span class="fthead">Contact &amp; Offices</span>
+          <div class="ftcol">
+            <p class="body-sm" style="color:rgba(255,255,255,.8); margin:0 0 8px;">11900 NE 1st St, Suite 300<br>Bellevue, WA 98005</p>
+            <a class="ftlink" href="tel:4252500205"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>425-250-0205</a>
+            <a class="ftlink" href="mailto:contact@equinoxbusinesslaw.com"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@equinoxbusinesslaw.com</a>
+            <div class="socrow">
+              <a class="soc" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/></svg></a>
+              <a class="soc" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg></a>
+              <a class="soc" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42A2.5 2.5 0 0 0 2.42 7.19C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legalbar">
+        <span class="ftfine">&copy; 2026 Equinox Business Law Group PLLC. All Rights Reserved.</span>
+        <div class="legallinks">
+          <a class="ftfine" href="#">Disclaimer</a>
+          <a class="ftfine" href="#">Privacy Policy</a>
+          <a class="ftfine" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div></div></div>
+
+<!-- SCRIPT: DYNAMIC SINGLE JOB RENDERER -->
+<script>
+(function() {
+  var jobsData = {
+    counsel: {
+      crumb: 'Corporate Counsel (Lorem Ipsum)',
+      badge: 'Legal Counsel · Lorem Ipsum Placeholder',
+      title: 'Corporate Counsel &mdash; <b>Lorem Ipsum Dolor Sit Amet</b>',
+      pageTitle: 'Corporate Counsel — Lorem Ipsum Sample — Equinox Careers',
+      lead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (Sample Opportunity).',
+      overview: '<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p class="body" style="margin-top:14px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+      duties: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.',
+        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
+        'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio nullam varius.'
+      ],
+      reqs: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+        'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.',
+        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.'
+      ],
+      factDept: 'Legal Counsel (Lorem Ipsum)',
+      factLocation: 'Bellevue, WA / Hybrid (Placeholder)',
+      factType: 'Full-Time (Placeholder)',
+      factExp: 'Lorem Ipsum Practice',
+      factLicensure: 'Lorem Ipsum Bar',
+      applySubject: 'Sample Placeholder Inquiry: Corporate Counsel'
+    },
+    paralegal: {
+      crumb: 'Corporate Paralegal (Lorem Ipsum)',
+      badge: 'Legal Support · Lorem Ipsum Placeholder',
+      title: 'Corporate Paralegal &amp; <b>Consectetur Adipiscing Elit</b>',
+      pageTitle: 'Corporate Paralegal — Lorem Ipsum Sample — Equinox Careers',
+      lead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (Sample Opportunity).',
+      overview: '<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p class="body" style="margin-top:14px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+      duties: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.',
+        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
+        'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio nullam varius.'
+      ],
+      reqs: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+        'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.',
+        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.'
+      ],
+      factDept: 'Legal Support (Lorem Ipsum)',
+      factLocation: 'Bellevue, WA / Hybrid (Placeholder)',
+      factType: 'Full-Time (Placeholder)',
+      factExp: 'Lorem Ipsum Experience',
+      factLicensure: 'Lorem Ipsum Credential',
+      applySubject: 'Sample Placeholder Inquiry: Corporate Paralegal'
+    },
+    ops: {
+      crumb: 'Legal Operations (Lorem Ipsum)',
+      badge: 'Operations & PM · Lorem Ipsum Placeholder',
+      title: 'Legal Operations Director &amp; <b>Sed Do Eiusmod Tempor</b>',
+      pageTitle: 'Legal Operations — Lorem Ipsum Sample — Equinox Careers',
+      lead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (Sample Opportunity).',
+      overview: '<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p class="body" style="margin-top:14px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+      duties: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.',
+        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
+        'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio nullam varius.'
+      ],
+      reqs: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+        'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.',
+        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.'
+      ],
+      factDept: 'Operations & PM (Lorem Ipsum)',
+      factLocation: 'Bellevue, WA / Hybrid (Placeholder)',
+      factType: 'Full-Time (Placeholder)',
+      factExp: 'Lorem Ipsum Operations',
+      factLicensure: 'Lorem Ipsum Credential',
+      applySubject: 'Sample Placeholder Inquiry: Legal Operations'
+    },
+    client: {
+      crumb: 'Client Coordinator (Lorem Ipsum)',
+      badge: 'Client Experience · Lorem Ipsum Placeholder',
+      title: 'Client Experience Coordinator &amp; <b>Incididunt Ut Labore</b>',
+      pageTitle: 'Client Experience — Lorem Ipsum Sample — Equinox Careers',
+      lead: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. (Sample Opportunity).',
+      overview: '<p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p class="body" style="margin-top:14px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+      duties: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
+        'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
+        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.',
+        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
+        'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio nullam varius.'
+      ],
+      reqs: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.',
+        'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+        'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.',
+        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.'
+      ],
+      factDept: 'Client Experience (Lorem Ipsum)',
+      factLocation: 'Bellevue, WA / Hybrid (Placeholder)',
+      factType: 'Full-Time (Placeholder)',
+      factExp: 'Lorem Ipsum Relations',
+      factLicensure: 'Lorem Ipsum Credential',
+      applySubject: 'Sample Placeholder Inquiry: Client Experience'
+    }
+  };
+
+  function getQueryParam(param) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  var jobKey = getQueryParam('job');
+  if (!jobKey && window.location.hash) {
+    jobKey = window.location.hash.replace('#', '').replace('job-', '');
+  }
+
+  if (jobKey && jobsData[jobKey]) {
+    var data = jobsData[jobKey];
+    document.title = data.pageTitle;
+    document.getElementById('crumbJob').textContent = data.crumb;
+    document.getElementById('heroBadge').textContent = data.badge;
+    document.getElementById('heroTitle').innerHTML = data.title;
+    document.getElementById('heroLead').textContent = data.lead;
+    document.getElementById('jobOverviewContent').innerHTML = data.overview;
+
+    var dutiesEl = document.getElementById('jobDutiesList');
+    dutiesEl.innerHTML = '';
+    data.duties.forEach(function(d) {
+      var li = document.createElement('li');
+      li.innerHTML = d;
+      dutiesEl.appendChild(li);
+    });
+
+    var reqsEl = document.getElementById('jobReqsList');
+    reqsEl.innerHTML = '';
+    data.reqs.forEach(function(r) {
+      var li = document.createElement('li');
+      li.innerHTML = r;
+      reqsEl.appendChild(li);
+    });
+
+    document.getElementById('factDept').textContent = data.factDept;
+    document.getElementById('factLocation').textContent = data.factLocation;
+    document.getElementById('factType').textContent = data.factType;
+    document.getElementById('factExp').textContent = data.factExp;
+    document.getElementById('factLicensure').textContent = data.factLicensure;
+
+    var mailto = 'mailto:careers@equinoxbusinesslaw.com?subject=' + encodeURIComponent(data.applySubject);
+    document.getElementById('bannerApplyBtn').setAttribute('href', mailto);
+    document.getElementById('sideApplyBtn').setAttribute('href', mailto);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equinox Business Law &mdash; 'Continue Exploring Equinox' UI Design Concepts (15 Variations)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* ================= GLOBAL RESET & BASE ================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: #081118;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2c2c2c; -webkit-font-smoothing: antialiased;
+}
+
+/* ================= TOOLBAR & NAVIGATION ================= */
+.topbar {
+  position: sticky; top: 0; z-index: 1000;
+  background: #002B3D; border-bottom: 2px solid #003B53;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  color: #ffffff; padding: 10px 24px;
+}
+.topbar-inner {
+  max-width: 1560px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+}
+.brand-group {
+  display: flex; align-items: center; gap: 10px;
+}
+.brand-pill {
+  background: #FFD457; color: #003B53; font-size: 10.5px; font-weight: 800;
+  padding: 4px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.12em;
+}
+.brand-title {
+  font-size: 13.5px; font-weight: 600; color: #ffffff; letter-spacing: -0.01em;
+}
+.brand-title span { color: #93BCCD; font-weight: 400; }
+
+.nav-buttons {
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+}
+.nav-group-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+  color: #FFD457; margin: 0 2px 0 6px;
+}
+.nav-btn {
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(147, 188, 205, 0.25);
+  color: #93BCCD; font-family: 'Montserrat', sans-serif; font-size: 10.5px; font-weight: 600;
+  padding: 5px 9px; border-radius: 3px; text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.nav-btn:hover { color: #ffffff; background: rgba(2, 124, 161, 0.3); border-color: #027CA1; }
+.nav-btn.active, .nav-btn:active {
+  background: #027CA1; color: #ffffff; border-color: #027CA1;
+  box-shadow: 0 2px 10px rgba(2,124,161,0.4);
+}
+
+/* ================= SHOWCASE BANNER ================= */
+.showcase-hero {
+  background: radial-gradient(circle at 50% 0%, #003B53 0%, #05141D 100%);
+  border-bottom: 1px solid rgba(147,188,205,0.18);
+  padding: 44px 24px 38px; color: #ffffff;
+}
+.hero-content {
+  max-width: 1420px; margin: 0 auto;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #FFD457; margin-bottom: 12px;
+}
+.hero-tag::before { content: ""; width: 14px; height: 2px; background: #FFD457; }
+.hero-h1 {
+  font-size: 32px; font-weight: 300; line-height: 1.25; color: #ffffff; letter-spacing: -0.01em; margin-bottom: 12px;
+}
+.hero-h1 b { font-weight: 700; color: #ffffff; }
+.hero-sub {
+  font-size: 15px; line-height: 1.65; color: #93BCCD; max-width: 1040px;
+}
+.hero-points {
+  display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap;
+}
+.hero-point {
+  display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.9);
+  background: rgba(0,59,83,0.45); border: 1px solid rgba(147,188,205,0.25);
+  padding: 6px 12px; border-radius: 4px;
+}
+.hero-point svg { width: 14px; height: 14px; color: #FFD457; flex: none; }
+
+/* Section Part Headers */
+.part-divider {
+  max-width: 1400px; margin: 60px auto 20px; padding: 0 20px;
+}
+.part-banner {
+  background: linear-gradient(90deg, #002B3D 0%, #061822 100%);
+  border: 1px solid rgba(147,188,205,0.3); border-radius: 6px;
+  padding: 22px 30px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+}
+.part-title-grp { display: flex; align-items: center; gap: 14px; }
+.part-badge {
+  background: #FFD457; color: #003B53; font-weight: 800; font-size: 11px;
+  padding: 5px 12px; border-radius: 3px; letter-spacing: 0.15em; text-transform: uppercase;
+}
+.part-heading { font-size: 20px; font-weight: 700; color: #ffffff; }
+.part-desc { font-size: 13.5px; color: #93BCCD; max-width: 650px; }
+
+/* ================= OPTION SECTION FRAME ================= */
+.option-wrapper {
+  max-width: 1400px; margin: 36px auto 56px; padding: 0 20px;
+}
+.option-header-card {
+  background: #0E1D27; border: 1px solid rgba(147, 188, 205, 0.22);
+  border-radius: 6px 6px 0 0; padding: 22px 28px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  border-bottom: 1px solid rgba(147, 188, 205, 0.15);
+}
+.opt-label-group {
+  display: flex; align-items: center; gap: 12px;
+}
+.opt-badge {
+  color: #ffffff; font-size: 11px; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px;
+}
+.opt-title {
+  font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em;
+}
+.opt-desc {
+  font-size: 14px; color: #93BCCD; margin-top: 5px; line-height: 1.5;
+}
+.opt-meta-tags {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.opt-tag {
+  font-size: 11.5px; font-weight: 600; color: #FFD457;
+  background: rgba(255,212,87,0.1); border: 1px solid rgba(255,212,87,0.3);
+  padding: 4px 10px; border-radius: 3px;
+}
+.opt-tag.teal {
+  color: #93BCCD; background: rgba(147,188,205,0.1); border-color: rgba(147,188,205,0.3);
+}
+
+.option-stage {
+  border: 1px solid rgba(147, 188, 205, 0.2); border-top: none;
+  border-radius: 0 0 6px 6px; overflow: hidden; background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* ================= COMMON EQUINOX SECTION ELEMENTS ================= */
+.eq-wrap { max-width: 1220px; margin: 0 auto; padding: 0 32px; }
+.eq-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #027CA1; margin-bottom: 10px;
+}
+.eq-eyebrow .rule { width: 22px; height: 2px; background: #FFD457; }
+.eq-h2 {
+  font-size: 30px; font-weight: 300; line-height: 1.25; color: #003B53; margin-bottom: 10px;
+}
+.eq-h2 b { font-weight: 700; }
+.eq-sub {
+  font-size: 15.5px; line-height: 1.62; color: #556973; max-width: 720px;
+}
+
+/* Film Grain Utility */
+.eq-grain { position: relative; }
+.eq-grain::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.08'/></svg>");
+}
+
+/* Equinox Buttons */
+.eq-btn {
+  font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 600;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 10px 20px; border-radius: 3px; text-decoration: none; cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transform: none; /* STRICT STABILITY */
+}
+.eq-btn.navy {
+  background: #003B53; color: #ffffff; border: 1.5px solid #003B53;
+}
+.eq-btn.navy:hover { background: #027CA1; border-color: #027CA1; color: #ffffff; }
+.eq-btn.outline {
+  background: transparent; color: #003B53; border: 1.5px solid #003B53;
+}
+.eq-btn.outline:hover { background: #003B53; color: #ffffff; border-color: #003B53; }
+.eq-btn.gold-accent {
+  background: #FFD457; color: #003B53; border: 1.5px solid #FFD457; font-weight: 700;
+}
+.eq-btn.gold-accent:hover { background: #003B53; color: #FFD457; border-color: #003B53; }
+.eq-btn svg { width: 16px; height: 16px; transition: transform 0.2s ease; }
+.eq-btn:hover svg { transform: translateX(3px); }
+
+/* ================================================================
+   PART I: LOW-IMAGE EXPLORATIONS (CONCEPTS 01 - 05)
+   ================================================================ */
+
+/* Concept 01: The Architectural Monogram Grid (0 Photos) */
+.opt1-wrap { padding: 88px 0 100px; background: #ffffff; }
+.opt1-head { margin-bottom: 44px; }
+.opt1-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+@media (max-width: 960px) { .opt1-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.opt1-card {
+  display: flex; flex-direction: column; position: relative;
+  background: #ffffff; border: 1px solid #E2EBF0; border-radius: 4px;
+  padding: 34px 28px;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt1-card:hover {
+  border-color: #027CA1; box-shadow: 0 10px 30px rgba(0, 59, 83, 0.08);
+}
+.opt1-emblem-row {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;
+}
+.opt1-emblem {
+  width: 56px; height: 56px; border-radius: 4px;
+  background: #F4F8FA; border: 1px solid #D5E5EC;
+  display: flex; align-items: center; justify-content: center;
+  color: #003B53;
+  transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+.opt1-emblem svg { width: 28px; height: 28px; }
+.opt1-card:hover .opt1-emblem {
+  background: #003B53; border-color: #003B53; color: #FFD457;
+}
+.opt1-num {
+  font-size: 12px; font-weight: 700; color: #93BCCD; letter-spacing: 0.12em;
+}
+.opt1-pill {
+  display: inline-block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em;
+  color: #027CA1; background: #EEF4F7; padding: 3px 8px; border-radius: 3px; margin-bottom: 12px; align-self: flex-start;
+}
+.opt1-title {
+  font-size: 21px; font-weight: 700; color: #003B53; margin: 0 0 10px; line-height: 1.3;
+}
+.opt1-body {
+  font-size: 14.5px; line-height: 1.65; color: #4a5d68; margin: 0 0 24px; flex: 1 1 auto;
+}
+.opt1-link {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700;
+  color: #003B53; text-decoration: none; align-self: flex-start; margin-top: auto;
+  transition: color 0.18s ease;
+}
+.opt1-link svg { width: 16px; height: 16px; transition: transform 0.2s ease; }
+.opt1-card:hover .opt1-link { color: #027CA1; }
+.opt1-card:hover .opt1-link svg { transform: translateX(4px); }
+
+/* Concept 02: The Single-Image Split Anchor (1 Photo Only) */
+.opt2-wrap { padding: 88px 0 104px; background: #F8FAFB; border-top: 1px solid #E2EBF0; }
+.opt2-head { margin-bottom: 40px; }
+.opt2-layout {
+  display: grid; grid-template-columns: 440px 1fr; gap: 44px; align-items: stretch;
+}
+@media (max-width: 1020px) { .opt2-layout { grid-template-columns: 1fr; gap: 36px; } }
+.opt2-anchor {
+  background: #002B3D; border: 1px solid #003B53; border-radius: 6px;
+  position: relative; overflow: hidden; display: flex; flex-direction: column;
+  justify-content: flex-end; min-height: 420px;
+}
+.opt2-anchor-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden;
+}
+.opt2-anchor-img img {
+  width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+.opt2-anchor:hover .opt2-anchor-img img {
+  transform: scale(1.04); filter: brightness(0.95);
+}
+.opt2-anchor-scrim {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(0,43,61,0.15) 0%, rgba(0,43,61,0.55) 45%, rgba(0,27,38,0.95) 100%);
+  pointer-events: none;
+}
+.opt2-anchor-content {
+  position: relative; z-index: 3; padding: 28px 24px; color: #ffffff;
+}
+.opt2-anchor-tag {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: #FFD457; margin-bottom: 10px;
+}
+.opt2-anchor-h3 {
+  font-size: 23px; font-weight: 700; line-height: 1.25; margin: 0 0 8px; color: #ffffff;
+}
+.opt2-anchor-p {
+  font-size: 14px; line-height: 1.55; color: #93BCCD; margin: 0;
+}
+.opt2-ledger {
+  display: flex; flex-direction: column; justify-content: space-between; border-top: 1px solid #DCE6EB;
+}
+.opt2-row {
+  display: grid; grid-template-columns: 52px 1fr 36px; gap: 22px; align-items: center;
+  padding: 24px 18px; border-bottom: 1px solid #DCE6EB; border-radius: 4px;
+  text-decoration: none; color: inherit; background: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transform: none;
+}
+.opt2-row:hover {
+  background: #ffffff; border-bottom-color: #027CA1; box-shadow: 0 4px 18px rgba(0, 59, 83, 0.05);
+}
+.opt2-idx {
+  font-size: 22px; font-weight: 300; color: #93BCCD; letter-spacing: -0.02em;
+}
+.opt2-row:hover .opt2-idx { color: #003B53; }
+.opt2-info { min-width: 0; }
+.opt2-kicker {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #027CA1; margin-bottom: 4px;
+}
+.opt2-title {
+  font-size: 19px; font-weight: 700; color: #003B53; line-height: 1.3; margin: 0 0 6px;
+  transition: color 0.18s ease;
+}
+.opt2-row:hover .opt2-title { color: #027CA1; }
+.opt2-desc {
+  font-size: 14px; line-height: 1.55; color: #556973; margin: 0;
+}
+.opt2-arrow-circle {
+  width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #DCE6EB;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.opt2-arrow-circle svg { width: 14px; height: 14px; transition: transform 0.2s ease; }
+.opt2-row:hover .opt2-arrow-circle {
+  border-color: #027CA1; background: #027CA1; color: #ffffff;
+}
+.opt2-row:hover .opt2-arrow-circle svg { transform: translateX(2px); }
+
+/* Concept 03: The Micro-Stamp / Letterbox Index */
+.opt3-wrap { padding: 88px 0 104px; background: #ffffff; }
+.opt3-head { margin-bottom: 40px; }
+.opt3-list { display: flex; flex-direction: column; border-top: 1px solid #D9E4EA; }
+.opt3-row {
+  display: grid; grid-template-columns: 56px 1.4fr auto; align-items: center; gap: 30px;
+  padding: 26px 20px; border-bottom: 1px solid #D9E4EA; border-radius: 4px;
+  text-decoration: none; color: inherit; background: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transform: none;
+}
+.opt3-row:hover { background: #F8FAFB; border-bottom-color: #93BCCD; }
+@media (max-width: 860px) {
+  .opt3-row { grid-template-columns: 1fr; gap: 16px; padding: 22px 14px; }
+}
+.opt3-idx { font-size: 22px; font-weight: 300; color: #93BCCD; letter-spacing: -0.02em; }
+.opt3-info { min-width: 0; }
+.opt3-tag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #027CA1; margin-bottom: 5px;
+}
+.opt3-title {
+  font-size: 20px; font-weight: 700; color: #003B53; line-height: 1.3; margin: 0 0 6px;
+  transition: color 0.18s ease;
+}
+.opt3-row:hover .opt3-title { color: #027CA1; }
+.opt3-desc { font-size: 14px; line-height: 1.55; color: #556973; margin: 0; }
+.opt3-end-col { display: flex; align-items: center; gap: 20px; flex: none; }
+.opt3-micro-thumb {
+  width: 110px; aspect-ratio: 16/9; border-radius: 3px; overflow: hidden;
+  border: 1px solid #D9E4EA; position: relative; flex: none;
+}
+.opt3-micro-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt3-row:hover .opt3-micro-thumb img { transform: scale(1.08); }
+.opt3-action {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700;
+  color: #003B53; white-space: nowrap; transition: color 0.2s ease;
+}
+.opt3-action svg {
+  width: 17px; height: 17px; border: 1.5px solid #003B53; border-radius: 50%;
+  padding: 3px; transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.opt3-row:hover .opt3-action { color: #027CA1; }
+.opt3-row:hover .opt3-action svg {
+  border-color: #027CA1; background: #027CA1; color: #ffffff;
+}
+
+/* Concept 04: The Deep Horizon Minimalist Directory (0 Photos) */
+.opt4-wrap {
+  padding: 92px 0 108px;
+  background: linear-gradient(180deg, #002B3D 0%, #001E2B 100%);
+  position: relative; overflow: hidden;
+}
+.opt4-wrap::before {
+  content: ""; position: absolute; top: -150px; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 500px;
+  background: radial-gradient(circle, rgba(2,124,161,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.opt4-head { margin-bottom: 46px; }
+.opt4-head .eq-h2 { color: #ffffff; }
+.opt4-head .eq-sub { color: #93BCCD; }
+.opt4-head .eq-eyebrow { color: #FFD457; }
+.opt4-head .eq-eyebrow .rule { background: #FFD457; }
+.opt4-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; position: relative; z-index: 2; }
+@media (max-width: 960px) { .opt4-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+.opt4-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(147, 188, 205, 0.2);
+  border-radius: 6px; padding: 34px 28px;
+  display: flex; flex-direction: column;
+  transition: background-color 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+  backdrop-filter: blur(8px);
+  transform: none;
+}
+.opt4-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 212, 87, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+.opt4-icon-badge {
+  width: 52px; height: 52px; border-radius: 4px;
+  background: rgba(2, 124, 161, 0.2); border: 1px solid rgba(147, 188, 205, 0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: #FFD457; margin-bottom: 22px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.opt4-icon-badge svg { width: 26px; height: 26px; }
+.opt4-card:hover .opt4-icon-badge {
+  background: rgba(255, 212, 87, 0.2); border-color: #FFD457;
+}
+.opt4-kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #FFD457; margin-bottom: 8px;
+}
+.opt4-title {
+  font-size: 20px; font-weight: 700; color: #ffffff; line-height: 1.3; margin: 0 0 10px;
+}
+.opt4-body {
+  font-size: 14.5px; line-height: 1.62; color: rgba(255, 255, 255, 0.78); margin: 0 0 24px; flex: 1 1 auto;
+}
+.opt4-link {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700;
+  color: #FFD457; text-decoration: none; align-self: flex-start; margin-top: auto;
+  transition: color 0.18s ease;
+}
+.opt4-link svg { width: 16px; height: 16px; transition: transform 0.2s ease; }
+.opt4-card:hover .opt4-link { color: #ffffff; }
+.opt4-card:hover .opt4-link svg { transform: translateX(4px); }
+
+/* Concept 05: The Restrained Blueprint Cards (3 Photos) */
+.opt5-wrap { padding: 88px 0 104px; background: #F6F9FA; border-top: 1px solid #E2EBF0; }
+.opt5-head { margin-bottom: 44px; }
+.opt5-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+@media (max-width: 960px) { .opt5-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.opt5-card {
+  display: flex; flex-direction: column; position: relative;
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 4px;
+  padding: 22px;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt5-card:hover {
+  border-color: #027CA1; box-shadow: 0 10px 28px rgba(0, 59, 83, 0.08);
+}
+.opt5-clip {
+  position: relative; width: 100%; aspect-ratio: 16/10;
+  border-radius: 3px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+.opt5-clip img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt5-card:hover .opt5-clip img { transform: scale(1.05); }
+.opt5-meta {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+}
+.opt5-num {
+  font-size: 11.5px; font-weight: 700; color: #93BCCD; letter-spacing: 0.1em;
+}
+.opt5-pill {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em;
+  color: #027CA1; background: #EEF4F7; padding: 3px 8px; border-radius: 3px;
+}
+.opt5-title {
+  font-size: 20px; font-weight: 700; color: #003B53; margin: 0 0 10px; line-height: 1.3;
+}
+.opt5-body {
+  font-size: 14px; line-height: 1.65; color: #4a5d68; margin: 0 0 22px; flex: 1 1 auto;
+}
+.opt5-card .eq-btn { align-self: flex-start; margin-top: auto; }
+
+/* ================================================================
+   PART II: CREATIVE IMAGE-FORWARD EXPLORATIONS (CONCEPTS 06 - 10)
+   ================================================================ */
+
+/* Concept 06: The Equinox Signature Lens Cards */
+.opt6-wrap { padding: 90px 0 106px; background: #ffffff; }
+.opt6-head { margin-bottom: 48px; text-align: center; }
+.opt6-head .eq-eyebrow { justify-content: center; }
+.opt6-head .eq-sub { margin: 0 auto; }
+.opt6-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+@media (max-width: 960px) { .opt6-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+.opt6-card {
+  background: #ffffff; border: 1px solid #E2EBF0; border-radius: 6px;
+  padding: 38px 28px 32px; display: flex; flex-direction: column; align-items: center; text-align: center;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt6-card:hover {
+  border-color: #027CA1; box-shadow: 0 14px 34px rgba(0, 59, 83, 0.08);
+}
+.opt6-lens-stage {
+  position: relative; width: 144px; height: 144px; margin-bottom: 24px;
+}
+.opt6-ring-gold {
+  position: absolute; inset: -4px; border-radius: 50%; border: 1.6px solid #FFD457;
+  transform: translate(-3px, -3px); pointer-events: none; transition: border-color 0.22s ease;
+}
+.opt6-ring-night {
+  position: absolute; inset: -4px; border-radius: 50%; border: 1.6px solid rgba(0, 59, 83, 0.35);
+  transform: translate(3px, 3px); pointer-events: none; transition: border-color 0.22s ease;
+}
+.opt6-card:hover .opt6-ring-night { border-color: #027CA1; }
+.opt6-lens-crop {
+  position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
+  border: 2.5px solid #ffffff; box-shadow: 0 6px 20px rgba(0, 59, 83, 0.14);
+}
+.opt6-lens-crop img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt6-card:hover .opt6-lens-crop img { transform: scale(1.09); }
+.opt6-num {
+  font-size: 11px; font-weight: 700; color: #93BCCD; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px;
+}
+.opt6-title {
+  font-size: 20px; font-weight: 700; color: #003B53; margin: 0 0 10px; line-height: 1.3;
+}
+.opt6-body {
+  font-size: 14px; line-height: 1.65; color: #4a5d68; margin: 0 0 22px; flex: 1 1 auto;
+}
+.opt6-card .eq-btn { margin-top: auto; }
+
+/* Concept 07: The Cinematic Split-Panels */
+.opt7-wrap { padding: 90px 0 108px; background: #F8FAFB; border-top: 1px solid #E2EBF0; }
+.opt7-head { margin-bottom: 44px; }
+.opt7-list { display: flex; flex-direction: column; gap: 30px; }
+.opt7-band {
+  display: grid; grid-template-columns: 1fr 1.15fr; border: 1px solid #DCE6EB;
+  border-radius: 6px; overflow: hidden; background: #ffffff;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt7-band:hover {
+  border-color: #027CA1; box-shadow: 0 12px 32px rgba(0, 59, 83, 0.08);
+}
+.opt7-band.reverse { direction: rtl; }
+.opt7-band.reverse > * { direction: ltr; }
+@media (max-width: 900px) {
+  .opt7-band, .opt7-band.reverse { grid-template-columns: 1fr; direction: ltr; }
+}
+.opt7-media {
+  position: relative; aspect-ratio: 16/10; width: 100%; overflow: hidden;
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+.opt7-band.reverse .opt7-media { border-right: none; border-left: 1px solid rgba(0,0,0,0.05); }
+.opt7-media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt7-band:hover .opt7-media img { transform: scale(1.05); }
+.opt7-caption-badge {
+  position: absolute; bottom: 14px; left: 14px; z-index: 3;
+  background: rgba(0, 43, 61, 0.85); backdrop-filter: blur(4px);
+  color: #ffffff; font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 4px 9px; border-radius: 3px; border: 1px solid rgba(147, 188, 205, 0.3);
+}
+.opt7-content {
+  padding: 40px 36px; display: flex; flex-direction: column; justify-content: center;
+}
+@media (max-width: 600px) { .opt7-content { padding: 26px 20px; } }
+.opt7-kicker {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: #027CA1; margin-bottom: 8px;
+}
+.opt7-title {
+  font-size: 23px; font-weight: 700; color: #003B53; line-height: 1.28; margin: 0 0 10px;
+}
+.opt7-desc {
+  font-size: 14.5px; line-height: 1.65; color: #556973; margin: 0 0 22px; max-width: 520px;
+}
+.opt7-content .eq-btn { align-self: flex-start; }
+
+/* Concept 08: The Darkroom Scrim Posters */
+.opt8-wrap { padding: 90px 0 110px; background: #ffffff; }
+.opt8-head { margin-bottom: 44px; }
+.opt8-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+@media (max-width: 960px) { .opt8-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+.opt8-poster {
+  position: relative; aspect-ratio: 3/4; border-radius: 6px; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between; padding: 30px 26px;
+  text-decoration: none; color: #ffffff; background: #002B3D;
+  transition: box-shadow 0.24s ease, border-color 0.24s ease;
+  border: 1px solid rgba(0, 59, 83, 0.25);
+  transform: none;
+}
+.opt8-poster:hover {
+  border-color: #027CA1; box-shadow: 0 18px 40px rgba(0, 59, 83, 0.22);
+}
+.opt8-bg-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1;
+}
+.opt8-poster:hover .opt8-bg-img { transform: scale(1.07); }
+.opt8-scrim {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,43,61,0.2) 0%, rgba(0,43,61,0.6) 45%, rgba(0,25,35,0.96) 100%);
+}
+.opt8-top { position: relative; z-index: 3; display: flex; justify-content: space-between; align-items: center; }
+.opt8-pill {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #FFD457; background: rgba(0, 43, 61, 0.7); border: 1px solid rgba(255, 212, 87, 0.4);
+  padding: 4px 9px; border-radius: 3px; backdrop-filter: blur(4px);
+}
+.opt8-idx { font-size: 13.5px; font-weight: 700; color: #93BCCD; letter-spacing: 0.1em; }
+.opt8-bottom { position: relative; z-index: 3; }
+.opt8-title {
+  font-size: 22px; font-weight: 700; line-height: 1.25; margin: 0 0 8px; color: #ffffff;
+}
+.opt8-desc {
+  font-size: 14px; line-height: 1.55; color: rgba(255, 255, 255, 0.82); margin: 0 0 18px;
+}
+.opt8-link {
+  display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700;
+  color: #FFD457; transition: color 0.18s ease;
+}
+.opt8-link svg {
+  width: 17px; height: 17px; background: rgba(255,255,255,0.15); border-radius: 50%;
+  padding: 3px; transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.opt8-poster:hover .opt8-link { color: #ffffff; }
+.opt8-poster:hover .opt8-link svg {
+  transform: translateX(4px); background: #FFD457; color: #003B53;
+}
+
+/* Concept 09: The Editorial Asymmetric Stage */
+.opt9-wrap { padding: 90px 0 108px; background: #F6F9FA; border-top: 1px solid #E2EBF0; }
+.opt9-head { margin-bottom: 44px; }
+.opt9-layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 34px; align-items: stretch; }
+@media (max-width: 980px) { .opt9-layout { grid-template-columns: 1fr; gap: 30px; } }
+
+.opt9-feature {
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 6px; padding: 30px;
+  display: flex; flex-direction: column; position: relative;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt9-feature:hover { border-color: #027CA1; box-shadow: 0 14px 34px rgba(0, 59, 83, 0.08); }
+.opt9-feat-clip {
+  position: relative; aspect-ratio: 16/9; width: 100%; border-radius: 4px; overflow: hidden;
+  margin-bottom: 22px; border: 1px solid rgba(0,0,0,0.06);
+}
+.opt9-feat-clip img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.opt9-feature:hover .opt9-feat-clip img { transform: scale(1.05); }
+
+.opt9-feat-tag {
+  display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #027CA1; background: #EEF4F7;
+  padding: 4px 9px; border-radius: 3px; margin-bottom: 10px; align-self: flex-start;
+}
+.opt9-feat-title {
+  font-size: 24px; font-weight: 700; color: #003B53; line-height: 1.25; margin: 0 0 10px;
+}
+.opt9-feat-body {
+  font-size: 14.5px; line-height: 1.65; color: #4a5d68; margin: 0 0 24px; flex: 1 1 auto;
+}
+.opt9-feature .eq-btn { align-self: flex-start; margin-top: auto; }
+
+.opt9-stack { display: flex; flex-direction: column; gap: 22px; }
+.opt9-mini-card {
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 6px; padding: 20px;
+  display: grid; grid-template-columns: 125px 1fr; gap: 18px; align-items: center;
+  text-decoration: none; color: inherit;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+@media (max-width: 580px) { .opt9-mini-card { grid-template-columns: 1fr; } }
+.opt9-mini-card:hover { border-color: #027CA1; box-shadow: 0 8px 24px rgba(0, 59, 83, 0.07); }
+.opt9-mini-clip {
+  width: 100%; aspect-ratio: 1/1; border-radius: 4px; overflow: hidden; position: relative;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.opt9-mini-clip img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.opt9-mini-card:hover .opt9-mini-clip img { transform: scale(1.07); }
+
+.opt9-mini-info { min-width: 0; }
+.opt9-mini-kicker {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #027CA1; margin-bottom: 4px;
+}
+.opt9-mini-title {
+  font-size: 18px; font-weight: 700; color: #003B53; line-height: 1.3; margin: 0 0 5px;
+  transition: color 0.18s ease;
+}
+.opt9-mini-card:hover .opt9-mini-title { color: #027CA1; }
+.opt9-mini-desc {
+  font-size: 13.5px; line-height: 1.55; color: #556973; margin: 0 0 10px;
+}
+.opt9-mini-action {
+  font-size: 12.5px; font-weight: 700; color: #003B53; display: inline-flex; align-items: center; gap: 5px;
+  transition: color 0.18s ease;
+}
+.opt9-mini-card:hover .opt9-mini-action { color: #027CA1; }
+.opt9-mini-card:hover .opt9-mini-action svg { transform: translateX(3px); }
+
+/* Concept 10: The Architectural Duotone Blueprint */
+.opt10-wrap { padding: 88px 0 104px; background: #ffffff; }
+.opt10-head { margin-bottom: 44px; }
+.opt10-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+@media (max-width: 960px) { .opt10-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.opt10-card {
+  background: #ffffff; border: 1px solid #E2EBF0; border-radius: 4px; padding: 24px;
+  display: flex; flex-direction: column;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt10-card:hover { border-color: #027CA1; box-shadow: 0 12px 30px rgba(0, 59, 83, 0.08); }
+.opt10-window {
+  position: relative; width: 100%; aspect-ratio: 16/10; border-radius: 3px;
+  overflow: hidden; margin-bottom: 20px; border: 1px solid #D5E2E8;
+}
+.opt10-window img {
+  width: 100%; height: 100%; object-fit: cover; filter: saturate(0.72) contrast(1.05);
+  transition: filter 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt10-card:hover .opt10-window img {
+  filter: saturate(1.08) contrast(1.02); transform: scale(1.05);
+}
+.opt10-crosshair {
+  position: absolute; width: 12px; height: 12px; z-index: 3; pointer-events: none;
+  color: #93BCCD; transition: color 0.22s ease; font-weight: 700; line-height: 1;
+}
+.opt10-card:hover .opt10-crosshair { color: #FFD457; }
+.opt10-crosshair.tl { top: 8px; left: 8px; }
+.opt10-crosshair.tr { top: 8px; right: 8px; }
+.opt10-crosshair.bl { bottom: 8px; left: 8px; }
+.opt10-crosshair.br { bottom: 8px; right: 8px; }
+
+.opt10-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.opt10-blueprint-num {
+  font-size: 11px; font-weight: 700; color: #93BCCD; letter-spacing: 0.12em; font-family: monospace, sans-serif;
+}
+.opt10-badge {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em;
+  color: #027CA1; background: #EEF4F7; padding: 3px 8px; border-radius: 3px;
+}
+.opt10-title {
+  font-size: 20px; font-weight: 700; color: #003B53; margin: 0 0 10px; line-height: 1.3;
+}
+.opt10-body {
+  font-size: 14px; line-height: 1.65; color: #4a5d68; margin: 0 0 22px; flex: 1 1 auto;
+}
+.opt10-card .eq-btn { align-self: flex-start; margin-top: auto; }
+
+/* ================================================================
+   PART III: BRENTWOOD-INSPIRED COMPACT INTERLINKING STRIPS
+   Compact 2:1 ratio, floating pills, low vertical height (~160-210px)
+   Strictly 0 Layout Shifting - Contained Zoom Only
+   ================================================================ */
+
+/* Common Header for Compact Blocks: Minimalist & Tight */
+.compact-sec-head {
+  display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  margin-bottom: 26px; padding-bottom: 12px; border-bottom: 1px solid #E2EBF0;
+}
+.compact-h2 {
+  font-size: 24px; font-weight: 300; color: #003B53; display: inline-flex; align-items: center; gap: 8px;
+}
+.compact-h2 b { font-weight: 700; }
+.compact-h2 svg { width: 18px; height: 18px; color: #027CA1; }
+.compact-kicker {
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #027CA1;
+}
+
+/* ================================================================
+   OPTION 11: THE BRENTWOOD-EQUINOX FLOATING PILL (DIRECT INSIGHT)
+   2:1 aspect ratio card with centered floating frosted pill badge
+   ================================================================ */
+.opt11-wrap { padding: 64px 0 76px; background: #ffffff; }
+.opt11-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .opt11-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.opt11-card {
+  position: relative; aspect-ratio: 2 / 1; border-radius: 6px; overflow: hidden;
+  border: 1px solid #DCE6EB; text-decoration: none; color: inherit; display: block;
+  box-shadow: 0 4px 14px rgba(0, 59, 83, 0.04);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none; /* STRICT NO TRANSLATE */
+}
+.opt11-card:hover {
+  border-color: #027CA1; box-shadow: 0 10px 28px rgba(0, 59, 83, 0.12);
+}
+.opt11-img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1;
+}
+.opt11-card:hover .opt11-img {
+  transform: scale(1.08); /* Internal zoom only */
+}
+.opt11-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 43, 61, 0.12) 0%, rgba(0, 28, 38, 0.68) 100%);
+  display: flex; align-items: flex-end; justify-content: center; padding: 18px;
+}
+.opt11-pill {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: #ffffff; color: #003B53; padding: 8px 16px; border-radius: 30px;
+  font-size: 13.5px; font-weight: 700; width: auto; max-width: 92%;
+  box-shadow: 0 6px 18px rgba(0, 43, 61, 0.24); border: 1px solid rgba(147, 188, 205, 0.4);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.opt11-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.opt11-chevron-wrap {
+  width: 22px; height: 22px; border-radius: 50%; background: #EEF4F7; color: #003B53;
+  display: flex; align-items: center; justify-content: center; flex: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.opt11-chevron-wrap svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+.opt11-card:hover .opt11-pill {
+  background: #003B53; color: #ffffff; border-color: #003B53;
+}
+.opt11-card:hover .opt11-chevron-wrap {
+  background: #FFD457; color: #003B53;
+}
+.opt11-card:hover .opt11-chevron-wrap svg { transform: translateX(2px); }
+
+/* ================================================================
+   OPTION 12: THE HORIZON BASE-SHELF (FLUSH BOTTOM DOCK)
+   Image with a clean, low-height navy base ledger (Height ~200px)
+   ================================================================ */
+.opt12-wrap { padding: 64px 0 76px; background: #F8FAFB; border-top: 1px solid #E2EBF0; }
+.opt12-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .opt12-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.opt12-card {
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 6px; overflow: hidden;
+  text-decoration: none; color: inherit; display: flex; flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 59, 83, 0.04);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt12-card:hover {
+  border-color: #027CA1; box-shadow: 0 10px 26px rgba(0, 59, 83, 0.1);
+}
+.opt12-media {
+  position: relative; width: 100%; aspect-ratio: 2.2 / 1; overflow: hidden;
+}
+.opt12-media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt12-card:hover .opt12-media img { transform: scale(1.06); }
+.opt12-dock {
+  background: #002B3D; padding: 15px 20px; display: flex; align-items: center;
+  justify-content: space-between; color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+.opt12-card:hover .opt12-dock { background: #003B53; }
+.opt12-name {
+  font-size: 15px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em;
+}
+.opt12-arrow {
+  width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center; color: #93BCCD;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.opt12-arrow svg { width: 13px; height: 13px; transition: transform 0.2s ease; }
+.opt12-card:hover .opt12-arrow { background: #FFD457; color: #003B53; }
+.opt12-card:hover .opt12-arrow svg { transform: translateX(2px); }
+
+/* ================================================================
+   OPTION 13: THE INSET FRAMED BANNER (ULTRA-COMPACT 2.4:1 STRIP)
+   Streamlined 140px banner with gold micro-kicker & perimeter border
+   ================================================================ */
+.opt13-wrap { padding: 64px 0 76px; background: #ffffff; }
+.opt13-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .opt13-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.opt13-card {
+  position: relative; aspect-ratio: 2.3 / 1; border-radius: 4px; overflow: hidden;
+  text-decoration: none; color: #ffffff; display: block; background: #002B3D;
+  transition: box-shadow 0.22s ease; transform: none;
+}
+.opt13-card:hover { box-shadow: 0 10px 28px rgba(0, 59, 83, 0.18); }
+.opt13-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1;
+}
+.opt13-card:hover .opt13-bg { transform: scale(1.07); }
+.opt13-scrim {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 43, 61, 0.35) 0%, rgba(0, 24, 34, 0.88) 100%);
+}
+.opt13-frame {
+  position: absolute; inset: 10px; z-index: 3; border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 3px; padding: 14px 16px; display: flex; flex-direction: column;
+  justify-content: space-between; pointer-events: none;
+  transition: border-color 0.22s ease;
+}
+.opt13-card:hover .opt13-frame { border-color: #FFD457; }
+.opt13-kicker {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #FFD457;
+}
+.opt13-row {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.opt13-title {
+  font-size: 16px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+}
+.opt13-card:hover .opt13-title { color: #FFD457; }
+.opt13-icon {
+  width: 18px; height: 18px; color: #ffffff; transition: transform 0.2s ease, color 0.2s ease;
+}
+.opt13-card:hover .opt13-icon { transform: translateX(3px); color: #FFD457; }
+
+/* ================================================================
+   OPTION 14: THE MICRO-SPLIT CHIP (105px ULTRA-LOW PROFILE)
+   Compact horizontal card with square photo thumbnail + micro-copy
+   ================================================================ */
+.opt14-wrap { padding: 64px 0 76px; background: #F6F9FA; border-top: 1px solid #E2EBF0; }
+.opt14-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 860px) { .opt14-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+.opt14-chip {
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 6px; overflow: hidden;
+  text-decoration: none; color: inherit; display: grid; grid-template-columns: 110px 1fr;
+  align-items: center; box-shadow: 0 3px 12px rgba(0, 59, 83, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transform: none; min-height: 100px;
+}
+.opt14-chip:hover {
+  border-color: #027CA1; box-shadow: 0 8px 22px rgba(0, 59, 83, 0.08);
+}
+.opt14-thumb {
+  position: relative; width: 100%; height: 100%; overflow: hidden;
+}
+.opt14-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.opt14-chip:hover .opt14-thumb img { transform: scale(1.08); }
+.opt14-info {
+  padding: 14px 16px; display: flex; flex-direction: column; justify-content: center;
+}
+.opt14-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #027CA1; margin-bottom: 3px;
+}
+.opt14-title {
+  font-size: 15.5px; font-weight: 700; color: #003B53; margin: 0 0 5px; line-height: 1.25;
+  transition: color 0.18s ease;
+}
+.opt14-chip:hover .opt14-title { color: #027CA1; }
+.opt14-action {
+  font-size: 12px; font-weight: 700; color: #556973; display: inline-flex; align-items: center; gap: 4px;
+  transition: color 0.18s ease;
+}
+.opt14-action svg { width: 12px; height: 12px; transition: transform 0.2s ease; }
+.opt14-chip:hover .opt14-action { color: #003B53; }
+.opt14-chip:hover .opt14-action svg { transform: translateX(2px); }
+
+/* ================================================================
+   OPTION 15: THE TRANSLUCENT GLASS FLOATING RIBBON
+   2:1 aspect ratio with an edge-to-edge floating frosted glass pill
+   ================================================================ */
+.opt15-wrap { padding: 64px 0 76px; background: #ffffff; }
+.opt15-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 860px) { .opt15-grid { grid-template-columns: 1fr; gap: 20px; } }
+
+.opt15-card {
+  position: relative; aspect-ratio: 2 / 1; border-radius: 6px; overflow: hidden;
+  border: 1px solid #DCE6EB; text-decoration: none; color: #ffffff; display: block;
+  box-shadow: 0 4px 14px rgba(0, 59, 83, 0.04);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  transform: none;
+}
+.opt15-card:hover {
+  border-color: #027CA1; box-shadow: 0 10px 28px rgba(0, 59, 83, 0.14);
+}
+.opt15-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1;
+}
+.opt15-card:hover .opt15-photo { transform: scale(1.07); }
+.opt15-scrim {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 43, 61, 0.1) 0%, rgba(0, 24, 34, 0.65) 100%);
+}
+.opt15-dock {
+  position: absolute; bottom: 12px; left: 12px; right: 12px; z-index: 3;
+  background: rgba(0, 43, 61, 0.78); backdrop-filter: blur(8px);
+  border: 1px solid rgba(147, 188, 205, 0.35); border-radius: 24px;
+  padding: 8px 16px; display: flex; align-items: center; justify-content: space-between;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.opt15-card:hover .opt15-dock {
+  background: rgba(0, 59, 83, 0.92); border-color: #FFD457;
+}
+.opt15-tag-grp { display: flex; align-items: center; gap: 8px; }
+.opt15-pip { width: 6px; height: 6px; border-radius: 50%; background: #FFD457; flex: none; }
+.opt15-label { font-size: 13px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em; }
+.opt15-chevron {
+  width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center; color: #FFD457;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.opt15-chevron svg { width: 10px; height: 10px; }
+.opt15-card:hover .opt15-chevron { background: #FFD457; color: #003B53; }
+.opt15-card:hover .opt15-chevron svg { transform: translateX(1px); }
+
+/* ================= RECOMMENDATION FOOTER ================= */
+.rec-strip {
+  background: #002B3D; border-top: 1px solid rgba(147,188,205,0.25);
+  padding: 48px 24px; color: #ffffff; text-align: center; margin-top: 60px;
+}
+.rec-wrap { max-width: 980px; margin: 0 auto; }
+.rec-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #ffffff; }
+.rec-body { font-size: 15px; line-height: 1.6; color: #93BCCD; margin-bottom: 28px; }
+.rec-spec-list {
+  display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.rec-spec-item {
+  display: flex; align-items: center; gap: 7px; font-size: 12px; color: #FFD457;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,212,87,0.3);
+  padding: 6px 12px; border-radius: 4px;
+}
+.rec-spec-item svg { width: 13px; height: 13px; }
+</style>
+</head>
+<body>
+
+<!-- TOP CONTROL BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-group">
+      <span class="brand-pill">Equinox UX Lab</span>
+      <div class="brand-title">Child Navigation Showcase &bull; <span>15 Variations</span></div>
+    </div>
+    <div class="nav-buttons">
+      <span class="nav-group-label">Part I:</span>
+      <a class="nav-btn" href="#option1">01. Monogram</a>
+      <a class="nav-btn" href="#option2">02. Split Anchor</a>
+      <a class="nav-btn" href="#option3">03. Micro-Stamps</a>
+      <a class="nav-btn" href="#option4">04. Midnight</a>
+      <a class="nav-btn" href="#option5">05. Static Blueprint</a>
+      <span class="nav-group-label">Part II:</span>
+      <a class="nav-btn" href="#option6">06. Brand Lens</a>
+      <a class="nav-btn" href="#option7">07. Cinematic Split</a>
+      <a class="nav-btn" href="#option8">08. Scrim Posters</a>
+      <a class="nav-btn" href="#option9">09. Asymmetric</a>
+      <a class="nav-btn" href="#option10">10. Duotone</a>
+      <span class="nav-group-label" style="color:#027CA1; background:rgba(2,124,161,0.2); padding:2px 6px; border-radius:2px;">Part III (Brentwood-Inspired):</span>
+      <a class="nav-btn" href="#option11" style="border-color:#FFD457; color:#FFD457;">11. Floating Pill</a>
+      <a class="nav-btn" href="#option12" style="border-color:#FFD457; color:#FFD457;">12. Base Shelf</a>
+      <a class="nav-btn" href="#option13" style="border-color:#FFD457; color:#FFD457;">13. Inset Banner</a>
+      <a class="nav-btn" href="#option14" style="border-color:#FFD457; color:#FFD457;">14. Micro-Split</a>
+      <a class="nav-btn" href="#option15" style="border-color:#FFD457; color:#FFD457;">15. Glass Ribbon</a>
+    </div>
+  </div>
+</div>
+
+<!-- SHOWCASE HERO -->
+<div class="showcase-hero">
+  <div class="hero-content">
+    <div class="hero-tag">Design Exploration &mdash; Child Navigation Blocks (15 Variations)</div>
+    <h1 class="hero-h1">15 Distinct UI Directions for <b>"Continue Exploring Equinox"</b></h1>
+    <p class="hero-sub">
+      Guiding to the 3 child pages of About Us (<b>Meet the Team</b>, <b>Career Opportunities</b>, and <b>Events &amp; Speaking</b>). Built with strict layout stability: <b>100% stationary card bounds</b> on hover or zoom (zero translateY, zero padding jumping), <b>strictly contained internal image zooms</b>, and no heavy yellow frames. Featuring a dedicated new <b>Part III: Brentwood-Inspired Compact Interlinking Strips</b> (low-height 2:1 cards with floating pills &amp; docks).
+    </p>
+    <div class="hero-points">
+      <div class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Zero Layout Shifts &bull; Fixed Geometry</div>
+      <div class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contained Image Zoom Only (overflow:hidden)</div>
+      <div class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Part I: 5 Low &amp; Zero-Image Explorations</div>
+      <div class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Part II: 5 Creative Image-Forward Concepts</div>
+      <div class="hero-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Part III: 5 Brentwood-Inspired Compact Strips</div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================================
+     PART I DIVIDER: LOW & ZERO-IMAGE EXPLORATIONS
+     ========================================================================= -->
+<div class="part-divider">
+  <div class="part-banner">
+    <div class="part-title-grp">
+      <span class="part-badge">Part I</span>
+      <div>
+        <div class="part-heading">Low-Image &amp; Zero-Image Directions (Concepts 01 &ndash; 05)</div>
+        <div class="part-desc">Typography-first layouts, single focal image anchors, compact micro-stamps, and architectural wireframes.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 01 -->
+<section id="option1" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#027CA1;">Concept 01</span>
+        <h2 class="opt-title">The Architectural Monogram Grid (Zero Photos)</h2>
+      </div>
+      <p class="opt-desc">Pure editorial typography with bespoke architectural SVG wireframe emblems. Clean, high-authority, and 100% static.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">0 Photos</span>
+      <span class="opt-tag teal">SVG Line-Art</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt1-wrap">
+      <div class="eq-wrap">
+        <div class="opt1-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Where To Go Next</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Discover the attorneys, culture, and educational forums that drive our collaborative business law practice.</p>
+        </div>
+
+        <div class="opt1-grid">
+          <div class="opt1-card">
+            <div class="opt1-emblem-row">
+              <div class="opt1-emblem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v8"/><path d="M9 12h6"/>
+                </svg>
+              </div>
+              <span class="opt1-num">01 / TEAM</span>
+            </div>
+            <span class="opt1-pill">Practice Leaders</span>
+            <h3 class="opt1-title">Meet the Team</h3>
+            <p class="opt1-body">Get to know our dedicated team of corporate attorneys, transactional specialists, and strategic business advisors.</p>
+            <a class="opt1-link" href="#"><span>Meet Our Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt1-card">
+            <div class="opt1-emblem-row">
+              <div class="opt1-emblem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+              <span class="opt1-num">02 / CAREER</span>
+            </div>
+            <span class="opt1-pill">Culture &amp; Autonomy</span>
+            <h3 class="opt1-title">Career Opportunities</h3>
+            <p class="opt1-body">Join a purposeful legal group that champions transparent flat-fee pricing, professional autonomy, and authentic work-life equilibrium.</p>
+            <a class="opt1-link" href="#"><span>Explore Careers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt1-card">
+            <div class="opt1-emblem-row">
+              <div class="opt1-emblem">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="16" r="1.5"/>
+                </svg>
+              </div>
+              <span class="opt1-num">03 / EVENTS</span>
+            </div>
+            <span class="opt1-pill">Executive Forums</span>
+            <h3 class="opt1-title">Events &amp; Speaking</h3>
+            <p class="opt1-body">Connect with our attorneys at upcoming educational business roundtables, executive leadership workshops, and speaking engagements.</p>
+            <a class="opt1-link" href="#"><span>View Calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 02 -->
+<section id="option2" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#003B53;">Concept 02</span>
+        <h2 class="opt-title">The Single-Image Split Anchor (1 Photo Only)</h2>
+      </div>
+      <p class="opt-desc">Reduces visual noise by using a single collective team anchor image on the left, paired with an elegant 3-row pathway ledger on the right.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">1 Focal Photo</span>
+      <span class="opt-tag teal">3-Row Pathway Ledger</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt2-wrap">
+      <div class="eq-wrap">
+        <div class="opt2-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Next Steps</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Follow the pathways below to connect directly with our attorneys, explore open positions, or attend upcoming forums.</p>
+        </div>
+
+        <div class="opt2-layout">
+          <div class="opt2-anchor eq-grain">
+            <div class="opt2-anchor-img">
+              <img src="img/s4-team.jpg" alt="Equinox Business Law Group Leadership Team">
+            </div>
+            <div class="opt2-anchor-scrim"></div>
+            <div class="opt2-anchor-content">
+              <div class="opt2-anchor-tag"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Bellevue &bull; Regional Practice</div>
+              <h3 class="opt2-anchor-h3">Entrepreneurs Serving Entrepreneurs</h3>
+              <p class="opt2-anchor-p">Dedicated business attorneys delivering Fractional General Counsel across the Pacific Northwest and Mountain West.</p>
+            </div>
+          </div>
+
+          <div class="opt2-ledger">
+            <a class="opt2-row" href="#">
+              <span class="opt2-idx">01</span>
+              <div class="opt2-info">
+                <div class="opt2-kicker">Attorneys &amp; Counsel</div>
+                <h3 class="opt2-title">Meet the Team</h3>
+                <p class="opt2-desc">Experienced corporate attorneys and business leaders behind Equinox's Strategic General Counsel model.</p>
+              </div>
+              <div class="opt2-arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <a class="opt2-row" href="#">
+              <span class="opt2-idx">02</span>
+              <div class="opt2-info">
+                <div class="opt2-kicker">Culture &amp; Autonomy</div>
+                <h3 class="opt2-title">Career Opportunities</h3>
+                <p class="opt2-desc">Thrive in an innovative environment where client relationships replace billable hour quotas and work-life balance is real.</p>
+              </div>
+              <div class="opt2-arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <a class="opt2-row" href="#">
+              <span class="opt2-idx">03</span>
+              <div class="opt2-info">
+                <div class="opt2-kicker">Community &amp; Insights</div>
+                <h3 class="opt2-title">Events &amp; Workshops</h3>
+                <p class="opt2-desc">Practical business governance workshops, EO Seattle forums, and roundtables across WA, OR, and CO.</p>
+              </div>
+              <div class="opt2-arrow-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 03 -->
+<section id="option3" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#D98D00;">Concept 03</span>
+        <h2 class="opt-title">The Micro-Stamp / Letterbox Index (Compact Images)</h2>
+      </div>
+      <p class="opt-desc">Typography-first horizontal index (85% text focus) with tiny letterbox photo stamps. Fixed geometry &mdash; zero padding expansion.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Compact Letterboxes</span>
+      <span class="opt-tag teal">Typography First</span>
+      <span class="opt-tag teal">Fixed Geometry</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt3-wrap">
+      <div class="eq-wrap">
+        <div class="opt3-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Inside Equinox</span></div>
+          <h2 class="eq-h2">Where To Go <b>From Here</b></h2>
+          <p class="eq-sub">Select an area below to continue your journey through our firm.</p>
+        </div>
+
+        <div class="opt3-list">
+          <a class="opt3-row" href="#">
+            <span class="opt3-idx">01</span>
+            <div class="opt3-info">
+              <div class="opt3-tag">The Practice</div>
+              <h3 class="opt3-title">Meet the Team</h3>
+              <p class="opt3-desc">A multi-disciplinary group of experienced corporate attorneys and paralegals committed to proactive counsel.</p>
+            </div>
+            <div class="opt3-end-col">
+              <div class="opt3-micro-thumb eq-grain"><img src="img/s4-team.jpg" alt="Equinox Team"></div>
+              <span class="opt3-action"><span>Explore Team</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <a class="opt3-row" href="#">
+            <span class="opt3-idx">02</span>
+            <div class="opt3-info">
+              <div class="opt3-tag">Culture &amp; Careers</div>
+              <h3 class="opt3-title">Careers at Equinox</h3>
+              <p class="opt3-desc">Discover our flat-fee business model, attorney autonomy, collaborative teamwork, and transparent compensation.</p>
+            </div>
+            <div class="opt3-end-col">
+              <div class="opt3-micro-thumb eq-grain"><img src="img/hero-5785.jpg" alt="Careers"></div>
+              <span class="opt3-action"><span>View Careers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <a class="opt3-row" href="#">
+            <span class="opt3-idx">03</span>
+            <div class="opt3-info">
+              <div class="opt3-tag">Executive Education</div>
+              <h3 class="opt3-title">Events &amp; Speaking Engagements</h3>
+              <p class="opt3-desc">Join our partners at regional business exchanges, EO Seattle workshops, and virtual executive roundtables.</p>
+            </div>
+            <div class="opt3-end-col">
+              <div class="opt3-micro-thumb eq-grain"><img src="img/s8-meeting.jpg" alt="Events"></div>
+              <span class="opt3-action"><span>See Schedule</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 04 -->
+<section id="option4" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#002B3D; border:1px solid #FFD457; color:#FFD457;">Concept 04</span>
+        <h2 class="opt-title">The Deep Horizon Directory (Midnight Canvas &bull; Zero Photos)</h2>
+      </div>
+      <p class="opt-desc">Dramatic, high-authority navy canvas providing cinematic weight before the footer. Frosted glass cards with wireframe emblems and zero photos.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">0 Photos</span>
+      <span class="opt-tag">Midnight Canvas</span>
+      <span class="opt-tag teal">Frosted Glass</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt4-wrap">
+      <div class="eq-wrap">
+        <div class="opt4-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Next Steps</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Follow the pathways below to connect directly with our attorneys, explore open positions, or attend upcoming forums.</p>
+        </div>
+
+        <div class="opt4-grid">
+          <div class="opt4-card">
+            <div class="opt4-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="opt4-kicker">01 // ATTORNEYS</span>
+            <h3 class="opt4-title">Meet the Team</h3>
+            <p class="opt4-body">Discover the experienced corporate attorneys and business leaders behind Equinox's Strategic General Counsel model.</p>
+            <a class="opt4-link" href="#"><span>View All Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt4-card">
+            <div class="opt4-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="opt4-kicker">02 // CULTURE &amp; CAREERS</span>
+            <h3 class="opt4-title">Career Opportunities</h3>
+            <p class="opt4-body">Thrive in an innovative environment where client relationships replace billable hour quotas and work-life balance is real.</p>
+            <a class="opt4-link" href="#"><span>Join the Practice</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt4-card">
+            <div class="opt4-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="opt4-kicker">03 // INSIGHTS &amp; EVENTS</span>
+            <h3 class="opt4-title">Events &amp; Workshops</h3>
+            <p class="opt4-body">Learn practical strategies to protect and scale your business at our upcoming legal workshops and executive seminars.</p>
+            <a class="opt4-link" href="#"><span>Browse Upcoming Dates</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 05 -->
+<section id="option5" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#5F7683;">Concept 05</span>
+        <h2 class="opt-title">The Restrained Blueprint Cards (100% Static Geometry)</h2>
+      </div>
+      <p class="opt-desc">For clients wanting photographic preview cards, but with 100% stationary card bounds. Image zoom is strictly internal within overflow:hidden.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">3 Photo Windows</span>
+      <span class="opt-tag teal">Internal Zoom Only</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt5-wrap">
+      <div class="eq-wrap">
+        <div class="opt5-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Next Chapters</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Immerse yourself in our people, culture, and upcoming community presence.</p>
+        </div>
+
+        <div class="opt5-grid">
+          <div class="opt5-card">
+            <div class="opt5-clip eq-grain"><img src="img/s4-team.jpg" alt="Equinox Business Law Group Team"></div>
+            <div class="opt5-meta"><span class="opt5-num">01 / TEAM</span><span class="opt5-pill">Attorneys</span></div>
+            <h3 class="opt5-title">Meet the Team</h3>
+            <p class="opt5-body">Entrepreneurs who are also attorneys, bringing legal rigor and proactive business strategy into direct alignment.</p>
+            <a class="eq-btn outline" href="#"><span>Meet Our Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt5-card">
+            <div class="opt5-clip eq-grain"><img src="img/hero-5785.jpg" alt="Careers at Equinox"></div>
+            <div class="opt5-meta"><span class="opt5-num">02 / CAREER</span><span class="opt5-pill">Culture</span></div>
+            <h3 class="opt5-title">Career Opportunities</h3>
+            <p class="opt5-body">Break free from traditional billable hours with a collaborative team that puts autonomy, clients, and balance first.</p>
+            <a class="eq-btn outline" href="#"><span>Explore Positions</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt5-card">
+            <div class="opt5-clip eq-grain"><img src="img/s8-meeting.jpg" alt="Events and Workshops"></div>
+            <div class="opt5-meta"><span class="opt5-num">03 / EVENTS</span><span class="opt5-pill">Roundtables</span></div>
+            <h3 class="opt5-title">Events &amp; Workshops</h3>
+            <p class="opt5-body">Actionable business law workshops and executive roundtables throughout Washington, Oregon, and Colorado.</p>
+            <a class="eq-btn outline" href="#"><span>View Calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PART II DIVIDER: CREATIVE IMAGE-FORWARD EXPLORATIONS
+     ========================================================================= -->
+<div class="part-divider">
+  <div class="part-banner" style="background: linear-gradient(90deg, #02384D 0%, #001E2B 100%); border-color: rgba(255,212,87,0.35);">
+    <div class="part-title-grp">
+      <span class="part-badge" style="background:#FFD457; color:#003B53;">Part II</span>
+      <div>
+        <div class="part-heading">Creative Image-Forward Concepts (Concepts 06 &ndash; 10)</div>
+        <div class="part-desc">Brand ring geometry lenses, cinematic split-panels, full-bleed scrim posters, asymmetric stages, and blueprint duotones.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Concept 06 -->
+<section id="option6" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#003B53; border:1px solid #FFD457; color:#FFD457;">Concept 06</span>
+        <h2 class="opt-title">The Equinox Signature Lens Cards (Brand Geometry)</h2>
+      </div>
+      <p class="opt-desc">Integrates the firm's signature offset Gold and Night ring geometry to frame circular photo lenses. 100% stationary.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Offset Brand Rings</span>
+      <span class="opt-tag teal">Circular Lens Crop</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt6-wrap">
+      <div class="eq-wrap">
+        <div class="opt6-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Signature Brand Geometry</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Follow our circular brand lenses into the attorneys, careers, and legal forums that shape our practice.</p>
+        </div>
+
+        <div class="opt6-grid">
+          <div class="opt6-card">
+            <div class="opt6-lens-stage">
+              <div class="opt6-ring-gold"></div>
+              <div class="opt6-ring-night"></div>
+              <div class="opt6-lens-crop eq-grain"><img src="img/s4-team.jpg" alt="Equinox Attorneys Team"></div>
+            </div>
+            <span class="opt6-num">01 / TEAM</span>
+            <h3 class="opt6-title">Meet the Team</h3>
+            <p class="opt6-body">Get to know our dedicated team of corporate attorneys, transactional specialists, and seasoned business advisors.</p>
+            <a class="eq-btn outline" href="#"><span>Our Team</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt6-card">
+            <div class="opt6-lens-stage">
+              <div class="opt6-ring-gold"></div>
+              <div class="opt6-ring-night"></div>
+              <div class="opt6-lens-crop eq-grain"><img src="img/hero-5785.jpg" alt="Careers at Equinox"></div>
+            </div>
+            <span class="opt6-num">02 / CAREERS</span>
+            <h3 class="opt6-title">Career Opportunities</h3>
+            <p class="opt6-body">Join a purposeful legal group that champions transparent flat-fee pricing, professional autonomy, and authentic work-life equilibrium.</p>
+            <a class="eq-btn outline" href="#"><span>Join the Practice</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt6-card">
+            <div class="opt6-lens-stage">
+              <div class="opt6-ring-gold"></div>
+              <div class="opt6-ring-night"></div>
+              <div class="opt6-lens-crop eq-grain"><img src="img/s8-meeting.jpg" alt="Events and Workshops"></div>
+            </div>
+            <span class="opt6-num">03 / EVENTS</span>
+            <h3 class="opt6-title">Events &amp; Speaking</h3>
+            <p class="opt6-body">Connect with our attorneys at upcoming educational business roundtables, executive workshops, and regional speaking panels.</p>
+            <a class="eq-btn outline" href="#"><span>View Calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 07 -->
+<section id="option7" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#027CA1;">Concept 07</span>
+        <h2 class="opt-title">The Cinematic Split-Panels (Alternating Photo Ribbons)</h2>
+      </div>
+      <p class="opt-desc">Wide horizontal landscape panels with alternating photo placement. Creates an expansive editorial cadence like a high-end publication.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Landscape Ribbons</span>
+      <span class="opt-tag teal">Alternating Rhythm</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt7-wrap">
+      <div class="eq-wrap">
+        <div class="opt7-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Editorial Horizons</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Discover the key pillars that support our collaborative, business-first corporate legal practice.</p>
+        </div>
+
+        <div class="opt7-list">
+          <div class="opt7-band">
+            <div class="opt7-media eq-grain">
+              <img src="img/s4-team.jpg" alt="Equinox Legal Team">
+              <div class="opt7-caption-badge">01 // Attorneys &amp; Advisors</div>
+            </div>
+            <div class="opt7-content">
+              <span class="opt7-kicker">Practice Leadership</span>
+              <h3 class="opt7-title">Meet the Team</h3>
+              <p class="opt7-desc">We are entrepreneurs who are also experienced corporate attorneys, transactional specialists, and business advisors dedicated to proactive fractional counsel.</p>
+              <a class="eq-btn navy" href="#"><span>Meet Our Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="opt7-band reverse">
+            <div class="opt7-media eq-grain">
+              <img src="img/hero-5785.jpg" alt="Careers at Equinox">
+              <div class="opt7-caption-badge">02 // Culture &amp; Growth</div>
+            </div>
+            <div class="opt7-content">
+              <span class="opt7-kicker">Career Opportunities</span>
+              <h3 class="opt7-title">A Different Kind of Law Firm</h3>
+              <p class="opt7-desc">Enjoy predictable flat-fee schedules, attorney autonomy, deep client relationships, and authentic Pacific Northwest work-life balance.</p>
+              <a class="eq-btn navy" href="#"><span>Explore Careers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <div class="opt7-band">
+            <div class="opt7-media eq-grain">
+              <img src="img/s8-meeting.jpg" alt="Events and Workshops">
+              <div class="opt7-caption-badge">03 // Executive Roundtables</div>
+            </div>
+            <div class="opt7-content">
+              <span class="opt7-kicker">Education &amp; Community</span>
+              <h3 class="opt7-title">Events &amp; Speaking Engagements</h3>
+              <p class="opt7-desc">Participate in proactive business governance workshops, EO Seattle forums, and virtual executive roundtables throughout Washington, Oregon, and Colorado.</p>
+              <a class="eq-btn navy" href="#"><span>View Upcoming Schedule</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 08 -->
+<section id="option8" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#5F7683;">Concept 08</span>
+        <h2 class="opt-title">The Darkroom Scrim Posters (Full-Bleed Visuals)</h2>
+      </div>
+      <p class="opt-desc">Full-bleed vertical posters with deep navy gradient scrims. Typography is 100% stationary &mdash; only the photo scales internally behind the scrim.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Full-Bleed Scrim</span>
+      <span class="opt-tag teal">Static Typography</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt8-wrap">
+      <div class="eq-wrap">
+        <div class="opt8-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Next Chapters</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Immerse yourself in our team, culture, and upcoming community workshops.</p>
+        </div>
+
+        <div class="opt8-grid">
+          <a class="opt8-poster eq-grain" href="#">
+            <img class="opt8-bg-img" src="img/s4-team.jpg" alt="Meet the Team">
+            <div class="opt8-scrim"></div>
+            <div class="opt8-top">
+              <span class="opt8-pill">Attorneys</span><span class="opt8-idx">01</span>
+            </div>
+            <div class="opt8-bottom">
+              <h3 class="opt8-title">Meet the Team</h3>
+              <p class="opt8-desc">Seasoned corporate attorneys and business leaders behind Equinox's Fractional General Counsel model.</p>
+              <span class="opt8-link"><span>Meet Our Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <a class="opt8-poster eq-grain" href="#">
+            <img class="opt8-bg-img" src="img/hero-5785.jpg" alt="Careers at Equinox">
+            <div class="opt8-scrim"></div>
+            <div class="opt8-top">
+              <span class="opt8-pill">Careers</span><span class="opt8-idx">02</span>
+            </div>
+            <div class="opt8-bottom">
+              <h3 class="opt8-title">Career Opportunities</h3>
+              <p class="opt8-desc">Thrive in a collaborative legal practice where autonomy, transparent pricing, and work-life balance come first.</p>
+              <span class="opt8-link"><span>Explore Positions</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <a class="opt8-poster eq-grain" href="#">
+            <img class="opt8-bg-img" src="img/s8-meeting.jpg" alt="Events and Workshops">
+            <div class="opt8-scrim"></div>
+            <div class="opt8-top">
+              <span class="opt8-pill">Forums</span><span class="opt8-idx">03</span>
+            </div>
+            <div class="opt8-bottom">
+              <h3 class="opt8-title">Events &amp; Workshops</h3>
+              <p class="opt8-desc">Practical legal governance workshops and roundtables throughout Washington, Oregon, and Colorado.</p>
+              <span class="opt8-link"><span>View Calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 09 -->
+<section id="option9" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#003B53; border:1px solid #FFD457; color:#FFD457;">Concept 09</span>
+        <h2 class="opt-title">The Editorial Asymmetric Stage (Hero + Sibling Cards)</h2>
+      </div>
+      <p class="opt-desc">Elevates 'Meet the Team' as the primary hero stage on the left, paired with two stacked photo cards on the right. 100% stationary.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Visual Hierarchy</span>
+      <span class="opt-tag teal">Hero Stage</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt9-wrap">
+      <div class="eq-wrap">
+        <div class="opt9-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Explore Equinox</span></div>
+          <h2 class="eq-h2">Continue Your <b>Discovery</b></h2>
+          <p class="eq-sub">Connect with the people who champion your business and explore what's happening across our community.</p>
+        </div>
+
+        <div class="opt9-layout">
+          <div class="opt9-feature">
+            <div class="opt9-feat-clip eq-grain"><img src="img/s4-team.jpg" alt="Equinox Leadership Team"></div>
+            <span class="opt9-feat-tag">Primary Destination</span>
+            <h3 class="opt9-feat-title">Meet the Attorneys Behind Your General Counsel</h3>
+            <p class="opt9-feat-body">Unlike conventional firms that rotate junior associates on your account, Equinox pairs you with a designated Lead Attorney backed by cross-functional specialists.</p>
+            <a class="eq-btn navy" href="#"><span>Meet the Entire Team</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt9-stack">
+            <a class="opt9-mini-card" href="#">
+              <div class="opt9-mini-clip eq-grain"><img src="img/hero-5785.jpg" alt="Careers at Equinox"></div>
+              <div class="opt9-mini-info">
+                <span class="opt9-mini-kicker">Careers</span>
+                <h4 class="opt9-mini-title">Join Our Growing Practice</h4>
+                <p class="opt9-mini-desc">Enjoy predictable schedules, collaborative teamwork, and client partnership.</p>
+                <span class="opt9-mini-action"><span>Explore Open Roles</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </div>
+            </a>
+
+            <a class="opt9-mini-card" href="#">
+              <div class="opt9-mini-clip eq-grain"><img src="img/s8-meeting.jpg" alt="Events and Workshops"></div>
+              <div class="opt9-mini-info">
+                <span class="opt9-mini-kicker">Workshops</span>
+                <h4 class="opt9-mini-title">Events &amp; Roundtables</h4>
+                <p class="opt9-mini-desc">Participate in proactive business governance workshops across WA, OR, and CO.</p>
+                <span class="opt9-mini-action"><span>View 2026 Schedule</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concept 10 -->
+<section id="option10" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#027CA1;">Concept 10</span>
+        <h2 class="opt-title">The Architectural Duotone Blueprint (Corner Crosshairs)</h2>
+      </div>
+      <p class="opt-desc">Subtle cool slate-cyan duotone photo windows with corner architectural crosshairs. Duotone clears into vibrant natural color on hover.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Duotone Reveal</span>
+      <span class="opt-tag teal">Corner Crosshairs</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt10-wrap">
+      <div class="eq-wrap">
+        <div class="opt10-head">
+          <div class="eq-eyebrow"><span class="rule"></span><span>Architectural Precision</span></div>
+          <h2 class="eq-h2">Continue Exploring <b>Equinox</b></h2>
+          <p class="eq-sub">Follow our precision blueprint into the core practices and community forums of our firm.</p>
+        </div>
+
+        <div class="opt10-grid">
+          <div class="opt10-card">
+            <div class="opt10-window eq-grain">
+              <span class="opt10-crosshair tl">+</span><span class="opt10-crosshair tr">+</span><span class="opt10-crosshair bl">+</span><span class="opt10-crosshair br">+</span>
+              <img src="img/s4-team.jpg" alt="Equinox Legal Team">
+            </div>
+            <div class="opt10-meta"><span class="opt10-blueprint-num">SEC.01 // TEAM</span><span class="opt10-badge">Attorneys</span></div>
+            <h3 class="opt10-title">Meet the Team</h3>
+            <p class="opt10-body">Corporate attorneys and business advisors delivering proactive counsel with complete fee transparency.</p>
+            <a class="eq-btn outline" href="#"><span>Our Attorneys</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt10-card">
+            <div class="opt10-window eq-grain">
+              <span class="opt10-crosshair tl">+</span><span class="opt10-crosshair tr">+</span><span class="opt10-crosshair bl">+</span><span class="opt10-crosshair br">+</span>
+              <img src="img/hero-5785.jpg" alt="Careers at Equinox">
+            </div>
+            <div class="opt10-meta"><span class="opt10-blueprint-num">SEC.02 // CAREER</span><span class="opt10-badge">Culture</span></div>
+            <h3 class="opt10-title">Career Opportunities</h3>
+            <p class="opt10-body">Join a purposeful legal practice that values attorney autonomy, team collaboration, and real work-life balance.</p>
+            <a class="eq-btn outline" href="#"><span>Join the Practice</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+
+          <div class="opt10-card">
+            <div class="opt10-window eq-grain">
+              <span class="opt10-crosshair tl">+</span><span class="opt10-crosshair tr">+</span><span class="opt10-crosshair bl">+</span><span class="opt10-crosshair br">+</span>
+              <img src="img/s8-meeting.jpg" alt="Events and Workshops">
+            </div>
+            <div class="opt10-meta"><span class="opt10-blueprint-num">SEC.03 // EVENTS</span><span class="opt10-badge">Roundtables</span></div>
+            <h3 class="opt10-title">Events &amp; Workshops</h3>
+            <p class="opt10-body">Practical business law workshops and executive forums throughout Washington, Oregon, and Colorado.</p>
+            <a class="eq-btn outline" href="#"><span>View Calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     PART III DIVIDER: BRENTWOOD-INSPIRED COMPACT INTERLINKING STRIPS
+     ========================================================================= -->
+<div class="part-divider">
+  <div class="part-banner" style="background: linear-gradient(90deg, #003B53 0%, #001E2B 100%); border-color: #FFD457;">
+    <div class="part-title-grp">
+      <span class="part-badge" style="background:#FFD457; color:#003B53;">Part III</span>
+      <div>
+        <div class="part-heading">Brentwood-Inspired Compact Interlinking Strips (Concepts 11 &ndash; 15)</div>
+        <div class="part-desc">Low-profile 2:1 ratio cards, floating pill buttons, and minimal vertical footprints inspired by Brentwood College's interlinking block.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================================
+     OPTION 11: THE BRENTWOOD-EQUINOX FLOATING PILL (DIRECT INSIGHT)
+     ========================================================================= -->
+<section id="option11" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#027CA1;">Concept 11</span>
+        <h2 class="opt-title">The Brentwood-Equinox Floating Pill (2:1 Ratio &bull; Direct Adaptation)</h2>
+      </div>
+      <p class="opt-desc">Directly inspired by Brentwood College's interlinking row: ultra-compact 2:1 aspect ratio cards with centered floating white pill badges.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">2:1 Ratio Cards</span>
+      <span class="opt-tag teal">Floating Center Pill</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt11-wrap">
+      <div class="eq-wrap">
+        <div class="compact-sec-head">
+          <h2 class="compact-h2">Continue Exploring <b>Equinox</b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></h2>
+          <span class="compact-kicker">01 // Learn More &bull; Direct Gateway</span>
+        </div>
+
+        <div class="opt11-grid">
+          <!-- Card 1 -->
+          <a class="opt11-card" href="#" aria-label="Meet the Team">
+            <img class="opt11-img" src="img/s4-team.jpg" alt="Equinox Attorneys Team">
+            <div class="opt11-overlay">
+              <span class="opt11-pill">
+                <span class="opt11-label">Meet the Team</span>
+                <span class="opt11-chevron-wrap">
+                  <svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                </span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a class="opt11-card" href="#" aria-label="Career Opportunities">
+            <img class="opt11-img" src="img/hero-5785.jpg" alt="Careers at Equinox">
+            <div class="opt11-overlay">
+              <span class="opt11-pill">
+                <span class="opt11-label">Career Opportunities</span>
+                <span class="opt11-chevron-wrap">
+                  <svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                </span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a class="opt11-card" href="#" aria-label="Events and Speaking">
+            <img class="opt11-img" src="img/s8-meeting.jpg" alt="Events and Workshops">
+            <div class="opt11-overlay">
+              <span class="opt11-pill">
+                <span class="opt11-label">Events &amp; Speaking</span>
+                <span class="opt11-chevron-wrap">
+                  <svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                </span>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     OPTION 12: THE HORIZON BASE-SHELF (FLUSH BOTTOM DOCK)
+     ========================================================================= -->
+<section id="option12" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#003B53;">Concept 12</span>
+        <h2 class="opt-title">The Horizon Base-Shelf (Flush Bottom Navy Dock)</h2>
+      </div>
+      <p class="opt-desc">Low-profile cards pairing an expansive 2.2:1 image window with an integrated navy base shelf and directional arrow button.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Flush Navy Shelf</span>
+      <span class="opt-tag teal">Pure Title &amp; Arrow</span>
+      <span class="opt-tag teal">Height: 195px</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt12-wrap">
+      <div class="eq-wrap">
+        <div class="compact-sec-head">
+          <h2 class="compact-h2">Where To Go <b>From Here</b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></h2>
+          <span class="compact-kicker">02 // Firm Directory Shelf</span>
+        </div>
+
+        <div class="opt12-grid">
+          <!-- Shelf 1: Team -->
+          <a class="opt12-card" href="#" aria-label="Meet the Team">
+            <div class="opt12-media eq-grain"><img src="img/s4-team.jpg" alt="Meet the Team"></div>
+            <div class="opt12-dock">
+              <span class="opt12-name">Meet the Team</span>
+              <div class="opt12-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </div>
+          </a>
+
+          <!-- Shelf 2: Careers -->
+          <a class="opt12-card" href="#" aria-label="Career Opportunities">
+            <div class="opt12-media eq-grain"><img src="img/hero-5785.jpg" alt="Career Opportunities"></div>
+            <div class="opt12-dock">
+              <span class="opt12-name">Career Opportunities</span>
+              <div class="opt12-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </div>
+          </a>
+
+          <!-- Shelf 3: Events -->
+          <a class="opt12-card" href="#" aria-label="Events and Speaking">
+            <div class="opt12-media eq-grain"><img src="img/s8-meeting.jpg" alt="Events and Workshops"></div>
+            <div class="opt12-dock">
+              <span class="opt12-name">Events &amp; Speaking</span>
+              <div class="opt12-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     OPTION 13: THE INSET FRAMED BANNER (ULTRA-COMPACT 2.4:1 STRIP)
+     ========================================================================= -->
+<section id="option13" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#D98D00;">Concept 13</span>
+        <h2 class="opt-title">The Inset Framed Banner (Ultra-Compact 2.4:1 Strip)</h2>
+      </div>
+      <p class="opt-desc">Streamlined 140px banner cards featuring delicate interior hairline frames that highlight in warm gold on hover.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">2.4:1 Aspect Ratio</span>
+      <span class="opt-tag teal">Gold Perimeter Frame</span>
+      <span class="opt-tag teal">Height: 140px</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt13-wrap">
+      <div class="eq-wrap">
+        <div class="compact-sec-head">
+          <h2 class="compact-h2">Continue Your <b>Discovery</b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></h2>
+          <span class="compact-kicker">03 // Architectural Banners</span>
+        </div>
+
+        <div class="opt13-grid">
+          <!-- Banner 1 -->
+          <a class="opt13-card" href="#">
+            <img class="opt13-bg" src="img/s4-team.jpg" alt="Meet the Team">
+            <div class="opt13-scrim"></div>
+            <div class="opt13-frame">
+              <span class="opt13-kicker">01 // ATTORNEYS</span>
+              <div class="opt13-row">
+                <span class="opt13-title">Meet the Team</span>
+                <svg class="opt13-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2 -->
+          <a class="opt13-card" href="#">
+            <img class="opt13-bg" src="img/hero-5785.jpg" alt="Careers at Equinox">
+            <div class="opt13-scrim"></div>
+            <div class="opt13-frame">
+              <span class="opt13-kicker">02 // CULTURE</span>
+              <div class="opt13-row">
+                <span class="opt13-title">Careers at Equinox</span>
+                <svg class="opt13-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3 -->
+          <a class="opt13-card" href="#">
+            <img class="opt13-bg" src="img/s8-meeting.jpg" alt="Events and Workshops">
+            <div class="opt13-scrim"></div>
+            <div class="opt13-frame">
+              <span class="opt13-kicker">03 // COMMUNITY</span>
+              <div class="opt13-row">
+                <span class="opt13-title">Events &amp; Workshops</span>
+                <svg class="opt13-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     OPTION 14: THE MICRO-SPLIT CHIP (105px ULTRA-LOW PROFILE)
+     ========================================================================= -->
+<section id="option14" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#5F7683;">Concept 14</span>
+        <h2 class="opt-title">The Micro-Split Chip (105px Ultra-Low Profile Widget)</h2>
+      </div>
+      <p class="opt-desc">The ultimate compact widget: only 105px high. A square photo thumbnail on the left paired with clean micro-copy on the right.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Ultra-Low Height (105px)</span>
+      <span class="opt-tag teal">Micro-Split</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt14-wrap">
+      <div class="eq-wrap">
+        <div class="compact-sec-head">
+          <h2 class="compact-h2">Explore <b>Equinox</b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></h2>
+          <span class="compact-kicker">04 // Compact Navigation Strip</span>
+        </div>
+
+        <div class="opt14-grid">
+          <!-- Chip 1 -->
+          <a class="opt14-chip" href="#">
+            <div class="opt14-thumb eq-grain"><img src="img/s4-team.jpg" alt="Meet the Team"></div>
+            <div class="opt14-info">
+              <span class="opt14-eyebrow">The Attorneys</span>
+              <h3 class="opt14-title">Meet the Team</h3>
+              <span class="opt14-action"><span>Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Chip 2 -->
+          <a class="opt14-chip" href="#">
+            <div class="opt14-thumb eq-grain"><img src="img/hero-5785.jpg" alt="Careers at Equinox"></div>
+            <div class="opt14-info">
+              <span class="opt14-eyebrow">Our Practice</span>
+              <h3 class="opt14-title">Career Roles</h3>
+              <span class="opt14-action"><span>Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Chip 3 -->
+          <a class="opt14-chip" href="#">
+            <div class="opt14-thumb eq-grain"><img src="img/s8-meeting.jpg" alt="Events and Workshops"></div>
+            <div class="opt14-info">
+              <span class="opt14-eyebrow">Forums</span>
+              <h3 class="opt14-title">Events &amp; Talks</h3>
+              <span class="opt14-action"><span>Explore</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     OPTION 15: THE TRANSLUCENT GLASS FLOATING RIBBON
+     ========================================================================= -->
+<section id="option15" class="option-wrapper">
+  <div class="option-header-card">
+    <div>
+      <div class="opt-label-group">
+        <span class="opt-badge" style="background:#027CA1;">Concept 15</span>
+        <h2 class="opt-title">The Translucent Glass Floating Ribbon (Frosted Dock)</h2>
+      </div>
+      <p class="opt-desc">2:1 aspect ratio cards with an edge-to-edge frosted glass dock floating over the bottom edge. High-end modern feel.</p>
+    </div>
+    <div class="opt-meta-tags">
+      <span class="opt-tag">Frosted Glass Dock</span>
+      <span class="opt-tag teal">Gold Pip Dot</span>
+      <span class="opt-tag teal">Zero Layout Shift</span>
+    </div>
+  </div>
+
+  <div class="option-stage">
+    <div class="opt15-wrap">
+      <div class="eq-wrap">
+        <div class="compact-sec-head">
+          <h2 class="compact-h2">Continue Exploring <b>Equinox</b> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></h2>
+          <span class="compact-kicker">05 // Frosted Glass Interlink</span>
+        </div>
+
+        <div class="opt15-grid">
+          <!-- Card 1 -->
+          <a class="opt15-card" href="#">
+            <img class="opt15-photo" src="img/s4-team.jpg" alt="Meet the Team">
+            <div class="opt15-scrim"></div>
+            <div class="opt15-dock">
+              <div class="opt15-tag-grp">
+                <span class="opt15-pip"></span>
+                <span class="opt15-label">Meet the Team</span>
+              </div>
+              <span class="opt15-chevron"><svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a class="opt15-card" href="#">
+            <img class="opt15-photo" src="img/hero-5785.jpg" alt="Careers at Equinox">
+            <div class="opt15-scrim"></div>
+            <div class="opt15-dock">
+              <div class="opt15-tag-grp">
+                <span class="opt15-pip"></span>
+                <span class="opt15-label">Career Opportunities</span>
+              </div>
+              <span class="opt15-chevron"><svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a class="opt15-card" href="#">
+            <img class="opt15-photo" src="img/s8-meeting.jpg" alt="Events and Workshops">
+            <div class="opt15-scrim"></div>
+            <div class="opt15-dock">
+              <div class="opt15-tag-grp">
+                <span class="opt15-pip"></span>
+                <span class="opt15-label">Events &amp; Speaking</span>
+              </div>
+              <span class="opt15-chevron"><svg viewBox="0 0 320 512" fill="currentColor"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM SUMMARY & RECOMMENDATION -->
+<div class="rec-strip">
+  <div class="rec-wrap">
+    <h3 class="rec-title">Summary of 15 UI Directions &bull; Zero Layout Shift Guarantee</h3>
+    <p class="rec-body">
+      Across all 15 concepts above, card positions, paddings, and bounds are 100% stationary. Hover effects are restricted to smooth color/border shifts and strictly contained internal image zooms (overflow: hidden).
+    </p>
+    <div class="rec-spec-list">
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>01. Monogram Grid (0)</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>02. Split Anchor (1)</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>03. Micro-Stamps</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>04. Midnight Canvas (0)</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>05. Static Blueprint</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>06. Brand Ring Lens</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>07. Cinematic Split</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>08. Scrim Posters</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>09. Asymmetric Stage</div>
+      <div class="rec-spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>10. Duotone Blueprint</div>
+      <div class="rec-spec-item" style="color:#027CA1; border-color:#027CA1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>11. Brentwood Floating Pill</div>
+      <div class="rec-spec-item" style="color:#027CA1; border-color:#027CA1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>12. Horizon Base Shelf</div>
+      <div class="rec-spec-item" style="color:#027CA1; border-color:#027CA1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>13. Inset Framed Banner</div>
+      <div class="rec-spec-item" style="color:#027CA1; border-color:#027CA1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>14. Micro-Split Chip (105px)</div>
+      <div class="rec-spec-item" style="color:#027CA1; border-color:#027CA1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>15. Glass Floating Ribbon</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Smooth active button highlighting in top bar
+window.addEventListener('scroll', function() {
+  var sections = document.querySelectorAll('.option-wrapper');
+  var buttons = document.querySelectorAll('.nav-btn');
+  var scrollPos = window.scrollY + 220;
+
+  sections.forEach(function(sec, index) {
+    if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      if (buttons[index]) buttons[index].classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

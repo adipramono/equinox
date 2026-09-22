@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hidden Liabilities in Standard Commercial Agreements — Equinox Business Law Group</title>
+<meta name="description" content="Most standard boilerplate clauses are drafted to protect someone else's enterprise. Here is how strategic corporate counsel audits commercial contracts before costly disputes arise.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="./assets/css/fonts.css">
+<style>
+/* BASE RESETS */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: #ffffff;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: #2c2c2c; -webkit-font-smoothing: antialiased;
+}
+
+/* DIRECTION A SYSTEM VARIABLES & TYPOGRAPHY */
+.ab-Main {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: #2c2c2c;
+  background: #ffffff;
+  line-height: 1.5;
+}
+.ab-Main a { color: #027CA1; text-decoration: none; transition: color .15s ease; }
+.ab-Main a:hover { color: #003B53; }
+.ab-Main .wrap { max-width: 1440px; margin: 0 auto; padding: 0 64px; }
+.ab-Main .wrapwide { max-width: 1440px; margin: 0 auto; padding: 0 64px; }
+
+.ab-Main .h1 { font-family: 'Montserrat', Arial, sans-serif; font-size: 38px; font-weight: 300; line-height: 1.18; color: #003B53; margin: 0; }
+.ab-Main .h1 b, .ab-Main .h1 strong { font-weight: 700; }
+.ab-Main .h2 { font-family: 'Montserrat', Arial, sans-serif; font-size: 26px; font-weight: 700; line-height: 1.28; color: #003B53; margin: 38px 0 16px; }
+.ab-Main .h3 { font-family: 'Montserrat', Arial, sans-serif; font-size: 19px; font-weight: 700; line-height: 1.35; color: #003B53; margin: 26px 0 12px; }
+.ab-Main .body { font-size: 16.5px; font-weight: 400; line-height: 1.62; color: #444444; }
+.ab-Main .svclead { font-size: 17.5px; line-height: 1.55; color: #444444; margin-top: 18px; max-width: 820px; }
+
+/* HEADER & MEGAMENU */
+.ab-Main .hdrrow { display:flex; align-items:center; justify-content:space-between; gap:48px; padding-top:24px; padding-bottom:24px; }
+.ab-Main .wordmark { height:52px; width:auto; display:block; }
+.ab-Main .hdr { position:sticky; top:0; z-index:60; background:#ffffff; border-bottom:1px solid #e4e4e4; }
+/* Sticky, and it condenses once the page has moved. CSS scroll-driven animation, no JS.
+Kadence Pro's header has sticky + shrink natively, so this is buildable as drawn.
+Browsers without scroll-timeline get a plain sticky header, which is the fallback we want. */
+@supports (animation-timeline: scroll()) {
+.ab-Main .hdr, .ab-Main .hdrrow, .ab-Main .wordmark { animation:linear both; animation-timeline:scroll(root); animation-range:0 140px; }
+.ab-Main .hdr { animation-name:hdrlift; }
+.ab-Main .hdrrow { animation-name:hdrsquash; }
+.ab-Main .wordmark { animation-name:markshrink; }
+@keyframes hdrlift { to { box-shadow:0 10px 24px -14px rgba(0,59,83,.34); } }
+@keyframes hdrsquash { to { padding-top:13px; padding-bottom:13px; } }
+@keyframes markshrink { to { height:38px; } }
+}
+.ab-Main .navwrap { display:inline-flex; align-items:center; padding:25px 0 52px; margin:-25px 0 -52px; }
+.ab-Main .navwrap.rel { position:relative; }
+.ab-Main .navitem { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:16px; font-weight:500; color:#2c2c2c; white-space:nowrap; display:inline-flex; align-items:center; gap:7px; text-decoration:none; cursor:pointer; }
+.ab-Main .navitem .chev { color:#9a9a9a; transition:transform .18s ease, color .18s ease; }
+.ab-Main .navwrap:hover .navitem, .ab-Main .navwrap:focus-within .navitem, .ab-Main .navitem.here { color:#003B53; }
+.ab-Main .navitem.here { font-weight:600; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev, .ab-Main .navitem.here .chev { color:#003B53; }
+.ab-Main .navwrap:hover .chev, .ab-Main .navwrap:focus-within .chev { transform:rotate(180deg); }
+.ab-Main .megapanel { display:none; position:absolute; left:0; right:0; top:100%; background:#ffffff; border-top:1px solid #e4e4e4; box-shadow:0 30px 52px -20px rgba(0,59,83,.3); z-index:40; }
+.ab-Main .droppanel { display:none; position:absolute; left:-24px; top:100%; width:330px; background:#ffffff; border:1px solid #e4e4e4; border-top:2px solid #ffd457; box-shadow:0 26px 46px -20px rgba(0,59,83,.3); padding:10px 8px; z-index:40; }
+.navwrap:hover .megapanel, .navwrap:focus-within .megapanel,
+.ab-Main .navwrap:hover .droppanel, .ab-Main .navwrap:focus-within .droppanel { display:block; }
+.ab-Main .megahead { font-family:'Montserrat',Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#8c8c8c; margin:0; padding-bottom:12px; border-bottom:1px solid #e4e4e4; }
+.ab-Main .megacol { display:flex; flex-direction:column; gap:2px; margin-top:8px; }
+.ab-Main .megalink { font-family:'Montserrat',Arial,sans-serif; font-size:15.5px; font-weight:600; line-height:1.3; color:#003B53; display:block; padding:8px 10px; margin-left:-10px; border-radius:3px; cursor:pointer; transition:background .14s ease; }
+.ab-Main .megalink.plain { font-weight:500; color:#2c2c2c; }
+.ab-Main .megalink:hover { background:#eef4f7; }
+.ab-Main .megacount { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:500; color:#9a9a9a; margin-left:8px; }
+.ab-Main .droprow { padding:3px 0; }
+.ab-Main .droprow.lg { padding:0; border-bottom:1px solid #f2f2f2; }
+.ab-Main .droprow.lg .megalink { font-size:16.5px; padding:15px 10px; }
+.ab-Main .droprow:hover .megalink { background:#eef4f7; }
+.ab-Main .megadesc { font-family:'Montserrat',Arial,sans-serif; font-size:13px; line-height:1.4; color:#8c8c8c; margin:-4px 0 6px; padding:0 10px; }
+.ab-Main .megacta { background:#003B53; border-radius:4px; padding:28px 26px; align-self:start; }
+.ab-Main .ctaeyebrow { font-family:'Montserrat',Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:#ffd457; margin:0; }
+.ab-Main .ctahead { font-family:'Montserrat',Arial,sans-serif; font-size:18px; font-weight:500; line-height:1.38; color:#ffffff; margin:12px 0 0; }
+.ab-Main .megaimg { position:relative; width:100%; padding-bottom:56.25%; background:#eef4f7; border:1px dashed #93BCCD; border-radius:4px; }
+.ab-Main .megaimglabel { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Montserrat',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#5d8fa2; }
+.ab-Main .ctabody { font-family:'Montserrat',Arial,sans-serif; font-size:14px; line-height:1.55; color:rgba(255,255,255,.78); margin:11px 0 0; }
+.ab-Main .ctaphone { font-family:'Montserrat',Arial,sans-serif; font-size:14px; color:rgba(255,255,255,.78); margin:18px 0 0; }
+.ab-Main .ctaphone span { color:#ffffff; font-weight:600; }
+.ab-Main .megafoot { border-top:1px solid #e4e4e4; background:#FFFAEB; }
+
+/* ==================================================================
+BUTTONS - one system, both directions. Spec and reasoning:
+notes/mockups/buttons/buttons.html
+Three roles, one accent. CONFIDENCE gold is the site's only accent,
+so it belongs to the one action that earns money. NIGHT is
+structural rather than an accent, which is why the secondary can be
+a solid NIGHT fill without breaking the one-accent rule.
+.btn.main      Book a Consultation
+.btn.secondary the assessment - the transitional conversion
+.btn.outline   routes and non-conversions
+Built for TWO LINES on purpose: "Take the Business Legal Health
+Assessment" is 395px and a 375px phone has ~335px, so it must wrap.
+line-height:1 would stack the lines on top of each other.
+================================================================== */
+.ab-Main .btn { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; font-weight:600;
+line-height:1.3; text-wrap:balance; padding:12px 24px; border-radius:3px; border:1.5px solid transparent;
+display:inline-flex; align-items:center; justify-content:center; gap:11px; text-align:center; text-decoration:none;
+cursor:pointer; position:relative; overflow:hidden;
+transition:background-color .16s ease, border-color .16s ease, color .16s ease; }
+.ab-Main .btn.sm { font-size:14.5px; padding:10px 20px; gap:9px; }
+.ab-Main .btn > span, .ab-Main .btn > svg { position:relative; z-index:1; }
+/* Icons appear on the SMALL size only - the header and mega panels, which are scanned
+rather than read and where two buttons sit side by side with nothing else to tell them
+apart. At full size the labels have room to do the work themselves.
+18px against a 16px label is the optical match; 16px against the 14.5px small size. */
+.ab-Main .bic { width:16px; height:16px; flex:none; }
+/* a route takes a trailing arrow - a DIRECTION, not a subject. These replace typographic
+arrows that sat at the label's own weight and baseline and read as punctuation. */
+.ab-Main .bic.arrow { width:17px; height:17px; }
+/* header buttons never wrap: the row can shrink them, and "Book a / Consultation"
+on two lines in a header is the failure this guard exists to prevent */
+.ab-Main .hdrrow .btn { white-space:nowrap; flex:none; }
+.ab-Main .hdrrow { flex:none; }
+.ab-Main .btn.main { background:#FFD457; color:#2c2c2c; border-color:#FFD457; }
+.ab-Main .btn.secondary { background:#003B53; color:#ffffff; border-color:#003B53; }
+.ab-Main .btn.outline { background:transparent; color:#003B53; border-color:#003B53; }
+.ab-Main .btn.gold { background:#FFD457; color:#003B53; font-weight:700; border-color:#FFD457; }
+.ab-Main .btn.gold:hover { background:#ffe082; }
+.ab-Main .on-dark .btn.secondary { background:#ffffff; color:#003B53; border-color:#ffffff; }
+.ab-Main .on-dark .btn.outline { background:transparent; color:#ffffff; border-color:rgba(255,255,255,.6); }
+/* Hover: the fill sweeps in from the left. Animates transform on a pseudo-element, never
+width - width would relayout on every frame. */
+.ab-Main .btn::before { content:""; position:absolute; inset:0; transform:scaleX(0); transform-origin:left center;
+transition:transform .22s cubic-bezier(.4,0,.2,1); z-index:0; }
+.ab-Main .btn:hover::before { transform:scaleX(1); }
+.ab-Main .btn.main::before { background:#D98D00; }
+.ab-Main .btn.secondary::before { background:#027CA1; }
+.ab-Main .btn.outline::before { background:#003B53; }
+.ab-Main .btn.outline:hover { color:#ffffff; }
+/* the Main label stays ink on hover: white on DAY gold is 2.71:1 and fails AA */
+.ab-Main .on-dark .btn.main::before { background:#ffffff; }
+.ab-Main .on-dark .btn.secondary::before { background:#93BCCD; }
+.ab-Main .on-dark .btn.outline::before { background:#ffffff; }
+.ab-Main .on-dark .btn.main:hover, .ab-Main .on-dark .btn.secondary:hover, .ab-Main .on-dark .btn.outline:hover { color:#003B53; }
+@media (prefers-reduced-motion: reduce) { .btn::before { transition:none; } }
+/* focus is not optional: sold under Baseline Structural SEO / AEO */
+.ab-Main .btn:focus-visible { outline:3px solid #027CA1; outline-offset:3px; }
+.ab-Main .on-dark .btn:focus-visible { outline-color:#FFD457; }
+/* the paired CTAs share width, so the 395px secondary cannot dwarf the 214px primary;
+below 760px they stack, because the pair needs 623px plus the page's side padding */
+.ab-Main .btnrow { display:flex; align-items:stretch; gap:14px; flex-wrap:wrap; }
+.ab-Main .btnrow .btn { flex:1 1 0; min-width:180px; max-width:420px; }
+.ab-Main .btnrow { max-width:660px; }
+.ab-Main .btnrow.single .btn { flex:0 0 auto; }
+@media (max-width: 720px) { .btnrow { flex-direction:column; align-items:stretch; }
+.ab-Main .btnrow .btn { flex:1 1 auto; max-width:none; } }
+
+/* BRAND EYEBROW MARK */
+.ab-Main .eyebrowmark { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; }
+.ab-Main .ymrule { width: 36px; height: 3px; background: #FFD457; flex: none; }
+.ab-Main .ytext { font-family: 'Montserrat', Arial, sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #027CA1; }
+
+/* HERO GRADIENT & CROSSOVER CIRCLE (4b geometry, matches about.html exactly) */
+.ab-Main .herograd { background: radial-gradient(ellipse at 50% 38%, #FFFFFF 0%, #E8F0F4 46%, #93BCCD 100%); border-bottom: 1px solid #e4e4e4; }
+.ab-Main .ptrow { display: grid; grid-template-columns: minmax(0, 1fr) var(--f); gap: 72px; align-items: start; }
+.ab-Main .ptpic { position: relative; }
+.ab-Main .ptpic .inner { position: absolute; top: calc(var(--air) - 56px - 0.0668 * var(--f)); left: 0; width: var(--f); height: var(--f); z-index: 2; }
+.ab-Main .eqshape { position: relative; width: 100%; aspect-ratio: 1/1; }
+.ab-Main .eqshape .eqring { position: absolute; border-radius: 50%; border: 1.5px solid; }
+.ab-Main .eqshape .eqring.gold  { left: 0.90%; top: 0.90%; width: 96.50%; height: 96.50%; border-color: #FFD457; }
+.ab-Main .eqshape .eqring.night { left: 4.86%; top: 4.86%; width: 94.24%; height: 94.24%; border-color: rgba(0,59,83,.55); }
+.ab-Main .eqshape .eqpic { position: absolute; left: 6.68%; top: 6.68%; width: 88.34%; height: 88.34%; border-radius: 50%; overflow: hidden; }
+.ab-Main .eqshape .eqpic .photo { border-radius: 50%; width: 100%; height: 100%; object-fit: cover; }
+.ab-Main .grain { position: relative; }
+.ab-Main .grain::after { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: 50%; background-image: url("data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20width='220'%20height='220'><filter%20id='n'><feTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='3'%20stitchTiles='stitch'/><feColorMatrix%20type='saturate'%20values='0'/></filter><rect%20width='220'%20height='220'%20filter='url%28%23n%29'/></svg>"); background-size: 220px 220px; opacity: .5; mix-blend-mode: multiply; }
+
+/* BREADCRUMB STRIP (VARIATION 1B • MINIMALIST WHISPER) */
+.ab-Main .crumb-strip, .crumb-strip {
+  background: #ffffff;
+  border-bottom: 1px solid #F2F4F5;
+  padding: 10px 0;
+}
+.ab-Main .crumb-bar, .crumb-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  color: #93A4AE;
+}
+.ab-Main .crumb-bar a, .crumb-bar a {
+  color: #93A4AE;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.ab-Main .crumb-bar a:hover, .crumb-bar a:hover {
+  color: #027CA1;
+  text-decoration: underline;
+}
+.ab-Main .crumb-bar .sep, .crumb-bar .sep {
+  color: #CBD7DC;
+  margin: 0 8px;
+  font-size: 13px;
+  user-select: none;
+}
+.ab-Main .crumb-bar .here, .crumb-bar .here {
+  color: #5D707A;
+  font-weight: 400;
+}
+
+/* =========================================================================
+   SECTION 2: ARTICLE BODY WITH ABOUT-STYLE SIDEBAR (.sec2split)
+   The right column (.sec2side) reserves space below the circle with padding-top: 100px.
+   ========================================================================= */
+.ab-Main .sec2split { display: grid; grid-template-columns: 1fr 340px; gap: 72px; align-items: start; }
+.ab-Main .sec2main { min-width: 0; }
+.ab-Main .sec2side { min-width: 0; padding-top: 100px; display: flex; flex-direction: column; gap: 28px; }
+
+/* WARM CREAM SIDEBOX (MATCHES ABOUT.HTML) */
+.ab-Main .sidebox { background: #FFFAEB; border: 1px solid #F0E6CD; border-radius: 4px; padding: 28px 24px; }
+.ab-Main .sidehead {
+  font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: #027CA1;
+  margin: 0 0 16px 0; padding-bottom: 12px; border-bottom: 1px solid #F0E6CD;
+}
+.ab-Main .sidelist { display: flex; flex-direction: column; gap: 4px; }
+.ab-Main .sidelink {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'Montserrat', Arial, sans-serif; font-size: 14.5px; font-weight: 500;
+  color: #2c2c2c; text-decoration: none; padding: 10px 12px; border-radius: 3px;
+  border-left: 3px solid transparent; transition: background .15s ease, color .15s ease;
+}
+.ab-Main .sidelink:hover { background: rgba(0,59,83,.05); color: #003B53; }
+.ab-Main .sidelink.here {
+  font-weight: 700; color: #003B53; background: #ffffff;
+  border-left-color: #FFD457; box-shadow: 0 2px 6px rgba(0,59,83,.06);
+}
+.ab-Main .sidechev { width: 14px; height: 14px; color: #9db3bd; transition: color .15s ease; flex: none; }
+.ab-Main .sidelink:hover .sidechev, .ab-Main .sidelink.here .sidechev { color: #003B53; }
+
+/* SECONDARY SIDEBAR BOXES */
+.ab-Main .sidebox-dark {
+  background: #003B53; border-radius: 4px; padding: 28px 24px; color: #ffffff;
+  position: relative; overflow: hidden;
+}
+.ab-Main .sidebox-dark::after {
+  content: ""; position: absolute; right: -25px; bottom: -25px; width: 110px; height: 110px;
+  border-radius: 50%; border: 14px solid rgba(255,212,87,0.12); pointer-events: none;
+}
+.ab-Main .sidebox-author {
+  background: #ffffff; border: 1px solid #DCE6EB; border-radius: 4px; padding: 26px 22px;
+}
+
+/* POST EDITORIAL CONTENT TYPOGRAPHY */
+.article-prose { font-size: 17px; line-height: 1.75; color: #333333; }
+.article-prose p { margin-bottom: 22px; }
+.article-prose strong { color: #003B53; font-weight: 700; }
+.article-prose ul, .article-prose ol { margin: 18px 0 26px 24px; }
+.article-prose li { margin-bottom: 10px; line-height: 1.65; }
+
+/* EDITORIAL CALLOUT QUOTE BOX */
+.article-callout {
+  background: #FFFAEB; border-left: 3px solid #FFD457; border-radius: 0 4px 4px 0;
+  padding: 24px 28px; margin: 36px 0;
+}
+.article-callout p {
+  font-family: 'Montserrat', Arial, sans-serif; font-size: 17.5px; font-weight: 500;
+  line-height: 1.6; color: #003B53; margin: 0; font-style: italic;
+}
+.article-callout cite {
+  display: block; font-style: normal; font-size: 12.5px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; color: #027CA1; margin-top: 12px;
+}
+
+/* COMPARISON MATRIX / REDLINE TABLE */
+.redline-table-wrap {
+  margin: 36px 0 40px; border: 1px solid #DCE6EB; border-radius: 4px; overflow: hidden;
+}
+.redline-table { width: 100%; border-collapse: collapse; text-align: left; }
+.redline-table th {
+  padding: 14px 18px; font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; background: #002B3D; color: #ffffff;
+}
+.redline-table td {
+  padding: 18px; font-size: 14.5px; line-height: 1.55; vertical-align: top;
+  border-bottom: 1px solid #EBF1F5; background: #ffffff;
+}
+.redline-table tr:last-child td { border-bottom: none; }
+.redline-table td.trap { background: #FFF9F8; color: #8A2D22; border-left: 3px solid #E26D5C; }
+.redline-table td.solution { background: #F6FAF7; color: #1B5E20; border-left: 3px solid #5ce6b0; }
+
+/* =========================================================================
+   KADENCE SIMPLE SHARE SYSTEM (ZERO LAYOUT SHIFT, KADENCE WP COMPATIBLE)
+   Matches official Kadence Simple Share plugin settings & styles.
+   ========================================================================= */
+
+.kadence-simple-share {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Alignment options matching Kadence Simple Share */
+.kadence-simple-share.kadence-share-align-left {
+  justify-content: flex-start;
+}
+.kadence-simple-share.kadence-share-align-center {
+  justify-content: center;
+}
+.kadence-simple-share.kadence-share-align-right {
+  justify-content: flex-end;
+}
+
+/* Optional Kadence Share Title */
+.kadence-share-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #5D707A;
+  margin-right: 4px;
+  user-select: none;
+}
+
+/* Kadence Simple Share Button Base (Zero Layout Shift, CLS = 0) */
+.kadence-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity .15s ease, filter .15s ease;
+  flex: none;
+}
+.kadence-share-btn svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  flex: none;
+}
+
+/* Style 1: Solid Brand-Colored Circles (Official Kadence Default & Preview Match) */
+.kadence-share-style-1 .kadence-share-facebook {
+  background: #3B5998;
+  color: #ffffff;
+}
+.kadence-share-style-1 .kadence-share-twitter {
+  background: #00ACED;
+  color: #ffffff;
+}
+.kadence-share-style-1 .kadence-share-linkedin {
+  background: #0077B5;
+  color: #ffffff;
+}
+.kadence-share-style-1 .kadence-share-email {
+  background: #027CA1;
+  color: #ffffff;
+}
+.kadence-share-style-1 .kadence-share-btn:hover {
+  opacity: 0.86;
+  filter: brightness(1.08);
+}
+
+/* Style 3: Outlined Minimal Circles (Kadence Settings Alternate) */
+.kadence-share-style-3 .kadence-share-btn {
+  background: #ffffff;
+  border-color: #DCE6EB;
+  color: #5F7683;
+}
+.kadence-share-style-3 .kadence-share-facebook:hover {
+  background: #3B5998;
+  border-color: #3B5998;
+  color: #ffffff;
+}
+.kadence-share-style-3 .kadence-share-twitter:hover {
+  background: #00ACED;
+  border-color: #00ACED;
+  color: #ffffff;
+}
+.kadence-share-style-3 .kadence-share-linkedin:hover {
+  background: #0077B5;
+  border-color: #0077B5;
+  color: #ffffff;
+}
+.kadence-share-style-3 .kadence-share-email:hover {
+  background: #027CA1;
+  border-color: #027CA1;
+  color: #ffffff;
+}
+
+/* Top Placement in Hero (Directly under byline as seen in Kadence Preview) */
+.hero-share-wrap {
+  margin-top: 18px;
+}
+
+/* Article Footer Meta Bar */
+.post-meta-footer {
+  margin-top: 36px; padding-top: 24px; border-top: 1px solid #E4ECEF;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+}
+.post-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.post-tag {
+  background: #F4F8FA; border: 1px solid #DCE6EB; border-radius: 3px;
+  padding: 6px 12px; font-size: 12px; font-weight: 600; color: #5F7683; text-decoration: none;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.post-tag:hover { color: #003B53; border-color: #027CA1; background: #EAF2F6; }
+
+/* Print Optimization */
+@media print {
+  .hdr, .crumb-strip, .kadence-simple-share, .sec2side, .post-meta-footer, .related-section, .nlband, .ftbody {
+    display: none !important;
+  }
+  .ab-Main .wrap, .ab-Main .wrapwide { max-width: 100% !important; padding: 0 !important; }
+  .ab-Main .sec2split { display: block !important; }
+  .ab-Main .sec2main { width: 100% !important; }
+  .herograd { background: none !important; border: none !important; }
+  .ptpic { display: none !important; }
+  .ab-Main .ptrow { display: block !important; }
+  body { color: #000000 !important; background: #ffffff !important; }
+}
+
+/* SECTION 3: RELATED POSTS (STABLE ZERO-SHIFT CARDS) */
+.related-section {
+  background: #F8FAFB; border-top: 1px solid #E8EFF2; padding: 76px 0 84px;
+}
+.related-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px;
+}
+.rel-card {
+  background: #ffffff; border: 1px solid #E4ECEF; border-radius: 4px; overflow: hidden;
+  display: flex; flex-direction: column; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.rel-card:hover {
+  border-color: #CBD7DC; box-shadow: 0 4px 14px rgba(0,59,83,0.06);
+}
+.rel-thumb { aspect-ratio: 16/9; background: #002B3D; overflow: hidden; }
+.rel-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rel-body { padding: 22px 20px; display: flex; flex-direction: column; flex: 1 1 auto; }
+.rel-cat { font-size: 10.5px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #027CA1; margin-bottom: 8px; }
+.rel-title { font-size: 16.5px; font-weight: 700; line-height: 1.35; color: #003B53; margin: 0 0 10px; }
+.rel-title a { color: #003B53; text-decoration: none; transition: color .15s ease; }
+.rel-title a:hover { color: #027CA1; }
+.rel-foot { margin-top: auto; padding-top: 14px; border-top: 1px solid #F0F4F6; font-size: 12px; color: #7B909C; display: flex; justify-content: space-between; }
+
+/* FOOTER & NEWSLETTER BAND */
+.ab-Main .nlband { background:#FFD457; }
+.ab-Main .nlpad { padding-top: 52px; padding-bottom: 54px; }
+.ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+.ab-Main .nlhead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:21px; font-weight:600; line-height:1.35; color:#003B53; margin:0; }
+.ab-Main .nlsub { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:#4a4a4a; margin:8px 0 0; }
+.ab-Main .nlform { display:flex; gap:10px; }
+.ab-Main .nlin { flex:1 1 0; min-width:0; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; color:#2c2c2c; background:#ffffff; border:1px solid rgba(0,0,0,.14); border-radius:3px; padding:14px 16px; }
+
+.ab-Main .ftbody { background:#112337; }
+.ab-Main .ftpad { padding-top: 76px; padding-bottom: 42px; }
+.ab-Main .ft3 { display: grid; grid-template-columns: 1.4fr 1fr 1.25fr 1.15fr; gap: 56px; }
+.ab-Main .ftbrand { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.ab-Main .ftlogo { height: 46px; width: auto; display: block; }
+.ab-Main .fttag { font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 500; line-height: 1.5; color: #FFD457; margin: 12px 0 0; }
+.ab-Main .ftsub { font-family: 'Montserrat', Arial, sans-serif; font-size: 15px; line-height: 1.55; color: rgba(255,255,255,.72); margin: 0; }
+.ab-Main .ftserve { font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; color: rgba(255,255,255,.55); margin: 10px 0 0; }
+.ab-Main .ftcol { display: flex; flex-direction: column; gap: 11px; align-items: flex-start; }
+.ab-Main .fthead { font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 4px; }
+.ab-Main .ftlink { font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; line-height: 1.4; color: rgba(255,255,255,.8); text-decoration: none; }
+.ab-Main .ftlink:hover { color: #ffffff; text-decoration: underline; }
+.ab-Main .ic-l { display: inline-flex; align-items: center; gap: 10px; }
+.ab-Main .fic { width: 17px; height: 17px; flex: none; color: #93BCCD; }
+.ab-Main .socrow { display: flex; gap: 14px; margin-top: 14px; color: rgba(255,255,255,.8); }
+.ab-Main .soc { width: 20px; height: 20px; }
+.ab-Main .legalbar { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.14); flex-wrap: wrap; }
+.ab-Main .legallinks { display: flex; gap: 26px; flex-wrap: wrap; }
+.ab-Main .ftfine { font-family: 'Montserrat', Arial, sans-serif; font-size: 13px; color: rgba(255,255,255,.55); }
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1150px) {
+  .ab-Main .ptrow { grid-template-columns: minmax(0,1fr); gap: 40px; }
+  .ab-Main .ptpic .inner { position: static; width: min(var(--f), 88vw); height: auto; }
+  .ab-Main .sec2split { grid-template-columns: 1fr; gap: 48px; }
+  .ab-Main .sec2side { padding-top: 0; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .ab-Main .ft3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding: 0 24px; }
+  .ab-Main .h1 { font-size: 28px; }
+  .related-grid { grid-template-columns: 1fr; }
+  .redline-table th, .redline-table td { padding: 12px; font-size: 13.5px; }
+  .post-meta-footer { flex-direction: column; align-items: flex-start; }
+  .ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
+  .ab-Main .nlform { display:flex; gap:10px; }
+  .ab-Main .ft3 { grid-template-columns: 1fr; }
+}
+/* FINAL CTA (NIGHT ground) */
+.ab-Main .finalcta { position:relative; overflow:hidden; background:#003B53; }
+.ab-Main .finalcta > .wrap { position:relative; }
+.ab-Main .ctasplit { display:grid; grid-template-columns:1.15fr .85fr; gap:76px; align-items:center; }
+.ab-Main .ctaimgwrap { position:relative; min-width:0; }
+.ab-Main .ctaimgwrap .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(18px, 18px); background:rgba(147,188,205,.30); }
+.ab-Main .ctaimgwrap .ctaslot, .ab-Main .ctaimgwrap .photo { position:relative; z-index:1; display:block; width:100%; max-width:100%; aspect-ratio:4/3; height:auto; object-fit:cover; border-radius:4px; filter:grayscale(1); }
+@media (max-width:1150px) {
+  .ab-Main .ctasplit { grid-template-columns:1fr; gap:48px; }
+}
+</style>
+</head>
+<body>
+<div class="stage"><div class="ab-Main" style="width:100%; margin:0 auto"><div style="width:100%; min-width:1180px; background:#ffffff;">
+
+    <!-- HEADER -->
+  <div class="hdr">
+    <div class="wrapwide hdrrow">
+
+      <a href="index.html" aria-label="Equinox Business Law Group Home"><img class="wordmark" src="./assets/equinox-logo-tag.png" alt="Equinox Business Law Group — Strategic Legal Counsel for All"></a>
+
+      <div style="display:flex; align-items:center; gap:32px;">
+
+        <div class="navwrap"><a class="navitem" href="#">General Counsel</a></div>
+
+        <div class="navwrap">
+          <a class="navitem" href="services.html" tabindex="0">Services<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1.05fr 0.8fr 300px; gap:44px; padding-top:38px; padding-bottom:34px;">
+              <div>
+                <p class="megahead">Practice Areas</p>
+                <div class="megacol">
+              <a class="megalink" href="services.html"><b>All Services &amp; Practice Areas</b></a>
+              <span class="megalink">Starting a Business</span>
+              <a class="megalink" href="service-contract-negotiation.html">Contract Negotiation &amp; Maintenance</a>
+              <span class="megalink">Buying &amp; Selling a Business / M&amp;A</span>
+              <span class="megalink">Intellectual Property</span>
+              <span class="megalink">Real Estate</span>
+              <span class="megalink">Succession &amp; Transition Planning</span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">By business function</p>
+                <div class="megacol">
+              <span class="megalink">Corporate Strategy<span class="megacount">21</span></span>
+              <span class="megalink">Human Resources<span class="megacount">11</span></span>
+              <span class="megalink">Sales<span class="megacount">7</span></span>
+              <span class="megalink">Property<span class="megacount">4</span></span>
+              <span class="megalink">Purchasing &amp; Vendor Management<span class="megacount">4</span></span>
+                </div>
+              </div>
+              <div>
+                <p class="megahead">Industries we serve</p>
+                <div class="megacol">
+              <span class="megalink plain">Manufacturing</span>
+              <span class="megalink plain">Construction</span>
+              <span class="megalink plain">Hospitality / Retail</span>
+              <span class="megalink plain">Professional Services</span>
+              <span class="megalink plain">Software Development</span>
+                </div>
+              </div>
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Not sure where to start?</p>
+                <p class="ctahead">Find out which legal gaps are costing you money.</p>
+                <span class="btn secondary sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2h-2"/><rect x="9" y="2.5" width="6" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></svg><span>Take the Assessment</span></span>
+              </div>
+            </div>
+            <div class="megafoot">
+              <div class="wrapwide" style="display:flex; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px;">
+                <a href="services.html" class="sans" style="font-size:15px; font-weight:600; color:#003B53; display:inline-flex; align-items:center; gap:9px; text-decoration:none;">View all Practice Areas &amp; Industries<svg class="bic arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h14"/><path d="M13 6.5l5.5 5.5-5.5 5.5"/></svg></a>
+                <span class="sans" style="font-size:15px; color:#666666;">Prefer to talk it through? Call <span style="color:#003B53; font-weight:600;">425-250-0205</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap">
+          <a class="navitem" href="our-approach.html" tabindex="0">Our Approach<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1.05fr 1fr 320px; gap:52px; padding-top:42px; padding-bottom:42px;">
+
+              <div>
+                <p class="megahead">Our Approach</p>
+                <div style="margin-top:10px;">
+                <div class="droprow lg"><a class="megalink" href="our-approach.html">Our Approach</a></div>
+                <div class="droprow lg"><span class="megalink">A La Carte Solutions</span></div>
+                <div class="droprow lg"><span class="megalink">Business Legal Health Assessment</span></div>
+                <div class="droprow lg"><span class="megalink">Testimonials</span></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="megaimg"><span class="megaimglabel">Image placeholder &middot; 16:9</span></div>
+              </div>
+
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Talk it through</p>
+                <p class="ctahead">Bring us the thing that is keeping you up at night.</p>
+                <p class="ctabody">A first conversation costs nothing and ends with a clear view of what needs doing.</p>
+                <span class="btn main sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg><span>Book a Consultation</span></span>
+                <p class="ctaphone">Or call <span>425-250-0205</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap">
+          <a class="navitem" href="about.html" tabindex="0">About Us<svg class="chev" width="9" height="6" viewBox="0 0 9 6" fill="none"><path d="M1 1.2L4.5 4.6L8 1.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+          <div class="megapanel">
+            <div class="wrapwide" style="display:grid; grid-template-columns:1fr 1.05fr 320px; gap:52px; padding-top:42px; padding-bottom:42px;">
+
+              <div>
+                <div class="megaimg"><span class="megaimglabel">Image placeholder &middot; 16:9</span></div>
+              </div>
+
+              <div>
+                <p class="megahead">About Us</p>
+                <div style="margin-top:10px;">
+                <div class="droprow lg"><a class="megalink" href="about.html">About Us</a></div>
+                <div class="droprow lg"><a class="megalink" href="team.html">Team</a></div>
+                <!-- Career sits beside Our Team rather than last: it belongs with the people
+                     group, and someone looking for a job is already scanning that cluster.
+                     Added 2026-09-17 at the client's request. They asked for a Career page
+                     having never opened this menu, which is worth noting on its own. -->
+                <div class="droprow lg"><a class="megalink" href="careers.html">Career</a></div>
+                <div class="droprow lg"><a class="megalink" href="events.html">Events</a></div>
+                </div>
+              </div>
+
+              <div class="megacta on-dark">
+                <p class="ctaeyebrow">Work with us</p>
+                <p class="ctahead">Meet the people who would actually be handling your work.</p>
+                <p class="ctabody">Nine attorneys, paralegals and operations staff across Washington, Oregon and Colorado.</p>
+                <span class="btn main sm"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/></svg><span>Book a Consultation</span></span>
+                <p class="ctaphone">Or call <span>425-250-0205</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="navwrap"><a class="navitem here" href="blog.html">Blog</a></div>
+      </div>
+
+      <a class="btn main sm" href="#"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><span>Contact Us</span></a>
+    </div>
+  </div>
+
+  <!-- 1. ARTICLE HERO WITH CROSSOVER CIRCLE -->
+  <div class="herograd">
+    <div class="wrap" style="padding-top:56px; padding-bottom:64px;">
+      <div class="ptrow" style="--air:140px; --f:430px;">
+        <div>
+          <div class="eyebrowmark">
+            <span class="ymrule"></span>
+            <span class="ytext">Contracts &amp; Commercial Advisory</span>
+          </div>
+          <h1 class="h1" style="font-size:38px; line-height:1.2; margin-top:0; max-width:840px;">The Hidden Liabilities in Standard Commercial Agreements: <b>What Founders Overlook</b></h1>
+          <p class="body svclead">Most standard boilerplate clauses are drafted to protect someone else&rsquo;s enterprise. Here is how strategic corporate counsel audits agreements before costly disputes arise.</p>
+          <div style="display:flex; align-items:center; gap:16px; margin-top:28px; flex-wrap:wrap; font-size:13px; color:#5F7683;">
+            <span style="font-weight:700; color:#003B53;">By Michelle Bomberger, Managing Partner</span>
+            <span style="color:#CBD7DC;">&bull;</span>
+            <span>September 18, 2026</span>
+            <span style="color:#CBD7DC;">&bull;</span>
+            <span>6 min read</span>
+          </div>
+
+          <!-- KADENCE SIMPLE SHARE: BEFORE POST CONTENT (MATCHES KADENCE PREVIEW) -->
+          <div class="hero-share-wrap">
+            <div class="kadence-simple-share kadence-share-style-1 kadence-share-align-left" aria-label="Share this article">
+              <a class="kadence-share-btn kadence-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on Facebook" aria-label="Share on Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a class="kadence-share-btn kadence-share-twitter" href="https://twitter.com/intent/tweet?text=The%20Hidden%20Liabilities%20in%20Standard%20Commercial%20Agreements%3A%20What%20Founders%20Overlook&url=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on X" aria-label="Share on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a class="kadence-share-btn kadence-share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+              <a class="kadence-share-btn kadence-share-email" href="mailto:?subject=Strategic%20Contract%20Insight%20%E2%80%94%20Equinox%20Business%20Law&body=Thought%20you%20might%20find%20this%20strategic%20legal%20analysis%20from%20Equinox%20Business%20Law%20Group%20valuable%3A%20https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" title="Share via Email" aria-label="Share via Email">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="ptpic">
+          <div class="inner">
+            <div class="eqshape">
+              <span class="eqring gold"></span>
+              <span class="eqring night"></span>
+              <div class="eqpic grain"><img class="photo" src="./assets/img/building-glass-tower.jpg" alt="Commercial Contract Architecture and Risk Analysis"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB: VARIATION 1B (MINIMALIST WHISPER) -->
+  <div class="crumb-strip" role="region" aria-label="Breadcrumb navigation">
+    <div class="wrap">
+      <nav class="crumb-bar" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">&bull;</span>
+        <a href="blog.html">Blog &amp; Insights</a>
+        <span class="sep">&bull;</span>
+        <span class="here" aria-current="page">Hidden Liabilities in Commercial Contracts</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. ARTICLE CONTENT & ABOUT-STYLE SIDEBAR SPLIT -->
+  <div class="wrap" style="padding-top:72px; padding-bottom:96px;">
+    <div class="sec2split">
+
+      <!-- LEFT COLUMN: ARTICLE BODY -->
+      <main class="sec2main article-prose">
+
+        <p><strong>Every business relationship is founded on an agreement.</strong> Whether signing a software vendor contract, bringing on a strategic partner, or finalizing a major client engagement, entrepreneurs often accept standard form agreements under the assumption that boilerplate language is neutral.</p>
+
+        <p>In practice, boilerplate language is rarely neutral. More often than not, it was written by the opposing party&rsquo;s counsel to shift risk, restrict remedies, and tilt potential dispute resolution heavily in their own favor. When businesses experience legal friction, it is rarely over the basic scope of work—it is over the fine-print provisions that were overlooked during execution.</p>
+
+        <div class="article-callout">
+          <p>&ldquo;A commercial contract is not just a mechanism for when deals go right. It is your business&rsquo;s insurance policy and operational playbook for when expectations collide.&rdquo;</p>
+          <cite>Michelle Bomberger &bull; Managing Partner, Equinox Business Law Group</cite>
+        </div>
+
+        <h2 class="h2" id="boilerplate-illusion">1. The Boilerplate Illusion</h2>
+        <p>Entrepreneurs are built for speed. When a customer demands quick onboarding or a key supplier issues a 22-page master services agreement (MSA), leadership naturally focuses on commercial pricing, delivery deadlines, and payment terms.</p>
+        <p>However, the provisions buried toward the back of the contract—indemnification, limitation of liability, intellectual property assignments, and governing law—often carry far greater financial exposure than the total value of the transaction itself.</p>
+
+        <h2 class="h2" id="unilateral-indemnity">2. Unilateral Indemnity Triggers</h2>
+        <p>One of the most dangerous terms in commercial contracting is the unilateral indemnity clause. In many vendor templates, one party promises to defend, indemnify, and hold harmless the other from <em>any and all claims, liabilities, damages, or costs</em> arising from the agreement.</p>
+        <p>If your business signs a one-sided indemnity clause, you could find yourself funding the other party&rsquo;s legal defense even if their own negligence contributed to the problem. Strategic counsel routinely audits this language to ensure mutual obligations and reasonable scoping.</p>
+
+        <!-- CONTRACT REDLINE COMPARISON MATRIX -->
+        <div class="redline-table-wrap">
+          <table class="redline-table">
+            <thead>
+              <tr>
+                <th style="width:50%;">Standard Boilerplate Trap</th>
+                <th style="width:50%;">Equinox Recommended Language</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="trap">
+                  <strong>One-Sided Indemnity:</strong><br>
+                  &ldquo;Company shall defend, indemnify, and hold harmless Vendor from any and all claims, costs, or losses arising out of or related to this Agreement.&rdquo;
+                </td>
+                <td class="solution">
+                  <strong>Mutual, Scoped Indemnity:</strong><br>
+                  &ldquo;Each party shall indemnify the other solely against third-party claims arising directly from gross negligence, willful misconduct, or material breach of confidentiality.&rdquo;
+                </td>
+              </tr>
+              <tr>
+                <td class="trap">
+                  <strong>Silent or Uncapped Liability:</strong><br>
+                  No limitation of liability, exposing your business&rsquo;s entire balance sheet to consequential damages or lost profits.
+                </td>
+                <td class="solution">
+                  <strong>Balanced Cap &amp; Exclusion:</strong><br>
+                  Cap total aggregate liability to the fees paid under the contract in the preceding 12 months, with mutual waiver of indirect or consequential damages.
+                </td>
+              </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <h2 class="h2" id="automatic-renewal">3. Ambiguous Automatic Renewal Traps</h2>
+        <p>Evergreen clauses and automatic renewal terms are designed to lock businesses into recurring commitments unless notice is delivered within narrow, easily missed windows (such as &ldquo;no later than 90 days prior to the expiration date via certified mail&rdquo;).</p>
+        <p>Without centralized contract tracking, companies regularly find themselves locked into six-figure renewals for redundant software licenses or legacy vendor agreements that no longer align with company strategy.</p>
+
+        <h2 class="h2" id="dispute-venues">4. Governing Law &amp; Dispute Venues</h2>
+        <p>If your company operates in Seattle, Washington, agreeing to litigate disputes in New York, Delaware, or England imposes an immediate financial penalty should conflict arise. The expense of retaining local counsel, traveling for depositions, and filing out-of-state pleadings often forces growing businesses into unfavorable settlements.</p>
+        <p>Equinox counsel always evaluates dispute resolution mechanisms, advocating for local jurisdiction, mutual mediation steps, and reciprocal prevailing-party attorney fee clauses to prevent frivolous bullying.</p>
+
+        <h2 class="h2" id="audit-checklist">5. The Proactive Contract Audit Checklist</h2>
+        <p>Before executing any material agreement, every executive team should run through this five-point diagnostic:</p>
+        <ul>
+          <li><strong>Scope of Representations:</strong> Are the performance warranties realistic, or are you promising perfection?</li>
+          <li><strong>IP Ownership:</strong> Does the agreement clearly state that your pre-existing intellectual property remains solely yours?</li>
+          <li><strong>Termination for Convenience:</strong> Can your company exit if circumstances change, or are you trapped without cause?</li>
+          <li><strong>Data Security &amp; Compliance:</strong> Does the vendor have contractual duties to protect your proprietary client data?</li>
+          <li><strong>Audit Rights:</strong> Is the other party permitted to inspect your books and operations without reasonable notice?</li>
+        </ul>
+
+        <p>By engaging experienced corporate counsel to review contracts through a fixed-fee general counsel relationship, your business protects what it has built while moving forward with speed and confidence.</p>
+
+        <!-- POST FOOTER: TOPICS & KADENCE SIMPLE SHARE (AFTER POST CONTENT) -->
+        <div class="post-meta-footer">
+          <div class="post-tags">
+            <span style="font-size:12px; font-weight:700; color:#7E98A6; text-transform:uppercase; letter-spacing:.1em; margin-right:4px;">Topics:</span>
+            <a class="post-tag" href="blog.html">Commercial Contracts</a>
+            <a class="post-tag" href="blog.html">Risk Mitigation</a>
+            <a class="post-tag" href="blog.html">Corporate Counsel</a>
+            <a class="post-tag" href="blog.html">Washington Business Law</a>
+          </div>
+          <div class="kadence-simple-share kadence-share-style-1 kadence-share-align-right" aria-label="Share this article">
+            <span class="kadence-share-title">Share:</span>
+            <a class="kadence-share-btn kadence-share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on Facebook" aria-label="Share on Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a class="kadence-share-btn kadence-share-twitter" href="https://twitter.com/intent/tweet?text=The%20Hidden%20Liabilities%20in%20Standard%20Commercial%20Agreements%3A%20What%20Founders%20Overlook&url=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on X" aria-label="Share on X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a class="kadence-share-btn kadence-share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a class="kadence-share-btn kadence-share-email" href="mailto:?subject=Strategic%20Contract%20Insight%20%E2%80%94%20Equinox%20Business%20Law&body=Thought%20you%20might%20find%20this%20strategic%20legal%20analysis%20from%20Equinox%20Business%20Law%20Group%20valuable%3A%20https%3A%2F%2Fequinoxbusinesslaw.com%2Fblog%2Fhidden-liabilities-commercial-agreements" title="Share via Email" aria-label="Share via Email">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- RIGHT COLUMN: ABOUT-STYLE SIDEBAR (padding-top:100px reserves space below circle) -->
+      <aside class="sec2side">
+
+        <!-- 1. TABLE OF CONTENTS (WARM CREAM SIDEBOX MATCHES ABOUT.HTML) -->
+        <div class="sidebox">
+          <p class="sidehead">Table of Contents</p>
+          <nav class="sidelist" aria-label="Article Sections">
+            <a class="sidelink" href="#boilerplate-illusion">
+              <span>1. The Boilerplate Illusion</span>
+              <svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a class="sidelink" href="#unilateral-indemnity">
+              <span>2. Unilateral Indemnity Triggers</span>
+              <svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a class="sidelink" href="#automatic-renewal">
+              <span>3. Automatic Renewal Traps</span>
+              <svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a class="sidelink" href="#dispute-venues">
+              <span>4. Dispute Resolution Venues</span>
+              <svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a class="sidelink" href="#audit-checklist">
+              <span>5. Proactive Audit Checklist</span>
+              <svg class="sidechev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </nav>
+        </div>
+
+        <!-- 2. AUTHOR SPOTLIGHT CARD -->
+        <div class="sidebox-author">
+          <p style="font-size:10.5px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#027CA1; margin-bottom:12px;">Author</p>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <img src="./assets/img/s4-team.jpg" alt="Michelle Bomberger" style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid #FFD457;">
+            <div>
+              <p style="font-size:15px; font-weight:700; color:#003B53; margin:0;">Michelle Bomberger</p>
+              <p style="font-size:12.5px; color:#666666; margin:2px 0 0;">Managing Partner &amp; Founder</p>
+            </div>
+          </div>
+          <p style="font-size:13px; line-height:1.55; color:#555555; margin-bottom:18px;">Michelle founded Equinox in 2004 to provide entrepreneurs with proactive, predictable strategic legal counsel.</p>
+          <a class="btn outline sm" href="team.html" style="width:100%;"><span>View Attorney Bio</span></a>
+        </div>
+
+
+        <!-- 4. DIAGNOSTIC ASSESSMENT CALLOUT -->
+        <div class="sidebox-dark">
+          <span style="display:inline-block; background:#FFD457; color:#003B53; font-size:10px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; padding:3px 7px; border-radius:2px; margin-bottom:12px;">Diagnostic</span>
+          <h3 style="font-size:18px; font-weight:700; line-height:1.3; color:#ffffff; margin-bottom:8px;">How Legally Protected Is Your Business?</h3>
+          <p style="font-size:13px; line-height:1.55; color:rgba(255,255,255,0.82); margin-bottom:18px;">Audit your commercial contracts, employment agreements, and corporate governance in under 5 minutes.</p>
+          <a class="btn gold sm" href="index.html#assessment" style="width:100%;"><span>Take 5-Min Assessment</span></a>
+        </div>
+
+        <!-- 5. RETURN TO BLOG LINK -->
+        <a href="blog.html" style="display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700; color:#027CA1; text-decoration:none; padding:8px 0;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          <span>Back to All Insights</span>
+        </a>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 3. RELATED LEGAL INSIGHTS (3-COLUMN CARDS) -->
+  <section class="related-section">
+    <div class="wrap">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+        <div>
+          <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Further Reading</span></div>
+          <h2 class="h2" style="font-size:28px; margin:0;">Related Legal Insights</h2>
+        </div>
+        <a class="btn outline sm" href="blog.html"><span>View All Articles &rarr;</span></a>
+      </div>
+
+      <div class="related-grid">
+
+        <!-- Card 1 -->
+        <article class="rel-card">
+          <div class="rel-thumb">
+            <img src="./assets/img/s8-meeting.jpg" alt="Worker classification discussion">
+          </div>
+          <div class="rel-body">
+            <span class="rel-cat">Employment &amp; HR</span>
+            <h3 class="rel-title"><a href="#">Independent Contractor or Employee? Navigating Worker Classification in 2026</a></h3>
+            <div class="rel-foot">
+              <span>Dominique Zett, Counsel</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="rel-card">
+          <div class="rel-thumb">
+            <img src="./assets/img/building-modern-angle.jpg" alt="Commercial lease property negotiation">
+          </div>
+          <div class="rel-body">
+            <span class="rel-cat">Real Estate</span>
+            <h3 class="rel-title"><a href="#">Commercial Lease Negotiations: 5 Clauses Growing Businesses Must Push Back On</a></h3>
+            <div class="rel-foot">
+              <span>Alicia Wimmer, Counsel</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="rel-card">
+          <div class="rel-thumb">
+            <img src="./assets/img/s4-baseplate.jpg" alt="Fractional general counsel foundation">
+          </div>
+          <div class="rel-body">
+            <span class="rel-cat">General Counsel</span>
+            <h3 class="rel-title"><a href="#">The Strategic Fractional Legal Counsel Model: Why Fixed Costs Beat Hourly Friction</a></h3>
+            <div class="rel-foot">
+              <span>Michelle Bomberger, Partner</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- FINAL CTA (NIGHT ground) -->
+  <div class="finalcta on-dark">
+    <div class="wrap" style="padding-top:104px; padding-bottom:108px;">
+      <div class="ctasplit">
+        <div>
+          <h2 class="h2" style="color:#ffffff; max-width:640px;"><b>Protect What You Have Built</b> and Prepare for What Comes Next</h2>
+          <div style="display:flex; flex-direction:column; gap:18px; margin-top:32px; max-width:760px;">
+            <p class="body" style="color:rgba(255,255,255,.88);">Your business should not have to experience a legal crisis before it receives proactive legal attention.</p>
+            <p class="body" style="color:rgba(255,255,255,.88);">Equinox Business Law gives you experienced legal guidance, practical protection, and a trusted team to lean on, without the cost of hiring full-time counsel or the fear of surprise legal bills.</p>
+            <p class="body" style="color:rgba(255,255,255,.88);">Take the first step toward greater legal confidence today.</p>
+          </div>
+          <div class="btnrow" style="margin-top:44px;">
+            <a class="btn main" href="#"><span>Book a Consultation</span></a>
+            <a class="btn secondary" href="#"><span>Take the Business Legal Health Assessment</span></a>
+          </div>
+        </div>
+        <div class="ctaimgwrap grain">
+          <div class="imgshadow"></div>
+          <img class="photo" src="img/cta-47103.jpg" alt="Equinox Strategic Business Team" width="1400" height="933">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER NEWSLETTER STRIP -->
+  <!-- FOOTER -->
+  <div class="nlband">
+    <div class="wrap nlpad">
+      <div class="nlsplit">
+        <div>
+          <p class="nlhead">Legal insight for growing businesses, in your inbox.</p>
+          <p class="nlsub">Short, practical notes from the Equinox team. No sales pitches.</p>
+        </div>
+        <form class="nlform" onsubmit="return false">
+          <input class="nlin" type="text" placeholder="Name" aria-label="Your Name">
+          <input class="nlin" type="email" placeholder="Email address" aria-label="Email address">
+          <button class="btn secondary sm" type="submit"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 14.9 21.5 11 13 2.5 9.1Z"/></svg><span>Subscribe</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ftbody">
+    <div class="wrap ftpad">
+      <div class="ft3">
+        <div class="ftbrand">
+          <img class="ftlogo" src="./assets/equinox-logo-tag-reverse.png" alt="Equinox Business Law Group">
+          <p class="fttag">Proactive Protection. Predictable Costs. Confidence in Growth.</p>
+          <p class="ftsub">Experienced strategic legal counsel for entrepreneurs and middle-market companies.</p>
+          <p class="ftserve">Serving Washington, Oregon and Colorado.</p>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Explore Equinox</span>
+          <a class="ftlink" href="index.html">Home</a>
+          <a class="ftlink" href="services.html">Practice Areas &amp; Services</a>
+          <a class="ftlink" href="service-contract-negotiation.html">Contract Negotiation</a>
+          <a class="ftlink" href="about.html">About Us</a>
+          <a class="ftlink" href="team.html">Legal &amp; Operations Team</a>
+          <a class="ftlink" href="careers.html">Careers &amp; Culture</a>
+          <a class="ftlink" href="events.html">Events &amp; Workshops</a>
+          <a class="ftlink" href="blog.html">Blog &amp; Insights</a>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Community Involvement</span>
+          <span class="ftlink">EO Seattle (Entrepreneurs&rsquo; Organization)</span>
+          <span class="ftlink">Women&rsquo;s Presidents Organization</span>
+          <span class="ftlink">Seattle U Family Business Exchange</span>
+          <span class="ftlink">Bellevue LifeSpring</span>
+        </div>
+        <div class="ftcol">
+          <span class="fthead">Contact Counsel</span>
+          <span class="ftlink ic-l"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.2 3.5h3l1.5 4-2 1.3a12.5 12.5 0 0 0 6.5 6.5l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2C10.6 19.2 4.8 13.4 4.2 5.7a2 2 0 0 1 2-2.2z"/></svg>425-250-0205</span>
+          <span class="ftlink ic-l"><svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg><a href="mailto:contact@equinoxbusinesslaw.com" style="color:inherit;text-decoration:none;">contact@equinoxbusinesslaw.com</a></span>
+          <div class="socrow">
+            <svg class="soc" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v13H.22V8zM8.34 8h4.37v1.78h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V21h-4.56v-5.72c0-1.37-.02-3.12-1.9-3.12-1.9 0-2.2 1.49-2.2 3.02V21H8.34V8z"/></svg>
+            <svg class="soc" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="legalbar">
+        <span class="ftfine">&copy; 2026 Equinox Business Law Group PLLC</span>
+        <div class="legallinks">
+          <span class="ftfine">Privacy Policy</span>
+          <span class="ftfine">Cookie Policy</span>
+          <span class="ftfine">Terms of Service</span>
+          <span class="ftfine">Disclaimer</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div></div></div>
+
+</body>
+</html>

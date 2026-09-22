@@ -1,0 +1,15 @@
+# Internal notes and heavy assets (>100MB exceeds GitHub file size limit)
+notes/
+
+# Google Drive and OS metadata
+*.gsheet
+*.gdoc
+*.gslides
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Editor / Scratch files
+.vscode/
+.idea/
+*.log
