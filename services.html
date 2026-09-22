@@ -225,13 +225,29 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .sidechev { width:15px; height:15px; color:#9db3bd; transition:transform .15s ease, color .15s ease; flex:none; }
 .ab-Main .sidelink:hover .sidechev, .ab-Main .sidelink.here .sidechev { color:#003B53; transform:translateX(3px); }
 
-/* SOCIAL PROOF LOGO WALL */
-.ab-Main .logowall { position:relative; overflow:hidden; padding:28px 0; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; background:#ffffff; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
-.ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 32s linear infinite; }
-.ab-Main .logotrack:hover { animation-play-state:paused; }
-.ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:50px; flex:none; }
-.ab-Main .logotile img { display:block; width:auto; height:auto; max-height:36px; max-width:140px; filter:grayscale(1); opacity:.78; }
-@keyframes logostep { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+/* SOCIAL PROOF BAND */
+.ab-Main .proofband { background:#ffffff; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; position:relative; z-index:1; }
+.ab-Main .proofpad { padding-top:32px; padding-bottom:34px; }
+.ab-Main .proofnames { min-width:0; width:100%; text-align:center; }
+.ab-Main .proofeyebrow { display:block; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#8c8c8c; text-align:center; }
+.ab-Main .logowall { position:relative; margin:16px auto 0; overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
+.ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 26s ease-in-out infinite; }
+.ab-Main .logowall:hover .logotrack, .ab-Main .logowall:focus-within .logotrack { animation-play-state:paused; }
+@media (prefers-reduced-motion: reduce) { .logotrack { animation:none; } }
+.ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:56px; flex:none; }
+.ab-Main .logotile img { display:block; width:auto; height:auto; max-height:38px; max-width:150px; filter:grayscale(1); opacity:.78; }
+.ab-Main .logotile.sq img { max-height:54px; max-width:64px; }
+@keyframes logostep {
+0%, 10% { transform:translateX(-0px); }
+12.5%, 22.5% { transform:translateX(-180px); }
+25%, 35% { transform:translateX(-360px); }
+37.5%, 47.5% { transform:translateX(-540px); }
+50%, 60% { transform:translateX(-720px); }
+62.5%, 72.5% { transform:translateX(-900px); }
+75%, 85% { transform:translateX(-1080px); }
+87.5%, 97.5% { transform:translateX(-1260px); }
+100% { transform:translateX(-1440px); }
+}
 
 /* SECTION 3: 6 CORE PRACTICE AREAS GRID */
 .ab-Main .praxgrid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; margin-top:48px; }
@@ -551,30 +567,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
     </div>
   </div>
 
-  <!-- 2. CLIENT LOGO MARQUEE -->
-  <div class="logowall" aria-label="Trusted by growing businesses across the Pacific Northwest">
-    <div class="logotrack">
-      <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
-      <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
-      <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
-      <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky Bakery"></div>
-      <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
-      <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="PMH"></div>
-      <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Building"></div>
-      <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
-      <!-- Loop duplicate for seamless css marquee -->
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/alliance.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/dicks.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/darwins.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/piroshky.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/ejp.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/pmh.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/tritec.png" alt=""></div>
-      <div class="logotile" aria-hidden="true"><img src="./assets/img/logos/architextures.png" alt=""></div>
-    </div>
-  </div>
-
-  <!-- 3. OVERVIEW & PRACTICE AREA SIDEBAR -->
+  <!-- 2. OVERVIEW & PRACTICE AREA SIDEBAR -->
   <section class="wrap" style="padding-top:104px; padding-bottom:96px;">
     <div class="sec2split">
       <div class="sec2main">
@@ -600,8 +593,20 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
     </div>
   </section>
 
-  <!-- 4. CORE PRACTICE AREAS (6 FEATURED CARDS) -->
-  <section class="wrap" style="padding-top:20px; padding-bottom:104px;">
+  <!-- SOCIAL PROOF BAND -->
+  <div class="proofband">
+    <div class="wrap proofpad">
+      <div class="proofnames">
+        <span class="proofeyebrow">Trusted by growing companies across Washington, Oregon and Colorado.</span>
+        <div class="logowall">
+          <div class="logotrack"><span class="logotile sq"><img src="img/logos/alliance.png" alt="Alliance Partition Systems" loading="lazy"></span><span class="logotile"><img src="img/logos/darwins.png" alt="Darwin’s Natural Pet Products" loading="lazy"></span><span class="logotile"><img src="img/logos/pmh.png" alt="ProMotion Holdings" loading="lazy"></span><span class="logotile sq"><img src="img/logos/dicks.png" alt="Dick’s Drive-In" loading="lazy"></span><span class="logotile"><img src="img/logos/ejp.png" alt="EJP Consulting Group" loading="lazy"></span><span class="logotile sq"><img src="img/logos/piroshky.png" alt="Piroshky Piroshky" loading="lazy"></span><span class="logotile"><img src="img/logos/architextures.png" alt="Architextures" loading="lazy"></span><span class="logotile"><img src="img/logos/tritec.png" alt="Tri-Tec Manufacturing" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/alliance.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/darwins.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/pmh.png" alt="" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/dicks.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/ejp.png" alt="" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/piroshky.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/architextures.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/tritec.png" alt="" loading="lazy"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CORE PRACTICE AREAS (6 FEATURED CARDS) -->
+  <section class="wrap" style="padding-top:84px; padding-bottom:104px;">
     <div style="max-width:840px;">
       <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Core Practice Areas</span></div>
       <h2 class="h2">Strategic legal counsel <b>across every corporate milestone</b></h2>
