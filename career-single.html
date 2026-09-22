@@ -164,7 +164,8 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 /* BREADCRUMB STRIP (VARIATION 1B • MINIMALIST WHISPER) */
 .ab-Main .crumb-strip, .crumb-strip {
   background: #ffffff;
-  border-bottom: 1px solid #F2F4F5;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
   padding: 10px 0;
 }
 .ab-Main .crumb-bar, .crumb-bar {
@@ -176,6 +177,16 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   font-weight: 400;
   letter-spacing: .02em;
   color: #93A4AE;
+}
+.ab-Main .crumb-bar .crumb-prefix, .crumb-bar .crumb-prefix {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: #8C9DA6;
+  margin-right: 10px;
+  user-select: none;
 }
 .ab-Main .crumb-bar a, .crumb-bar a {
   color: #93A4AE;
@@ -487,6 +498,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   <div class="crumb-strip" role="region" aria-label="Breadcrumb navigation">
     <div class="wrap">
       <nav class="crumb-bar" aria-label="Breadcrumb">
+        <span class="crumb-prefix">YOU ARE HERE:</span>
         <a href="index.html">Home</a>
         <span class="sep">&raquo;</span>
         <a href="about.html">About Us</a>
