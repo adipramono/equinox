@@ -626,7 +626,8 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .spotcard:hover .spotlink { color:#003B53; }
 
 /* SOCIAL PROOF LOGO WALL */
-.ab-Main .logowall { position:relative; overflow:hidden; padding:32px 0; border-bottom:1px solid #e4e4e4; background:#ffffff; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
+.ab-Main .logoband { background:#ffffff; border-bottom:1px solid #e4e4e4; padding:32px 0; }
+.ab-Main .logowall { position:relative; overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
 .ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 32s linear infinite; }
 .ab-Main .logotrack:hover { animation-play-state:paused; }
 .ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:50px; flex:none; }
@@ -1252,25 +1253,29 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   </section>
 
   <!-- 8. SOCIAL PROOF LOGO WALL -->
-  <section class="logowall" aria-label="Selected Equinox Clients">
-    <div class="logotrack">
-      <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
-      <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
-      <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
-      <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
-      <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
-      <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
-      <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
-      <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
-      <!-- Loop duplicate for infinite scroll -->
-      <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
-      <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
-      <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
-      <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
-      <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
-      <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
-      <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
-      <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
+  <section class="logoband" aria-label="Selected Equinox Clients">
+    <div class="wrap">
+      <div class="logowall">
+        <div class="logotrack">
+          <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
+          <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
+          <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
+          <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
+          <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
+          <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
+          <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
+          <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
+          <!-- Loop duplicate for infinite scroll -->
+          <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
+          <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
+          <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
+          <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
+          <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
+          <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
+          <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
+          <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
+        </div>
+      </div>
     </div>
   </section>
 
