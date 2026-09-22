@@ -625,14 +625,31 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 }
 .ab-Main .spotcard:hover .spotlink { color:#003B53; }
 
-/* SOCIAL PROOF LOGO WALL */
-.ab-Main .logoband { background:#ffffff; border-bottom:1px solid #e4e4e4; padding:32px 0; }
-.ab-Main .logowall { position:relative; overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
-.ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 32s linear infinite; }
-.ab-Main .logotrack:hover { animation-play-state:paused; }
-.ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:50px; flex:none; }
-.ab-Main .logotile img { display:block; width:auto; height:auto; max-height:36px; max-width:140px; filter:grayscale(1); opacity:.78; }
-@keyframes logostep { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+/* SOCIAL PROOF BAND */
+.ab-Main .proofband { background:#ffffff; border-bottom:1px solid #e4e4e4; position:relative; z-index:1; }
+.ab-Main .proofpad { padding-top:26px; padding-bottom:28px; }
+.ab-Main .proofrow { display:grid; grid-template-columns:minmax(0, 2fr) minmax(0, 1fr); gap:72px; align-items:center; }
+.ab-Main .proofnames { min-width:0; }
+.ab-Main .proofblank { min-width:0; }
+.ab-Main .proofeyebrow { display:block; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#8c8c8c; }
+.ab-Main .logowall { position:relative; margin-top:14px; overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); mask-image:linear-gradient(90deg, transparent 0, #000 42px, #000 calc(100% - 42px), transparent 100%); }
+.ab-Main .logotrack { display:flex; align-items:center; gap:0; width:max-content; animation:logostep 26s ease-in-out infinite; }
+.ab-Main .logowall:hover .logotrack, .ab-Main .logowall:focus-within .logotrack { animation-play-state:paused; }
+@media (prefers-reduced-motion: reduce) { .logotrack { animation:none; } }
+.ab-Main .logotile { display:inline-flex; align-items:center; justify-content:center; width:180px; height:56px; flex:none; }
+.ab-Main .logotile img { display:block; width:auto; height:auto; max-height:38px; max-width:150px; filter:grayscale(1); opacity:.78; }
+.ab-Main .logotile.sq img { max-height:54px; max-width:64px; }
+@keyframes logostep {
+0%, 10% { transform:translateX(-0px); }
+12.5%, 22.5% { transform:translateX(-180px); }
+25%, 35% { transform:translateX(-360px); }
+37.5%, 47.5% { transform:translateX(-540px); }
+50%, 60% { transform:translateX(-720px); }
+62.5%, 72.5% { transform:translateX(-900px); }
+75%, 85% { transform:translateX(-1080px); }
+87.5%, 97.5% { transform:translateX(-1260px); }
+100% { transform:translateX(-1440px); }
+}
 
 /* BOTTOM CONSULTATION BANNER */
 /* FOOTER */
@@ -667,6 +684,8 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   .ab-Main .wrap, .ab-Main .wrapwide { padding:0 32px; }
   .ab-Main .ptrow { grid-template-columns:1fr; gap:40px; --f:0px; }
   .ab-Main .ptpic { display:none; }
+  .ab-Main .proofrow { grid-template-columns:1fr; gap:0; }
+  .ab-Main .proofblank { display:none; }
   .ab-Main .propgrid { grid-template-columns:1fr; }
   .ab-Main .readygrid { grid-template-columns:1fr; }
   .ab-Main .opt2-matrix { grid-template-columns:1fr; }
@@ -876,6 +895,21 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
         <span class="sep">&bull;</span>
         <span class="here" aria-current="page">Our Approach</span>
       </nav>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROOF BAND -->
+  <div class="proofband">
+    <div class="wrap proofpad">
+      <div class="proofrow">
+        <div class="proofnames">
+          <span class="proofeyebrow">Trusted by growing companies across Washington, Oregon and Colorado.</span>
+          <div class="logowall">
+            <div class="logotrack"><span class="logotile sq"><img src="img/logos/alliance.png" alt="Alliance Partition Systems" loading="lazy"></span><span class="logotile"><img src="img/logos/darwins.png" alt="Darwin’s Natural Pet Products" loading="lazy"></span><span class="logotile"><img src="img/logos/pmh.png" alt="ProMotion Holdings" loading="lazy"></span><span class="logotile sq"><img src="img/logos/dicks.png" alt="Dick’s Drive-In" loading="lazy"></span><span class="logotile"><img src="img/logos/ejp.png" alt="EJP Consulting Group" loading="lazy"></span><span class="logotile sq"><img src="img/logos/piroshky.png" alt="Piroshky Piroshky" loading="lazy"></span><span class="logotile"><img src="img/logos/architextures.png" alt="Architextures" loading="lazy"></span><span class="logotile"><img src="img/logos/tritec.png" alt="Tri-Tec Manufacturing" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/alliance.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/darwins.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/pmh.png" alt="" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/dicks.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/ejp.png" alt="" loading="lazy"></span><span class="logotile sq" aria-hidden="true"><img src="img/logos/piroshky.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/architextures.png" alt="" loading="lazy"></span><span class="logotile" aria-hidden="true"><img src="img/logos/tritec.png" alt="" loading="lazy"></span></div>
+          </div>
+        </div>
+        <div class="proofblank" aria-hidden="true"></div>
+      </div>
     </div>
   </div>
 
@@ -1252,34 +1286,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
     </div>
   </section>
 
-  <!-- 8. SOCIAL PROOF LOGO WALL -->
-  <section class="logoband" aria-label="Selected Equinox Clients">
-    <div class="wrap">
-      <div class="logowall">
-        <div class="logotrack">
-          <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
-          <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
-          <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
-          <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
-          <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
-          <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
-          <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
-          <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
-          <!-- Loop duplicate for infinite scroll -->
-          <div class="logotile"><img src="./assets/img/logos/alliance.png" alt="Alliance Partition Systems"></div>
-          <div class="logotile"><img src="./assets/img/logos/architextures.png" alt="Architextures"></div>
-          <div class="logotile"><img src="./assets/img/logos/darwins.png" alt="Darwin's Natural Pet Products"></div>
-          <div class="logotile"><img src="./assets/img/logos/dicks.png" alt="Dick's Drive-In"></div>
-          <div class="logotile"><img src="./assets/img/logos/ejp.png" alt="E.J. Prescott"></div>
-          <div class="logotile"><img src="./assets/img/logos/piroshky.png" alt="Piroshky Piroshky"></div>
-          <div class="logotile"><img src="./assets/img/logos/pmh.png" alt="ProMotion Holdings"></div>
-          <div class="logotile"><img src="./assets/img/logos/tritec.png" alt="Tritec Manufacturing"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- FINAL CTA (NIGHT ground) -->
+  <!-- FINAL CTA (NIGHT ground) -->
   <div class="finalcta on-dark">
     <div class="wrap" style="padding-top:104px; padding-bottom:108px;">
       <div class="ctasplit">
