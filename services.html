@@ -484,11 +484,14 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
 .ab-Main .nlband { background:#FFD457; }
 .ab-Main .nlpad { padding-top:52px; padding-bottom:54px; }
-.ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center; }
-.ab-Main .nlhead { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:21px; font-weight:600; line-height:1.35; color:#003B53; margin:0; }
-.ab-Main .nlsub { font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; line-height:1.55; color:#4a4a4a; margin:8px 0 0; }
-.ab-Main .nlform { display:flex; gap:10px; }
-.ab-Main .nlin { flex:1 1 0; min-width:0; font-family:'Montserrat','Helvetica Neue',Arial,sans-serif; font-size:15px; color:#2c2c2c; background:#ffffff; border:1px solid rgba(0,0,0,.14); border-radius:3px; padding:14px 16px; }
+.ab-Main .nlsplit { display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:center; }
+.ab-Main .nlhead { font-family:'Montserrat',Arial,sans-serif; font-size:21px; font-weight:700; line-height:1.35; color:#003B53; margin:0; }
+.ab-Main .nlsub { font-family:'Montserrat',Arial,sans-serif; font-size:15px; line-height:1.55; color:#3a3a3a; margin:8px 0 0; }
+.ab-Main .nlform { display:flex; gap:10px; align-items:stretch; }
+.ab-Main .nlin { flex:1 1 0; min-width:0; font-family:'Montserrat',Arial,sans-serif; font-size:15px; color:#2c2c2c; background:#ffffff; border:1px solid rgba(0,0,0,.18); border-radius:3px; padding:13px 16px; outline:none; transition:border-color .15s ease, box-shadow .15s ease; box-sizing:border-box; }
+.ab-Main .nlin:focus { border-color:#003B53; box-shadow:0 0 0 2px rgba(0,59,83,0.18); }
+.ab-Main .nlform .btn { background:#003B53; color:#ffffff; border:1px solid #003B53; padding:13px 22px; flex:none; white-space:nowrap; transition:all .16s ease; }
+.ab-Main .nlform .btn:hover { background:#027CA1; border-color:#027CA1; color:#ffffff; }
 
 .ab-Main .ftbody { background:#112337; }
 .ab-Main .ftpad { padding-top:76px; padding-bottom:42px; }
@@ -539,6 +542,9 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   .ab-Main .funclist { grid-template-columns:repeat(2, 1fr); gap:12px 20px; }
   .ab-Main .func-acc-summary { padding:20px 22px; }
   .ab-Main .func-acc-body { padding:20px 22px 24px; }
+  .ab-Main .nlsplit { grid-template-columns: 1fr; gap: 24px; }
+  .ab-Main .nlpad { padding-top: 42px; padding-bottom: 46px; }
+  .ab-Main .nlform { width: 100%; }
   .ab-Main .ft3 { grid-template-columns:1fr; }
 }
 
@@ -551,6 +557,13 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   .ab-Main .strip-deliverables { grid-template-columns: 1fr; }
   .ab-Main .strip-pane:hover, .ab-Main .strip-pane.active { height: 420px; }
   .ab-Main .strip-title { font-size: 22px; }
+  .ab-Main .nlpad { padding-top: 36px; padding-bottom: 40px; }
+  .ab-Main .nlsplit { gap: 18px; }
+  .ab-Main .nlhead { font-size: 19px; line-height: 1.3; }
+  .ab-Main .nlsub { font-size: 14px; margin-top: 6px; }
+  .ab-Main .nlform { flex-direction: column; width: 100%; gap: 10px; }
+  .ab-Main .nlin { width: 100%; }
+  .ab-Main .nlform .btn { width: 100%; padding: 14px; justify-content: center; }
   .ab-Main .btnrow { flex-direction:column; align-items:stretch; }
   .ab-Main .btnrow .btn { width:100%; }
 }
@@ -1308,7 +1321,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
         <form class="nlform" onsubmit="return false">
           <input class="nlin" type="text" placeholder="Name" aria-label="Your Name">
           <input class="nlin" type="email" placeholder="Email address" aria-label="Email address">
-          <button class="btn secondary sm" type="submit"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 14.9 21.5 11 13 2.5 9.1Z"/></svg><span>Subscribe</span></button>
+          <button class="btn main sm" type="submit"><svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 14.9 21.5 11 13 2.5 9.1Z"/></svg><span>Subscribe</span></button>
         </form>
       </div>
     </div>
