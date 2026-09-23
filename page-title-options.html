@@ -347,175 +347,105 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
 
 
 /* ==========================================================================
-   OPTION 06: CELESTIAL EQUINOX RINGS (ORBITAL BRAND GEOMETRY)
+   EQUINOX SIGNATURE DECORATIVE GRAPHIC MARKS (LIKE S4ART / PZART IN INDEX.HTML)
    ========================================================================== */
+.ab-Main .heroart-col { display:flex; justify-content:center; align-items:center; min-width:0; }
+.ab-Main .s4art-hero { position:relative; width:230px; max-width:100%; }
+.ab-Main .s4art-hero .pzart { display:block; width:100%; height:auto; transform:rotate(-8deg); transform-origin:50% 50%; }
+.ab-Main .pz { fill:#E7EDF0; stroke:#ffffff; stroke-width:3; }
+.ab-Main .pzfit { fill:#003B53; stroke:#ffffff; stroke-width:3; }
+
+.ab-Main .pz-dark { fill:rgba(255,255,255,0.12); stroke:#002738; stroke-width:3; }
+.ab-Main .pzfit-gold { fill:#FFD457; stroke:#002738; stroke-width:3; }
+
+.ab-Main .hcart-hero { position:relative; width:220px; max-width:100%; }
+.ab-Main .hcart-hero .hcart { display:block; width:100%; height:auto; transform:rotate(-8deg); transform-origin:50% 50%; }
+
+.ab-Main .eqring-hero { position:relative; width:210px; max-width:100%; }
+.ab-Main .eqring-hero .eqringart { display:block; width:100%; height:auto; transform:rotate(-8deg); transform-origin:50% 50%; }
+
+.ab-Main .ksart-hero { position:relative; width:210px; max-width:100%; }
+.ab-Main .ksart-hero .ksart { display:block; width:100%; height:auto; }
+
+/* Option 06: Puzzle on Signature Light Gradient */
 .opt6-hero {
-  background: radial-gradient(ellipse at 40% 30%, #FFFFFF 0%, #F3F8FA 60%, #DDECF2 100%);
+  background: radial-gradient(ellipse at 50% 38%, #FFFFFF 0%, #E8F0F4 46%, #93BCCD 100%);
   padding: 68px 0 72px;
   border-bottom: 1px solid #D2E2EA;
 }
 .opt6-layout {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 56px;
   align-items: center;
 }
 .opt6-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
 .opt6-hero .body { font-size: 18px; line-height: 1.62; color: #2c2c2c; margin-top: 20px; }
-.opt6-svgwrap {
-  position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 16px 44px rgba(0, 59, 83, 0.08);
-  border: 1px solid #E1EDF2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-/* ==========================================================================
-   OPTION 07: MODERN SCALES OF EQUILIBRIUM (ARCHITECTURAL BALANCE)
-   ========================================================================== */
+/* Option 07: Dark Ground Gold Puzzle Fit */
 .opt7-hero {
-  background: #F7FAF9;
-  padding: 68px 0 72px;
-  border-bottom: 1px solid #E2EBE8;
-}
-.opt7-layout {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 56px;
-  align-items: center;
-}
-.opt7-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
-.opt7-hero .body { font-size: 18px; line-height: 1.62; color: #2C3E47; margin-top: 20px; }
-.opt7-svgwrap {
-  position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 16px 40px rgba(0, 59, 83, 0.07);
-  border: 1px solid #E2EBE7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ==========================================================================
-   OPTION 08: EMBEDDED LEGAL POD & SHIELD MATRIX (CORPORATE OS)
-   ========================================================================== */
-.opt8-hero {
-  background: linear-gradient(135deg, #001B27 0%, #002B3D 60%, #003B53 100%);
+  background: linear-gradient(135deg, #002231 0%, #003B53 60%, #004D6D 100%);
   padding: 72px 0 76px;
   color: #ffffff;
-  border-bottom: 3px solid #027CA1;
+  border-bottom: 3px solid #FFD457;
   position: relative;
   overflow: hidden;
 }
-.opt8-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 80% 30%, rgba(2, 124, 161, 0.25) 0%, transparent 50%);
-  pointer-events: none;
+.opt7-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 56px;
+  align-items: center;
+}
+.opt7-hero .h1 { font-size: 42px; color: #ffffff; line-height: 1.16; margin-top: 0; }
+.opt7-hero .h1 b { color: #FFD457; }
+.opt7-hero .body { font-size: 18px; color: rgba(255,255,255,0.88); line-height: 1.62; margin-top: 20px; }
+.opt7-hero .ytext { color: #FFD457; }
+
+/* Option 08: 8-Segment Radial Wheel on Warm Ground */
+.opt8-hero {
+  background: #FFFAEB;
+  border-bottom: 1px solid #F0E6CD;
+  padding: 68px 0 72px;
 }
 .opt8-layout {
-  position: relative;
-  z-index: 2;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 56px;
   align-items: center;
 }
-.opt8-hero .h1 { font-size: 42px; color: #ffffff; line-height: 1.16; margin-top: 0; }
-.opt8-hero .h1 b { color: #FFD457; }
-.opt8-hero .body { font-size: 18px; color: rgba(255,255,255,0.88); line-height: 1.62; margin-top: 20px; }
-.opt8-hero .ytext { color: #FFD457; }
-.opt8-svgwrap {
-  position: relative;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 20px 48px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.opt8-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
+.opt8-hero .body { font-size: 18px; color: #3A454B; line-height: 1.62; margin-top: 20px; }
 
-/* ==========================================================================
-   OPTION 09: STRATEGIC BLUEPRINT & BEDROCK FOUNDATION (ISOMETRIC WIREFRAME)
-   ========================================================================== */
+/* Option 09: Equinox Signature Dual Rings */
 .opt9-hero {
-  background: #08212F;
-  padding: 72px 0 76px;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  position: relative;
-}
-.opt9-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(147,188,205,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(147,188,205,0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
+  background: #F4F8FA;
+  padding: 68px 0 72px;
+  border-bottom: 1px solid #DCE6EB;
 }
 .opt9-layout {
-  position: relative;
-  z-index: 2;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 56px;
   align-items: center;
 }
-.opt9-hero .h1 { font-size: 42px; color: #ffffff; line-height: 1.16; margin-top: 0; }
-.opt9-hero .h1 b { color: #FFD457; }
-.opt9-hero .body { font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.62; margin-top: 20px; }
-.opt9-hero .ytext { color: #FFD457; }
-.opt9-svgwrap {
-  position: relative;
-  background: rgba(0, 31, 44, 0.7);
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid rgba(147, 188, 205, 0.25);
-  box-shadow: 0 20px 48px rgba(0,0,0,0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.opt9-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
+.opt9-hero .body { font-size: 18px; color: #2C3E47; line-height: 1.62; margin-top: 20px; }
 
-/* ==========================================================================
-   OPTION 10: GROWTH TRAJECTORY & REGULATORY HORIZON (RADAR FORESIGHT)
-   ========================================================================== */
+/* Option 10: Foundation Keystone Masonry */
 .opt10-hero {
-  background: radial-gradient(ellipse at 60% 40%, #FFFFFF 0%, #F5F9FA 55%, #E3EDF2 100%);
+  background: radial-gradient(ellipse at 50% 30%, #FFFFFF 0%, #EDF4F7 60%, #D4E5ED 100%);
   padding: 68px 0 72px;
-  border-bottom: 1px solid #D6E4EB;
+  border-bottom: 1px solid #C9DEE8;
 }
 .opt10-layout {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 56px;
   align-items: center;
 }
 .opt10-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
-.opt10-hero .body { font-size: 18px; line-height: 1.62; color: #2C3E47; margin-top: 20px; }
-.opt10-svgwrap {
-  position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 16px 44px rgba(0, 59, 83, 0.08);
-  border: 1px solid #DCE9F0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.opt10-hero .body { font-size: 18px; color: #2C3E47; line-height: 1.62; margin-top: 20px; }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -549,7 +479,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
     <div class="wrapwide top-bar-inner">
       <div class="top-bar-title">
         <span class="top-pill">Design Showcase</span>
-        <span>Equinox Inner Page Title UI Options (10 Styles: Photo, Color & SVG Art)</span>
+        <span>Equinox Inner Page Title UI Options (10 Styles: Photo, Color & Signature s4art Marks)</span>
       </div>
       <nav class="nav-pills" aria-label="Page Title Options">
         <span style="font-size:11px; font-weight:700; color:#93BCCD; text-transform:uppercase; letter-spacing:.08em; margin-right:4px;">Photo &amp; Color:</span>
@@ -558,12 +488,12 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
         <a class="pill-btn" href="#opt3">03 • Glass Skyline</a>
         <a class="pill-btn" href="#opt4">04 • Panorama</a>
         <a class="pill-btn" href="#opt5">05 • Dual Sand</a>
-        <span style="font-size:11px; font-weight:700; color:#FFD457; text-transform:uppercase; letter-spacing:.08em; margin:0 4px 0 10px;">Bespoke SVG Art:</span>
-        <a class="pill-btn" href="#opt6">06 • Equinox Rings</a>
-        <a class="pill-btn" href="#opt7">07 • Modern Scales</a>
-        <a class="pill-btn" href="#opt8">08 • Shield Matrix</a>
-        <a class="pill-btn" href="#opt9">09 • Blueprint</a>
-        <a class="pill-btn" href="#opt10">10 • Trajectory</a>
+        <span style="font-size:11px; font-weight:700; color:#FFD457; text-transform:uppercase; letter-spacing:.08em; margin:0 4px 0 10px;">Signature Graphic Marks (s4art Style):</span>
+        <a class="pill-btn" href="#opt6">06 • Puzzle Interlock</a>
+        <a class="pill-btn" href="#opt7">07 • Gold Fit (Navy)</a>
+        <a class="pill-btn" href="#opt8">08 • 8-Sector Wheel</a>
+        <a class="pill-btn" href="#opt9">09 • Dual Rings</a>
+        <a class="pill-btn" href="#opt10">10 • Keystone Block</a>
         <a class="pill-btn" href="#comparison" style="background:#FFD457; color:#003B53; margin-left:8px;">Matrix</a>
       </nav>
     </div>
@@ -576,7 +506,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
       <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Design Exploration</span></div>
       <h1 class="h1">Inner Page Title <b>UI Explorations</b></h1>
       <p class="body" style="margin-top:14px; max-width:860px; color:#55727E;">
-        Comparing 10 distinct treatments for the hero/page title area across Equinox inner pages (e.g. <code>about.html</code>, <code>services.html</code>, <code>team.html</code>). Concepts 01–05 explore photographic, color, and editorial treatments; Concepts 06–10 explore bespoke modern SVG artwork tailored for the Equinox brand story. across Equinox inner pages (e.g. <code>about.html</code>, <code>services.html</code>, <code>team.html</code>). Each option solves the layout balance differently—from clean typography without images, to solid executive colors, to full-width background textures and balanced landscape image cards.
+        Comparing 10 distinct treatments for the hero/page title area across Equinox inner pages (e.g. <code>about.html</code>, <code>services.html</code>, <code>team.html</code>). Concepts 01–05 explore photographic, color, and editorial treatments; Concepts 06–10 explore signature Equinox decorative graphic marks (like the iconic <code>.s4art</code> / <code>.pzart</code> puzzle piece, <code>.hcart</code> 8-sector wheel, and brand rings from <code>index.html</code>) rotated at <code>-8deg</code> beside the page title. across Equinox inner pages (e.g. <code>about.html</code>, <code>services.html</code>, <code>team.html</code>). Each option solves the layout balance differently—from clean typography without images, to solid executive colors, to full-width background textures and balanced landscape image cards.
       </p>
     </div>
 
@@ -1046,20 +976,20 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
 
     
     <!-- =====================================================================
-         CONCEPT 06: CELESTIAL EQUINOX RINGS (ORBITAL BRAND GEOMETRY)
+         CONCEPT 06: THE INTERLOCKING PUZZLE MARK (EXACT S4ART STYLE FROM INDEX.HTML)
          ===================================================================== -->
     <section class="concept-frame" id="opt6">
       <div class="concept-header-bar">
         <div>
           <div class="concept-badge-row">
-            <span class="concept-num" style="background:#027CA1;">CONCEPT 06</span>
-            <h2 class="concept-name">Celestial Equinox Rings • Bespoke Orbital Brand Geometry</h2>
+            <span class="concept-num" style="background:#003B53;">CONCEPT 06</span>
+            <h2 class="concept-name">The Interlocking Puzzle Mark • The Exact s4art Style</h2>
           </div>
           <p class="concept-desc" style="margin-top:8px;">
-            <strong>Type: SVG Art (Brand Alignment).</strong> Features a bespoke vector artwork inspired by astronomical equinox orbital planes—where business speed and risk management find exact equilibrium. Precision concentric vector orbits, golden nodes, and dual-tone core sphere.
+            <strong>Type: Equinox Signature Graphic Mark (.s4art).</strong> Uses the exact interlocking puzzle piece mark from <code>index.html</code> (Section 4). Two pieces cropped by the frame, tilted <code>-8deg</code>: one in light slate (<code>#E7EDF0</code>) and one in deep navy (<code>#003B53</code>). Sits beside the heading as a brand texture without asking to be read.
           </p>
         </div>
-        <span class="concept-type-tag" style="background:#E0F2FE; color:#0369A1;">SVG Vector Art • Proprietary</span>
+        <span class="concept-type-tag" style="background:#EBF2F5; color:#003B53;">Exact Index.html Style</span>
       </div>
 
       <div class="concept-canvas">
@@ -1072,88 +1002,27 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
                   <span class="ytext">About Equinox</span>
                 </div>
                 <h1 class="h1">
-                  Bringing Business Speed &amp; Preventative Law into <b>Perfect Equilibrium</b>
+                  Strategic Legal Counsel Built for <b>Entrepreneurial Growth</b>
                 </h1>
                 <p class="body">
-                  We call ourselves Equinox because true business success requires equal parts velocity and protection. Our proactive counsel removes roadblocks so leadership teams can scale without fear.
+                  We make it possible for business leaders to have an embedded corporate legal department on their team by removing the friction of billable hours, slow response times, and unpredictable costs.
                 </p>
                 <div class="btnrow" style="margin-top:32px;">
                   <a class="btn main" href="#"><span>Book a Consultation</span></a>
-                  <a class="btn outline" href="#"><span>Explore Our Model</span></a>
+                  <a class="btn outline" href="#"><span>Take Legal Health Check</span></a>
                 </div>
               </div>
 
-              <!-- SVG ARTWORK CONTAINER -->
-              <div class="opt6-svgwrap">
-                <svg viewBox="0 0 520 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible;">
-  <defs>
-    <radialGradient id="glow6" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFD457" stop-opacity="0.25"/>
-      <stop offset="60%" stop-color="#027CA1" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#027CA1" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="goldBeam6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFE082"/>
-      <stop offset="50%" stop-color="#FFD457"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </linearGradient>
-    <linearGradient id="navyOrb6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#004D6D"/>
-      <stop offset="50%" stop-color="#003B53"/>
-      <stop offset="100%" stop-color="#002231"/>
-    </linearGradient>
-    <filter id="softShadow6" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#003B53" flood-opacity="0.18"/>
-    </filter>
-  </defs>
-
-  <!-- AMBIENT GLOW -->
-  <circle cx="260" cy="200" r="160" fill="url(#glow6)"/>
-
-  <!-- MATHEMATICAL COORDINATE GRID TICKS -->
-  <g stroke="#93BCCD" stroke-opacity="0.35" stroke-width="1">
-    <line x1="260" y1="30" x2="260" y2="370" stroke-dasharray="3 4"/>
-    <line x1="60" y1="200" x2="460" y2="200" stroke-dasharray="3 4"/>
-    <circle cx="260" cy="200" r="180" fill="none" stroke-dasharray="2 6"/>
-  </g>
-
-  <!-- AXIAL ROTATION GUIDE -->
-  <g transform="rotate(-22 260 200)">
-    <!-- OUTER GOLD EQUINOX TRAJECTORY -->
-    <ellipse cx="260" cy="200" rx="190" ry="85" fill="none" stroke="url(#goldBeam6)" stroke-width="2.5" filter="url(#softShadow6)"/>
-    
-    <!-- INNER NAVY STABILITY RING -->
-    <ellipse cx="260" cy="200" rx="145" ry="60" fill="none" stroke="#003B53" stroke-width="2" stroke-opacity="0.75"/>
-    
-    <!-- FINE ACCENT RING -->
-    <ellipse cx="260" cy="200" rx="100" ry="40" fill="none" stroke="#027CA1" stroke-width="1.5" stroke-dasharray="4 4"/>
-
-    <!-- TILTED LATITUDE LINE -->
-    <line x1="70" y1="200" x2="450" y2="200" stroke="#FFD457" stroke-width="1.2" stroke-opacity="0.8"/>
-
-    <!-- EQUINOX ORBITAL NODES -->
-    <circle cx="450" cy="200" r="6" fill="#FFD457" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="70" cy="200" r="4" fill="#003B53" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="260" cy="115" r="5" fill="#027CA1" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="260" cy="285" r="5" fill="#FFD457" stroke="#ffffff" stroke-width="2"/>
-  </g>
-
-  <!-- CENTRAL DUAL-TONE PLANETARY CORE (EQUILIBRIUM: EQUAL DAY & NIGHT) -->
-  <g filter="url(#softShadow6)">
-    <!-- Base Sphere -->
-    <circle cx="260" cy="200" r="46" fill="url(#navyOrb6)"/>
-    <!-- Day Light Hemisphere (Gold Crescent) -->
-    <path d="M 260 154 A 46 46 0 0 1 260 246 A 46 36 0 0 0 260 154 Z" fill="url(#goldBeam6)"/>
-    <!-- Equator Line -->
-    <circle cx="260" cy="200" r="46" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.4"/>
-  </g>
-
-  <!-- SUBTLE CORNER BADGES -->
-  <g font-family="'Montserrat', sans-serif" font-size="9" font-weight="700" letter-spacing="0.16em" text-anchor="middle">
-    <rect x="180" y="340" width="160" height="24" rx="12" fill="#003B53" fill-opacity="0.06"/>
-    <text x="260" y="356" fill="#003B53">CELESTIAL EQUILIBRIUM</text>
+              <!-- EXACT S4ART PUZZLE PIECE CONTAINER -->
+              <div class="heroart-col">
+                <div class="s4art-hero">
+                  <svg class="pzart" viewBox="0 0 382 382" role="img" aria-label="A board of pieces with one piece fitting exactly" style="display:block; width:100%; height:auto;">
+  <g transform="translate(-246 -136) scale(1.72)">
+    <path class="pz" d="M132.00 132.00 L173.30 132.00 C167.40 146.16 165.04 165.04 179.20 169.76 C191.00 174.48 191.00 174.48 202.80 169.76 C216.96 165.04 214.60 146.16 208.70 132.00 L250.00 132.00 L250.00 173.30 C264.16 167.40 283.04 165.04 287.76 179.20 C292.48 191.00 292.48 191.00 287.76 202.80 C283.04 216.96 264.16 214.60 250.00 208.70 L250.00 250.00 L208.70 250.00 C214.60 235.84 216.96 216.96 202.80 212.24 C191.00 207.52 191.00 207.52 179.20 212.24 C165.04 216.96 167.40 235.84 173.30 250.00 L132.00 250.00 L132.00 208.70 C117.84 214.60 98.96 216.96 94.24 202.80 C89.52 191.00 89.52 191.00 94.24 179.20 C98.96 165.04 117.84 167.40 132.00 173.30 L132.00 132.00 Z"/>
+    <path class="pzfit" d="M250.00 132.00 L291.30 132.00 C285.40 117.84 283.04 98.96 297.20 94.24 C309.00 89.52 309.00 89.52 320.80 94.24 C334.96 98.96 332.60 117.84 326.70 132.00 L368.00 132.00 L368.00 250.00 L326.70 250.00 C332.60 235.84 334.96 216.96 320.80 212.24 C309.00 207.52 309.00 207.52 297.20 212.24 C283.04 216.96 285.40 235.84 291.30 250.00 L250.00 250.00 L250.00 208.70 C264.16 214.60 283.04 216.96 287.76 202.80 C292.48 191.00 292.48 191.00 287.76 179.20 C283.04 165.04 264.16 167.40 250.00 173.30 L250.00 132.00 Z"/>
   </g>
 </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1179,7 +1048,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
               <div>
                 <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
                 <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
-                  Vector art creates a distinctive, custom agency feel without the visual clutter or maintenance of staff photography.
+                  The mark is 100% vector, perfectly sharp on all screens, and maintains identical brand DNA with the home page Section 4.
                 </p>
               </div>
               <div class="sec2-preview-card">
@@ -1193,20 +1062,20 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
     </section>
 
     <!-- =====================================================================
-         CONCEPT 07: MODERN SCALES OF EQUILIBRIUM (ARCHITECTURAL BALANCE)
+         CONCEPT 07: EXECUTIVE DARK PUZZLE FIT (GOLD KEY PIECE ON DEEP NAVY)
          ===================================================================== -->
     <section class="concept-frame" id="opt7">
       <div class="concept-header-bar">
         <div>
           <div class="concept-badge-row">
-            <span class="concept-num" style="background:#2E7D32;">CONCEPT 07</span>
-            <h2 class="concept-name">Modern Scales of Equilibrium • Architectural Balance</h2>
+            <span class="concept-num" style="background:#002231;">CONCEPT 07</span>
+            <h2 class="concept-name">The Executive Gold Interlock • Deep Navy Contrast</h2>
           </div>
           <p class="concept-desc" style="margin-top:8px;">
-            <strong>Type: SVG Art (Modernized Legal Iconography).</strong> Reimagines the traditional scales of justice as an ultra-modern architectural cantilever beam. Counterbalances "Growth Speed" on the left with "Legal Shield" on the right in 100% stable equilibrium.
+            <strong>Type: Signature Graphic Mark (Dark Ground).</strong> Adapts the interlocking puzzle mark to the deep navy ground (<code>#003B53</code>). The base board piece is rendered in translucent slate and the fitting key piece is rendered in radiant <strong>Equinox Day Gold</strong> (<code>#FFD457</code>). Tilted <code>-8deg</code>.
           </p>
         </div>
-        <span class="concept-type-tag" style="background:#E8F5E9; color:#2E7D32;">SVG Vector Art • Conceptual</span>
+        <span class="concept-type-tag" style="background:#003B53; color:#FFD457;">Dark Ground • Gold Key</span>
       </div>
 
       <div class="concept-canvas">
@@ -1215,270 +1084,38 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
             <div class="opt7-layout">
               <div>
                 <div class="eyebrowmark">
-                  <span class="ymrule"></span>
-                  <span class="ytext">Our Legal Model</span>
-                </div>
-                <h1 class="h1">
-                  Entrepreneurs Who Are <b>Also Experienced Business Attorneys</b>
-                </h1>
-                <p class="body">
-                  Unlike traditional law firms that slow down your deals with over-cautious disclaimers, we align risk tolerance with commercial opportunity—keeping your enterprise balanced at high velocity.
-                </p>
-                <div class="btnrow" style="margin-top:32px;">
-                  <a class="btn main" href="#"><span>Schedule a Consultation</span></a>
-                  <a class="btn outline" href="#"><span>Take Legal Health Check</span></a>
-                </div>
-              </div>
-
-              <!-- SVG ARTWORK CONTAINER -->
-              <div class="opt7-svgwrap">
-                <svg viewBox="0 0 520 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible;">
-  <defs>
-    <linearGradient id="beamGrad7" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#027CA1"/>
-      <stop offset="50%" stop-color="#003B53"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </linearGradient>
-    <linearGradient id="goldFulcrum7" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFE58F"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </linearGradient>
-    <filter id="plateShadow7" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#003B53" flood-opacity="0.14"/>
-    </filter>
-  </defs>
-
-  <!-- BASELINE HORIZON GRID -->
-  <g stroke="#93BCCD" stroke-opacity="0.3" stroke-width="1">
-    <line x1="40" y1="340" x2="480" y2="340"/>
-    <line x1="60" y1="320" x2="460" y2="320" stroke-dasharray="4 6"/>
-  </g>
-
-  <!-- FULCRUM PILLAR (STABILITY COLUMN) -->
-  <g filter="url(#plateShadow7)">
-    <polygon points="260,180 232,340 288,340" fill="#003B53"/>
-    <polygon points="260,180 248,340 288,340" fill="#002738"/>
-    <!-- Fulcrum Precision Pivot -->
-    <circle cx="260" cy="180" r="14" fill="url(#goldFulcrum7)" stroke="#ffffff" stroke-width="3"/>
-    <circle cx="260" cy="180" r="5" fill="#003B53"/>
-  </g>
-
-  <!-- CANTILEVER BALANCE BEAM (LEVEL) -->
-  <g filter="url(#plateShadow7)">
-    <rect x="70" y="174" width="380" height="12" rx="4" fill="url(#beamGrad7)"/>
-    <!-- Measurement Calibration Ticks -->
-    <g stroke="#ffffff" stroke-width="1" stroke-opacity="0.6">
-      <line x1="120" y1="174" x2="120" y2="180"/>
-      <line x1="160" y1="174" x2="160" y2="182"/>
-      <line x1="200" y1="174" x2="200" y2="180"/>
-      <line x1="320" y1="174" x2="320" y2="180"/>
-      <line x1="360" y1="174" x2="360" y2="182"/>
-      <line x1="400" y1="174" x2="400" y2="180"/>
-    </g>
-    <!-- Center Level Vane -->
-    <polygon points="260,166 254,174 266,174" fill="#FFD457"/>
-  </g>
-
-  <!-- LEFT SUSPENSION & PLATE: ENTREPRENEURIAL SPEED & GROWTH -->
-  <g>
-    <line x1="110" y1="186" x2="110" y2="246" stroke="#003B53" stroke-width="2"/>
-    <g filter="url(#plateShadow7)">
-      <!-- Suspension Plate -->
-      <path d="M 70 246 Q 110 262 150 246 Z" fill="#027CA1"/>
-      <!-- Growth Block -->
-      <rect x="85" y="210" width="50" height="36" rx="4" fill="#003B53" stroke="#027CA1" stroke-width="1.5"/>
-      <path d="M 98 232 L 108 220 L 114 226 L 122 216" fill="none" stroke="#FFD457" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <polygon points="122,216 116,216 122,222" fill="#FFD457"/>
-    </g>
-    <text x="110" y="280" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" fill="#003B53" text-anchor="middle" letter-spacing="0.08em">GROWTH SPEED</text>
-  </g>
-
-  <!-- RIGHT SUSPENSION & PLATE: PREVENTATIVE RISK SHIELD -->
-  <g>
-    <line x1="410" y1="186" x2="410" y2="246" stroke="#003B53" stroke-width="2"/>
-    <g filter="url(#plateShadow7)">
-      <!-- Suspension Plate -->
-      <path d="M 370 246 Q 410 262 450 246 Z" fill="#D98D00"/>
-      <!-- Shield Block -->
-      <rect x="385" y="210" width="50" height="36" rx="4" fill="#FFD457" stroke="#D98D00" stroke-width="1.5"/>
-      <path d="M 410 216 L 424 222 C 424 232 410 238 410 238 C 410 238 396 232 396 222 Z" fill="#003B53"/>
-    </g>
-    <text x="410" y="280" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" fill="#003B53" text-anchor="middle" letter-spacing="0.08em">LEGAL SHIELD</text>
-  </g>
-
-  <!-- LEVEL FACTOR CHIP -->
-  <g font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" text-anchor="middle">
-    <rect x="185" y="70" width="150" height="28" rx="14" fill="#003B53" fill-opacity="0.08"/>
-    <circle cx="204" cy="84" r="4" fill="#2E7D32"/>
-    <text x="264" y="88" fill="#003B53" letter-spacing="0.1em">PERFECT BALANCE</text>
-  </g>
-</svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BREADCRUMB PREVIEW -->
-        <div class="crumb-strip">
-          <div class="wrap">
-            <nav class="crumb-bar">
-              <span class="crumb-prefix">YOU ARE HERE:</span>
-              <a href="#">Home</a>
-              <span class="sep">&raquo;</span>
-              <span class="here">About Us</span>
-            </nav>
-          </div>
-        </div>
-
-        <!-- SIMULATED CONTENT FLOW BELOW -->
-        <div class="sec2-preview-box">
-          <div class="wrap">
-            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
-            <div class="sec2-preview-inner">
-              <div>
-                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
-                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
-                  Directly communicates the core identity of the name Equinox (balance between speed and security) before the user reads a single paragraph.
-                </p>
-              </div>
-              <div class="sec2-preview-card">
-                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
-                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         CONCEPT 08: EMBEDDED LEGAL POD & SHIELD MATRIX (CORPORATE OS)
-         ===================================================================== -->
-    <section class="concept-frame" id="opt8">
-      <div class="concept-header-bar">
-        <div>
-          <div class="concept-badge-row">
-            <span class="concept-num" style="background:#003B53;">CONCEPT 08</span>
-            <h2 class="concept-name">Embedded Legal Pod &amp; Shield Matrix • Connected Corporate OS</h2>
-          </div>
-          <p class="concept-desc" style="margin-top:8px;">
-            <strong>Type: SVG Art (Executive System Network).</strong> Renders a glowing corporate defense matrix. The central Equinox Legal Pod connects to 5 operational nodes (Commercial MSAs, Governance, Employment, IP, Capital) within a multifaceted protective vector shield.
-          </p>
-        </div>
-        <span class="concept-type-tag" style="background:#002738; color:#FFD457;">Dark Executive SVG • High Tech</span>
-      </div>
-
-      <div class="concept-canvas">
-        <div class="opt8-hero">
-          <div class="wrap">
-            <div class="opt8-layout">
-              <div>
-                <div class="eyebrowmark">
                   <span class="ymrule" style="background:#FFD457;"></span>
-                  <span class="ytext">The Pod Architecture</span>
+                  <span class="ytext">About Equinox</span>
                 </div>
                 <h1 class="h1">
-                  A Fractional General Counsel <b>Embedded in Your Operating Cadence</b>
+                  The Missing Strategic Piece in <b>Your Executive Leadership Team</b>
                 </h1>
                 <p class="body">
-                  Rather than billing you for every telephone inquiry, your Equinox pod integrates seamlessly across your contracts, operations, governance, and equity decisions under one predictable retainer.
+                  Growing companies navigate high-stakes vendor agreements, key employment contracts, and financing rounds every week. Equinox embeds dedicated corporate counsel directly into your rhythm under one fixed monthly retainer.
                 </p>
-                <div class="btnrow" style="margin-top:32px;">
-                  <a class="btn gold" href="#"><span>Book a Consultation</span></a>
-                  <a class="btn white-ghost" href="#"><span>View Service Tiers</span></a>
+                <div class="btnrow" style="margin-top:34px;">
+                  <a class="btn gold" href="#"><span>Schedule a Consultation</span></a>
+                  <a class="btn white-ghost" href="#"><span>Take Legal Health Check</span></a>
                 </div>
               </div>
 
-              <!-- SVG ARTWORK CONTAINER -->
-              <div class="opt8-svgwrap">
-                <svg viewBox="0 0 520 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible;">
-  <defs>
-    <linearGradient id="shieldGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFD457"/>
-      <stop offset="100%" stop-color="#027CA1"/>
-    </linearGradient>
-    <radialGradient id="centerCore8" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFD457"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </radialGradient>
-    <filter id="glowFilter8" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-  </defs>
-
-  <!-- SHIELD PERIMETER -->
-  <path d="M 260 30 L 440 85 C 440 240 260 360 260 360 C 260 360 80 240 80 85 Z" 
-        fill="rgba(0,59,83,0.35)" stroke="url(#shieldGrad8)" stroke-width="2.5" stroke-dasharray="12 4 4 4"/>
-
-  <!-- INNER CONCENTRIC SHIELD -->
-  <path d="M 260 55 L 415 105 C 415 230 260 330 260 330 C 260 330 105 230 105 105 Z" 
-        fill="rgba(0,39,56,0.5)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
-
-  <!-- NETWORK ROUTING PATHS (FROM SATELLITES TO CENTRAL GC HUB) -->
-  <g stroke="#93BCCD" stroke-width="1.8" stroke-dasharray="4 4" stroke-opacity="0.8">
-    <line x1="160" y1="120" x2="260" y2="195"/>
-    <line x1="360" y1="120" x2="260" y2="195"/>
-    <line x1="390" y1="230" x2="260" y2="195"/>
-    <line x1="260" y1="290" x2="260" y2="195"/>
-    <line x1="130" y1="230" x2="260" y2="195"/>
-  </g>
-
-  <!-- SATELLITE NODES -->
-  <!-- Node 1: Commercial MSAs -->
-  <g transform="translate(160, 120)">
-    <circle r="22" fill="#002738" stroke="#FFD457" stroke-width="2"/>
-    <path d="M -8 -4 L 8 -4 M -8 0 L 8 0 M -8 4 L 4 4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
-    <text y="34" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">MSAs &amp; Sales</text>
-  </g>
-
-  <!-- Node 2: Corporate Governance -->
-  <g transform="translate(360, 120)">
-    <circle r="22" fill="#002738" stroke="#027CA1" stroke-width="2"/>
-    <rect x="-7" y="-8" width="14" height="16" rx="2" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-    <line x1="-3" y1="-3" x2="3" y2="-3" stroke="#ffffff" stroke-width="1.4"/>
-    <line x1="-3" y1="1" x2="3" y2="1" stroke="#ffffff" stroke-width="1.4"/>
-    <text y="34" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">Governance</text>
-  </g>
-
-  <!-- Node 3: Employment & Equity -->
-  <g transform="translate(390, 230)">
-    <circle r="22" fill="#002738" stroke="#FFD457" stroke-width="2"/>
-    <circle cx="0" cy="-5" r="4.5" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-    <path d="M -7 6 C -7 1 -2 1 0 1 C 2 1 7 1 7 6" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-    <text y="34" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">People &amp; Equity</text>
-  </g>
-
-  <!-- Node 4: IP & Tech Assets -->
-  <g transform="translate(260, 290)">
-    <circle r="22" fill="#002738" stroke="#027CA1" stroke-width="2"/>
-    <circle cx="0" cy="0" r="7" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-    <text x="0" y="3.5" font-family="'Montserrat', sans-serif" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">IP</text>
-    <text y="34" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">IP &amp; Brand</text>
-  </g>
-
-  <!-- Node 5: M&A / Growth Capital -->
-  <g transform="translate(130, 230)">
-    <circle r="22" fill="#002738" stroke="#027CA1" stroke-width="2"/>
-    <path d="M -6 4 L 0 -4 L 6 0 L 10 -6" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
-    <text y="34" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">Capital &amp; M&amp;A</text>
-  </g>
-
-  <!-- CENTRAL CORE: EQUINOX FRACTIONAL GC -->
-  <g transform="translate(260, 195)" filter="url(#glowFilter8)">
-    <circle r="36" fill="url(#centerCore8)" stroke="#ffffff" stroke-width="3"/>
-    <circle r="28" fill="#003B53"/>
-    <text y="-2" font-family="'Montserrat', sans-serif" font-size="10" font-weight="800" fill="#FFD457" text-anchor="middle" letter-spacing="0.1em">EQUINOX</text>
-    <text y="11" font-family="'Montserrat', sans-serif" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.06em">LEGAL POD</text>
+              <!-- DARK GROUND GOLD PUZZLE MARK -->
+              <div class="heroart-col">
+                <div class="s4art-hero">
+                  <svg class="pzart" viewBox="0 0 382 382" role="img" aria-label="A board of pieces with one gold piece fitting exactly" style="display:block; width:100%; height:auto;">
+  <g transform="translate(-246 -136) scale(1.72)">
+    <path class="pz-dark" d="M132.00 132.00 L173.30 132.00 C167.40 146.16 165.04 165.04 179.20 169.76 C191.00 174.48 191.00 174.48 202.80 169.76 C216.96 165.04 214.60 146.16 208.70 132.00 L250.00 132.00 L250.00 173.30 C264.16 167.40 283.04 165.04 287.76 179.20 C292.48 191.00 292.48 191.00 287.76 202.80 C283.04 216.96 264.16 214.60 250.00 208.70 L250.00 250.00 L208.70 250.00 C214.60 235.84 216.96 216.96 202.80 212.24 C191.00 207.52 191.00 207.52 179.20 212.24 C165.04 216.96 167.40 235.84 173.30 250.00 L132.00 250.00 L132.00 208.70 C117.84 214.60 98.96 216.96 94.24 202.80 C89.52 191.00 89.52 191.00 94.24 179.20 C98.96 165.04 117.84 167.40 132.00 173.30 L132.00 132.00 Z"/>
+    <path class="pzfit-gold" d="M250.00 132.00 L291.30 132.00 C285.40 117.84 283.04 98.96 297.20 94.24 C309.00 89.52 309.00 89.52 320.80 94.24 C334.96 98.96 332.60 117.84 326.70 132.00 L368.00 132.00 L368.00 250.00 L326.70 250.00 C332.60 235.84 334.96 216.96 320.80 212.24 C309.00 207.52 309.00 207.52 297.20 212.24 C283.04 216.96 285.40 235.84 291.30 250.00 L250.00 250.00 L250.00 208.70 C264.16 214.60 283.04 216.96 287.76 202.80 C292.48 191.00 292.48 191.00 287.76 179.20 C283.04 165.04 264.16 167.40 250.00 173.30 L250.00 132.00 Z"/>
   </g>
 </svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- BREADCRUMB PREVIEW (DARK ALIGNED) -->
-        <div class="crumb-strip" style="background:#001E2B; border-color:rgba(255,255,255,0.08);">
+        <div class="crumb-strip" style="background:#001A26; border-color:rgba(255,255,255,0.08);">
           <div class="wrap">
             <nav class="crumb-bar" style="color:#829BA6;">
               <span class="crumb-prefix" style="color:#829BA6;">YOU ARE HERE:</span>
@@ -1497,7 +1134,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
               <div>
                 <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
                 <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
-                  Visually proves that Equinox is an integrated operational asset, not an external law firm that bills by the minute.
+                  A magnificent corporate chapter opener. The gold key piece immediately communicates that Equinox provides the missing solution.
                 </p>
               </div>
               <div class="sec2-preview-card">
@@ -1511,117 +1148,58 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
     </section>
 
     <!-- =====================================================================
-         CONCEPT 09: STRATEGIC BLUEPRINT & BEDROCK FOUNDATION (ISOMETRIC WIREFRAME)
+         CONCEPT 08: THE 8-SECTOR RADIAL WHEEL (.HCART FROM INDEX.HTML)
          ===================================================================== -->
-    <section class="concept-frame" id="opt9">
+    <section class="concept-frame" id="opt8">
       <div class="concept-header-bar">
         <div>
           <div class="concept-badge-row">
-            <span class="concept-num" style="background:#0B2535;">CONCEPT 09</span>
-            <h2 class="concept-name">The Strategic Blueprint • Isometric Enterprise Bedrock</h2>
+            <span class="concept-num" style="background:#027CA1;">CONCEPT 08</span>
+            <h2 class="concept-name">The 8-Sector Health Check Wheel • Holistic Alignment</h2>
           </div>
           <p class="concept-desc" style="margin-top:8px;">
-            <strong>Type: SVG Art (Architectural Wireframe).</strong> Visualizes "Legal Problems are Easier to Prevent than Repair". A 3D isometric blueprint depicting a towering corporate enterprise resting solidly upon reinforced preventative legal bedrock foundations.
+            <strong>Type: Equinox Signature Graphic Mark (.hcart).</strong> Uses the 8-segment radial dial from <code>index.html</code> (Section 11). Alternating curved wedges in deep navy (<code>#003B53</code>) and light slate (<code>#E7EDF0</code>) surrounding an inner gold circle (<code>#FFD457</code>). Tilted <code>-8deg</code>.
           </p>
         </div>
-        <span class="concept-type-tag" style="background:#0F3348; color:#93BCCD;">Blueprint Schematic • Architectural</span>
+        <span class="concept-type-tag" style="background:#FFF9E6; color:#B45309;">Exact Index.html Wheel</span>
       </div>
 
       <div class="concept-canvas">
-        <div class="opt9-hero">
+        <div class="opt8-hero">
           <div class="wrap">
-            <div class="opt9-layout">
+            <div class="opt8-layout">
               <div>
                 <div class="eyebrowmark">
-                  <span class="ymrule" style="background:#FFD457;"></span>
-                  <span class="ytext">Preventative Architecture</span>
+                  <span class="ymrule"></span>
+                  <span class="ytext">Practice Area Depth</span>
                 </div>
                 <h1 class="h1">
-                  Legal Problems are <b>Easier to Prevent than Repair</b>
+                  Proactive Legal Coverage Across <b>Your Entire Enterprise</b>
                 </h1>
                 <p class="body">
-                  Just like a skyscraper requires reinforced engineering foundations to reach new heights, an ambitious enterprise requires structural legal groundwork before scaling revenue and raising capital.
+                  Just like your primary care physician manages your complete physical health, Equinox oversees your company's full legal posture—from everyday contracts and employment to governance and intellectual property.
                 </p>
                 <div class="btnrow" style="margin-top:32px;">
-                  <a class="btn gold" href="#"><span>Book a Foundation Audit</span></a>
-                  <a class="btn white-ghost" href="#"><span>Read Case Studies</span></a>
+                  <a class="btn main" href="#"><span>Book a Consultation</span></a>
+                  <a class="btn outline" href="#"><span>Take Legal Health Check</span></a>
                 </div>
               </div>
 
-              <!-- SVG ARTWORK CONTAINER -->
-              <div class="opt9-svgwrap">
-                <svg viewBox="0 0 520 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible;">
-  <defs>
-    <linearGradient id="blueTowerGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#027CA1" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#003B53" stop-opacity="0.4"/>
-    </linearGradient>
-    <linearGradient id="goldFoundGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFD457"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </linearGradient>
-  </defs>
-
-  <!-- BLUEPRINT BACKGROUND GRID LINES -->
-  <g stroke="#93BCCD" stroke-opacity="0.18" stroke-width="1">
-    <line x1="60" y1="40" x2="60" y2="360"/>
-    <line x1="160" y1="40" x2="160" y2="360"/>
-    <line x1="260" y1="40" x2="260" y2="360"/>
-    <line x1="360" y1="40" x2="360" y2="360"/>
-    <line x1="460" y1="40" x2="460" y2="360"/>
-    <line x1="40" y1="100" x2="480" y2="100"/>
-    <line x1="40" y1="200" x2="480" y2="200"/>
-    <line x1="40" y1="300" x2="480" y2="300"/>
-  </g>
-
-  <!-- ISOMETRIC ENTERPRISE TOWER (RISING HIGH) -->
-  <!-- Left Facet -->
-  <polygon points="260,60 170,110 170,270 260,220" fill="url(#blueTowerGrad9)" stroke="#93BCCD" stroke-width="1.5"/>
-  <!-- Right Facet -->
-  <polygon points="260,60 350,110 350,270 260,220" fill="rgba(0,59,83,0.6)" stroke="#93BCCD" stroke-width="1.5"/>
-  <!-- Roof Top -->
-  <polygon points="260,40 170,90 260,60 350,90" fill="#027CA1" stroke="#FFD457" stroke-width="2"/>
-
-  <!-- TOWER WIREFRAME WINDOW GRIDS -->
-  <g stroke="#93BCCD" stroke-width="1" stroke-opacity="0.5">
-    <line x1="200" y1="93" x2="200" y2="253"/>
-    <line x1="230" y1="77" x2="230" y2="237"/>
-    <line x1="290" y1="77" x2="290" y2="237"/>
-    <line x1="320" y1="93" x2="320" y2="253"/>
-    <!-- Horizontal floor levels -->
-    <line x1="170" y1="150" x2="260" y2="100"/>
-    <line x1="260" y1="100" x2="350" y2="150"/>
-    <line x1="170" y1="190" x2="260" y2="140"/>
-    <line x1="260" y1="140" x2="350" y2="190"/>
-    <line x1="170" y1="230" x2="260" y2="180"/>
-    <line x1="260" y1="180" x2="350" y2="230"/>
-  </g>
-
-  <!-- SOLID REINFORCED BEDROCK FOUNDATION BLOCKS -->
-  <!-- Foundation Base Slab -->
-  <polygon points="260,240 130,310 260,375 390,310" fill="#001824" stroke="#FFD457" stroke-width="2.5"/>
-  <!-- Foundation Front Left -->
-  <polygon points="130,310 260,375 260,385 130,320" fill="#002231" stroke="#FFD457" stroke-width="1"/>
-  <!-- Foundation Front Right -->
-  <polygon points="260,375 390,310 390,320 260,385" fill="#00111A" stroke="#FFD457" stroke-width="1"/>
-
-  <!-- FOUNDATION PILLAR LABELS -->
-  <g font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#FFD457" text-anchor="middle">
-    <text x="210" y="325">PREVENTATIVE</text>
-    <text x="310" y="325">FOUNDATION</text>
-  </g>
-
-  <!-- SCHEMATIC DIMENSION CALLOUT ARROWS -->
-  <g stroke="#FFD457" stroke-width="1.2">
-    <line x1="390" y1="110" x2="450" y2="110"/>
-    <circle cx="390" cy="110" r="3" fill="#FFD457"/>
-    <line x1="450" y1="110" x2="450" y2="140"/>
-  </g>
-  <text x="450" y="160" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">
-    <tspan x="445" dy="0">ENTERPRISE</tspan>
-    <tspan x="445" dy="14">VELOCITY</tspan>
-  </text>
+              <!-- EXACT HCART RADIAL WHEEL -->
+              <div class="heroart-col">
+                <div class="hcart-hero">
+                  <svg class="hcart" viewBox="0 0 260 260" role="img" aria-label="8-segment legal health check wheel mark" style="display:block; width:100%; height:auto;">
+  <path d="M134.7 26.1 A104 104 0 0 1 200.2 53.2 L171.8 84.2 A62 62 0 0 0 132.8 68.1 Z" fill="#003B53"/>
+  <path d="M206.8 59.8 A104 104 0 0 1 233.9 125.3 L191.9 127.2 A62 62 0 0 0 175.8 88.2 Z" fill="#003B53"/>
+  <path d="M233.9 134.7 A104 104 0 0 1 206.8 200.2 L175.8 171.8 A62 62 0 0 0 191.9 132.8 Z" fill="#E7EDF0"/>
+  <path d="M200.2 206.8 A104 104 0 0 1 134.7 233.9 L132.8 191.9 A62 62 0 0 0 171.8 175.8 Z" fill="#003B53"/>
+  <path d="M125.3 233.9 A104 104 0 0 1 59.8 206.8 L88.2 175.8 A62 62 0 0 0 127.2 191.9 Z" fill="#003B53"/>
+  <path d="M53.2 200.2 A104 104 0 0 1 26.1 134.7 L68.1 132.8 A62 62 0 0 0 84.2 171.8 Z" fill="#E7EDF0"/>
+  <path d="M26.1 125.3 A104 104 0 0 1 53.2 59.8 L84.2 88.2 A62 62 0 0 0 68.1 127.2 Z" fill="#003B53"/>
+  <path d="M59.8 53.2 A104 104 0 0 1 125.3 26.1 L127.2 68.1 A62 62 0 0 0 88.2 84.2 Z" fill="#003B53"/>
+  <circle cx="130" cy="130" r="30" fill="none" stroke="#FFD457" stroke-width="7"/>
 </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1647,7 +1225,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
               <div>
                 <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
                 <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
-                  Directly appeals to engineers, SaaS founders, and corporate leaders who value architectural integrity and proactive risk management.
+                  Reinforces the 8 core areas of business law evaluated in the Legal Health Assessment, creating perfect visual consistency.
                 </p>
               </div>
               <div class="sec2-preview-card">
@@ -1661,20 +1239,109 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
     </section>
 
     <!-- =====================================================================
-         CONCEPT 10: GROWTH TRAJECTORY & REGULATORY HORIZON (RADAR FORESIGHT)
+         CONCEPT 09: EQUINOX SIGNATURE DUAL RINGS (PLANETARY BRAND MOTIF)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt9">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num" style="background:#D98D00;">CONCEPT 09</span>
+            <h2 class="concept-name">The Equinox Dual Rings • Brand Celestial Alignment</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: Signature Graphic Mark (Brand Geometry).</strong> Renders the nested Equinox dual rings in the exact flat graphic style of the site marks. Features the outer Day Gold ring, the Night Navy ring, and the central equal day/night core, tilted <code>-8deg</code>.
+          </p>
+        </div>
+        <span class="concept-type-tag" style="background:#FEF3C7; color:#B45309;">Brand Mark Motif</span>
+      </div>
+
+      <div class="concept-canvas">
+        <div class="opt9-hero">
+          <div class="wrap">
+            <div class="opt9-layout">
+              <div>
+                <div class="eyebrowmark">
+                  <span class="ymrule"></span>
+                  <span class="ytext">Our Legal Model</span>
+                </div>
+                <h1 class="h1">
+                  Bringing Business Velocity &amp; Legal Strategy <b>into Perfect Alignment</b>
+                </h1>
+                <p class="body">
+                  We call ourselves Equinox because we serve our clients by bringing law and entrepreneurial expertise into equilibrium. We remove the barriers of costs, response time, and complexity.
+                </p>
+                <div class="btnrow" style="margin-top:32px;">
+                  <a class="btn main" href="#"><span>Book a Consultation</span></a>
+                  <a class="btn outline" href="#"><span>Explore Our Model</span></a>
+                </div>
+              </div>
+
+              <!-- EQUINOX DUAL RINGS GRAPHIC MARK -->
+              <div class="heroart-col">
+                <div class="eqring-hero">
+                  <svg class="eqringart" viewBox="0 0 260 260" role="img" aria-label="Equinox brand rings alignment mark" style="display:block; width:100%; height:auto;">
+  <circle cx="130" cy="130" r="112" fill="none" stroke="#FFD457" stroke-width="3"/>
+  <circle cx="138" cy="138" r="102" fill="none" stroke="#003B53" stroke-width="4.5" stroke-opacity="0.8"/>
+  <circle cx="124" cy="124" r="88" fill="#E7EDF0"/>
+  <path d="M 124 36 A 88 88 0 0 1 124 212 A 88 64 0 0 0 124 36 Z" fill="#003B53"/>
+  <circle cx="124" cy="124" r="88" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="218" cy="74" r="8" fill="#FFD457" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="50" cy="178" r="6" fill="#003B53" stroke="#ffffff" stroke-width="2"/>
+</svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW -->
+        <div class="crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  Directly incorporates the firm's astronomical logo geometry as a flat decorative watermark.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONCEPT 10: FOUNDATION KEYSTONE INTERLOCK (PREVENTATIVE ARCHITECTURE)
          ===================================================================== -->
     <section class="concept-frame" id="opt10">
       <div class="concept-header-bar">
         <div>
           <div class="concept-badge-row">
-            <span class="concept-num" style="background:#D98D00;">CONCEPT 10</span>
-            <h2 class="concept-name">The Growth Trajectory &amp; Radar • Predictive Foresight</h2>
+            <span class="concept-num" style="background:#334D58;">CONCEPT 10</span>
+            <h2 class="concept-name">The Foundation Keystone • Interlocking Bedrock Masonry</h2>
           </div>
           <p class="concept-desc" style="margin-top:8px;">
-            <strong>Type: SVG Art (Vector Infographic Trajectory).</strong> Features an upward exponential growth trajectory moving across corporate milestones (Formation → Series / Scale → Mid-Market → Exit/M&amp;A) with predictive foresight radar sweeping ahead to defuse risks.
+            <strong>Type: Signature Graphic Mark (Bedrock Anchor).</strong> A precision architectural keystone mark crafted with the exact line weight and <code>-8deg</code> tilt of the site's decorative art. Three interlocking foundation blocks (<code>#003B53</code>, <code>#E7EDF0</code>, <code>#FFD457</code>) locked in place.
           </p>
         </div>
-        <span class="concept-type-tag" style="background:#FEF3C7; color:#B45309;">Vector Trajectory • Growth-Focused</span>
+        <span class="concept-type-tag" style="background:#E2EBF0; color:#003B53;">Bedrock Keystone</span>
       </div>
 
       <div class="concept-canvas">
@@ -1684,90 +1351,36 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
               <div>
                 <div class="eyebrowmark">
                   <span class="ymrule"></span>
-                  <span class="ytext">Long-Term Value Creation</span>
+                  <span class="ytext">Preventative Architecture</span>
                 </div>
                 <h1 class="h1">
-                  Guiding Your Enterprise from <b>Formation to Successful Exit</b>
+                  Legal Problems are <b>Easier to Prevent than Repair</b>
                 </h1>
                 <p class="body">
-                  We don't just react to disputes; we anticipate the milestones of your corporate lifecycle. Our proactive legal foresight protects founder equity and positions your company for maximum enterprise valuation.
+                  Every solid enterprise is anchored by unshakeable contracts, clean equity structures, and proactive governance. Equinox builds and maintains your legal bedrock before costly disputes ever arise.
                 </p>
                 <div class="btnrow" style="margin-top:32px;">
-                  <a class="btn main" href="#"><span>Schedule a Consultation</span></a>
-                  <a class="btn outline" href="#"><span>Explore Our Practice Areas</span></a>
+                  <a class="btn main" href="#"><span>Book a Foundation Audit</span></a>
+                  <a class="btn outline" href="#"><span>View Client Stories</span></a>
                 </div>
               </div>
 
-              <!-- SVG ARTWORK CONTAINER -->
-              <div class="opt10-svgwrap">
-                <svg viewBox="0 0 520 400" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible;">
-  <defs>
-    <linearGradient id="curveGrad10" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#027CA1"/>
-      <stop offset="60%" stop-color="#FFD457"/>
-      <stop offset="100%" stop-color="#D98D00"/>
-    </linearGradient>
-    <radialGradient id="radarCone10" cx="100%" cy="0%" r="100%">
-      <stop offset="0%" stop-color="#FFD457" stop-opacity="0.3"/>
-      <stop offset="70%" stop-color="#027CA1" stop-opacity="0.05"/>
-      <stop offset="100%" stop-color="#027CA1" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="glow10" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#FFD457" flood-opacity="0.4"/>
-    </filter>
-  </defs>
-
-  <!-- RADAR SWEEP HORIZON CONE (FORESIGHT RADAR) -->
-  <path d="M 60 330 L 460 70 L 460 330 Z" fill="url(#radarCone10)"/>
-
-  <!-- AXIS BASELINE & GRID -->
-  <g stroke="#93BCCD" stroke-opacity="0.3" stroke-width="1">
-    <line x1="50" y1="330" x2="470" y2="330"/>
-    <line x1="50" y1="50" x2="50" y2="330"/>
-    <!-- Horizon lines -->
-    <line x1="50" y1="260" x2="470" y2="260" stroke-dasharray="3 5"/>
-    <line x1="50" y1="190" x2="470" y2="190" stroke-dasharray="3 5"/>
-    <line x1="50" y1="120" x2="470" y2="120" stroke-dasharray="3 5"/>
-  </g>
-
-  <!-- EXPONENTIAL ASCENDING GROWTH TRAJECTORY -->
-  <path d="M 60 330 C 180 320 280 250 450 75" 
-        fill="none" stroke="url(#curveGrad10)" stroke-width="4.5" stroke-linecap="round" filter="url(#glow10)"/>
-
-  <!-- TRAJECTORY MILESTONE NODES -->
-  <!-- Milestone 1: Formation -->
-  <g transform="translate(130, 322)">
-    <circle r="7" fill="#003B53" stroke="#ffffff" stroke-width="2"/>
-    <text y="24" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#003B53" text-anchor="middle">Formation</text>
-  </g>
-
-  <!-- Milestone 2: Scaling -->
-  <g transform="translate(240, 280)">
-    <circle r="7" fill="#027CA1" stroke="#ffffff" stroke-width="2"/>
-    <text y="24" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#003B53" text-anchor="middle">Series / Scale</text>
-  </g>
-
-  <!-- Milestone 3: Expansion -->
-  <g transform="translate(350, 190)">
-    <circle r="8" fill="#FFD457" stroke="#003B53" stroke-width="2"/>
-    <text y="24" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#003B53" text-anchor="middle">Mid-Market</text>
-  </g>
-
-  <!-- Milestone 4: Horizon Target -->
-  <g transform="translate(450, 75)" filter="url(#glow10)">
-    <circle r="12" fill="#FFD457" stroke="#003B53" stroke-width="3"/>
-    <circle r="5" fill="#003B53"/>
-    <!-- Radiating rings -->
-    <circle r="22" fill="none" stroke="#FFD457" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text y="-20" font-family="'Montserrat', sans-serif" font-size="11" font-weight="800" fill="#003B53" text-anchor="middle">EXIT / M&amp;A</text>
-  </g>
-
-  <!-- FORESIGHT CALLOUT CHIP -->
-  <g font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700">
-    <rect x="230" y="90" width="160" height="28" rx="14" fill="#003B53"/>
-    <text x="310" y="108" fill="#FFD457" text-anchor="middle" letter-spacing="0.08em">PREDICTIVE FORESIGHT</text>
+              <!-- KEYSTONE GRAPHIC MARK -->
+              <div class="heroart-col">
+                <div class="ksart-hero">
+                  <svg class="ksart" viewBox="0 0 260 260" role="img" aria-label="Interlocking keystone foundation mark" style="display:block; width:100%; height:auto;">
+  <g transform="translate(130 130) rotate(-8) translate(-130 -130)">
+    <!-- Bedrock Base Left -->
+    <path d="M 30 140 L 120 140 L 120 230 L 30 230 Z" fill="#E7EDF0" stroke="#ffffff" stroke-width="4"/>
+    <!-- Bedrock Base Right -->
+    <path d="M 128 140 L 230 140 L 230 230 L 128 230 Z" fill="#003B53" stroke="#ffffff" stroke-width="4"/>
+    <!-- Keystone Fitted Top Center -->
+    <path d="M 75 35 L 185 35 L 205 132 L 55 132 Z" fill="#003B53" stroke="#ffffff" stroke-width="4"/>
+    <!-- Core Gold Anchor Accent in Keystone -->
+    <polygon points="130,55 160,110 100,110" fill="#FFD457"/>
   </g>
 </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -1793,7 +1406,7 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
               <div>
                 <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
                 <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
-                  Energizes founders with a clear visual story of scaling, giving confidence that Equinox scales alongside them through every funding round or acquisition.
+                  Visually reinforces the cornerstone baseplate motif introduced in Section 4 of the home page.
                 </p>
               </div>
               <div class="sec2-preview-card">
@@ -1918,85 +1531,85 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
           <tr>
             <td>
               <strong>Concept 06</strong><br>
-              <span style="color:#027CA1; font-weight:600;">Celestial Equinox Rings</span>
+              <span style="color:#003B53; font-weight:600;">Puzzle Interlock (.s4art)</span>
             </td>
             <td>
-              <span class="kadence-pill" style="background:#E0F2FE; color:#0369A1;">Bespoke SVG Art</span><br>
-              <small>Planetary brand geometry</small>
+              <span class="kadence-pill" style="background:#EBF2F5; color:#003B53;">Exact Site Graphic Mark</span><br>
+              <small>Two puzzle pieces (-8° tilt)</small>
             </td>
-            <td>Prestigious, mathematical precision, proprietary brand alignment</td>
-            <td>Scales vector smoothly on all screen sizes with zero pixelation</td>
+            <td>Identical DNA to Home Page Section 4; fits exactly beside heading</td>
+            <td>100% vector; scales cleanly on mobile with zero photo cropping</td>
             <td>
-              <code>Kadence Row Layout</code> (2-col 55/45)<br>
-              Right Column: <code>Custom HTML / SVG Block</code> inside Kadence Section card
+              <code>Kadence Row Layout</code> (2-col 70/30)<br>
+              Right: <code>Custom HTML Block</code> (with <code>.s4art</code> &amp; <code>.pzart</code>)
             </td>
           </tr>
 
           <tr>
             <td>
               <strong>Concept 07</strong><br>
-              <span style="color:#2E7D32; font-weight:600;">Modern Scales of Equilibrium</span>
+              <span style="color:#002231; font-weight:600;">Gold Key Fit (Deep Navy)</span>
             </td>
             <td>
-              <span class="kadence-pill" style="background:#E8F5E9; color:#2E7D32;">Bespoke SVG Art</span><br>
-              <small>Architectural scales of law</small>
+              <span class="kadence-pill" style="background:#003B53; color:#FFD457;">Dark Ground Mark</span><br>
+              <small>Gold piece on navy (-8°)</small>
             </td>
-            <td>Reinvented legal symbolism, commercial balance, high confidence</td>
-            <td>Centered vector presentation on mobile; perfect clarity</td>
+            <td>High contrast, executive prestige; the "missing piece" metaphor</td>
+            <td>Luminous gold contrast pops on OLED and mobile screens</td>
             <td>
-              <code>Kadence Row Layout</code> (BG: <code>#F7FAF9</code>)<br>
-              Right Column: <code>Custom HTML / SVG Block</code>
+              <code>Kadence Row Layout</code> (BG: Deep Navy)<br>
+              Right: <code>Custom HTML Block</code> with <code>.pzfit-gold</code>
             </td>
           </tr>
 
           <tr>
             <td>
               <strong>Concept 08</strong><br>
-              <span style="color:#003B53; font-weight:600;">Embedded Pod &amp; Shield Matrix</span>
+              <span style="color:#027CA1; font-weight:600;">8-Sector Radial Wheel (.hcart)</span>
             </td>
             <td>
-              <span class="kadence-pill" style="background:#002738; color:#FFD457;">Bespoke SVG Art</span><br>
-              <small>Corporate OS network shield</small>
+              <span class="kadence-pill" style="background:#FFF9E6; color:#B45309;">Exact Site Graphic Mark</span><br>
+              <small>8-sector gear dial (-8° tilt)</small>
             </td>
-            <td>Modern tech-forward, corporate governance architecture, high authority</td>
-            <td>Stacks cleanly; glowing vectors pop against dark mobile screen</td>
+            <td>Holistic 360-degree legal health; directly echoes Section 11</td>
+            <td>Compact circular footprint fits cleanly beside or under heading</td>
             <td>
-              <code>Kadence Row Layout</code> (BG: Deep Navy <code>#002B3D</code>)<br>
-              Right: <code>Section</code> (Glassmorphic) + SVG Block
+              <code>Kadence Row Layout</code> (BG: Warm Sand)<br>
+              Right: <code>Custom HTML Block</code> with <code>.hcart</code>
             </td>
           </tr>
 
           <tr>
             <td>
               <strong>Concept 09</strong><br>
-              <span style="color:#0B2535; font-weight:600;">The Strategic Blueprint</span>
+              <span style="color:#D98D00; font-weight:600;">Equinox Dual Rings (.eqring)</span>
             </td>
             <td>
-              <span class="kadence-pill" style="background:#0F3348; color:#93BCCD;">Bespoke SVG Art</span><br>
-              <small>Isometric bedrock blueprint</small>
+              <span class="kadence-pill" style="background:#FEF3C7; color:#B45309;">Brand Geometry Mark</span><br>
+              <small>Nested crescent rings (-8°)</small>
             </td>
-            <td>Direct metaphor for preventative law, structural solidity</td>
-            <td>Crisp wireframe scaling; technical appeal</td>
+            <td>Proprietary brand watermark; day/night balance</td>
+            <td>Very light, unobtrusive decorative presence</td>
             <td>
-              <code>Kadence Row Layout</code> (BG: Blueprint Navy)<br>
-              Right: <code>Custom HTML / SVG Block</code>
+              <code>Kadence Row Layout</code> (BG: Light Gradient)<br>
+              Right: <code>Custom HTML Block</code> with <code>.eqringart</code>
             </td>
           </tr>
 
           <tr>
             <td>
               <strong>Concept 10</strong><br>
-              <span style="color:#B45309; font-weight:600;">Growth Trajectory &amp; Radar</span>
+              <span style="color:#334D58; font-weight:600;">Foundation Keystone (.ksart)</span>
             </td>
             <td>
-              <span class="kadence-pill" style="background:#FEF3C7; color:#B45309;">Bespoke SVG Art</span><br>
-              <small>Ascending milestone trajectory</small>
+              <span class="kadence-pill" style="background:#E2EBF0; color:#003B53;">Architectural Mark</span><br>
+              <small>3 bedrock stones (-8° tilt)</small>
             </td>
-            <td>Dynamic, founder-centric, proactive foresight, long-term valuation</td>
-            <td>High readability on mobile; intuitive visual curve</td>
+            <td>Structural integrity; "Easier to Prevent than Repair"</td>
+            <td>Anchors the layout solidly; perfectly responsive</td>
             <td>
-              <code>Kadence Row Layout</code> (BG: Light Gradient)<br>
-              Right: <code>Custom HTML / SVG Block</code> inside Card
+              <code>Kadence Row Layout</code> (BG: Architectural Slate)<br>
+              Right: <code>Custom HTML Block</code> with <code>.ksart</code>
             </td>
           </tr>
         </tbody>
