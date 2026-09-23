@@ -450,6 +450,13 @@ html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; fon
 .opt10-hero .body { font-size: 18px; color: #2C3E47; line-height: 1.62; margin-top: 20px; }
 
 /* RESPONSIVE */
+
+/* ADAPTIVE HEADER SPACING FOR 1025px - 1240px TO PREVENT CTA SQUEEZING */
+@media (max-width: 1240px) and (min-width: 1025px) {
+  .ab-Main .hdrrow { gap: 24px !important; }
+  .ab-Main .desktop-nav { gap: 20px !important; }
+}
+
 @media (max-width: 1024px) {
   .ab-Main .wrap, .ab-Main .wrapwide { padding: 0 32px; }
   .opt1-ribbon { grid-template-columns: 1fr; gap: 20px; }

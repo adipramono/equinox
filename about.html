@@ -497,7 +497,7 @@ arrows that sat at the label's own weight and baseline and read as punctuation. 
 .ab-Main .bic.arrow { width:17px; height:17px; }
 /* header buttons never wrap: the row can shrink them, and "Book a / Consultation"
 on two lines in a header is the failure this guard exists to prevent */
-.ab-Main .hdrrow .btn { white-space:nowrap; flex:none; }
+.ab-Main .hdrrow .btn, .ab-Main .desktop-cta { white-space:nowrap !important; flex:none !important; flex-shrink:0 !important; }
 .ab-Main .hdrrow { flex:none; }
 .ab-Main .btn.main { background:#FFD457; color:#2c2c2c; border-color:#FFD457; }
 .ab-Main .btn.secondary { background:#003B53; color:#ffffff; border-color:#003B53; }
@@ -1005,6 +1005,13 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .mob-contact-row svg { width:16px; height:16px; color:#027CA1; flex:none; }
 
 /* RESPONSIVE MEDIA QUERIES FOR HEADER & NEWSLETTER */
+
+/* ADAPTIVE HEADER SPACING FOR 1025px - 1240px TO PREVENT CTA SQUEEZING */
+@media (max-width: 1240px) and (min-width: 1025px) {
+  .ab-Main .hdrrow { gap: 24px !important; }
+  .ab-Main .desktop-nav { gap: 20px !important; }
+}
+
 @media (max-width:1024px) {
   .ab-Main .desktop-nav { display: none !important; }
   .ab-Main .desktop-cta { display: none !important; }
