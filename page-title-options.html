@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Page Title UI Options &amp; Concepts | Equinox Business Law Group</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+<style>
+*,*::before,*::after { box-sizing:border-box; }
+html,body { margin:0; padding:0; background:#f4f7f9; scroll-behavior:smooth; font-family:'Montserrat',Arial,sans-serif; color:#2c2c2c; }
+.stage { overflow:visible; }
+.ab-Main { margin:0; background:transparent; color:#2c2c2c; }
+.ab-Main a { color:#027CA1; text-decoration:none; }
+.ab-Main a:hover { color:#002B3D; }
+.ab-Main .wrap { max-width:1440px; margin:0 auto; padding:0 64px; }
+.ab-Main .wrapwide { max-width:1440px; margin:0 auto; padding:0 64px; }
+
+/* TYPOGRAPHY */
+.ab-Main .eyebrow { font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+.ab-Main .h1 { font-size:44px; font-weight:300; line-height:1.15; color:#003B53; margin:0; }
+.ab-Main .h1 b { font-weight:700; }
+.ab-Main .h2 { font-size:34px; font-weight:300; line-height:1.2; color:#003B53; margin:0; }
+.ab-Main .h2 b { font-weight:700; }
+.ab-Main .h3 { font-size:20px; font-weight:600; line-height:1.3; color:#003B53; margin:0; }
+.ab-Main .body { font-size:17.5px; font-weight:400; line-height:1.62; color:#2c2c2c; margin:0; }
+.ab-Main .body-sm { font-size:14.5px; font-weight:400; line-height:1.6; color:#55727E; margin:0; }
+
+.ab-Main .eyebrowmark { display:flex; align-items:center; gap:14px; margin:0 0 16px; }
+.ab-Main .ymrule { width:40px; height:3px; background:#FFD457; flex:none; }
+.ab-Main .ytext { font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:#027CA1; }
+
+/* BUTTONS */
+.ab-Main .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; font-size:14.5px; font-weight:600; letter-spacing:.03em; border-radius:3px; padding:13px 26px; cursor:pointer; text-decoration:none; transition:all .18s ease; }
+.ab-Main .btn.main { background:#003B53; color:#ffffff; border:1px solid #003B53; }
+.ab-Main .btn.main:hover { background:#027CA1; border-color:#027CA1; color:#ffffff; }
+.ab-Main .btn.gold { background:#FFD457; color:#003B53; border:1px solid #FFD457; font-weight:700; }
+.ab-Main .btn.gold:hover { background:#ffe28a; border-color:#ffe28a; color:#003B53; }
+.ab-Main .btn.outline { background:transparent; color:#003B53; border:1.5px solid #003B53; }
+.ab-Main .btn.outline:hover { background:#003B53; color:#ffffff; }
+.ab-Main .btn.white-ghost { background:rgba(255,255,255,0.12); color:#ffffff; border:1px solid rgba(255,255,255,0.35); backdrop-filter:blur(8px); }
+.ab-Main .btn.white-ghost:hover { background:#ffffff; color:#003B53; }
+.ab-Main .btn.white-solid { background:#ffffff; color:#003B53; border:1px solid #ffffff; font-weight:700; }
+.ab-Main .btn.white-solid:hover { background:#E8F0F4; }
+.ab-Main .btnrow { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+
+/* HEADER & GLOBAL BRAND BAR */
+.ab-Main .top-showcase-bar { background:#002738; color:#ffffff; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.1); font-size:13px; position:sticky; top:0; z-index:100; }
+.ab-Main .top-bar-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.ab-Main .top-bar-title { display:flex; align-items:center; gap:12px; font-weight:600; letter-spacing:.02em; }
+.ab-Main .top-pill { background:#FFD457; color:#003B53; font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:3px; text-transform:uppercase; letter-spacing:.1em; }
+.ab-Main .nav-pills { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.ab-Main .pill-btn { background:rgba(255,255,255,0.1); color:#ffffff; font-size:12px; font-weight:600; padding:6px 14px; border-radius:20px; text-decoration:none; transition:all .15s ease; border:1px solid transparent; }
+.ab-Main .pill-btn:hover, .ab-Main .pill-btn.active { background:#FFD457; color:#003B53; font-weight:700; }
+
+/* CONCEPT SHELL */
+.concept-frame { margin:48px 0 72px; background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 12px 32px rgba(0,59,83,0.07); border:1px solid #E1E8EC; }
+.concept-header-bar { background:#ffffff; border-bottom:1px solid #E6EDF0; padding:20px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.concept-badge-row { display:flex; align-items:center; gap:14px; }
+.concept-num { background:#003B53; color:#ffffff; font-size:12px; font-weight:800; padding:5px 12px; border-radius:4px; letter-spacing:.08em; }
+.concept-name { font-size:19px; font-weight:700; color:#003B53; margin:0; }
+.concept-type-tag { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:#027CA1; background:#E8F4F8; padding:5px 12px; border-radius:20px; }
+.concept-desc { font-size:14px; color:#55727E; line-height:1.55; max-width:820px; margin:0; }
+.concept-canvas { position:relative; background:#ffffff; }
+
+/* BREADCRUMB PREVIEW */
+.ab-Main .crumb-strip { background:#ffffff; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; padding:11px 0; }
+.ab-Main .crumb-bar { display:flex; align-items:center; flex-wrap:wrap; font-size:11.5px; color:#93A4AE; }
+.ab-Main .crumb-prefix { font-size:10.5px; font-weight:700; letter-spacing:.12em; color:#93A4AE; margin-right:10px; }
+.ab-Main .crumb-bar a { color:#93A4AE; text-decoration:none; }
+.ab-Main .crumb-bar a:hover { color:#027CA1; text-decoration:underline; }
+.ab-Main .crumb-bar .sep { color:#CBD7DC; margin:0 8px; }
+.ab-Main .crumb-bar .here { color:#5D707A; }
+
+/* SIMULATED SECTION 2 PREVIEW */
+.sec2-preview-box { padding:44px 0 52px; background:#FAFCFD; border-top:1px dashed #D6E2E8; }
+.sec2-preview-inner { display:grid; grid-template-columns:1fr 320px; gap:56px; align-items:start; }
+.sec2-preview-label { font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:#8FA1AA; margin-bottom:12px; display:inline-block; }
+.sec2-preview-card { background:#ffffff; border:1px solid #E1E8EC; border-radius:6px; padding:22px 24px; box-shadow:0 3px 10px rgba(0,59,83,0.03); }
+
+/* ==========================================================================
+   OPTION 01: THE PURE EDITORIAL (NO IMAGE)
+   ========================================================================== */
+.opt1-hero {
+  background: radial-gradient(ellipse at 50% 20%, #FFFFFF 0%, #F5F9FA 55%, #E5EFF3 100%);
+  padding: 68px 0 64px;
+  border-bottom: 1px solid #DCE6EB;
+}
+.opt1-content { max-width: 920px; }
+.opt1-hero .h1 { font-size: 46px; line-height: 1.14; margin-top: 0; color: #003B53; }
+.opt1-hero .body { font-size: 19px; line-height: 1.62; color: #2C3E47; margin-top: 22px; max-width: 820px; }
+.opt1-ribbon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0,59,83,0.12);
+}
+.opt1-ribbon-item { display: flex; align-items: flex-start; gap: 14px; }
+.opt1-ribbon-icon {
+  width: 36px; height: 36px; border-radius: 6px;
+  background: #003B53; color: #FFD457;
+  display: flex; align-items: center; justify-content: center;
+  flex: none; margin-top: 2px;
+}
+.opt1-ribbon-title { font-size: 14px; font-weight: 700; color: #003B53; margin-bottom: 3px; }
+.opt1-ribbon-desc { font-size: 13px; color: #55727E; line-height: 1.45; }
+
+/* ==========================================================================
+   OPTION 02: THE EXECUTIVE DEEP NAVY (BACKGROUND COLOR)
+   ========================================================================== */
+.opt2-hero {
+  background: linear-gradient(135deg, #002738 0%, #003B53 60%, #004D6D 100%);
+  color: #ffffff;
+  padding: 76px 0 76px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #FFD457;
+}
+.opt2-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 85% 30%, rgba(255,212,87,0.12) 0%, transparent 40%),
+    radial-gradient(circle at 15% 80%, rgba(2,124,161,0.2) 0%, transparent 45%);
+  pointer-events: none;
+}
+.opt2-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.opt2-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+}
+.opt2-hero .h1 { font-size: 44px; color: #ffffff; line-height: 1.15; }
+.opt2-hero .h1 b { color: #FFD457; }
+.opt2-hero .body { font-size: 18.5px; color: rgba(255,255,255,0.88); line-height: 1.62; margin-top: 22px; }
+.opt2-hero .ytext { color: #FFD457; }
+.opt2-stat-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 36px 32px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+}
+.opt2-stat-num { font-size: 38px; font-weight: 800; color: #FFD457; line-height: 1; }
+.opt2-stat-label { font-size: 14px; font-weight: 600; color: #ffffff; margin-top: 8px; }
+.opt2-stat-divider { height: 1px; background: rgba(255,255,255,0.14); margin: 20px 0; }
+.opt2-stat-points { display: flex; flex-direction: column; gap: 12px; }
+.opt2-stat-point { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: rgba(255,255,255,0.85); }
+.opt2-crumb-strip {
+  background: #001E2B;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 10px 0;
+}
+.opt2-crumb-strip .crumb-bar { color: #829BA6; }
+.opt2-crumb-strip .crumb-prefix { color: #829BA6; }
+.opt2-crumb-strip .crumb-bar a { color: #A4BCC7; }
+.opt2-crumb-strip .crumb-bar a:hover { color: #FFD457; }
+.opt2-crumb-strip .crumb-bar .here { color: #ffffff; }
+
+/* ==========================================================================
+   OPTION 03: ARCHITECTURAL GLASS OVERLAY (BACKGROUND IMAGE + MASK)
+   ========================================================================== */
+.opt3-hero {
+  position: relative;
+  background-color: #002231;
+  background-image: url('./assets/img/building-london-tower.jpg');
+  background-size: cover;
+  background-position: center right;
+  padding: 80px 0 76px;
+  border-bottom: 1px solid #001B26;
+  color: #ffffff;
+  overflow: hidden;
+}
+.opt3-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #001F2C 0%, rgba(0,31,44,0.95) 45%, rgba(0,31,44,0.72) 75%, rgba(0,31,44,0.35) 100%);
+  pointer-events: none;
+}
+.opt3-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+.opt3-hero .h1 { font-size: 45px; color: #ffffff; line-height: 1.15; }
+.opt3-hero .h1 b { color: #FFD457; }
+.opt3-hero .body { font-size: 18.5px; color: rgba(255,255,255,0.90); line-height: 1.62; margin-top: 22px; max-width: 720px; }
+.opt3-hero .ytext { color: #FFD457; }
+.opt3-pills { display: flex; align-items: center; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+.opt3-pill-item {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  backdrop-filter: blur(6px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.opt3-pill-item svg { color: #FFD457; }
+
+/* ==========================================================================
+   OPTION 04: THE ASYMMETRIC PANORAMA STRIP (WIDE LANDSCAPE CARD)
+   ========================================================================== */
+.opt4-hero {
+  background: radial-gradient(ellipse at 50% 30%, #FFFFFF 0%, #EBF2F5 65%, #C2D9E2 100%);
+  padding: 64px 0 68px;
+  border-bottom: 1px solid #D1DFE5;
+}
+.opt4-layout {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 60px;
+  align-items: center;
+}
+.opt4-hero .h1 { font-size: 42px; line-height: 1.16; margin-top: 0; }
+.opt4-hero .body { font-size: 18px; line-height: 1.62; color: #2c2c2c; margin-top: 20px; }
+.opt4-panocard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px -12px rgba(0, 59, 83, 0.28);
+  border: 1px solid rgba(0, 59, 83, 0.12);
+  aspect-ratio: 16 / 10;
+  background: #003B53;
+}
+.opt4-panocard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.opt4-panocard:hover img { transform: scale(1.03); }
+.opt4-panobadge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(0, 39, 56, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  padding: 12px 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.opt4-badge-title { font-size: 13px; font-weight: 700; color: #ffffff; }
+.opt4-badge-meta { font-size: 11px; color: #FFD457; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+
+/* ==========================================================================
+   OPTION 05: DUAL-TONE SAND & ARCHITECTURAL SPLIT (WARM CREAM + ACCENT)
+   ========================================================================== */
+.opt5-hero {
+  background: #F9F8F5;
+  border-bottom: 1px solid #EBE5D8;
+  padding: 68px 0 72px;
+  position: relative;
+}
+.opt5-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 68px;
+  align-items: center;
+}
+.opt5-hero .h1 { font-size: 42px; line-height: 1.16; }
+.opt5-hero .body { font-size: 18px; color: #3A454B; line-height: 1.62; margin-top: 20px; }
+.opt5-quote-card {
+  margin-top: 32px;
+  padding: 18px 24px;
+  background: #ffffff;
+  border-left: 3px solid #FFD457;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+.opt5-quote-text { font-size: 15px; font-style: italic; color: #003B53; line-height: 1.5; font-weight: 500; }
+.opt5-quote-author { font-size: 12px; font-weight: 700; color: #027CA1; margin-top: 6px; text-transform: uppercase; letter-spacing: .08em; }
+.opt5-framewrap {
+  position: relative;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #E2D9C8;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0, 59, 83, 0.08);
+}
+.opt5-photo-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #003B53;
+}
+.opt5-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.opt5-chip {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #FFD457;
+  color: #003B53;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   COMPARISON MATRIX & KADENCE RECIPES
+   ========================================================================== */
+.matrix-sec { background: #ffffff; border-radius: 12px; padding: 48px; margin: 64px 0 96px; box-shadow: 0 12px 32px rgba(0,59,83,0.07); border: 1px solid #E1E8EC; }
+.matrix-title { font-size: 28px; font-weight: 700; color: #003B53; margin: 0 0 14px; }
+.matrix-sub { font-size: 15.5px; color: #55727E; margin: 0 0 32px; max-width: 820px; line-height: 1.6; }
+.matrix-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.matrix-table th { background: #003B53; color: #ffffff; font-weight: 700; padding: 16px 20px; text-align: left; letter-spacing: .04em; }
+.matrix-table td { padding: 18px 20px; border-bottom: 1px solid #E6EDF0; vertical-align: top; color: #334D58; }
+.matrix-table tr:hover td { background: #F8FAFB; }
+.kadence-pill { display: inline-block; background: #E8F4F8; color: #027CA1; font-weight: 700; font-size: 11px; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding: 0 32px; }
+  .opt1-ribbon { grid-template-columns: 1fr; gap: 20px; }
+  .opt2-layout { grid-template-columns: 1fr; gap: 40px; }
+  .opt4-layout { grid-template-columns: 1fr; gap: 40px; }
+  .opt5-layout { grid-template-columns: 1fr; gap: 40px; }
+  .sec2-preview-inner { grid-template-columns: 1fr; gap: 36px; }
+  .matrix-table { display: block; overflow-x: auto; }
+}
+@media (max-width: 640px) {
+  .ab-Main .wrap, .ab-Main .wrapwide { padding: 0 20px; }
+  .concept-header-bar { padding: 16px 20px; }
+  .ab-Main .h1 { font-size: 32px !important; }
+  .ab-Main .body { font-size: 16px !important; }
+  .opt4-panocard { aspect-ratio: 16 / 11; }
+  .matrix-sec { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="stage ab-Main">
+
+  <!-- TOP STICKY SHOWCASE JUMP BAR -->
+  <header class="top-showcase-bar">
+    <div class="wrapwide top-bar-inner">
+      <div class="top-bar-title">
+        <span class="top-pill">Design Showcase</span>
+        <span>Equinox Inner Page Title UI Options (5 Styles)</span>
+      </div>
+      <nav class="nav-pills" aria-label="Page Title Options">
+        <a class="pill-btn" href="#opt1">01 • Pure Editorial (No Image)</a>
+        <a class="pill-btn" href="#opt2">02 • Deep Navy (Color)</a>
+        <a class="pill-btn" href="#opt3">03 • Glass Skyline (BG Image)</a>
+        <a class="pill-btn" href="#opt4">04 • Landscape Panorama (Card)</a>
+        <a class="pill-btn" href="#opt5">05 • Dual-Tone Sand (Warm)</a>
+        <a class="pill-btn" href="#comparison" style="background:#FFD457; color:#003B53;">Comparison Matrix</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap" style="padding-top:40px;">
+
+    <!-- INTRO BANNER -->
+    <div style="margin-bottom:32px;">
+      <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Design Exploration</span></div>
+      <h1 class="h1">Inner Page Title <b>UI Explorations</b></h1>
+      <p class="body" style="margin-top:14px; max-width:860px; color:#55727E;">
+        Comparing 5 distinct treatments for the hero/page title area across Equinox inner pages (e.g. <code>about.html</code>, <code>services.html</code>, <code>team.html</code>). Each option solves the layout balance differently—from clean typography without images, to solid executive colors, to full-width background textures and balanced landscape image cards.
+      </p>
+    </div>
+
+    <!-- =====================================================================
+         CONCEPT 01: THE PURE EDITORIAL (NO IMAGE)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt1">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num">CONCEPT 01</span>
+            <h2 class="concept-name">The Pure Editorial • Clean Typographic Authority</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: No Image.</strong> Inspired by premium corporate and legal institutions (McKinsey, Cooley, Wilson Sonsini). Uses refined typographic hierarchy, subtle light gradient backdrop, and a 3-point key credential ribbon. Eliminates awkward image crops and brings immediate focus to the message.
+          </p>
+        </div>
+        <span class="concept-type-tag">Zero Image • 100% Crisp</span>
+      </div>
+
+      <div class="concept-canvas">
+        <!-- 1. HERO GRADIENT BAND -->
+        <div class="opt1-hero">
+          <div class="wrap">
+            <div class="opt1-content">
+              <div class="eyebrowmark">
+                <span class="ymrule"></span>
+                <span class="ytext">About Equinox Business Law Group</span>
+              </div>
+              <h1 class="h1">
+                Strategic Legal Counsel Built for <b>Entrepreneurial Growth</b>
+              </h1>
+              <p class="body">
+                We make it possible for business leaders to have an embedded corporate legal department on their team by removing the friction of billable hours, slow response times, and unpredictable costs.
+              </p>
+              <div class="btnrow" style="margin-top:32px;">
+                <a class="btn main" href="#"><span>Book a Strategic Consultation</span></a>
+                <a class="btn outline" href="#"><span>Take Legal Health Check</span></a>
+              </div>
+
+              <!-- 3-PILLAR CREDENTIAL RIBBON -->
+              <div class="opt1-ribbon">
+                <div class="opt1-ribbon-item">
+                  <div class="opt1-ribbon-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <div class="opt1-ribbon-title">24-Hour SLA Response</div>
+                    <div class="opt1-ribbon-desc">Guaranteed rapid turnaround keeps your deals and executive decisions moving.</div>
+                  </div>
+                </div>
+                <div class="opt1-ribbon-item">
+                  <div class="opt1-ribbon-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <div>
+                    <div class="opt1-ribbon-title">Fixed Monthly Investment</div>
+                    <div class="opt1-ribbon-desc">All-inclusive predictable fee structure with zero surprise hourly invoices.</div>
+                  </div>
+                </div>
+                <div class="opt1-ribbon-item">
+                  <div class="opt1-ribbon-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <div class="opt1-ribbon-title">Dedicated Counsel Pod</div>
+                    <div class="opt1-ribbon-desc">Direct access to your dedicated attorney and operations specialist.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW -->
+        <div class="crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  Most law firms make their money when things break. At Equinox, our entire incentive model is inverted: we succeed when your business runs smoothly, risks are averted early, and contracts protect your long-term equity.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONCEPT 02: THE EXECUTIVE DEEP NAVY (BACKGROUND COLOR)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt2">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num" style="background:#002738;">CONCEPT 02</span>
+            <h2 class="concept-name">The Executive Deep Navy • Immersive Color Contrast</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: Solid Background Color.</strong> Uses Equinox’s signature deep corporate navy (<code>#003B53</code> / <code>#002738</code>) with crisp white typography and Equinox Day Gold accents. Gives significant weight and prestige to the page title without needing a photograph.
+          </p>
+        </div>
+        <span class="concept-type-tag" style="background:#003B53; color:#FFD457;">Executive Navy • High Contrast</span>
+      </div>
+
+      <div class="concept-canvas">
+        <div class="opt2-hero">
+          <div class="wrap">
+            <div class="opt2-layout">
+              <div>
+                <div class="eyebrowmark">
+                  <span class="ymrule" style="background:#FFD457;"></span>
+                  <span class="ytext">About Equinox</span>
+                </div>
+                <h1 class="h1">
+                  Your Dedicated In-House Legal Team <b>Without The In-House Overhead</b>
+                </h1>
+                <p class="body">
+                  Growing companies face pivotal legal decisions every single week. Equinox embeds seasoned corporate counsel directly into your leadership cadence under one transparent, fixed monthly retainer.
+                </p>
+                <div class="btnrow" style="margin-top:34px;">
+                  <a class="btn gold" href="#"><span>Schedule a Consultation</span></a>
+                  <a class="btn white-ghost" href="#"><span>Take Legal Health Check</span></a>
+                </div>
+              </div>
+
+              <!-- HIGHLIGHT STAT / CALLOUT CARD -->
+              <div class="opt2-stat-card">
+                <div class="opt2-stat-num">85%+</div>
+                <div class="opt2-stat-label">Of Enterprise Legal Matters Handled Internally</div>
+                <div class="opt2-stat-divider"></div>
+                <div class="opt2-stat-points">
+                  <div class="opt2-stat-point">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD457" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Corporate governance &amp; entity setup</span>
+                  </div>
+                  <div class="opt2-stat-point">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD457" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Commercial contracting &amp; vendor MSAs</span>
+                  </div>
+                  <div class="opt2-stat-point">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFD457" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Employment counsel &amp; IP protection</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW (DARK-ALIGNED) -->
+        <div class="opt2-crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  The high-contrast transition from deep navy back to crisp white ground below creates a dramatic, structured reading experience that guides the eye directly into the section narrative.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONCEPT 03: ARCHITECTURAL GLASS OVERLAY (BACKGROUND IMAGE + MASK)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt3">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num" style="background:#027CA1;">CONCEPT 03</span>
+            <h2 class="concept-name">Architectural Glass Overlay • Modern Skyline Texture</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: Background Image with Gradient Mask.</strong> Uses full-bleed high-res corporate architecture photography with a deep navy gradient overlay. The building skyline is subtly visible on the right, while the text zone on the left maintains 100% solid readability and contrast.
+          </p>
+        </div>
+        <span class="concept-type-tag" style="background:#E1F5FE; color:#0277BD;">Full-Bleed Image • Atmospheric</span>
+      </div>
+
+      <div class="concept-canvas">
+        <div class="opt3-hero">
+          <div class="opt3-overlay"></div>
+          <div class="wrap">
+            <div class="opt3-content">
+              <div class="eyebrowmark">
+                <span class="ymrule" style="background:#FFD457;"></span>
+                <span class="ytext">About Equinox</span>
+              </div>
+              <h1 class="h1">
+                Proactive Legal Architecture for <b>Ambitious Enterprises</b>
+              </h1>
+              <p class="body">
+                We bridge the gap between business reality and corporate law. Founded in 2004, Equinox serves hundreds of Pacific Northwest founders and growing companies with dedicated, embedded general counsel.
+              </p>
+              <div class="btnrow" style="margin-top:32px;">
+                <a class="btn gold" href="#"><span>Book a Consultation</span></a>
+                <a class="btn white-ghost" href="#"><span>Explore Our Story</span></a>
+              </div>
+
+              <!-- FLOATING KEY TRAITS CHIPS -->
+              <div class="opt3-pills">
+                <div class="opt3-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Founded 2004 &bull; 20+ Years Track Record</span>
+                </div>
+                <div class="opt3-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Bellevue &amp; Seattle Corporate Offices</span>
+                </div>
+                <div class="opt3-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>100% Transparent Retainers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW -->
+        <div class="crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  Gives an instant impression of an established corporate law powerhouse while avoiding any awkward small image cutouts.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONCEPT 04: THE ASYMMETRIC PANORAMA STRIP (WIDE LANDSCAPE CARD)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt4">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num" style="background:#D98D00;">CONCEPT 04</span>
+            <h2 class="concept-name">The Asymmetric Panorama • Cinematic 16:9 Landscape Card</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: Using Image (Wide Aspect Ratio).</strong> Instead of a square 1:1 box with dark offset shadows, this uses a refined 16:10 wide landscape card with soft elevation, rounded corners, and a frosted caption chip. Naturally frames real meetings or architectural photography without clipping heads.
+          </p>
+        </div>
+        <span class="concept-type-tag" style="background:#FFF8E1; color:#F57F17;">Landscape Ratio • Modern Card</span>
+      </div>
+
+      <div class="concept-canvas">
+        <div class="opt4-hero">
+          <div class="wrap">
+            <div class="opt4-layout">
+              <div>
+                <div class="eyebrowmark">
+                  <span class="ymrule"></span>
+                  <span class="ytext">About Equinox</span>
+                </div>
+                <h1 class="h1">
+                  What If Your Lawyer Knew Your Business <b>as Well as You Do?</b>
+                </h1>
+                <p class="body">
+                  Legal services are often reactive and fragmented. At Equinox, we become an embedded extension of your executive leadership team, delivering proactive legal strategy that matches your growth velocity.
+                </p>
+                <div class="btnrow" style="margin-top:32px;">
+                  <a class="btn main" href="#"><span>Book a Consultation</span></a>
+                  <a class="btn outline" href="#"><span>View Our Leadership</span></a>
+                </div>
+              </div>
+
+              <!-- PANORAMA LANDSCAPE PHOTO CARD -->
+              <div class="opt4-panocard">
+                <img src="img/s8-meeting.jpg" alt="Equinox business lawyers collaborating in conference room" width="1200" height="750">
+                <div class="opt4-panobadge">
+                  <div>
+                    <div class="opt4-badge-title">Proactive Corporate Legal Team</div>
+                    <div style="font-size:12px; color:rgba(255,255,255,0.75);">Bellevue &bull; Seattle &bull; Fractional Counsel</div>
+                  </div>
+                  <div class="opt4-badge-meta">Est. 2004</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW -->
+        <div class="crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  The landscape image card sits strictly inside the hero container (zero spillover into section 2), allowing the sidebar and content below to align perfectly at the top.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONCEPT 05: DUAL-TONE SAND & ARCHITECTURAL SPLIT (WARM CREAM + ACCENT)
+         ===================================================================== -->
+    <section class="concept-frame" id="opt5">
+      <div class="concept-header-bar">
+        <div>
+          <div class="concept-badge-row">
+            <span class="concept-num" style="background:#4A5568;">CONCEPT 05</span>
+            <h2 class="concept-name">Dual-Tone Sand &amp; Framed Window • Warm Executive Elegance</h2>
+          </div>
+          <p class="concept-desc" style="margin-top:8px;">
+            <strong>Type: Warm Background Color + Framed Image Accent.</strong> Blends an inviting sand/parchment background (<code>#F9F8F5</code>) with an executive mission quote block on the left and an architectural gallery window on the right. Warm, human, and deeply trustworthy.
+          </p>
+        </div>
+        <span class="concept-type-tag" style="background:#F0EFEB; color:#4A5568;">Warm Sand • Gallery Frame</span>
+      </div>
+
+      <div class="concept-canvas">
+        <div class="opt5-hero">
+          <div class="wrap">
+            <div class="opt5-layout">
+              <div>
+                <div class="eyebrowmark">
+                  <span class="ymrule"></span>
+                  <span class="ytext">Who We Are</span>
+                </div>
+                <h1 class="h1">
+                  Entrepreneurs Who Are <b>Also Business Attorneys</b>
+                </h1>
+                <p class="body">
+                  Like you, we are entrepreneurs. Unlike you, we are lawyers. We call ourselves Equinox because we bring entrepreneurial momentum and preventative law into perfect equilibrium.
+                </p>
+
+                <!-- EDITORIAL QUOTE CALLOUT -->
+                <div class="opt5-quote-card">
+                  <div class="opt5-quote-text">&ldquo;We make business law accessible, proactive, and transparent so founders can take bold risks with confidence.&rdquo;</div>
+                  <div class="opt5-quote-author">Michelle Bomberger &bull; Founder &amp; Managing Partner</div>
+                </div>
+
+                <div class="btnrow" style="margin-top:28px;">
+                  <a class="btn main" href="#"><span>Book a Consultation</span></a>
+                  <a class="btn outline" href="#"><span>Meet the Partners</span></a>
+                </div>
+              </div>
+
+              <!-- GALLERY FRAMED WINDOW -->
+              <div class="opt5-framewrap">
+                <div class="opt5-photo-frame">
+                  <img src="img/s4-team.jpg" alt="Equinox business lawyers collaborating" width="1000" height="750">
+                  <div class="opt5-chip">Embedded Legal Pod</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREADCRUMB PREVIEW -->
+        <div class="crumb-strip">
+          <div class="wrap">
+            <nav class="crumb-bar">
+              <span class="crumb-prefix">YOU ARE HERE:</span>
+              <a href="#">Home</a>
+              <span class="sep">&raquo;</span>
+              <span class="here">About Us</span>
+            </nav>
+          </div>
+        </div>
+
+        <!-- SIMULATED CONTENT FLOW BELOW -->
+        <div class="sec2-preview-box">
+          <div class="wrap">
+            <span class="sec2-preview-label">How It Connects To Page Body Below:</span>
+            <div class="sec2-preview-inner">
+              <div>
+                <h3 class="h3" style="font-size:24px;">Our Core Philosophy &amp; Why We Exist</h3>
+                <p class="body" style="font-size:16px; margin-top:12px; color:#55727E;">
+                  Warm, welcoming tones avoid the generic "cold legal template" feel while maintaining unmistakable executive gravitas.
+                </p>
+              </div>
+              <div class="sec2-preview-card">
+                <div style="font-size:11px; font-weight:700; color:#027CA1; text-transform:uppercase; letter-spacing:.15em;">Sidebar Navigation</div>
+                <div style="margin-top:10px; font-size:14.5px; font-weight:600; color:#003B53;">What We Believe &rarr;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         COMPARISON MATRIX & KADENCE WORDPRESS GUIDE
+         ===================================================================== -->
+    <section class="matrix-sec" id="comparison">
+      <h2 class="matrix-title">Comparison Matrix &amp; Kadence Implementation Recipe</h2>
+      <p class="matrix-sub">
+        Every option is built with clean CSS that directly translates to native Kadence Pro blocks (Row Layout, Advanced Heading, Advanced Button, Info Box) without requiring custom hacks or heavy plugins.
+      </p>
+
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Image Dependency</th>
+            <th>Visual Vibe</th>
+            <th>Mobile Adaptability</th>
+            <th>Kadence Block Recipe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Concept 01</strong><br>
+              <span style="color:#027CA1; font-weight:600;">Pure Editorial</span>
+            </td>
+            <td>
+              <span class="kadence-pill" style="background:#E8F5E9; color:#2E7D32;">No Image Needed</span><br>
+              <small>Zero asset maintenance</small>
+            </td>
+            <td>Clean, prestigious, high-trust, fast-loading</td>
+            <td>100% effortless on mobile (scales perfectly)</td>
+            <td>
+              <code>Kadence Row Layout</code> (1-col)<br>
+              <code>Kadence Advanced Heading</code> + <code>Buttons</code><br>
+              <code>Kadence Info Box</code> (3-col ribbon)
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Concept 02</strong><br>
+              <span style="color:#003B53; font-weight:600;">Executive Deep Navy</span>
+            </td>
+            <td>
+              <span class="kadence-pill" style="background:#E1F5FE; color:#0277BD;">Color Background</span><br>
+              <small>Pure CSS / color</small>
+            </td>
+            <td>Bold, authoritative, high corporate prestige</td>
+            <td>Stacks stat card beneath headline on mobile</td>
+            <td>
+              <code>Kadence Row Layout</code> (2-col)<br>
+              BG Color: <code>#003B53</code><br>
+              Right Column: <code>Kadence Section</code> with blur/border
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Concept 03</strong><br>
+              <span style="color:#0277BD; font-weight:600;">Glass Skyline Overlay</span>
+            </td>
+            <td>
+              <span class="kadence-pill" style="background:#FFF8E1; color:#F57F17;">Background Photo</span><br>
+              <small>Architectural tower</small>
+            </td>
+            <td>Atmospheric, modern enterprise skyline</td>
+            <td>Gradient ensures 100% readability on all phones</td>
+            <td>
+              <code>Kadence Row Layout</code> (Full width)<br>
+              BG: Image (London Tower) + Overlay Gradient<br>
+              Left Column: <code>Advanced Heading</code> + <code>Pills</code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Concept 04</strong><br>
+              <span style="color:#D98D00; font-weight:600;">Asymmetric Panorama</span>
+            </td>
+            <td>
+              <span class="kadence-pill" style="background:#EDE7F6; color:#512DA8;">16:9 Landscape Card</span><br>
+              <small>Meeting or team photo</small>
+            </td>
+            <td>Balanced, contemporary, human &amp; architectural</td>
+            <td>Card stacks cleanly below copy with zero overlap</td>
+            <td>
+              <code>Kadence Row Layout</code> (2-col 55/45)<br>
+              Right Column: <code>Advanced Image</code> with border-radius &amp; box-shadow
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Concept 05</strong><br>
+              <span style="color:#4A5568; font-weight:600;">Dual-Tone Sand</span>
+            </td>
+            <td>
+              <span class="kadence-pill" style="background:#FBE9E7; color:#D84315;">Framed Accent Image</span><br>
+              <small>4:3 gallery frame</small>
+            </td>
+            <td>Warm, editorial, approachable yet executive</td>
+            <td>Gallery frame stacks neatly below quote block</td>
+            <td>
+              <code>Kadence Row Layout</code> (BG: <code>#F9F8F5</code>)<br>
+              Left: <code>Testimonial / Quote</code><br>
+              Right: <code>Section</code> with double border frame
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+</div>
+
+</body>
+</html>
