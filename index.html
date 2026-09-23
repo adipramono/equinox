@@ -216,22 +216,14 @@ by the copy - a real dependency on whatever photograph eventually lands here. */
    before the photograph in the source instead of after it. The ratio moves with it - the text
    keeps the wider 1.2fr column, which is now column 1. */
 .ab-Main .s3split { display:grid; grid-template-columns:1.2fr .8fr; gap:64px; align-items:center; }
-/* THE STAKES IMAGE IS A CIRCLE (Adi, 2026-09-18), the same device as the inner page head, not the
-   square plate with the NIGHT offset shadow it replaces. The shape is the brandmark's, so it is
-   the one image treatment on this page that says whose page it is. Rings are drawn in CSS, gold
-   outside and NIGHT inside, so they scale with the circle and never arrive as a flattened asset.
-
-   NO NEGATIVE MARGIN HERE. On a page head the circle hangs past the band because that is what buys
-   the head its air while staying short. In a section there is nothing to hang past: the section
-   is already as tall as its own text, so a drop would only be an overlap for its own sake.
-
-   The old device is gone rather than kept alongside: the plate and the circle are two ways of
-   presenting the same picture, and a page that uses both has no rule about either. The offset
-   shadow, the 4px radius and the 24px reservation for it all go with it.
-
-   The column stretched to the text's height before, so its "square" was never square. A circle
-   cannot be approximate about this - it is centred against the text and locked to 1:1. */
-.ab-Main .s3imgcol { display:flex; align-items:center; }
+/* THE STAKES IMAGE: Shape shadow with offset plate */
+.ab-Main .s3imgcol { min-width:0; }
+.ab-Main .s3img { position:relative; aspect-ratio:4/5; width:100%; height:auto; margin-right:20px; }
+.ab-Main .s3shadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
+@media (max-width:900px) {
+  .ab-Main .s3split { grid-template-columns:1fr; gap:40px; }
+  .ab-Main .s3img { max-width:460px; margin:0 auto 20px; }
+}
 /* The box fills the column, so the footprint's outer edge lands exactly on the page margin and
    the circle lines up with every other left edge on the page. Nothing overhangs any more: the
    rings live inside the box rather than outside the picture. */
@@ -780,7 +772,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
   </div>
 
-  <!-- 3. THE STAKES  (claim -> cause -> result, with the circle on the right) -->
+  <!-- 3. THE STAKES  (claim -> cause -> result, with offset shadow plate on the right) -->
   <div class="sec3band">
     <div class="wrap" style="padding-top:112px; padding-bottom:116px;">
       <div class="s3split">
@@ -799,10 +791,9 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
         </div>
 
         <div class="s3imgcol">
-          <div class="eqshape">
-            <span class="eqring gold"></span>
-            <span class="eqring night"></span>
-            <div class="eqpic grain"><img class="photo" src="img/s4-baseplate.jpg" alt="A steel column base plate bolted to a concrete foundation" width="1400" height="933"></div>
+          <div class="s3img grain">
+            <div class="s3shadow"></div>
+            <img class="photo" src="img/s9-towers.jpg" alt="Commercial office towers and corporate business skyline" width="1400" height="1750">
           </div>
         </div>
 
