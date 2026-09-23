@@ -200,6 +200,12 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
 /* HERO SECTION WITH CROSSOVER CIRCLE (4b geometry) */
 .ab-Main .herograd { background:linear-gradient(180deg, #F0F6F8 0%, #FFFFFF 100%); }
+/* HERO SECTION: SQUARE WITH SHADOW (MATCHES S8-MEETING STYLE) */
+.ab-Main .herosplit { display:grid; grid-template-columns:1.18fr .82fr; gap:64px; align-items:center; }
+.ab-Main .heromedia { min-width:0; display:flex; justify-content:center; }
+.ab-Main .heromedia .imgwrap { position:relative; aspect-ratio:1/1; width:100%; max-width:440px; height:auto; margin:0 20px 20px 0; }
+.ab-Main .heromedia .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
+.ab-Main .heromedia .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
 .ab-Main .ptrow { display:grid; grid-template-columns:minmax(0,1fr) var(--f); gap:72px; align-items:start; }
 .ab-Main .ptpic { position:relative; }
 .ab-Main .ptpic .inner { position:absolute; top:calc(var(--air) - 56px - 0.0668 * var(--f)); left:0; width:var(--f); height:var(--f); z-index:2; }
@@ -694,7 +700,10 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .ab-Main .wrap, .ab-Main .wrapwide { padding:0 32px; }
-  .ab-Main .ptrow { grid-template-columns:1fr; gap:40px; --f:0px; }
+    .ab-Main .herosplit { grid-template-columns:1fr; gap:44px; }
+  .ab-Main .heromedia { justify-content:flex-start; }
+  .ab-Main .heromedia .imgwrap { max-width:min(420px, calc(100% - 24px)); margin:0 auto 20px; }
+.ab-Main .ptrow { grid-template-columns:1fr; gap:40px; --f:0px; }
   .ab-Main .ptpic { display:none; }
   .ab-Main .propgrid { grid-template-columns:1fr; }
   .ab-Main .readygrid { grid-template-columns:1fr; }
@@ -1054,7 +1063,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   <!-- 1. HERO SECTION WITH CROSSOVER CIRCLE -->
   <div class="herograd">
     <div class="wrap" style="padding-top:56px; padding-bottom:68px;">
-      <div class="ptrow" style="--air:140px; --f:430px;">
+      <div class="herosplit">
         <div>
           <div class="eyebrowmark">
             <span class="ymrule"></span>
@@ -1071,13 +1080,10 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
             <a class="btn secondary" href="index.html#assessment"><span>Take Legal Health Check</span></a>
           </div>
         </div>
-        <div class="ptpic">
-          <div class="inner">
-            <div class="eqshape">
-              <span class="eqring gold"></span>
-              <span class="eqring night"></span>
-              <div class="eqpic grain"><img class="photo" src="./assets/img/s8-meeting.jpg" alt="Equinox strategic legal consultation meeting"></div>
-            </div>
+        <div class="heromedia">
+          <div class="imgwrap grain">
+            <div class="imgshadow"></div>
+            <img class="photo" src="./assets/img/s8-meeting.jpg" alt="Equinox strategic legal consultation meeting" width="900" height="900">
           </div>
         </div>
       </div>

@@ -195,6 +195,12 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .svclead { margin-top:24px; max-width:720px; }
 
 /* PAGE HEAD PICTURE: the circle at drop 105 */
+/* HERO SECTION: SQUARE WITH SHADOW (MATCHES S8-MEETING STYLE) */
+.ab-Main .herosplit { display:grid; grid-template-columns:1.18fr .82fr; gap:64px; align-items:center; }
+.ab-Main .heromedia { min-width:0; display:flex; justify-content:center; }
+.ab-Main .heromedia .imgwrap { position:relative; aspect-ratio:1/1; width:100%; max-width:440px; height:auto; margin:0 20px 20px 0; }
+.ab-Main .heromedia .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
+.ab-Main .heromedia .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
 .ab-Main .ptrow { display:grid; grid-template-columns:minmax(0,1fr) var(--f); gap:72px; align-items:start; }
 .ab-Main .ptpic { position:relative; }
 .ab-Main .ptpic .inner { position:absolute; top:calc(var(--air) - 56px - 0.0668 * var(--f)); left:0;
@@ -217,7 +223,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .s2head { max-width:none; }
 .ab-Main .sec2split { display:grid; grid-template-columns:1fr 340px; gap:72px; align-items:start; }
 .ab-Main .sec2main { min-width:0; }
-.ab-Main .sec2side { min-width:0; padding-top:100px; }
+.ab-Main .sec2side { min-width:0; padding-top:0; }
 .ab-Main .sidebox { background:#FFFAEB; border:1px solid #F0E6CD; border-radius:4px; padding:28px 24px; }
 .ab-Main .sidehead { font-family:'Montserrat',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#027CA1; margin:0 0 16px 0; padding-bottom:12px; border-bottom:1px solid #F0E6CD; }
 .ab-Main .sidelist { display:flex; flex-direction:column; gap:4px; }
@@ -356,7 +362,10 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width:1150px) {
-  .ab-Main .ptrow { grid-template-columns:minmax(0,1fr); gap:40px; }
+    .ab-Main .herosplit { grid-template-columns:1fr; gap:44px; }
+  .ab-Main .heromedia { justify-content:flex-start; }
+  .ab-Main .heromedia .imgwrap { max-width:min(420px, calc(100% - 24px)); margin:0 auto 20px; }
+.ab-Main .ptrow { grid-template-columns:minmax(0,1fr); gap:40px; }
   .ab-Main .ptpic .inner { position:static; width:min(var(--f), 88vw); height:auto; }
   .ab-Main .sec2split { grid-template-columns:1fr; gap:48px; }
   .ab-Main .sec2side { padding-top:0; }
@@ -722,7 +731,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   <!-- 1. PAGE TITLE & HERO -->
   <div class="herograd">
   <div class="wrap" style="padding-top:56px; padding-bottom:64px;">
-    <div class="ptrow" style="--air:140px; --f:430px;">
+    <div class="herosplit">
       <div>
         <h1 class="h2" style="font-size:44px; margin-top:0; max-width:820px;">Events &amp; <b>Workshops</b></h1>
         <p class="body svclead">Join Equinox attorneys and guest experts for actionable legal briefings, founder roundtables, and executive workshops designed for growing businesses.</p>
@@ -731,15 +740,12 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
           <a class="btn outline" href="#speaking"><span>Request a Speaker</span></a>
         </div>
       </div>
-      <div class="ptpic">
-        <div class="inner">
-          <div class="eqshape">
-            <span class="eqring gold"></span>
-            <span class="eqring night"></span>
-            <div class="eqpic grain"><img class="photo" src="img/s8-meeting.jpg" alt="Equinox Business Law Group workshops and seminars"></div>
+      <div class="heromedia">
+          <div class="imgwrap grain">
+            <div class="imgshadow"></div>
+            <img class="photo" src="img/s8-meeting.jpg" alt="Equinox Business Law Group workshops and seminars" width="900" height="900">
           </div>
         </div>
-      </div>
     </div>
   </div>
   </div>
@@ -759,7 +765,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   </div>
 
   <!-- 2. OVERVIEW & SIDEBAR NAV -->
-  <div class="wrap" style="padding-top:104px; padding-bottom:72px;">
+  <div class="wrap" style="padding-top:72px; padding-bottom:72px;">
     <div class="sec2split">
       <div class="sec2main">
         <div class="s2head">

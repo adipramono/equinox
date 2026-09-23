@@ -253,11 +253,12 @@ html,body { margin:0; padding:0; background:#ffffff; }
 .ab-Main .svcfig .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
 .ab-Main .svcfig .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
 
-/* FEATURE FIGURE: CIRCLE WITH LINES */
+/* FEATURE FIGURE: SQUARE WITH SHADOW (COORDINATION) */
 .ab-Main .circfig { display:grid; grid-template-columns:54fr 46fr; gap:64px; align-items:center; }
-.ab-Main .circfig-media { min-width:0; }
-.ab-Main .circfig-media .eqshape { max-width:420px; width:100%; margin:0 auto; }
-.ab-Main .eqshape .eqpic.grain::after { border-radius:50%; }
+.ab-Main .circfig-media { min-width:0; display:flex; justify-content:center; }
+.ab-Main .circfig .imgwrap { position:relative; aspect-ratio:1/1; width:100%; max-width:440px; height:auto; margin:0 20px 20px 0; }
+.ab-Main .circfig .imgshadow { position:absolute; inset:0; border-radius:4px; transform:translate(20px, 20px); background:#003B53; }
+.ab-Main .circfig .photo { position:relative; z-index:1; display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; filter:grayscale(1); }
 
 /* SECTION 6: GENERALIST VS SPECIALIST ARCHITECTURE BOX */
 .ab-Main .archibox { background:#FFFAEB; border:1px solid #F0E6CD; border-radius:8px; padding:44px 48px; margin-top:48px; }
@@ -333,8 +334,8 @@ html,body { margin:0; padding:0; background:#ffffff; }
   .ab-Main .svcfig .imgwrap { max-width:min(440px, calc(100% - 24px)); margin:0 auto 20px; }
   .ab-Main .tiergrid { grid-template-columns:1fr; }
   .ab-Main .circfig { grid-template-columns:1fr; gap:44px; }
-  .ab-Main .circfig-media { order:2; }
-  .ab-Main .circfig-media .eqshape { max-width:340px; }
+  .ab-Main .circfig-media { order:2; justify-content:flex-start; }
+  .ab-Main .circfig-media .imgwrap { max-width:min(420px, calc(100% - 24px)); margin:0 auto 20px; }
   .ab-Main .opt2-matrix { grid-template-columns:1fr; }
   .ab-Main .opt2-col-trad { border-right:none; border-bottom:1px solid #E2EBF0; padding:36px 28px; }
   .ab-Main .opt2-col-eq { padding:36px 28px; }
@@ -939,10 +940,9 @@ html,body { margin:0; padding:0; background:#ffffff; }
           </div>
         </div>
         <div class="circfig-media">
-          <div class="eqshape">
-            <span class="eqring gold"></span>
-            <span class="eqring night"></span>
-            <div class="eqpic grain"><img class="photo" src="img/s4-team.jpg" alt="Equinox business law attorneys collaborating on corporate strategy and specialist oversight" width="1400" height="933"></div>
+          <div class="imgwrap grain">
+            <div class="imgshadow"></div>
+            <img class="photo" src="img/s4-team.jpg" alt="Equinox business law attorneys collaborating on corporate strategy and specialist oversight" width="1400" height="933">
           </div>
         </div>
       </div>
