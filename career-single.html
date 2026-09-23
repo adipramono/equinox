@@ -191,6 +191,8 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   user-select: none;
 }
 .ab-Main .crumb-bar a, .crumb-bar a {
+  display: inline-flex;
+  align-items: center;
   color: #93A4AE;
   text-decoration: none;
   transition: color .15s ease;
@@ -198,6 +200,19 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .crumb-bar a:hover, .crumb-bar a:hover {
   color: #027CA1;
   text-decoration: underline;
+}
+.crumb-home-icon {
+  width: 12.5px;
+  height: 12.5px;
+  margin-right: 5px;
+  vertical-align: -1px;
+  flex-shrink: 0;
+  stroke-width: 1.8;
+  opacity: 0.85;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.crumb-bar a:hover .crumb-home-icon {
+  opacity: 1;
 }
 .ab-Main .crumb-bar .sep, .crumb-bar .sep {
   color: #CBD7DC;
@@ -684,7 +699,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
     <div class="wrap">
       <nav class="crumb-bar" aria-label="Breadcrumb">
         <span class="crumb-prefix">YOU ARE HERE:</span>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="crumb-home"><svg class="crumb-home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:12.5px; height:12.5px; margin-right:5px; vertical-align:-1px; flex-shrink:0;"><path d="M3 9.5l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
         <span class="sep">&raquo;</span>
         <a href="about.html">About Us</a>
         <span class="sep">&raquo;</span>
