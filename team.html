@@ -247,32 +247,17 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .sidelink:hover .sidechev, .ab-Main .sidelink.here .sidechev { color:#003B53; transform:translateX(3px); }
 
 
-/* INTERACTIVE FILTER BAR */
-.ab-Main .filter-wrap { display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid #E8F0F4; padding-bottom:14px; margin-bottom:40px; flex-wrap:wrap; gap:16px; }
-.ab-Main .filter-tabs { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-.ab-Main .filter-btn { background:none; border:1px solid #DCE6EB; padding:8px 18px; border-radius:20px; font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:600; color:#003B53; cursor:pointer; transition:all .18s ease; }
-.ab-Main .filter-btn:hover { border-color:#027CA1; color:#027CA1; background:#F8FAFB; }
-.ab-Main .filter-btn.active { background:#003B53; border-color:#003B53; color:#ffffff; }
-.ab-Main .team-count { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:500; color:#666666; }
-
 /* TEAM ROSTER GRID */
 .ab-Main .team-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
-.ab-Main .team-card { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; overflow:hidden; box-shadow:0 4px 16px rgba(0,59,83,0.04); display:flex; flex-direction:column; transition:border-color .22s ease, box-shadow .22s ease; transform:none; }
-.ab-Main .team-card:hover { border-color:#027CA1; box-shadow:0 12px 30px rgba(0,59,83,0.10); }
+.ab-Main .team-card { background:#ffffff; border:1px solid #DCE6EB; border-radius:6px; overflow:hidden; box-shadow:0 4px 16px rgba(0,59,83,0.04); display:flex; flex-direction:column; text-decoration:none; color:inherit; transition:border-color .22s ease, box-shadow .22s ease, transform .22s ease; cursor:pointer; }
+.ab-Main .team-card:hover { border-color:#027CA1; box-shadow:0 12px 28px rgba(0,59,83,0.12); transform:translateY(-4px); }
 .ab-Main .team-media { position:relative; width:100%; aspect-ratio:1/1; overflow:hidden; background:#F0F4F7; }
 .ab-Main .team-photo { width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; transition:transform .4s cubic-bezier(0.16, 1, 0.3, 1); }
 .ab-Main .team-card:hover .team-photo { transform:scale(1.05); }
-.ab-Main .team-body { padding:24px; display:flex; flex-direction:column; flex:1; }
-.ab-Main .team-rolebadge { font-family:'Montserrat',Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#027CA1; margin-bottom:8px; }
-.ab-Main .team-name { font-family:'Montserrat',Arial,sans-serif; font-size:21px; font-weight:700; color:#003B53; margin:0 0 4px; }
-.ab-Main .team-title { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:600; color:#666666; margin:0 0 16px; min-height:36px; }
-.ab-Main .team-desc { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:400; line-height:1.55; color:#444444; margin:0 0 20px; flex:1; }
-.ab-Main .team-meta { border-top:1px solid #EDEDED; padding-top:14px; display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
-.ab-Main .team-creds { font-family:'Montserrat',Arial,sans-serif; font-size:12px; font-weight:600; color:#003B53; }
-.ab-Main .team-link { font-family:'Montserrat',Arial,sans-serif; font-size:13px; font-weight:600; color:#027CA1; display:inline-flex; align-items:center; gap:4px; text-decoration:none; }
-.ab-Main .team-link:hover { color:#002B3D; }
-.ab-Main .team-link svg { width:14px; height:14px; transition:transform .18s ease; }
-.ab-Main .team-link:hover svg { transform:translateX(3px); }
+.ab-Main .team-body { padding:22px 24px 26px; display:flex; flex-direction:column; flex:1; }
+.ab-Main .team-name { font-family:'Montserrat',Arial,sans-serif; font-size:20px; font-weight:700; color:#003B53; margin:0 0 6px; line-height:1.3; transition:color .18s ease; }
+.ab-Main .team-card:hover .team-name { color:#027CA1; }
+.ab-Main .team-title { font-family:'Montserrat',Arial,sans-serif; font-size:14px; font-weight:500; color:#5D707A; margin:0; line-height:1.45; }
 
 /* CULTURE & POD MODEL SECTION */
 .ab-Main .cultureband { background:#FAFAFA; border-top:1px solid #EDEDED; border-bottom:1px solid #EDEDED; padding:96px 0; }
@@ -750,160 +735,102 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
     </div>
   </div>
 
-  <!-- 3. TEAM ROSTER GRID WITH INTERACTIVE FILTER TABS -->
+  <!-- 3. TEAM ROSTER GRID -->
   <div class="wrap" style="padding-top:24px; padding-bottom:104px;">
-    <div style="margin-bottom:32px;">
+    <div style="margin-bottom:44px;">
       <div class="eyebrowmark"><span class="ymrule"></span><span class="ytext">Our People</span></div>
       <h2 class="h2" style="max-width:760px;">Your dedicated <b>legal &amp; business team</b></h2>
     </div>
 
-    <div class="filter-wrap">
-      <div class="filter-tabs" role="tablist" aria-label="Team member categories">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Team Members (8)</button>
-        <button class="filter-btn" data-filter="legal" role="tab" aria-selected="false">Attorneys &amp; Counsel (2)</button>
-        <button class="filter-btn" data-filter="ops" role="tab" aria-selected="false">Leadership &amp; Operations (3)</button>
-        <button class="filter-btn" data-filter="client" role="tab" aria-selected="false">Client Care &amp; Support (3)</button>
-      </div>
-      <span class="team-count" id="visibleCount">Showing 8 professionals</span>
-    </div>
-
-    <div class="team-grid" id="teamGrid">
+    <div class="team-grid">
 
       <!-- Member 1: Michelle Bomberger -->
-      <article class="team-card" data-category="legal">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/michelle-bomberger/">
         <div class="team-media">
           <img class="team-photo" src="img/team/michelle-bomberger.jpg" alt="Michelle Bomberger" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2022/08/Michelle_Bomberger_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Executive &middot; Legal Counsel</span>
           <h3 class="team-name">Michelle Bomberger</h3>
           <p class="team-title">CEO &amp; Managing Attorney</p>
-          <p class="team-desc">Founder and strategic general counsel guiding business leaders in evaluating risk, governance, commercial transactions, and growth opportunities.</p>
-          <div class="team-meta">
-            <span class="team-creds">WA &amp; CO &middot; J.D. / MBA</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 2: Laura Doehle -->
-      <article class="team-card" data-category="ops">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/laura-doehle/">
         <div class="team-media">
           <img class="team-photo" src="img/team/laura-doehle.jpg" alt="Laura Doehle" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2026/05/Laura_Doehle_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Executive Leadership</span>
           <h3 class="team-name">Laura Doehle</h3>
           <p class="team-title">COO &amp; Integrator</p>
-          <p class="team-desc">Brings a strategic, systems-driven approach to align teams, processes, and priorities for seamless execution and sustainable client service delivery.</p>
-          <div class="team-meta">
-            <span class="team-creds">Auburn MBA &middot; Illinois Gies</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 3: Danica Paddock -->
-      <article class="team-card" data-category="legal">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/danica-paddock/">
         <div class="team-media">
           <img class="team-photo" src="img/team/danica-paddock.jpg" alt="Danica Paddock" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2022/10/Danica-Paddock-square.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Legal Counsel</span>
           <h3 class="team-name">Danica Paddock</h3>
           <p class="team-title">Corporate Counsel</p>
-          <p class="team-desc">Focuses on commercial contracts, regulatory compliance, corporate governance, mergers and acquisitions, and making legal systems accessible to owners.</p>
-          <div class="team-meta">
-            <span class="team-creds">WA &amp; OR &middot; Seattle U Law</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 4: Dominique Zett -->
-      <article class="team-card" data-category="ops">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/dominique-zett/">
         <div class="team-media">
           <img class="team-photo" src="img/team/dominique-zett.jpg" alt="Dominique Zett" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2025/07/Dominique_Zett_Equinox-Updated.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Operations Leadership</span>
           <h3 class="team-name">Dominique Zett</h3>
           <p class="team-title">Director of Operations &amp; Project Manager</p>
-          <p class="team-desc">Oversees internal operations and legal project management, ensuring matters are executed with strict adherence to budget, quality, and client milestones.</p>
-          <div class="team-meta">
-            <span class="team-creds">Pepperdine University</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 5: Devon Maxwell -->
-      <article class="team-card" data-category="client">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/devon-maxwell/">
         <div class="team-media">
           <img class="team-photo" src="img/team/devon-maxwell.jpg" alt="Devon Maxwell" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2025/07/Devon_Maxwell_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Legal Support</span>
           <h3 class="team-name">Devon Maxwell</h3>
           <p class="team-title">Corporate Paralegal</p>
-          <p class="team-desc">Supports clients and attorneys with business entity formations, regulatory filings, contract drafting, and corporate compliance operations.</p>
-          <div class="team-meta">
-            <span class="team-creds">Northwestern MA &middot; Lewis &amp; Clark</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 6: Leaf Eʻekaika -->
-      <article class="team-card" data-category="ops">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/leaf-ekaika/">
         <div class="team-media">
           <img class="team-photo" src="img/team/leaf-ekaika.jpg" alt="Leaf Eʻekaika" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2025/07/Leaf_Ekaika_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Operations &amp; Admin</span>
-          <h3 class="team-name">Leaf Eʻekaika</h3>
+          <h3 class="team-name">Leaf E&#699;ekaika</h3>
           <p class="team-title">Operations Administrator</p>
-          <p class="team-desc">Supports day-to-day business operations, vendor workflows, HR initiatives, and financial administration to maintain a smooth practice infrastructure.</p>
-          <div class="team-meta">
-            <span class="team-creds">Operations &amp; Systems</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 7: Alicia Wimmer -->
-      <article class="team-card" data-category="client">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/alicia-megrath/">
         <div class="team-media">
           <img class="team-photo" src="img/team/alicia-wimmer.jpg" alt="Alicia Wimmer" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2025/08/Alicia_Megrath_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Client Experience &amp; Growth</span>
           <h3 class="team-name">Alicia Wimmer</h3>
           <p class="team-title">Sales &amp; Marketing Operations Coordinator</p>
-          <p class="team-desc">Coordinates business development, executive support, and marketing outreach across the Pacific Northwest and Mountain West jurisdictions.</p>
-          <div class="team-meta">
-            <span class="team-creds">UW Economics &middot; PM Certified</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
       <!-- Member 8: Pamela Franklin -->
-      <article class="team-card" data-category="client">
+      <a class="team-card" href="https://equinoxbusinesslaw.com/about-us/legal-team/pamela-franklin/">
         <div class="team-media">
           <img class="team-photo" src="img/team/pamela-franklin.jpg" alt="Pamela Franklin" loading="lazy" onerror="this.src='https://equinoxbusinesslaw.com/wp-content/uploads/2025/11/Pamela_Franklin_Equinox.jpg'">
         </div>
         <div class="team-body">
-          <span class="team-rolebadge">Client Engagement</span>
           <h3 class="team-name">Pamela Franklin</h3>
           <p class="team-title">Sales &amp; Customer Experience Officer</p>
-          <p class="team-desc">Leads initial consultations, assessments, and onboarding experiences with an emphasis on empathy, trust, clarity, and long-term partnership.</p>
-          <div class="team-meta">
-            <span class="team-creds">Cal Poly &middot; Client Relations</span>
-            <a class="team-link" href="#"><span>Profile</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
-          </div>
         </div>
-      </article>
+      </a>
 
     </div>
   </div>
@@ -1095,43 +1022,6 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   </div>
 
 </div></div></div>
-
-<!-- Interactive Category Filter Script -->
-<script>
-(function() {
-  var buttons = document.querySelectorAll('.filter-btn');
-  var cards = document.querySelectorAll('.team-card');
-  var countEl = document.getElementById('visibleCount');
-
-  buttons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      buttons.forEach(function(b) {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      var filter = btn.getAttribute('data-filter');
-      var visible = 0;
-
-      cards.forEach(function(card) {
-        var cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
-          card.style.display = 'flex';
-          visible++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-
-      if (countEl) {
-        countEl.textContent = 'Showing ' + visible + ' professional' + (visible === 1 ? '' : 's');
-      }
-    });
-  });
-})();
-</script>
 
 <!-- SCRIPT FOR MOBILE NAV -->
 <script>
