@@ -288,12 +288,14 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   background: #ffffff; border: 1px solid #DCE6EB; border-radius: 4px; padding: 26px 22px;
 }
 
-/* SEARCH BAR IN MAIN COLUMN */
+/* SEARCH BAR IN MAIN COLUMN (WordPress-Ready with Submit Button) */
 .ab-Main .blog-search-bar, .blog-search-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin: 28px 0 36px;
-  padding: 2px 12px 2px 18px;
+  padding: 5px 6px 5px 18px;
   background: #ffffff;
   border: 1px solid #DCE6EB;
   border-radius: 6px;
@@ -328,7 +330,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 }
 .ab-Main .search-input, .search-input {
   width: 100%;
-  height: 44px;
+  height: 40px;
   border: none;
   background: transparent;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -347,8 +349,8 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   display: none;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -357,7 +359,7 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
   cursor: pointer;
   transition: all .15s ease;
   flex-shrink: 0;
-  margin-left: 8px;
+  margin-right: 4px;
 }
 .ab-Main .search-clear-btn:hover, .search-clear-btn:hover {
   background: #003B53;
@@ -366,6 +368,44 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
 .ab-Main .search-clear-btn svg, .search-clear-btn svg {
   width: 12px;
   height: 12px;
+}
+.ab-Main .search-submit-btn, .search-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 22px;
+  background: #003B53;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color .18s ease, transform .15s ease;
+}
+.ab-Main .search-submit-btn:hover, .search-submit-btn:hover {
+  background: #027CA1;
+}
+.ab-Main .search-submit-btn:active, .search-submit-btn:active {
+  transform: scale(0.98);
+}
+@media (max-width: 600px) {
+  .ab-Main .blog-search-bar, .blog-search-bar {
+    padding: 4px 4px 4px 14px;
+    gap: 8px;
+  }
+  .ab-Main .search-submit-btn, .search-submit-btn {
+    padding: 0 15px;
+    font-size: 13px;
+    height: 36px;
+  }
+  .ab-Main .search-input, .search-input {
+    font-size: 13.5px;
+  }
 }
 
 /* FEATURED EDITORIAL CARD (ROCK SOLID ZERO-SHIFT ON HOVER) */
@@ -879,8 +919,6 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
       <nav class="crumb-bar" aria-label="Breadcrumb">
         <a href="index.html" class="crumb-home"><svg class="crumb-home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:12.5px; height:12.5px; margin-right:5px; vertical-align:-1px; flex-shrink:0;"><path d="M3 9.5l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
         <span class="sep">&raquo;</span>
-         <a href="index.html">Home</a>
-        <span class="sep">&raquo;</span>
         <span class="here" aria-current="page">Blog &amp; Insights</span>
       </nav>
     </div>
@@ -897,16 +935,19 @@ below 760px they stack, because the pair needs 623px plus the page's side paddin
           <h2 class="h2">Actionable counsel for <b>every stage of business</b></h2>
         </div>
 
-        <!-- SEARCH BAR -->
-        <div class="blog-search-bar">
+        <!-- SEARCH BAR (WordPress-Ready with Submit Button) -->
+        <form role="search" method="get" class="blog-search-bar" action="#" onsubmit="event.preventDefault(); applyFilters();">
           <div class="search-input-wrap">
             <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="blogSearch" class="search-input" placeholder="Search by topic, keyword, or attorney..." oninput="handleSearch(this.value)" aria-label="Search articles">
+            <input type="search" id="blogSearch" name="s" class="search-input" placeholder="Search by topic, keyword, or attorney..." oninput="handleSearch(this.value)" aria-label="Search articles" autocomplete="off">
+            <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearBlogSearch()" aria-label="Clear search" title="Clear search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
           </div>
-          <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearBlogSearch()" aria-label="Clear search" title="Clear search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <button type="submit" class="search-submit-btn" aria-label="Search">
+            <span>Search</span>
           </button>
-        </div>
+        </form>
 
         <!-- FEATURED STORY CARD -->
         <article class="featured-card" data-category="contracts" data-title="The Hidden Liabilities in Standard Commercial Agreements: What Founders Overlook">
